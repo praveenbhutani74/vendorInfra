@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core pages -->
+  <url><loc>https://vendorinfra.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vendorinfra.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendorinfra.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://vendorinfra.com/sectors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendorinfra.com/materials</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendorinfra.com/pricing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/contact</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vendorinfra.com/why-us</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendorinfra.com/referral</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendorinfra.com/iso</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://vendorinfra.com/faq</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vendorinfra.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vendorinfra.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vendorinfra.com/security</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vendorinfra.com/pricing-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Blog posts -->
+  <url><loc>https://vendorinfra.com/blog/marketplace-plants-equipment</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/blog/saas-revolution-construction</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/blog/digitalisation-construction</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/blog/ai-for-business</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
+  <!-- Sectors -->
+  <url><loc>https://vendorinfra.com/sectors/roads-bridges</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/railways</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/metros-urban-transport</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/airports</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/ports-shipping</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/power-energy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/oil-gas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/water-sanitation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/buildings-real-estate</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/solar-renewable</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/smart-cities</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/mining</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vendorinfra.com/sectors/irrigation-tunnels</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

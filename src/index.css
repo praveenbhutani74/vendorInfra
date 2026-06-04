@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-card-border: hsl(var(--card-border));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-popover-border: hsl(var(--popover-border));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-primary-border: var(--primary-border);
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-secondary-border: var(--secondary-border);
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-muted-border: var(--muted-border);
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-accent-border: var(--accent-border);
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-destructive-border: var(--destructive-border);
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-sidebar: hsl(var(--sidebar));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-primary-border: var(--sidebar-primary-border);
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-accent-border: var(--sidebar-accent-border);
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --font-sans: var(--app-font-sans);
+  --font-serif: var(--app-font-serif);
+  --font-mono: var(--app-font-mono);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* LIGHT MODE */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+
+  --opaque-button-border-intensity: -8;
+
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+
+  /* White/light background */
+  --background: 0 0% 100%;
+  --foreground: 215 25% 12%;
+
+  --border: 215 20% 88%;
+  --input: 215 20% 88%;
+  --ring: 213 90% 42%;
+
+  /* Cards */
+  --card: 0 0% 100%;
+  --card-foreground: 215 25% 12%;
+  --card-border: 215 20% 90%;
+
+  /* Sidebar */
+  --sidebar: 215 30% 97%;
+  --sidebar-foreground: 215 25% 12%;
+  --sidebar-border: 215 20% 88%;
+  --sidebar-primary: 213 90% 42%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 213 80% 95%;
+  --sidebar-accent-foreground: 213 90% 30%;
+  --sidebar-ring: 213 90% 42%;
+
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 215 25% 12%;
+  --popover-border: 215 20% 88%;
+
+  /* Primary - Vendor Infra blue */
+  --primary: 213 90% 42%;
+  --primary-foreground: 0 0% 100%;
+
+  /* Secondary */
+  --secondary: 215 20% 94%;
+  --secondary-foreground: 215 25% 20%;
+
+  /* Muted */
+  --muted: 215 20% 96%;
+  --muted-foreground: 215 15% 45%;
+
+  /* Accent */
+  --accent: 213 80% 93%;
+  --accent-foreground: 213 90% 30%;
+
+  /* Destructive */
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  /* Charts */
+  --chart-1: 213 90% 42%;
+  --chart-2: 213 70% 55%;
+  --chart-3: 213 50% 65%;
+  --chart-4: 25 90% 55%;
+  --chart-5: 142 70% 45%;
+
+  --app-font-sans: "Poppins", sans-serif;
+  --app-font-serif: "Poppins", sans-serif;
+  --app-font-mono: "Poppins", sans-serif;
+  --radius: .5rem;
+
+  --shadow-2xs: 0px 1px 2px 0px rgba(0,0,0,0.05);
+  --shadow-xs: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  --shadow-sm: 0px 1px 3px 0px rgba(0,0,0,0.10), 0px 1px 2px -1px rgba(0,0,0,0.06);
+  --shadow: 0px 4px 6px -1px rgba(0,0,0,0.10), 0px 2px 4px -2px rgba(0,0,0,0.06);
+  --shadow-md: 0px 10px 15px -3px rgba(0,0,0,0.10), 0px 4px 6px -4px rgba(0,0,0,0.06);
+  --shadow-lg: 0px 20px 25px -5px rgba(0,0,0,0.10), 0px 8px 10px -6px rgba(0,0,0,0.06);
+  --shadow-xl: 0px 25px 50px -12px rgba(0,0,0,0.25);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0,0,0,0.25);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+
+  --sidebar-primary-border: hsl(var(--sidebar-primary));
+  --sidebar-primary-border: hsl(from hsl(var(--sidebar-primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --sidebar-accent-border: hsl(var(--sidebar-accent));
+  --sidebar-accent-border: hsl(from hsl(var(--sidebar-accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --primary-border: hsl(var(--primary));
+  --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --secondary-border: hsl(var(--secondary));
+  --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --muted-border: hsl(var(--muted));
+  --muted-border: hsl(from hsl(var(--muted)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --accent-border: hsl(var(--accent));
+  --accent-border: hsl(from hsl(var(--accent)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+  --destructive-border: hsl(var(--destructive));
+  --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
+}
+
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+
+  --background: 215 30% 8%;
+  --foreground: 213 20% 92%;
+  --border: 215 20% 18%;
+  --input: 215 20% 18%;
+  --ring: 213 90% 55%;
+
+  --card: 215 28% 11%;
+  --card-foreground: 213 20% 92%;
+  --card-border: 215 20% 18%;
+
+  --sidebar: 215 30% 10%;
+  --sidebar-foreground: 213 20% 92%;
+  --sidebar-border: 215 20% 18%;
+  --sidebar-primary: 213 90% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 213 40% 20%;
+  --sidebar-accent-foreground: 213 80% 75%;
+  --sidebar-ring: 213 90% 55%;
+
+  --popover: 215 28% 11%;
+  --popover-foreground: 213 20% 92%;
+  --popover-border: 215 20% 18%;
+
+  --primary: 213 90% 55%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 215 20% 18%;
+  --secondary-foreground: 213 20% 85%;
+
+  --muted: 215 20% 15%;
+  --muted-foreground: 215 15% 55%;
+
+  --accent: 213 40% 20%;
+  --accent-foreground: 213 80% 75%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --chart-1: 213 90% 55%;
+  --chart-2: 213 70% 65%;
+  --chart-3: 213 50% 72%;
+  --chart-4: 25 90% 60%;
+  --chart-5: 142 70% 50%;
+
+  --shadow-2xs: 0px 1px 2px 0px rgba(0,0,0,0.3);
+  --shadow-xs: 0px 2px 4px 0px rgba(0,0,0,0.35);
+  --shadow-sm: 0px 1px 3px 0px rgba(0,0,0,0.4), 0px 1px 2px -1px rgba(0,0,0,0.3);
+  --shadow: 0px 4px 6px -1px rgba(0,0,0,0.4), 0px 2px 4px -2px rgba(0,0,0,0.3);
+  --shadow-md: 0px 10px 15px -3px rgba(0,0,0,0.4), 0px 4px 6px -4px rgba(0,0,0,0.3);
+  --shadow-lg: 0px 20px 25px -5px rgba(0,0,0,0.4), 0px 8px 10px -6px rgba(0,0,0,0.3);
+  --shadow-xl: 0px 25px 50px -12px rgba(0,0,0,0.5);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0,0,0,0.5);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--app-font-sans);
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--app-font-sans);
+  }
+
+  #root,
+  button,
+  input,
+  select,
+  textarea,
+  .prose {
+    font-family: var(--app-font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .stable-card-title {
+    @apply leading-snug;
+    min-height: 2.75rem;
+  }
+
+  .stable-card-copy {
+    @apply leading-relaxed;
+    min-height: 4.75rem;
+  }
+
+  .stable-card-copy-sm {
+    @apply leading-relaxed;
+    min-height: 3.75rem;
+  }
+}
+
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}
+
+/* Site typography tokens. Keep these opt-in so Tailwind text classes stay honest. */
+:root {
+  --type-eyebrow: 0.78rem;
+  --type-body: 1rem;
+  --type-body-lg: 1.075rem;
+  --type-card-title: 1.12rem;
+  --type-section-title: clamp(2.25rem, 2.55vw, 2.85rem);
+  --type-page-title: clamp(2.25rem, 4vw, 4rem);
+}
+
+body {
+  font-family: var(--app-font-sans);
+  font-size: var(--type-body);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+  text-rendering: geometricPrecision;
+}
+
+main,
+section {
+  font-size: var(--type-body);
+}
+
+body :is(h1, h2):not([data-preserve-hero-typography] *) {
+  font-weight: 700;
+}
+
+body :is(h3, h4):not([data-preserve-hero-typography] *) {
+  font-weight: 650;
+}
+
+body :is(section, article, main) :is(h2):not([data-preserve-hero-typography] *) {
+  font-size: var(--type-section-title);
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+body :is(section, article, main) :is(h3):not([data-preserve-hero-typography] *) {
+  font-size: var(--type-card-title);
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+body :is(section, article, main) :is(h4):not([data-preserve-hero-typography] *) {
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+body :is(section, article, main) :is(p, li):not(nav *):not(footer *):not([data-preserve-hero-typography] *) {
+  font-size: var(--type-body);
+  line-height: 1.72;
+}
+
+body :is(section, article, main) :is(.text-xs):not(nav *):not(footer *):not([data-preserve-hero-typography] *) {
+  font-size: 0.82rem;
+}
+
+body :is(section, article, main) :is(.text-sm):not(nav *):not(footer *):not([data-preserve-hero-typography] *) {
+  font-size: 0.95rem;
+}
+
+body :is(section, article, main) :is(.text-base):not(nav *):not(footer *):not([data-preserve-hero-typography] *) {
+  font-size: 1.03rem;
+}
+
+.ai-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: ai-marquee-left 30s linear infinite;
+}
+
+.ai-marquee-track-reverse {
+  animation-name: ai-marquee-right;
+  animation-duration: 34s;
+}
+
+.ai-marquee-item {
+  flex: 0 0 auto;
+  padding-right: 3rem;
+  color: white;
+  font-size: clamp(1.75rem, 4vw, 4.25rem);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+@keyframes ai-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes ai-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-marquee-track {
+    animation-duration: 90s;
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+@layer components {
+  .type-eyebrow {
+    @apply inline-flex items-center justify-center gap-2 text-[#edad1a] font-bold uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    line-height: 1.35;
+  }
+
+  .type-eyebrow::before,
+  .type-eyebrow::after {
+    content: "";
+    width: 1.5rem;
+    height: 1px;
+    background-color: rgb(237 173 26 / 0.6);
+  }
+
+  .type-section-title {
+    @apply font-bold text-[#00274d] tracking-normal;
+    font-size: var(--type-section-title);
+    line-height: 1.15;
+  }
+
+  .type-card-title {
+    @apply font-bold tracking-normal;
+    font-size: var(--type-card-title);
+    line-height: 1.35;
+  }
+
+  .type-body {
+    @apply font-normal;
+    font-size: var(--type-body);
+    line-height: 1.7;
+  }
+
+  .type-body-lg {
+    @apply font-normal;
+    font-size: var(--type-body-lg);
+    line-height: 1.72;
+  }
+}
