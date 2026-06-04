@@ -1,0 +1,80 @@
+<svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="720" rx="44" fill="#031B36"/>
+  <rect width="960" height="720" rx="44" fill="url(#bg)"/>
+  <path d="M92 534C196 438 286 392 402 400C530 409 604 496 744 458C819 438 876 392 930 326" stroke="#EDAD1A" stroke-opacity=".24" stroke-width="2"/>
+  <path d="M70 584C205 485 310 456 436 474C550 491 640 558 766 512C842 484 888 430 930 372" stroke="#7DB7FF" stroke-opacity=".16" stroke-width="2"/>
+  <g opacity=".34">
+    <path d="M152 146H808" stroke="#FFFFFF" stroke-opacity=".14"/>
+    <path d="M152 246H808" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M152 346H808" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M152 446H808" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M252 92V590" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M392 92V590" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M532 92V590" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M672 92V590" stroke="#FFFFFF" stroke-opacity=".10"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="480" cy="320" r="118" fill="#082B4F"/>
+    <circle cx="480" cy="320" r="116" stroke="#EDAD1A" stroke-opacity=".46" stroke-width="2"/>
+    <circle cx="480" cy="320" r="78" stroke="#EDAD1A" stroke-opacity=".22" stroke-width="2" stroke-dasharray="8 12"/>
+    <path d="M440 348L480 236L520 348H494L487 326H452L445 348H440Z" fill="#EDAD1A"/>
+    <path d="M542 348V236H568V348H542Z" fill="#FFFFFF"/>
+    <circle cx="480" cy="320" r="142" stroke="#EDAD1A" stroke-opacity=".16" stroke-width="1.5"/>
+  </g>
+  <g>
+    <path d="M174 540H332V376L276 336L214 378V540Z" fill="#0B3158" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M226 540V438H282V540" fill="#061F3E"/>
+    <path d="M214 402H240M266 402H292M214 430H240M266 430H292" stroke="#EDAD1A" stroke-opacity=".78" stroke-width="8" stroke-linecap="round"/>
+    <path d="M146 540H826" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  </g>
+  <g>
+    <path d="M610 540H788V320L700 260L610 320V540Z" fill="#0B3158" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="2"/>
+    <path d="M642 356H672M700 356H730M642 396H672M700 396H730M642 436H672M700 436H730M642 476H672M700 476H730" stroke="#9CC9FF" stroke-opacity=".38" stroke-width="10" stroke-linecap="round"/>
+    <path d="M704 540V472H754V540" fill="#061F3E"/>
+    <path d="M582 540H640V414L582 382V540Z" fill="#09284A" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="2"/>
+  </g>
+  <g stroke="#EDAD1A" stroke-opacity=".65" stroke-width="2.5">
+    <path d="M354 430L396 386"/>
+    <path d="M604 418L558 374"/>
+    <path d="M356 252L396 274"/>
+    <path d="M604 250L558 276"/>
+    <path d="M480 178V126"/>
+  </g>
+  <g filter="url(#nodeGlow)">
+    <circle cx="354" cy="430" r="10" fill="#EDAD1A"/>
+    <circle cx="604" cy="418" r="10" fill="#EDAD1A"/>
+    <circle cx="356" cy="252" r="10" fill="#EDAD1A"/>
+    <circle cx="604" cy="250" r="10" fill="#EDAD1A"/>
+    <circle cx="480" cy="126" r="10" fill="#EDAD1A"/>
+  </g>
+  <g opacity=".9">
+    <rect x="144" y="148" width="150" height="52" rx="16" fill="#082B4F" stroke="#FFFFFF" stroke-opacity=".12"/>
+    <rect x="662" y="144" width="158" height="52" rx="16" fill="#082B4F" stroke="#FFFFFF" stroke-opacity=".12"/>
+    <rect x="382" y="566" width="196" height="52" rx="16" fill="#082B4F" stroke="#FFFFFF" stroke-opacity=".12"/>
+    <circle cx="170" cy="174" r="8" fill="#EDAD1A"/>
+    <circle cx="688" cy="170" r="8" fill="#EDAD1A"/>
+    <circle cx="408" cy="592" r="8" fill="#EDAD1A"/>
+    <path d="M190 174H266M708 170H784M428 592H542" stroke="#FFFFFF" stroke-opacity=".48" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(740 130) rotate(135) scale(700 820)">
+      <stop stop-color="#0C4072"/>
+      <stop offset=".46" stop-color="#062747" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#021A36"/>
+    </radialGradient>
+    <filter id="glow" x="304" y="144" width="352" height="352" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="nodeGlow" x="324" y="96" width="310" height="364" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
