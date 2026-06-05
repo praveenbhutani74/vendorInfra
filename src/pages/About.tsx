@@ -8,18 +8,18 @@ import { CtaArrow } from "@/components/CtaArrow";
 const base = import.meta.env.BASE_URL;
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/Adani-Group-1.webp" },
-  { name: "NCC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-1.webp" },
-  { name: "Tata Projects",  logo: "https://vendorinfra.com/wp-content/uploads/2025/11/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
-  { name: "JWIL",           logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JWIL-Logo-e1649507267477.webp" },
-  { name: "Gawar",          logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-2.webp" },
-  { name: "JMC Projects",   logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JMC-logo.webp" },
-  { name: "Dilip Buildcon", logo: "https://vendorinfra.com/wp-content/uploads/2025/11/photo_2022-09-09_17-00-34.webp" },
-  { name: "INOX Wind",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/INOX-wind-logo-1.webp" },
-  { name: "IndInfravit",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/indinfravit.webp" },
-  { name: "KEC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-5.webp" },
-  { name: "Kalpataru",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-4.webp" },
-  { name: "IRB Infra",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-3.webp" },
+  { name: "Adani Group",    logo: "/images/wp/Adani-Group-1.webp" },
+  { name: "NCC",            logo: "/images/wp/logo-dmia-2-1.webp" },
+  { name: "Tata Projects",  logo: "/images/wp/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
+  { name: "JWIL",           logo: "/images/wp/JWIL-Logo-e1649507267477.webp" },
+  { name: "Gawar",          logo: "/images/wp/logo-dmia-2-2.webp" },
+  { name: "JMC Projects",   logo: "/images/wp/JMC-logo.webp" },
+  { name: "Dilip Buildcon", logo: "/images/wp/photo_2022-09-09_17-00-34.webp" },
+  { name: "INOX Wind",      logo: "/images/wp/INOX-wind-logo-1.webp" },
+  { name: "IndInfravit",    logo: "/images/wp/indinfravit.webp" },
+  { name: "KEC",            logo: "/images/wp/logo-dmia-2-5.webp" },
+  { name: "Kalpataru",      logo: "/images/wp/logo-dmia-2-4.webp" },
+  { name: "IRB Infra",      logo: "/images/wp/logo-dmia-2-3.webp" },
 ];
 
 function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {
@@ -48,32 +48,32 @@ function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {
 const usps = [
   {
     title: "End to End Value Chain Integration",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/Untitled-design-62.png",
+    image: "/images/wp/Untitled-design-62.png",
     desc: "From vendor discovery and material procurement to financing, insurance and plant & equipment hire/sales, we provide a full-stack AI powered platform that bridges every gap in infrastructure & construction. No more juggling multiple tools or vendors.",
   },
   {
     title: "Single Unified Data Lake",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/6.png",
+    image: "/images/wp/6.png",
     desc: "One unified data lake for all project, procurement, vendor, and site data-fully unified and instantly accessible. Eliminate silos, improve decision-making, and run your entire project ecosystem with real-time intelligence.",
   },
   {
     title: "Smart Decision Support via Market Intelligence",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/9.png",
+    image: "/images/wp/9.png",
     desc: "Sector insights, Industry Updates, schedules of rates, competitive intelligence, tender & PQ samples. We provide you context & foresight so you can plan strategically, not just reactively.",
   },
   {
     title: "AI & ML-Driven Insights",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/7.png",
+    image: "/images/wp/7.png",
     desc: "Vendor Infra leverages Artificial Intelligence and Machine Learning to match you with the best-suited requirement and generate real-time analytics for smarter, data-backed decisions.",
   },
   {
     title: "Safety, Security & Trust built in",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/8.png",
+    image: "/images/wp/8.png",
     desc: "Every vendor and supplier is vetted. Data security is paramount. We ensure the platform and your data adhere to high standards so your decisions are reliable, protected and scalable.",
   },
   {
     title: "Dedicated Support & Accountability",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/17.png",
+    image: "/images/wp/17.png",
     desc: "Our team is available round-the-clock. Beyond just tech support, we assign dedicated account managers (or equivalents) to guide you at every stage so that deadlines aren't just met, but exceeded.",
   },
 ];

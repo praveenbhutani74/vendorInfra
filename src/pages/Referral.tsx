@@ -9,14 +9,14 @@ const referralPrograms = [
   {
     code: "CRP",
     title: "Client Referral Program",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/11/CRP.jpg",
+    image: "/images/wp/CRP.png",
     description:
       "Refer Vendor Infra services to Infrastructure & Construction Companies, Vendors, Consultant, Suppliers, Manufacturers etc and earn Cash with each referral from our Exclusive Client Referral Program",
   },
   {
     code: "IBC",
     title: "Independent Business Consultant",
-    image: "https://vendorinfra.com/wp-content/uploads/2025/11/IBC.jpg",
+    image: "/images/wp/IBC.png",
     description:
       "Vendor Infra is ISO 14001 certified. This ISO standard provides guidelines on what has to be done to implement an environmental management system (EMS). It includes policies, processes, plans, records, and best practices that define rules regarding how your company interacts with the environment. ISO 14001 requirements give you a framework, along with guidelines. for creating EMS for any organization",
   },

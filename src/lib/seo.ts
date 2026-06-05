@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const DEFAULT_TITLE = "Vendor Infra — AI-Powered Infrastructure Procurement Platform";
+const DEFAULT_TITLE = "Vendor Infra | Vendor Management & Procurement Platform";
 const DEFAULT_DESCRIPTION =
   "Discover vendors, procure materials & access real-time market intelligence. India's #1 platform for contractors and EPC companies.";
 

@@ -15,7 +15,7 @@ export const sectors: Sector[] = [
   {
     slug: "roads-bridges",
     name: "Roads & Bridges",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/ROADS-AND-BRIDGES.jpg",
+    image: "/images/wp/roads-bridges-cinematic.jpg",
     description: "National highways, expressways, flyovers & bridge infrastructure",
     overview:
       "India has the world's second-largest road network, extending over 6.63 million km as of 2026 (up from 5.89 million km in 2013). This network handles 71% of freight and 85% of passenger movement, powering economic activity and regional connectivity. The sector contributes roughly 4.7% to GDP and supports industrial, agricultural, and tourism growth. Government programs like Bharatmala Pariyojana, PM GatiShakti, and NIP have accelerated capacity addition, while digitalization through FASTag and AI traffic monitoring is enhancing efficiency. The focus is shifting toward climate-resilient, green corridors and integrated logistics networks.",
@@ -55,7 +55,7 @@ export const sectors: Sector[] = [
   {
     slug: "urban-transport",
     name: "Urban Transport",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/URBAN-TRANSPORT.jpg",
+    image: "/images/wp/urban-transport-cinematic.jpg",
     description: "Metro rail, MRTS, BRT and urban mobility systems",
     overview:
       "Rapid urbanization has made mass transit a core pillar of city infrastructure. India hosts the world's third-largest metro network (982 km operational), which will surpass 2,000 km by 2030. Expansions across Delhi, Mumbai, Bengaluru, and Chennai support low-carbon mobility and reduced congestion. Digital ticketing, intelligent traffic systems, and safe urban stations enhance commuter experience. Public transport integration with EV and e-bus fleets is reducing urban emissions and fossil fuel dependence.",
@@ -93,7 +93,7 @@ export const sectors: Sector[] = [
   {
     slug: "railways",
     name: "Railways",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/12/RAILWAYS.jpg",
+    image: "/images/wp/railways-cinematic.jpg",
     description: "Dedicated freight corridors, high-speed rail and station upgrades",
     overview:
       "Indian Railways is the lifeline of national mobility, transporting 23 million passengers and 1.55 billion tonnes of freight every day. Covering 68,426 route km, the network is 95.3% electrified, enhancing efficiency and cutting emissions. Capex investments of ₹2.65 lakh crore (FY26) support modern coaches, AI signaling, and station redevelopment. Dedicated freight corridors and high-speed rail projects are pushing India toward a next-generation rail economy.",
@@ -131,7 +131,7 @@ export const sectors: Sector[] = [
   {
     slug: "airports",
     name: "Airports & Aviation",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/AIRPORTS.jpg",
+    image: "/images/wp/airports-cinematic.jpg",
     description: "Greenfield airports, terminal expansions and airside works",
     overview:
       "India's aviation sector is among the fastest growing globally, projected to handle 1 billion passengers annually within a decade. Operational airports rose from 74 (2014) to 149 (2026), boosting Tier-2 and Tier-3 connectivity. With US$15 billion in investments, modernization covers terminal expansion, cargo handling, and smart operations. The sector is embracing AI security, biometric boarding, and green energy to reduce carbon intensity.",
@@ -169,7 +169,7 @@ export const sectors: Sector[] = [
   {
     slug: "transmission-lines-substations",
     name: "Transmission Lines & Substations",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/TRANSMISSION-LINE.jpg",
+    image: "/images/wp/transmission-lines-cinematic.jpg",
     description: "HV/EHV transmission networks and substation projects",
     overview:
       "India's grid is a critical enabler of industrial and renewable growth. Over 4.98 lakh circuit km of 400 kV+ lines connect all regions, with interstate capacity of 123 GW. Investments worth ₹4.1 lakh crore (FY25–30) focus on smart substations, HVDC corridors, and real-time SCADA systems. The network integrates solar and wind projects under Green Energy Corridors.",
@@ -205,7 +205,7 @@ export const sectors: Sector[] = [
   {
     slug: "industrial-corridor",
     name: "Industrial Corridors",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/INDUSTRIAL-CORRIDOR.jpg",
+    image: "/images/wp/industrial-corridor-cinematic.jpg",
     description: "DMIC, CBIC and other industrial zone developments",
     overview:
       "Industrial corridors are designed as integrated economic zones combining manufacturing, urban living, and logistics. Stretching over 4,200 km, they anchor India's goal to raise manufacturing GDP share to 25% by 2030. Each corridor links smart cities, ports, and freight networks, facilitating plug-and-play industrialization. They have generated massive foreign interest from Japan, Singapore, and Gulf sovereign funds.",
@@ -242,7 +242,7 @@ export const sectors: Sector[] = [
   {
     slug: "smart-cities",
     name: "Smart Cities",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/12/smart-city-3.jpg",
+    image: "/images/wp/smart-cities-cinematic.jpg",
     description: "Integrated command centers, ICT infrastructure and urban services",
     overview:
       "Covering 100 cities, the Smart Cities Mission represents a nationwide push for data-driven urban transformation. Projects worth ₹2.1 lakh crore drive ICT integration for mobility, water, waste, and energy systems. Integrated Command & Control Centres (ICCCs) operate in 80+ cities, enabling digital governance and faster public service delivery. The mission has significantly enhanced urban resilience and citizen participation.",
@@ -279,7 +279,7 @@ export const sectors: Sector[] = [
   {
     slug: "ports",
     name: "Ports & Maritime",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/PORTS.jpg",
+    image: "/images/wp/ports-maritime-cinematic.jpg",
     description: "Major ports, minor ports and inland waterways infrastructure",
     overview:
       "Ports enable India's trade-led industrial strategy, handling 95% of cargo volume and 70% by value. Twelve major ports and 210 minor ports now hold 2,600 MTPA capacity with 1.49 billion-tonne throughput (FY25). Under Sagarmala Programme (₹5.6 lakh crore), automation, mechanization, and green initiatives are redefining maritime efficiency. Inland waterways development is reducing freight costs and GHG emissions.",
@@ -316,7 +316,7 @@ export const sectors: Sector[] = [
   {
     slug: "water-waste-water",
     name: "Water & Waste Water",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/WATER-AND-WASTE-WATER.jpg",
+    image: "/images/wp/water-waste-water-cinematic.jpg",
     description: "Water supply, sewage treatment and distribution networks",
     overview:
       "India's water infrastructure is advancing toward universal access and sustainability. The Jal Jeevan Mission achieved 96% rural coverage, bringing tap water to 14 crore households. Urban programs (AMRUT 2.0) are modernizing wastewater treatment capacities to 38,000 MLD by 2030. IoT networks now monitor water quality and leakage in 150+ cities, reducing losses and improving efficiency. Water recycling and reuse markets are growing in industrial corridors.",
@@ -353,7 +353,7 @@ export const sectors: Sector[] = [
   {
     slug: "renewable-power",
     name: "Renewable Power",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/RENEWABLE-POWER.jpg",
+    image: "/images/wp/renewable-power-cinematic.jpg",
     description: "Solar, wind, hydro and hybrid renewable energy projects",
     overview:
       "India is charting a historic energy transition with 204 GW renewables in 2026 and a 500 GW target by 2030. Solar (104 GW) and wind (45 GW) drive this growth; hydro and biomass provide balance. The sector attracts global capital via green bonds and PPAs with data centers and industries. The Green Hydrogen Mission (₹8 lakh crore) and battery manufacturing initiatives position India as a clean tech export leader.",
@@ -390,7 +390,7 @@ export const sectors: Sector[] = [
   {
     slug: "power",
     name: "Power",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/12/Power.jpg",
+    image: "/images/wp/power-cinematic.jpg",
     description: "Thermal, hydro and nuclear power generation projects",
     overview:
       "India's power sector is among the largest in the world, with 435 GW installed capacity supplying a peak demand of 253 GW. Renewables already form 46% of capacity, well ahead of global averages. Smart metering and digital distribution under the Revamped DISCOM Scheme are reducing T&D losses to 15.1%. Massive grid modernization and storage investments will support energy-intensive digital and EV economies.",
@@ -427,7 +427,7 @@ export const sectors: Sector[] = [
   {
     slug: "buildings-industrial",
     name: "Buildings & Industrial Projects",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/BUILDINGS-INDUSTRIAL-PROJECTS.jpg",
+    image: "/images/wp/buildings-industrial-cinematic.jpg",
     description: "Commercial complexes, factories and industrial facilities",
     overview:
       "The construction sector fuels India's urban and industrial transformation, creating over 50 million jobs. Valued at US$480 billion in 2025 and heading toward US$1 trillion by 2030, growth is driven by housing, commercial real estate, and logistics parks. Transition toward green and digital construction — PEB, BIM, and sustainable materials — has cut project times by 40%. Government schemes like PM Awas Yojana and PLI for construction materials are stimulating capacity and innovation.",
@@ -464,7 +464,7 @@ export const sectors: Sector[] = [
   {
     slug: "oil-gas",
     name: "Oil & Gas",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/11/OIL-GAS.jpg",
+    image: "/images/wp/oil-gas-cinematic.jpg",
     description: "Offshore platforms, pipelines and refinery infrastructure",
     overview:
       "India's oil & gas sector, valued at US$150 billion by 2030, is undergoing strategic transformation to support cleaner energy use. With refining capacity of 254 MMTPA (4th globally) and expanding pipelines (23,300 km → 34,000 km by 2028), India is emerging as Asia's refining hub. The government's vision is to boost natural gas to 15% of the energy mix and expand city gas distribution to 70% of districts.",
@@ -501,7 +501,7 @@ export const sectors: Sector[] = [
   {
     slug: "irrigation-tunneling",
     name: "Irrigation & Tunnel Projects",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/12/Irrigation-Tunnel-Project.jpg",
+    image: "/images/wp/irrigation-tunneling-cinematic.jpg",
     description: "Dams, canals, micro-irrigation and tunnel construction",
     overview:
       "Irrigation supports India's agricultural backbone while tunnels enable connectivity across complex terrains. Under PMKSY, ₹3.5 lakh crore has been deployed to modernize canals and lift systems, covering over 100 lakh hectares of farmland. Advanced TBM methodologies drive 1,100 km of active tunnel projects across metros, hydro, and highways. Technological innovation is reducing construction time and improving safety across mountainous regions.",
@@ -537,7 +537,7 @@ export const sectors: Sector[] = [
   {
     slug: "solid-waste-management",
     name: "Solid Waste Management",
-    image: "https://vendorinfra.com/wp-content/uploads/2020/12/Solid-Waste-Management.jpg",
+    image: "/images/wp/solid-waste-management-cinematic.jpg",
     description: "Waste processing plants, landfill and material recovery facilities",
     overview:
       "India produces 165,000 tonnes of municipal waste daily; scientific management is now core to urban sustainability. Driven by the Swachh Bharat Mission (U) 2.0, waste processing capacity has reached 76% of total generation (up from just 20% in 2014). Cities adopt GPS tracking, AI sorting, and integrated segregation systems. Recycling and waste-to-energy initiatives make SWM a circular-economy pillar.",

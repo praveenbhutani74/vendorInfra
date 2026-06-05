@@ -15,7 +15,7 @@ const services = [
   {
     title: "AI-Powered Vendor Discovery",
     icon: Search,
-    image: "https://vendorinfra.com/wp-content/uploads/2026/06/F0pKf-1.jpg",
+    image: "/images/services/ai-vendor-discovery.jpg",
     imageAlt: "AI vendor discovery platform",
     flip: false,
     points: [
@@ -36,7 +36,7 @@ const services = [
   {
     title: "Smart Price Discovery",
     icon: Calculator,
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/3-1.png",
+    image: "/images/services/smart-price-discovery.jpg",
     imageAlt: "Smart price discovery and quotation",
     flip: true,
     points: [
@@ -57,7 +57,7 @@ const services = [
   {
     title: "AI-Powered Plants & Equipment",
     icon: Tractor,
-    image: "https://vendorinfra.com/wp-content/uploads/2026/05/ChatGPT-Image-May-8-2026-03_39_45-PM.png",
+    image: "/images/services/plants-equipment-marketplace.png",
     imageAlt: "Plants and heavy equipment marketplace",
     flip: false,
     points: [
@@ -78,7 +78,7 @@ const services = [
   {
     title: "Smart Material Procurement",
     icon: Package,
-    image: "https://vendorinfra.com/wp-content/uploads/2026/06/Ha9VV-1.jpg",
+    image: "/images/services/smart-material-procurement.jpg",
     imageAlt: "Smart material procurement for construction",
     flip: true,
     points: [
@@ -121,7 +121,7 @@ const services = [
   {
     title: "Smart Project Insurance",
     icon: ShieldCheck,
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/6-1.png",
+    image: "/images/services/project-insurance.jpg",
     imageAlt: "Smart project insurance and protection",
     flip: false,
     points: [
@@ -142,7 +142,7 @@ const services = [
   {
     title: "AI Powered Enterprise Services",
     icon: Briefcase,
-    image: "https://vendorinfra.com/wp-content/uploads/2026/06/s6kff-1.jpg",
+    image: "/images/services/ai-enterprise-services.jpg",
     imageAlt: "Enterprise services and business growth",
     flip: true,
     points: [
@@ -163,7 +163,7 @@ const services = [
   {
     title: "Other Services",
     icon: BarChart3,
-    image: "https://vendorinfra.com/wp-content/uploads/2025/10/8-1.png",
+    image: "/images/services/sector-intelligence.jpg",
     imageAlt: "Sector intelligence and SOR data analytics",
     flip: false,
     points: [

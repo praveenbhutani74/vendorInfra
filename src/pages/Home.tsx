@@ -74,14 +74,14 @@ type ServiceItem = {
 };
 
 const services: ServiceItem[] = [
-  { icon: Search,      title: "AI-Powered Vendor Discovery",     href: PORTAL_LOGIN_URL, external: true, image: "https://vendorinfra.com/wp-content/uploads/2026/06/F0pKf-1.jpg",                                                            desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
-  { icon: Calculator,  title: "Smart Price Discovery",           href: PORTAL_LOGIN_URL, external: true, image: "https://vendorinfra.com/wp-content/uploads/2025/10/3-1.png",                                desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
-  { icon: Tractor,     title: "AI-Powered Plants & Equipment",   href: PORTAL_LOGIN_URL, external: true, image: "https://vendorinfra.com/wp-content/uploads/2026/05/ChatGPT-Image-May-8-2026-03_39_45-PM.png", desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
-  { icon: Package,     title: "Smart Material Procurement",      href: "/materials", image: "https://vendorinfra.com/wp-content/uploads/2026/06/Ha9VV-1.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
+  { icon: Search,      title: "AI-Powered Vendor Discovery",     href: PORTAL_LOGIN_URL, external: true, image: "/images/services/ai-vendor-discovery.jpg",                                                            desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
+  { icon: Calculator,  title: "Smart Price Discovery",           href: PORTAL_LOGIN_URL, external: true, image: "/images/services/smart-price-discovery.jpg",           desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
+  { icon: Tractor,     title: "AI-Powered Plants & Equipment",   href: PORTAL_LOGIN_URL, external: true, image: "/images/services/plants-equipment-marketplace.png",    desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
+  { icon: Package,     title: "Smart Material Procurement",      href: "/materials", image: "/images/services/smart-material-procurement.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
   { icon: Factory,     title: "Contract Manufacturing",          href: "/contract-manufacturing", image: "/contract-manufacturing-ai.jpg", desc: "Design, source, manufacture, and deliver products through verified manufacturers, structured workflows, and real-time execution visibility." },
-  { icon: ShieldCheck, title: "Smart Project Insurance",         href: "/contact", image: "https://vendorinfra.com/wp-content/uploads/2025/10/6-1.png",                                desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
-  { icon: Briefcase,   title: "AI Powered Enterprise Services",  href: "/contact", image: "https://vendorinfra.com/wp-content/uploads/2026/06/s6kff-1.jpg",                                                          desc: "Leverage enterprise solutions for subcontracting, organisational growth, market entry, and diversification into new businesses." },
-  { icon: BarChart3,   title: "Other Services",                  href: "/services", image: "https://vendorinfra.com/wp-content/uploads/2025/10/8-1.png",                                desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." },
+  { icon: ShieldCheck, title: "Smart Project Insurance",         href: "/contact", image: "/images/services/project-insurance.jpg",             desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
+  { icon: Briefcase,   title: "AI Powered Enterprise Services",  href: "/contact", image: "/images/services/ai-enterprise-services.jpg",                                                          desc: "Leverage enterprise solutions for subcontracting, organisational growth, market entry, and diversification into new businesses." },
+  { icon: BarChart3,   title: "Other Services",                  href: "/services", image: "/images/services/sector-intelligence.jpg",           desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." },
 ];
 
 const stats = [
@@ -92,9 +92,9 @@ const stats = [
 ];
 
 const blogs = [
-  { img: "https://vendorinfra.com/wp-content/uploads/2024/01/photo_2025-09-03_23-17-56.jpg", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
-  { img: "https://vendorinfra.com/wp-content/uploads/2024/01/Plants-and-equipments-blog-image.png", date: "March 30, 2026", cat: "Technology",  title: "SaaS Revolution in Construction and Infrastructure Industry",                                  excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
-  { img: "https://vendorinfra.com/wp-content/uploads/2024/02/photo_2025-09-03_23-03-06.jpg", date: "March 30, 2026", cat: "AI",          title: "Promote Digitalisation in Construction Industry: The Catalysts of Change",                       excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." },
+  { img: "/images/blog/construction-digital-blueprint.jpg", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
+  { img: "/images/blog/equipment-marketplace-phone.jpg", date: "March 30, 2026", cat: "Technology",  title: "SaaS Revolution in Construction and Infrastructure Industry",                                  excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
+  { img: "/images/blog/construction-site-digital.jpg", date: "March 30, 2026", cat: "AI",          title: "Promote Digitalisation in Construction Industry: The Catalysts of Change",                       excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." },
 
 ];
 
@@ -108,40 +108,40 @@ const testimonials = [
 ];
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/Adani-Group-1.webp" },
-  { name: "NCC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-1.webp" },
-  { name: "Tata Projects",  logo: "https://vendorinfra.com/wp-content/uploads/2025/11/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
-  { name: "JWIL",           logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JWIL-Logo-e1649507267477.webp" },
-  { name: "Gawar",          logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-2.webp" },
-  { name: "JMC Projects",   logo: "https://vendorinfra.com/wp-content/uploads/2025/11/JMC-logo.webp" },
-  { name: "Dilip Buildcon", logo: "https://vendorinfra.com/wp-content/uploads/2025/11/photo_2022-09-09_17-00-34.webp" },
-  { name: "INOX Wind",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/INOX-wind-logo-1.webp" },
-  { name: "IndInfravit",    logo: "https://vendorinfra.com/wp-content/uploads/2025/11/indinfravit.webp" },
-  { name: "KEC",            logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-5.webp" },
-  { name: "Kalpataru",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-4.webp" },
-  { name: "IRB Infra",      logo: "https://vendorinfra.com/wp-content/uploads/2025/11/logo-dmia-2-3.webp" },
+  { name: "Adani Group",    logo: "/images/wp/Adani-Group-1.webp" },
+  { name: "NCC",            logo: "/images/wp/logo-dmia-2-1.webp" },
+  { name: "Tata Projects",  logo: "/images/wp/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
+  { name: "JWIL",           logo: "/images/wp/JWIL-Logo-e1649507267477.webp" },
+  { name: "Gawar",          logo: "/images/wp/logo-dmia-2-2.webp" },
+  { name: "JMC Projects",   logo: "/images/wp/JMC-logo.webp" },
+  { name: "Dilip Buildcon", logo: "/images/wp/photo_2022-09-09_17-00-34.webp" },
+  { name: "INOX Wind",      logo: "/images/wp/INOX-wind-logo-1.webp" },
+  { name: "IndInfravit",    logo: "/images/wp/indinfravit.webp" },
+  { name: "KEC",            logo: "/images/wp/logo-dmia-2-5.webp" },
+  { name: "Kalpataru",      logo: "/images/wp/logo-dmia-2-4.webp" },
+  { name: "IRB Infra",      logo: "/images/wp/logo-dmia-2-3.webp" },
 ];
 
 const associations = [
-  { name: "ISO 14001",     logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-14001-certification-label-vector-1811356-e1766492588397.avif" },
-  { name: "ISO 27001",     logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-27001-certification-label-vector-1811348-e1766492622776.avif" },
-  { name: "ISO Certified", logo: "https://vendorinfra.com/wp-content/uploads/2025/12/iso-certified-golden-label-vector-illustration-51941869.webp" },
-  { name: "GEM",           logo: "https://vendorinfra.com/wp-content/uploads/2025/12/GEM.png" },
-  { name: "FICCI",         logo: "https://vendorinfra.com/wp-content/uploads/2025/12/FICCI_logo.svg.png" },
-  { name: "Startup India", logo: "https://vendorinfra.com/wp-content/uploads/2025/12/m1-logo.png" },
-  { name: "CII",           logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Official_logo_of_the_Confederation_of_Indian_Industry_CII.svg.png" },
-  { name: "DPIIT",         logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Screenshot-2025-12-23-at-6.05.03-PM.png" },
-  { name: "InvoiceMart",   logo: "https://vendorinfra.com/wp-content/uploads/2025/12/invoicemartlogo.png" },
-  { name: "MSME",          logo: "https://vendorinfra.com/wp-content/uploads/2025/12/msme-logo.webp" },
+  { name: "ISO 14001",     logo: "/images/wp/iso-14001-certification-label-vector-1811356-e1766492588397.avif" },
+  { name: "ISO 27001",     logo: "/images/wp/iso-27001-certification-label-vector-1811348-e1766492622776.avif" },
+  { name: "ISO Certified", logo: "/images/wp/iso-certified-golden-label-vector-illustration-51941869.webp" },
+  { name: "GEM",           logo: "/images/wp/GEM.png" },
+  { name: "FICCI",         logo: "/images/wp/FICCI_logo.svg.png" },
+  { name: "Startup India", logo: "/images/wp/m1-logo.png" },
+  { name: "CII",           logo: "/images/wp/Official_logo_of_the_Confederation_of_Indian_Industry_CII.svg.png" },
+  { name: "DPIIT",         logo: "/images/wp/Screenshot-2025-12-23-at-6.05.03-PM.png" },
+  { name: "InvoiceMart",   logo: "/images/wp/invoicemartlogo.png" },
+  { name: "MSME",          logo: "/images/wp/msme-logo.webp" },
 ];
 
 const financingPartners = [
-  { name: "HDFC Bank",            logo: "https://vendorinfra.com/wp-content/uploads/2025/12/HDFC-Bank-logo-scaled.png" },
-  { name: "Aditya Birla Capital",  logo: "https://vendorinfra.com/wp-content/uploads/2025/12/ABC-Logo_600-x-315.jpg" },
-  { name: "Tata Capital",         logo: "https://vendorinfra.com/wp-content/uploads/2025/12/Tata_Capital_Logo-01-scaled.jpg" },
-  { name: "Shriram Finance",      logo: "https://vendorinfra.com/wp-content/uploads/2025/12/a8e302e62f283694c1c25f1d1233d7a4.jpg" },
-  { name: "L&T Finance",          logo: "https://vendorinfra.com/wp-content/uploads/2025/12/l-t-finance-logo_black-white-1.webp" },
-  { name: "IDFC FIRST Bank",      logo: "https://vendorinfra.com/wp-content/uploads/2025/12/IDFC.NS_BIG-e9912e55.png" },
+  { name: "HDFC Bank",            logo: "/images/wp/HDFC-Bank-logo-scaled.png" },
+  { name: "Aditya Birla Capital",  logo: "/images/wp/ABC-Logo_600-x-315.png" },
+  { name: "Tata Capital",         logo: "/images/wp/Tata_Capital_Logo-01-scaled.png" },
+  { name: "Shriram Finance",      logo: "/images/wp/a8e302e62f283694c1c25f1d1233d7a4.png" },
+  { name: "L&T Finance",          logo: "/images/wp/l-t-finance-logo_black-white-1.webp" },
+  { name: "IDFC FIRST Bank",      logo: "/images/wp/IDFC.NS_BIG-e9912e55.png" },
 ];
 
 const awards = [
