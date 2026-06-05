@@ -8,18 +8,18 @@ import { CtaArrow } from "@/components/CtaArrow";
 const base = import.meta.env.BASE_URL;
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "/images/wp/Adani-Group-1.webp" },
-  { name: "NCC",            logo: "/images/wp/logo-dmia-2-1.webp" },
-  { name: "Tata Projects",  logo: "/images/wp/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
-  { name: "JWIL",           logo: "/images/wp/JWIL-Logo-e1649507267477.webp" },
-  { name: "Gawar",          logo: "/images/wp/logo-dmia-2-2.webp" },
-  { name: "JMC Projects",   logo: "/images/wp/JMC-logo.webp" },
-  { name: "Dilip Buildcon", logo: "/images/wp/photo_2022-09-09_17-00-34.webp" },
-  { name: "INOX Wind",      logo: "/images/wp/INOX-wind-logo-1.webp" },
-  { name: "IndInfravit",    logo: "/images/wp/indinfravit.webp" },
-  { name: "KEC",            logo: "/images/wp/logo-dmia-2-5.webp" },
-  { name: "Kalpataru",      logo: "/images/wp/logo-dmia-2-4.webp" },
-  { name: "IRB Infra",      logo: "/images/wp/logo-dmia-2-3.webp" },
+  { name: "Adani Group",    logo: "/logos/adani-group.svg" },
+  { name: "NCC",            logo: "/logos/ncc.svg" },
+  { name: "Tata Projects",  logo: "/logos/tata-projects.svg" },
+  { name: "JWIL",           logo: "/logos/jwil.svg" },
+  { name: "Gawar",          logo: "/logos/gawar.svg" },
+  { name: "JMC Projects",   logo: "/logos/jmc-projects.svg" },
+  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
+  { name: "INOX Wind",      logo: "/logos/inox-wind.svg" },
+  { name: "IndInfravit",    logo: "/logos/indinfravit.svg" },
+  { name: "KEC",            logo: "/logos/kec.svg" },
+  { name: "Kalpataru",      logo: "/logos/kalpataru.svg" },
+  { name: "IRB Infra",      logo: "/logos/irb-infra.svg" },
 ];
 
 function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {

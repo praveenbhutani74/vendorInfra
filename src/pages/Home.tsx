@@ -108,40 +108,40 @@ const testimonials = [
 ];
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "/images/wp/Adani-Group-1.webp" },
-  { name: "NCC",            logo: "/images/wp/logo-dmia-2-1.webp" },
-  { name: "Tata Projects",  logo: "/images/wp/tata_projects_logo-removebg-preview-1-e1665663043137.webp" },
-  { name: "JWIL",           logo: "/images/wp/JWIL-Logo-e1649507267477.webp" },
-  { name: "Gawar",          logo: "/images/wp/logo-dmia-2-2.webp" },
-  { name: "JMC Projects",   logo: "/images/wp/JMC-logo.webp" },
-  { name: "Dilip Buildcon", logo: "/images/wp/photo_2022-09-09_17-00-34.webp" },
-  { name: "INOX Wind",      logo: "/images/wp/INOX-wind-logo-1.webp" },
-  { name: "IndInfravit",    logo: "/images/wp/indinfravit.webp" },
-  { name: "KEC",            logo: "/images/wp/logo-dmia-2-5.webp" },
-  { name: "Kalpataru",      logo: "/images/wp/logo-dmia-2-4.webp" },
-  { name: "IRB Infra",      logo: "/images/wp/logo-dmia-2-3.webp" },
+  { name: "Adani Group",    logo: "/logos/adani-group.svg" },
+  { name: "NCC",            logo: "/logos/ncc.svg" },
+  { name: "Tata Projects",  logo: "/logos/tata-projects.svg" },
+  { name: "JWIL",           logo: "/logos/jwil.svg" },
+  { name: "Gawar",          logo: "/logos/gawar.svg" },
+  { name: "JMC Projects",   logo: "/logos/jmc-projects.svg" },
+  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
+  { name: "INOX Wind",      logo: "/logos/inox-wind.svg" },
+  { name: "IndInfravit",    logo: "/logos/indinfravit.svg" },
+  { name: "KEC",            logo: "/logos/kec.svg" },
+  { name: "Kalpataru",      logo: "/logos/kalpataru.svg" },
+  { name: "IRB Infra",      logo: "/logos/irb-infra.svg" },
 ];
 
 const associations = [
-  { name: "ISO 14001",     logo: "/images/wp/iso-14001-certification-label-vector-1811356-e1766492588397.avif" },
-  { name: "ISO 27001",     logo: "/images/wp/iso-27001-certification-label-vector-1811348-e1766492622776.avif" },
-  { name: "ISO Certified", logo: "/images/wp/iso-certified-golden-label-vector-illustration-51941869.webp" },
-  { name: "GEM",           logo: "/images/wp/GEM.png" },
-  { name: "FICCI",         logo: "/images/wp/FICCI_logo.svg.png" },
-  { name: "Startup India", logo: "/images/wp/m1-logo.png" },
-  { name: "CII",           logo: "/images/wp/Official_logo_of_the_Confederation_of_Indian_Industry_CII.svg.png" },
-  { name: "DPIIT",         logo: "/images/wp/Screenshot-2025-12-23-at-6.05.03-PM.png" },
-  { name: "InvoiceMart",   logo: "/images/wp/invoicemartlogo.png" },
-  { name: "MSME",          logo: "/images/wp/msme-logo.webp" },
+  { name: "ISO 14001",     logo: "/logos/iso-14001.svg" },
+  { name: "ISO 27001",     logo: "/logos/iso-27001.svg" },
+  { name: "ISO Certified", logo: "/logos/iso-certified.svg" },
+  { name: "GEM",           logo: "/logos/gem.svg" },
+  { name: "FICCI",         logo: "/logos/ficci.svg" },
+  { name: "Startup India", logo: "/logos/startup-india.svg" },
+  { name: "CII",           logo: "/logos/cii.svg" },
+  { name: "DPIIT",         logo: "/logos/dpiit.svg" },
+  { name: "InvoiceMart",   logo: "/logos/invoicemart.svg" },
+  { name: "MSME",          logo: "/logos/msme.svg" },
 ];
 
 const financingPartners = [
-  { name: "HDFC Bank",            logo: "/images/wp/HDFC-Bank-logo-scaled.png" },
-  { name: "Aditya Birla Capital",  logo: "/images/wp/ABC-Logo_600-x-315.png" },
-  { name: "Tata Capital",         logo: "/images/wp/Tata_Capital_Logo-01-scaled.png" },
-  { name: "Shriram Finance",      logo: "/images/wp/a8e302e62f283694c1c25f1d1233d7a4.png" },
-  { name: "L&T Finance",          logo: "/images/wp/l-t-finance-logo_black-white-1.webp" },
-  { name: "IDFC FIRST Bank",      logo: "/images/wp/IDFC.NS_BIG-e9912e55.png" },
+  { name: "HDFC Bank",             logo: "/logos/hdfc-bank.svg" },
+  { name: "Aditya Birla Capital",  logo: "/logos/aditya-birla-capital.svg" },
+  { name: "Tata Capital",          logo: "/logos/tata-capital.svg" },
+  { name: "Shriram Finance",       logo: "/logos/shriram-finance.svg" },
+  { name: "L&T Finance",           logo: "/logos/l-t-finance.svg" },
+  { name: "IDFC FIRST Bank",       logo: "/logos/idfc-first-bank.svg" },
 ];
 
 const awards = [
@@ -1227,7 +1227,7 @@ export default function Home() {
 
 
       {/* ── LOGO SHOWCASE (redesigned) ─────────────────── */}
-      <section className="relative overflow-hidden bg-[#00274d] py-20">
+    <section className="relative overflow-hidden bg-[#00274d] py-20">
         {/* subtle grid background */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.5]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px)", backgroundSize: "44px 44px" }} />
         <div className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[60%] h-72 rounded-full bg-[#edad1a]/[0.08] blur-3xl" />
