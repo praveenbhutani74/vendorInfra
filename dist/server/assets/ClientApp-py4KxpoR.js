@@ -524,13 +524,12 @@ function Navbar() {
     ) })
   ] });
 }
-const faviconUrl = `${"/"}favicon.svg`;
 function Footer() {
   return /* @__PURE__ */ jsxs("footer", { className: "bg-[#00274d] text-white", children: [
     /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col md:flex-row md:justify-between gap-10", children: [
       /* @__PURE__ */ jsxs("div", { className: "shrink-0 max-w-[220px] space-y-4", children: [
         /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2.5", children: [
-          /* @__PURE__ */ jsx("img", { src: faviconUrl, alt: "Vendor Infra icon", className: "h-9 w-9" }),
+          /* @__PURE__ */ jsx("img", { src: "/favicon.ico", alt: "Vendor Infra icon", className: "h-9 w-9" }),
           /* @__PURE__ */ jsxs("span", { className: "text-xl font-semibold tracking-tight text-white leading-none", children: [
             "vendor infra",
             /* @__PURE__ */ jsx("sup", { className: "text-[#edad1a] text-xs font-bold ml-0.5", children: "®" })
@@ -1912,7 +1911,7 @@ const sectors = [
   {
     slug: "roads-bridges",
     name: "Roads & Bridges",
-    image: "/images/wp/roads-bridges-cinematic.jpg",
+    image: "/images/wp/ROADS-AND-BRIDGES-600x400.jpg",
     description: "National highways, expressways, flyovers & bridge infrastructure",
     overview: "India has the world's second-largest road network, extending over 6.63 million km as of 2026 (up from 5.89 million km in 2013). This network handles 71% of freight and 85% of passenger movement, powering economic activity and regional connectivity. The sector contributes roughly 4.7% to GDP and supports industrial, agricultural, and tourism growth. Government programs like Bharatmala Pariyojana, PM GatiShakti, and NIP have accelerated capacity addition, while digitalization through FASTag and AI traffic monitoring is enhancing efficiency. The focus is shifting toward climate-resilient, green corridors and integrated logistics networks.",
     keyStats: [
@@ -1950,7 +1949,7 @@ const sectors = [
   {
     slug: "urban-transport",
     name: "Urban Transport",
-    image: "/images/wp/urban-transport-cinematic.jpg",
+    image: "/images/wp/URBAN-TRANSPORT.jpg",
     description: "Metro rail, MRTS, BRT and urban mobility systems",
     overview: "Rapid urbanization has made mass transit a core pillar of city infrastructure. India hosts the world's third-largest metro network (982 km operational), which will surpass 2,000 km by 2030. Expansions across Delhi, Mumbai, Bengaluru, and Chennai support low-carbon mobility and reduced congestion. Digital ticketing, intelligent traffic systems, and safe urban stations enhance commuter experience. Public transport integration with EV and e-bus fleets is reducing urban emissions and fossil fuel dependence.",
     keyStats: [
@@ -1986,7 +1985,7 @@ const sectors = [
   {
     slug: "railways",
     name: "Railways",
-    image: "/images/wp/railways-cinematic.jpg",
+    image: "/images/wp/RAILWAYS.jpg",
     description: "Dedicated freight corridors, high-speed rail and station upgrades",
     overview: "Indian Railways is the lifeline of national mobility, transporting 23 million passengers and 1.55 billion tonnes of freight every day. Covering 68,426 route km, the network is 95.3% electrified, enhancing efficiency and cutting emissions. Capex investments of ₹2.65 lakh crore (FY26) support modern coaches, AI signaling, and station redevelopment. Dedicated freight corridors and high-speed rail projects are pushing India toward a next-generation rail economy.",
     keyStats: [
@@ -2022,7 +2021,7 @@ const sectors = [
   {
     slug: "airports",
     name: "Airports & Aviation",
-    image: "/images/wp/airports-cinematic.jpg",
+    image: "/images/wp/AIRPORTS.jpg",
     description: "Greenfield airports, terminal expansions and airside works",
     overview: "India's aviation sector is among the fastest growing globally, projected to handle 1 billion passengers annually within a decade. Operational airports rose from 74 (2014) to 149 (2026), boosting Tier-2 and Tier-3 connectivity. With US$15 billion in investments, modernization covers terminal expansion, cargo handling, and smart operations. The sector is embracing AI security, biometric boarding, and green energy to reduce carbon intensity.",
     keyStats: [
@@ -2058,7 +2057,7 @@ const sectors = [
   {
     slug: "transmission-lines-substations",
     name: "Transmission Lines & Substations",
-    image: "/images/wp/transmission-lines-cinematic.jpg",
+    image: "/images/wp/TRANSMISSION-LINE.jpg",
     description: "HV/EHV transmission networks and substation projects",
     overview: "India's grid is a critical enabler of industrial and renewable growth. Over 4.98 lakh circuit km of 400 kV+ lines connect all regions, with interstate capacity of 123 GW. Investments worth ₹4.1 lakh crore (FY25–30) focus on smart substations, HVDC corridors, and real-time SCADA systems. The network integrates solar and wind projects under Green Energy Corridors.",
     keyStats: [
@@ -2092,7 +2091,7 @@ const sectors = [
   {
     slug: "industrial-corridor",
     name: "Industrial Corridors",
-    image: "/images/wp/industrial-corridor-cinematic.jpg",
+    image: "/images/wp/INDUSTRIAL-CORRIDOR.jpg",
     description: "DMIC, CBIC and other industrial zone developments",
     overview: "Industrial corridors are designed as integrated economic zones combining manufacturing, urban living, and logistics. Stretching over 4,200 km, they anchor India's goal to raise manufacturing GDP share to 25% by 2030. Each corridor links smart cities, ports, and freight networks, facilitating plug-and-play industrialization. They have generated massive foreign interest from Japan, Singapore, and Gulf sovereign funds.",
     keyStats: [
@@ -2127,7 +2126,7 @@ const sectors = [
   {
     slug: "smart-cities",
     name: "Smart Cities",
-    image: "/images/wp/smart-cities-cinematic.jpg",
+    image: "/images/wp/SMART-CITY.jpg",
     description: "Integrated command centers, ICT infrastructure and urban services",
     overview: "Covering 100 cities, the Smart Cities Mission represents a nationwide push for data-driven urban transformation. Projects worth ₹2.1 lakh crore drive ICT integration for mobility, water, waste, and energy systems. Integrated Command & Control Centres (ICCCs) operate in 80+ cities, enabling digital governance and faster public service delivery. The mission has significantly enhanced urban resilience and citizen participation.",
     keyStats: [
@@ -2162,7 +2161,7 @@ const sectors = [
   {
     slug: "ports",
     name: "Ports & Maritime",
-    image: "/images/wp/ports-maritime-cinematic.jpg",
+    image: "/images/wp/PORTS.jpg",
     description: "Major ports, minor ports and inland waterways infrastructure",
     overview: "Ports enable India's trade-led industrial strategy, handling 95% of cargo volume and 70% by value. Twelve major ports and 210 minor ports now hold 2,600 MTPA capacity with 1.49 billion-tonne throughput (FY25). Under Sagarmala Programme (₹5.6 lakh crore), automation, mechanization, and green initiatives are redefining maritime efficiency. Inland waterways development is reducing freight costs and GHG emissions.",
     keyStats: [
@@ -2197,7 +2196,7 @@ const sectors = [
   {
     slug: "water-waste-water",
     name: "Water & Waste Water",
-    image: "/images/wp/water-waste-water-cinematic.jpg",
+    image: "/images/wp/WATER-AND-WASTE-WATER.jpg",
     description: "Water supply, sewage treatment and distribution networks",
     overview: "India's water infrastructure is advancing toward universal access and sustainability. The Jal Jeevan Mission achieved 96% rural coverage, bringing tap water to 14 crore households. Urban programs (AMRUT 2.0) are modernizing wastewater treatment capacities to 38,000 MLD by 2030. IoT networks now monitor water quality and leakage in 150+ cities, reducing losses and improving efficiency. Water recycling and reuse markets are growing in industrial corridors.",
     keyStats: [
@@ -2232,7 +2231,7 @@ const sectors = [
   {
     slug: "renewable-power",
     name: "Renewable Power",
-    image: "/images/wp/renewable-power-cinematic.jpg",
+    image: "/images/wp/RENEWABLE-POWER.jpg",
     description: "Solar, wind, hydro and hybrid renewable energy projects",
     overview: "India is charting a historic energy transition with 204 GW renewables in 2026 and a 500 GW target by 2030. Solar (104 GW) and wind (45 GW) drive this growth; hydro and biomass provide balance. The sector attracts global capital via green bonds and PPAs with data centers and industries. The Green Hydrogen Mission (₹8 lakh crore) and battery manufacturing initiatives position India as a clean tech export leader.",
     keyStats: [
@@ -2302,7 +2301,7 @@ const sectors = [
   {
     slug: "buildings-industrial",
     name: "Buildings & Industrial Projects",
-    image: "/images/wp/buildings-industrial-cinematic.jpg",
+    image: "/images/wp/BUILDINGS-INDUSTRIAL-PROJECTS.jpg",
     description: "Commercial complexes, factories and industrial facilities",
     overview: "The construction sector fuels India's urban and industrial transformation, creating over 50 million jobs. Valued at US$480 billion in 2025 and heading toward US$1 trillion by 2030, growth is driven by housing, commercial real estate, and logistics parks. Transition toward green and digital construction — PEB, BIM, and sustainable materials — has cut project times by 40%. Government schemes like PM Awas Yojana and PLI for construction materials are stimulating capacity and innovation.",
     keyStats: [
@@ -2337,7 +2336,7 @@ const sectors = [
   {
     slug: "oil-gas",
     name: "Oil & Gas",
-    image: "/images/wp/oil-gas-cinematic.jpg",
+    image: "/images/wp/OIL-GAS.jpg",
     description: "Offshore platforms, pipelines and refinery infrastructure",
     overview: "India's oil & gas sector, valued at US$150 billion by 2030, is undergoing strategic transformation to support cleaner energy use. With refining capacity of 254 MMTPA (4th globally) and expanding pipelines (23,300 km → 34,000 km by 2028), India is emerging as Asia's refining hub. The government's vision is to boost natural gas to 15% of the energy mix and expand city gas distribution to 70% of districts.",
     keyStats: [
@@ -2443,7 +2442,6 @@ function getSectorBySlug(slug) {
   return sectors.find((s) => s.slug === slug);
 }
 const heroImage = "/assets/hero-construction-PkMOOhzu.png";
-const PORTAL_REGISTER_URL$1 = "https://portal.vendorinfra.com/register";
 function Counter({ target, suffix = "", prefix = "" }) {
   const [count2, setCount] = useState(0);
   const ref = useRef(null);
@@ -2495,9 +2493,9 @@ const services$1 = [
   { icon: Tractor, title: "AI-Powered Plants & Equipment", href: PORTAL_LOGIN_URL, external: true, image: "/images/services/plants-equipment-marketplace.png", desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
   { icon: Package, title: "Smart Material Procurement", href: "/materials", image: "/images/services/smart-material-procurement.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
   { icon: Factory, title: "Contract Manufacturing", href: "/contract-manufacturing", image: "/contract-manufacturing-ai.jpg", desc: "Design, source, manufacture, and deliver products through verified manufacturers, structured workflows, and real-time execution visibility." },
-  { icon: ShieldCheck, title: "Smart Project Insurance", href: "/contact", image: "/images/services/project-insurance.jpg", desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
+  { icon: ShieldCheck, title: "Smart Project Insurance", href: "/contact", image: "/images/services/insurance.png", desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
   { icon: Briefcase, title: "AI Powered Enterprise Services", href: "/contact", image: "/images/services/ai-enterprise-services.jpg", desc: "Leverage enterprise solutions for subcontracting, organisational growth, market entry, and diversification into new businesses." },
-  { icon: BarChart3, title: "Other Services", href: "/services", image: "/images/services/sector-intelligence.jpg", desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." }
+  { icon: BarChart3, title: "Other Services", href: "/services", image: "/images/services/otherServices.png", desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." }
 ];
 const stats$1 = [
   { value: 31637, suffix: "", label: "Contractors & Vendors", sub: "Certified across 20+ infrastructure sectors." },
@@ -2506,9 +2504,9 @@ const stats$1 = [
   { value: 159, suffix: "", label: "Plants & Equipment", sub: "Listed for hire, sale, or purchase." }
 ];
 const blogs = [
-  { img: "/images/blog/construction-digital-blueprint.jpg", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
-  { img: "/images/blog/equipment-marketplace-phone.jpg", date: "March 30, 2026", cat: "Technology", title: "SaaS Revolution in Construction and Infrastructure Industry", excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
-  { img: "/images/blog/construction-site-digital.jpg", date: "March 30, 2026", cat: "AI", title: "Promote Digitalisation in Construction Industry: The Catalysts of Change", excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." }
+  { img: "/images/blog/Blog-promote-digitalisation.png", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
+  { img: "/images/blog/ChatGPT Image Jun 6, 2026, 12_13_52 PM.png", date: "March 30, 2026", cat: "Technology", title: "SaaS Revolution in Construction and Infrastructure Industry", excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
+  { img: "/images/blog/ChatGPT Image Jun 6, 2026, 12_14_22 PM.png", date: "March 30, 2026", cat: "AI", title: "Promote Digitalisation in Construction Industry: The Catalysts of Change", excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." }
 ];
 const testimonials = [
   { name: "Andleeb Jain", role: "Group President: People | Culture | Digital, JK Cement", image: "/testimonials/andleeb-jain.jpg", text: "I have witnessed this platform taking shape and the great efforts, thoughts analysis and data going into it. It's surely the first and one of a kind in the infrastructure space — a one stop shop, very useful, very comprehensive, very handy." },
@@ -2575,60 +2573,6 @@ const awards = [
     dark: true
   }
 ];
-const homePricingPlans = [
-  {
-    name: "Basic",
-    tag: "Starter",
-    price: "₹7,999",
-    priceSuffix: "/month",
-    description: "For companies ready to digitize, optimize, and grow",
-    features: [
-      "AI-Powered Vendor Discovery (Upto 3 Sectors)",
-      "Price Discovery (Upto 3 Sectors)",
-      "Smart Material Procurement",
-      "User Login (Single)",
-      "Basic Support"
-    ],
-    excluded: ["Dedicated Account Manager"],
-    highlight: false,
-    ctaType: "register"
-  },
-  {
-    name: "Plus",
-    tag: "Most Popular",
-    price: "₹9,999",
-    priceSuffix: "/month",
-    description: "For growing teams who need wider sector coverage",
-    features: [
-      "AI-Powered Vendor Discovery (Upto 10 Sectors)",
-      "Price Discovery (Upto 10 Sectors)",
-      "Smart Material Procurement",
-      "Unified Analytics Dashboard",
-      "User Login (1+3)",
-      "Dedicated Account Manager"
-    ],
-    excluded: [],
-    highlight: true,
-    ctaType: "register"
-  },
-  {
-    name: "Premium",
-    tag: "Enterprise",
-    price: "Contact Us",
-    description: "Enterprise-grade access for large EPC organisations",
-    features: [
-      "AI-Powered Vendor Discovery (20+ Sectors)",
-      "Price Discovery (20+ Sectors)",
-      "Smart Material Procurement",
-      "Unified Analytics Dashboard",
-      "User Login (Unlimited)",
-      "Dedicated Account Manager"
-    ],
-    excluded: [],
-    highlight: false,
-    ctaType: "contact"
-  }
-];
 const whyPoints = [
   { title: "End-to-End Value Chain Integration", desc: "From vendor discovery and material procurement to financing, insurance and equipment hire — one unified platform." },
   { title: "Single Unified Data Lake", desc: "All project, procurement, vendor, and site data — fully unified and instantly accessible. Eliminate silos." },
@@ -2678,10 +2622,6 @@ function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [contactOpen, setContactOpen] = useState(false);
   const [contactPlan, setContactPlan] = useState(void 0);
-  const openContact = (planName) => {
-    setContactPlan(planName);
-    setContactOpen(true);
-  };
   useEffect(() => {
     const t = setInterval(() => setActiveTestimonial((p) => (p + 1) % testimonials.length), 5500);
     return () => clearInterval(t);
@@ -3398,80 +3338,6 @@ function Home() {
         )
       ] })
     ] }),
-    /* @__PURE__ */ jsxs("section", { className: "py-14 md:py-20 bg-gray-50 border-y border-gray-100 relative overflow-hidden", children: [
-      /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.45]", style: { backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,39,77,0.12) 1px, transparent 0)", backgroundSize: "28px 28px" } }),
-      /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-14", children: [
-          /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-            "Pricing",
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
-          ] }),
-          /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] mb-4", children: [
-            "Simple and ",
-            /* @__PURE__ */ jsx("span", { className: "text-[#edad1a]", children: "flexible." })
-          ] }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-500 text-base font-normal", children: "Monthly pricing plans, billed annually." })
-        ] }),
-        /* @__PURE__ */ jsx(
-          motion.div,
-          {
-            className: "grid grid-cols-1 md:grid-cols-3 gap-6",
-            variants: gridVariants,
-            initial: "hidden",
-            whileInView: "show",
-            viewport: { once: true, margin: "-60px" },
-            children: homePricingPlans.map((plan) => /* @__PURE__ */ jsx(motion.div, { variants: gridItem, children: /* @__PURE__ */ jsxs("div", { className: `h-full rounded-2xl overflow-hidden flex flex-col border transition-all duration-300 hover:-translate-y-1 ${plan.highlight ? "bg-[#00274d] border-[#edad1a] shadow-2xl shadow-yellow-400/20" : "bg-white border-gray-200 shadow-sm hover:shadow-md"}`, children: [
-              /* @__PURE__ */ jsxs("div", { className: `p-7 ${plan.highlight ? "bg-[#00274d]" : "bg-white"}`, children: [
-                /* @__PURE__ */ jsx("span", { className: `inline-flex rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider mb-4 ${plan.highlight ? "bg-[#edad1a] text-white" : "bg-gray-100 text-gray-500"}`, children: plan.tag }),
-                /* @__PURE__ */ jsx("h3", { className: `text-2xl font-bold mb-3 ${plan.highlight ? "text-white" : "text-[#00274d]"}`, children: plan.name }),
-                /* @__PURE__ */ jsxs("div", { className: "flex items-baseline gap-2 mb-4", children: [
-                  plan.ctaType === "contact" ? /* @__PURE__ */ jsx(
-                    "button",
-                    {
-                      type: "button",
-                      onClick: () => openContact(plan.name),
-                      className: "inline-flex items-center justify-center rounded-xl bg-[#00274d] px-5 py-3 text-lg font-bold text-white shadow-md transition-colors hover:bg-[#003a73]",
-                      children: plan.price
-                    }
-                  ) : /* @__PURE__ */ jsx("span", { className: `text-4xl font-extrabold tracking-tight ${plan.highlight ? "text-white" : "text-[#00274d]"}`, children: plan.price }),
-                  plan.priceSuffix && /* @__PURE__ */ jsx("span", { className: `text-sm font-medium ${plan.highlight ? "text-white/60" : "text-gray-500"}`, children: plan.priceSuffix })
-                ] }),
-                /* @__PURE__ */ jsx("p", { className: `text-sm leading-relaxed font-normal ${plan.highlight ? "text-white/65" : "text-gray-500"}`, children: plan.description })
-              ] }),
-              /* @__PURE__ */ jsx("div", { className: `h-px ${plan.highlight ? "bg-white/10" : "bg-gray-100"}` }),
-              /* @__PURE__ */ jsxs("div", { className: `p-7 flex-1 flex flex-col ${plan.highlight ? "bg-[#00274d]" : "bg-white"}`, children: [
-                /* @__PURE__ */ jsxs("ul", { className: "space-y-3 mb-8 flex-1", children: [
-                  plan.features.map((f) => /* @__PURE__ */ jsxs("li", { className: "flex items-start gap-3", children: [
-                    /* @__PURE__ */ jsx("span", { className: `mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full ${plan.highlight ? "bg-[#edad1a]/20" : "bg-[#edad1a]/10"}`, children: /* @__PURE__ */ jsx(CheckCircle2, { className: "h-3 w-3 text-[#edad1a]" }) }),
-                    /* @__PURE__ */ jsx("span", { className: `text-sm font-normal ${plan.highlight ? "text-white/85" : "text-gray-700"}`, children: f })
-                  ] }, f)),
-                  plan.excluded.map((f) => /* @__PURE__ */ jsxs("li", { className: "flex items-start gap-3", children: [
-                    /* @__PURE__ */ jsx("span", { className: "mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-red-500/10", children: /* @__PURE__ */ jsx("span", { className: "text-xs font-bold text-red-500", children: "×" }) }),
-                    /* @__PURE__ */ jsx("span", { className: `text-sm font-normal ${plan.highlight ? "text-white/50" : "text-gray-500"}`, children: f })
-                  ] }, f))
-                ] }),
-                /* @__PURE__ */ jsx(
-                  "button",
-                  {
-                    onClick: () => {
-                      if (plan.ctaType === "contact") openContact(plan.name);
-                      else window.open(PORTAL_REGISTER_URL$1, "_blank", "noopener,noreferrer");
-                    },
-                    className: `w-full py-3.5 rounded-xl text-sm font-semibold transition-all ${plan.highlight ? "bg-[#edad1a] text-white hover:bg-[#d4941a] shadow-lg shadow-yellow-500/30" : "bg-[#00274d] text-white hover:bg-[#003a73] shadow-md shadow-[#00274d]/20"}`,
-                    children: plan.ctaType === "contact" ? "Contact Us" : "Get Started"
-                  }
-                )
-              ] })
-            ] }) }, plan.name))
-          }
-        ),
-        /* @__PURE__ */ jsx(FadeUp$2, { className: "mt-10 text-center flex justify-center", children: /* @__PURE__ */ jsx(Link, { href: "/pricing", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center justify-center gap-3 rounded-xl bg-[#edad1a] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-yellow-500/20 transition-all hover:bg-[#d4941a]", children: [
-          "View all pricing plans ",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-        ] }) }) })
-      ] })
-    ] }),
     /* @__PURE__ */ jsx(
       "section",
       {
@@ -3603,32 +3469,32 @@ function LogoMarquee({ logos }) {
 const usps = [
   {
     title: "End to End Value Chain Integration",
-    image: "/images/wp/Untitled-design-62.png",
+    image: "/images/wp/ValueChain.png",
     desc: "From vendor discovery and material procurement to financing, insurance and plant & equipment hire/sales, we provide a full-stack AI powered platform that bridges every gap in infrastructure & construction. No more juggling multiple tools or vendors."
   },
   {
     title: "Single Unified Data Lake",
-    image: "/images/wp/6.png",
+    image: "/images/wp/unified.png",
     desc: "One unified data lake for all project, procurement, vendor, and site data-fully unified and instantly accessible. Eliminate silos, improve decision-making, and run your entire project ecosystem with real-time intelligence."
   },
   {
     title: "Smart Decision Support via Market Intelligence",
-    image: "/images/wp/9.png",
+    image: "/images/wp/SmartDecision.png",
     desc: "Sector insights, Industry Updates, schedules of rates, competitive intelligence, tender & PQ samples. We provide you context & foresight so you can plan strategically, not just reactively."
   },
   {
     title: "AI & ML-Driven Insights",
-    image: "/images/wp/7.png",
+    image: "/images/wp/AI-ML.png",
     desc: "Vendor Infra leverages Artificial Intelligence and Machine Learning to match you with the best-suited requirement and generate real-time analytics for smarter, data-backed decisions."
   },
   {
     title: "Safety, Security & Trust built in",
-    image: "/images/wp/8.png",
+    image: "/images/wp/safety.png",
     desc: "Every vendor and supplier is vetted. Data security is paramount. We ensure the platform and your data adhere to high standards so your decisions are reliable, protected and scalable."
   },
   {
     title: "Dedicated Support & Accountability",
-    image: "/images/wp/17.png",
+    image: "/images/wp/support.png",
     desc: "Our team is available round-the-clock. Beyond just tech support, we assign dedicated account managers (or equivalents) to guide you at every stage so that deadlines aren't just met, but exceeded."
   }
 ];
@@ -3955,7 +3821,7 @@ const services = [
   {
     title: "Smart Project Insurance",
     icon: ShieldCheck,
-    image: "/images/services/project-insurance.jpg",
+    image: "/images/services/insurance.png",
     imageAlt: "Smart project insurance and protection",
     flip: false,
     points: [
@@ -3997,7 +3863,7 @@ const services = [
   {
     title: "Other Services",
     icon: BarChart3,
-    image: "/images/services/sector-intelligence.jpg",
+    image: "/images/services/otherServices.png",
     imageAlt: "Sector intelligence and SOR data analytics",
     flip: false,
     points: [
@@ -6321,13 +6187,13 @@ const referralPrograms = [
   {
     code: "CRP",
     title: "Client Referral Program",
-    image: "/images/wp/CRP.png",
+    image: "/images/wp/Mesa-de-trabajo.png",
     description: "Refer Vendor Infra services to Infrastructure & Construction Companies, Vendors, Consultant, Suppliers, Manufacturers etc and earn Cash with each referral from our Exclusive Client Referral Program"
   },
   {
     code: "IBC",
     title: "Independent Business Consultant",
-    image: "/images/wp/IBC.png",
+    image: "/images/wp/2-1.png",
     description: "Vendor Infra is ISO 14001 certified. This ISO standard provides guidelines on what has to be done to implement an environmental management system (EMS). It includes policies, processes, plans, records, and best practices that define rules regarding how your company interacts with the environment. ISO 14001 requirements give you a framework, along with guidelines. for creating EMS for any organization"
   }
 ];
@@ -7218,14 +7084,7 @@ function FAQ() {
                   children: /* @__PURE__ */ jsx(Icon, { className: "w-3.5 h-3.5" })
                 }
               ),
-              g.short,
-              /* @__PURE__ */ jsx(
-                "span",
-                {
-                  className: `text-[11px] font-bold rounded-full px-2 py-0.5 ${active ? "bg-white/15 text-white" : "bg-gray-100 text-gray-500"}`,
-                  children: g.faqs.length
-                }
-              )
+              g.short
             ]
           },
           g.group
