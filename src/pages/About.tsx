@@ -48,32 +48,32 @@ function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {
 const usps = [
   {
     title: "End to End Value Chain Integration",
-    image: "/images/wp/Untitled-design-62.png",
+    image: "/images/wp/ValueChain.png",
     desc: "From vendor discovery and material procurement to financing, insurance and plant & equipment hire/sales, we provide a full-stack AI powered platform that bridges every gap in infrastructure & construction. No more juggling multiple tools or vendors.",
   },
   {
     title: "Single Unified Data Lake",
-    image: "/images/wp/6.png",
+    image: "/images/wp/unified.png",
     desc: "One unified data lake for all project, procurement, vendor, and site data-fully unified and instantly accessible. Eliminate silos, improve decision-making, and run your entire project ecosystem with real-time intelligence.",
   },
   {
     title: "Smart Decision Support via Market Intelligence",
-    image: "/images/wp/9.png",
+    image: "/images/wp/SmartDecision.png",
     desc: "Sector insights, Industry Updates, schedules of rates, competitive intelligence, tender & PQ samples. We provide you context & foresight so you can plan strategically, not just reactively.",
   },
   {
     title: "AI & ML-Driven Insights",
-    image: "/images/wp/7.png",
+    image: "/images/wp/AI-ML.png",
     desc: "Vendor Infra leverages Artificial Intelligence and Machine Learning to match you with the best-suited requirement and generate real-time analytics for smarter, data-backed decisions.",
   },
   {
     title: "Safety, Security & Trust built in",
-    image: "/images/wp/8.png",
+    image: "/images/wp/safety.png",
     desc: "Every vendor and supplier is vetted. Data security is paramount. We ensure the platform and your data adhere to high standards so your decisions are reliable, protected and scalable.",
   },
   {
     title: "Dedicated Support & Accountability",
-    image: "/images/wp/17.png",
+    image: "/images/wp/support.png",
     desc: "Our team is available round-the-clock. Beyond just tech support, we assign dedicated account managers (or equivalents) to guide you at every stage so that deadlines aren't just met, but exceeded.",
   },
 ];

@@ -121,7 +121,7 @@ const services = [
   {
     title: "Smart Project Insurance",
     icon: ShieldCheck,
-    image: "/images/services/project-insurance.jpg",
+    image: "/images/services/insurance.png",
     imageAlt: "Smart project insurance and protection",
     flip: false,
     points: [
@@ -163,7 +163,7 @@ const services = [
   {
     title: "Other Services",
     icon: BarChart3,
-    image: "/images/services/sector-intelligence.jpg",
+    image: "/images/services/otherServices.png",
     imageAlt: "Sector intelligence and SOR data analytics",
     flip: false,
     points: [

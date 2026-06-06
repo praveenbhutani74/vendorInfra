@@ -108,7 +108,7 @@ export default function Contact() {
                         <span>
                           <span className="block font-semibold">Head Office</span>
                           <span className="block text-white/70 text-sm leading-relaxed">
-                            Suit No. 1436-1439, Plus Offices,<br />
+                            Suit No. 1436-1440, Plus Offices,<br />
                             Landmark Cyber Park,<br />
                             Sector 67, Gurugram,<br />
                             Haryana, India - 122101
@@ -232,7 +232,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <p className="text-[11px] font-bold text-[#00274d] leading-tight">Vendor Infra HQ</p>
-                        <p className="text-[10px] text-gray-500 leading-snug">Suit 1436-1439, Plus Offices</p>
+                        <p className="text-[10px] text-gray-500 leading-snug">Suit 1436-1440, Plus Offices</p>
                       </div>
                     </div>
                   </div>

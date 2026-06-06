@@ -38,7 +38,7 @@ const sections = [
   },
   {
     title: "Contact",
-    content: `If you have any questions about these Terms, please contact us at:\nVendor Infra Global Private Limited\nSuit No. 1436-1439, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana – 122101\nEmail: enquiry@vendorinfra.com`,
+    content: `If you have any questions about these Terms, please contact us at:\nVendor Infra Global Private Limited\nSuit No. 1436-1440, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana – 122101\nEmail: enquiry@vendorinfra.com`,
   },
 ];
 

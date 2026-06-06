@@ -587,7 +587,7 @@ function Footer() {
             /* @__PURE__ */ jsx("a", { href: "tel:+918800404840", className: "hover:text-[#edad1a] transition-colors", children: "+91-8800404840" })
           ] }),
           /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx("a", { href: "mailto:enquiry@vendorinfra.com", className: "hover:text-[#edad1a] transition-colors", children: "enquiry@vendorinfra.com" }) }),
-          /* @__PURE__ */ jsx("li", { className: "leading-relaxed", children: "Suit No. 1436-1439, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101" })
+          /* @__PURE__ */ jsx("li", { className: "leading-relaxed", children: "Suit No. 1436-1440, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101" })
         ] })
       ] })
     ] }) }),
@@ -4722,7 +4722,7 @@ function Contact() {
                   /* @__PURE__ */ jsxs("span", { children: [
                     /* @__PURE__ */ jsx("span", { className: "block font-semibold", children: "Head Office" }),
                     /* @__PURE__ */ jsxs("span", { className: "block text-white/70 text-sm leading-relaxed", children: [
-                      "Suit No. 1436-1439, Plus Offices,",
+                      "Suit No. 1436-1440, Plus Offices,",
                       /* @__PURE__ */ jsx("br", {}),
                       "Landmark Cyber Park,",
                       /* @__PURE__ */ jsx("br", {}),
@@ -4835,7 +4835,7 @@ function Contact() {
               /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-lg bg-[#00274d] flex items-center justify-center shrink-0", children: /* @__PURE__ */ jsx(MapPin, { className: "w-4 h-4 text-[#edad1a]" }) }),
               /* @__PURE__ */ jsxs("div", { children: [
                 /* @__PURE__ */ jsx("p", { className: "text-[11px] font-bold text-[#00274d] leading-tight", children: "Vendor Infra HQ" }),
-                /* @__PURE__ */ jsx("p", { className: "text-[10px] text-gray-500 leading-snug", children: "Suit 1436-1439, Plus Offices" })
+                /* @__PURE__ */ jsx("p", { className: "text-[10px] text-gray-500 leading-snug", children: "Suit 1436-1440, Plus Offices" })
               ] })
             ] })
           ] })
@@ -6833,7 +6833,7 @@ You can choose not to provide us with certain information, but then you may not 
     title: "Contact Us",
     content: `If you have any questions about this Policy, please contact us at:
 Vendor Infra Global Private Limited
-Suit No. 1436-1439, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101
+Suit No. 1436-1440, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101
 Email: enquiry@vendorinfra.com
 Phone: +91-8800404840`
   }
@@ -7046,7 +7046,7 @@ Kindly read this Agreement carefully. In part consideration for accessing/using 
     title: "Contact",
     content: `If you have any questions about these Terms, please contact us at:
 Vendor Infra Global Private Limited
-Suit No. 1436-1439, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana – 122101
+Suit No. 1436-1440, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana – 122101
 Email: enquiry@vendorinfra.com`
   }
 ];

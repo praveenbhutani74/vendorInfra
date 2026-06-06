@@ -183,13 +183,13 @@ export default function FAQ() {
                     <Icon className="w-3.5 h-3.5" />
                   </span>
                   {g.short}
-                  <span
+                  {/* <span
                     className={`text-[11px] font-bold rounded-full px-2 py-0.5 ${
                       active ? "bg-white/15 text-white" : "bg-gray-100 text-gray-500"
                     }`}
                   >
                     {g.faqs.length}
-                  </span>
+                  </span> */}
                 </button>
               );
             })}

@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
-const faviconUrl = `${import.meta.env.BASE_URL}favicon.svg`;
+const faviconUrl = `${import.meta.env.BASE_URL}favicon.ico`;
 
 export function Footer() {
   return (
@@ -13,7 +13,7 @@ export function Footer() {
           {/* Column 1: Brand */}
           <div className="shrink-0 max-w-[220px] space-y-4">
             <div className="flex items-center gap-2.5">
-              <img src={faviconUrl} alt="Vendor Infra icon" className="h-9 w-9" />
+            <img src="/favicon.ico" alt="Vendor Infra icon" className="h-9 w-9" />
               <span className="text-xl font-semibold tracking-tight text-white leading-none">
                 vendor infra<sup className="text-[#edad1a] text-xs font-bold ml-0.5">®</sup>
               </span>
@@ -98,7 +98,7 @@ export function Footer() {
                 <a href="mailto:enquiry@vendorinfra.com" className="hover:text-[#edad1a] transition-colors">enquiry@vendorinfra.com</a>
               </li>
               <li className="leading-relaxed">
-                Suit No. 1436-1439, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101
+                Suit No. 1436-1440, Plus Offices, Landmark Cyber Park, Sector 67, Gurugram, Haryana, India – 122101
               </li>
             </ul>
           </div>

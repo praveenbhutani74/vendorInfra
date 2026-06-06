@@ -79,9 +79,9 @@ const services: ServiceItem[] = [
   { icon: Tractor,     title: "AI-Powered Plants & Equipment",   href: PORTAL_LOGIN_URL, external: true, image: "/images/services/plants-equipment-marketplace.png",    desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
   { icon: Package,     title: "Smart Material Procurement",      href: "/materials", image: "/images/services/smart-material-procurement.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
   { icon: Factory,     title: "Contract Manufacturing",          href: "/contract-manufacturing", image: "/contract-manufacturing-ai.jpg", desc: "Design, source, manufacture, and deliver products through verified manufacturers, structured workflows, and real-time execution visibility." },
-  { icon: ShieldCheck, title: "Smart Project Insurance",         href: "/contact", image: "/images/services/project-insurance.jpg",             desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
+  { icon: ShieldCheck, title: "Smart Project Insurance",         href: "/contact", image: "/images/services/insurance.png",             desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
   { icon: Briefcase,   title: "AI Powered Enterprise Services",  href: "/contact", image: "/images/services/ai-enterprise-services.jpg",                                                          desc: "Leverage enterprise solutions for subcontracting, organisational growth, market entry, and diversification into new businesses." },
-  { icon: BarChart3,   title: "Other Services",                  href: "/services", image: "/images/services/sector-intelligence.jpg",           desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." },
+  { icon: BarChart3,   title: "Other Services",                  href: "/services", image: "/images/services/otherServices.png",           desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." },
 ];
 
 const stats = [
@@ -92,9 +92,9 @@ const stats = [
 ];
 
 const blogs = [
-  { img: "/images/blog/construction-digital-blueprint.jpg", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
-  { img: "/images/blog/equipment-marketplace-phone.jpg", date: "March 30, 2026", cat: "Technology",  title: "SaaS Revolution in Construction and Infrastructure Industry",                                  excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
-  { img: "/images/blog/construction-site-digital.jpg", date: "March 30, 2026", cat: "AI",          title: "Promote Digitalisation in Construction Industry: The Catalysts of Change",                       excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." },
+  { img: "/images/blog/Blog-promote-digitalisation.png", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
+  { img: "/images/blog/ChatGPT Image Jun 6, 2026, 12_13_52 PM.png", date: "March 30, 2026", cat: "Technology",  title: "SaaS Revolution in Construction and Infrastructure Industry",                                  excerpt: "The Indian economy stands on the shoulders of the Construction and Infrastructure industry, encompassing vital sectors like roads, railways, and urban infrastructure." },
+  { img: "/images/blog/ChatGPT Image Jun 6, 2026, 12_14_22 PM.png", date: "March 30, 2026", cat: "AI",          title: "Promote Digitalisation in Construction Industry: The Catalysts of Change",                       excerpt: "The construction industry is undergoing a digital revolution. It's time to embrace the catalysts of change and the power of innovation." },
 
 ];
 
@@ -1320,7 +1320,7 @@ export default function Home() {
       </section>
 
 
-      <section className="py-14 md:py-20 bg-gray-50 border-y border-gray-100 relative overflow-hidden">
+      {/* <section className="py-14 md:py-20 bg-gray-50 border-y border-gray-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.45]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,39,77,0.12) 1px, transparent 0)", backgroundSize: "28px 28px" }} />
         <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <FadeUp className="text-center mb-14">
@@ -1419,7 +1419,7 @@ export default function Home() {
             </Link>
           </FadeUp>
         </div>
-      </section>
+      </section> */}
 
       {/* ── CTA BANNER ────────────────────────────────── */}
       <section
