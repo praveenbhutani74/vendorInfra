@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Variant = "dark" | "light" | "blue";
+type Variant = "dark" | "light" | "blue" | "gold";
 
 /**
  * Circular arrow badge used inside CTA buttons.
@@ -20,10 +20,12 @@ export function CtaArrow({
       className={cn(
         "inline-flex items-center justify-center rounded-full w-6 h-6 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5",
         variant === "dark"
-          ? "bg-white text-[#00274d]"
+          ? "bg-[#00274d] text-white"
           : variant === "light"
             ? "bg-white text-[#00274d]"
-            : "bg-[#00274d] text-white",
+            : variant === "gold"
+              ? "bg-[#edad1a] text-[#00274d]"
+              : "bg-[#00274d] text-white",
         className,
       )}
     >

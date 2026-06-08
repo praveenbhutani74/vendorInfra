@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { sectors } from "@/lib/sectorsData";
-import { CtaArrow } from "@/components/CtaArrow";
+import { SiteButton } from "@/components/SiteButton";
 
 const container = {
   hidden: { opacity: 0 },
@@ -108,10 +108,9 @@ export default function Sectors() {
             Join thousands of contractors, vendors and EPC companies already on Vendor Infra.
           </p>
           <Link href="/contact">
-            <button className="group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors shadow-lg">
+            <SiteButton variant="onGold" className="normal-case tracking-normal">
               Get in Touch
-              <CtaArrow variant="blue" />
-            </button>
+            </SiteButton>
           </Link>
         </div>
       </section>

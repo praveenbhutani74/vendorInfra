@@ -14,7 +14,7 @@ import {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
-import { CtaArrow } from "@/components/CtaArrow";
+import { SiteButton } from "@/components/SiteButton";
 
 const uspItems = [
   {
@@ -111,7 +111,7 @@ export default function WhyUs() {
                       </div>
                     ))}
                   </div>
-                  <a
+                  {/* <a
                     href="https://youtu.be/tn81mJqaeEM"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -120,8 +120,7 @@ export default function WhyUs() {
                     <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#edad1a] text-white">
                       <Play className="h-4 w-4" fill="currentColor" />
                     </span>
-                    Know more
-                  </a>
+                  </a> */}
                 </div>
 
                 <div className="relative grid sm:grid-cols-3 gap-3 p-5">
@@ -154,9 +153,7 @@ export default function WhyUs() {
                 Every vendor needs exposure to grow in a digitally expanding world, where clients can compare, connect, and collaborate with multiple real-time vendors for their projects. <strong>Vendor Infra</strong> empowers this growth by providing a <strong>cloud-based, AI-driven marketplace</strong> that connects <strong>certified suppliers, contractors, consultants, and developers</strong> across the infrastructure and construction ecosystem. We ensure reliability, transparency, and speed by bringing the entire vendor discovery, management, and collaboration process under one secure digital roof - helping businesses make smarter, faster, and data-backed decisions.
               </p>
               <Link href="/services">
-                <button className="group mt-9 inline-flex items-center gap-3 rounded-lg bg-[#edad1a] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#edad1a]/20 hover:bg-[#d49a10] transition-colors">
-                  Explore Services <CtaArrow variant="dark" />
-                </button>
+                <SiteButton className="mt-9">Explore Services</SiteButton>
               </Link>
             </motion.div>
           </div>

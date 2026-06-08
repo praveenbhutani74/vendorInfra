@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, TrendingUp, Layers } from "lucide-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { getSectorBySlug, sectors } from "@/lib/sectorsData";
-import { CtaArrow } from "@/components/CtaArrow";
+import { SiteButton } from "@/components/SiteButton";
 import NotFound from "@/pages/not-found";
 
 export default function SectorDetail() {
@@ -114,16 +114,14 @@ export default function SectorDetail() {
               <p className="text-gray-600 leading-relaxed text-base mb-8">{sector.overview}</p>
               <div className="flex flex-wrap gap-3">
                 <Link href="/contact">
-                  <button className="group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5">
+                  <SiteButton className="normal-case tracking-normal">
                     Get Started
-                    <CtaArrow variant="blue" />
-                  </button>
+                  </SiteButton>
                 </Link>
                 <Link href="/services">
-                  <button className="group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors">
+                  <SiteButton className="normal-case tracking-normal">
                     Our Services
-                    <CtaArrow variant="blue" />
-                  </button>
+                  </SiteButton>
                 </Link>
               </div>
             </motion.div>
@@ -242,15 +240,14 @@ export default function SectorDetail() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact">
-              <button className="group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors shadow-lg">
+              <SiteButton variant="onGold" className="normal-case tracking-normal">
                 Get in Touch
-                <CtaArrow variant="blue" />
-              </button>
+              </SiteButton>
             </Link>
             <Link href="/sectors">
-              <button className="group inline-flex items-center gap-2 border-2 border-[#00274d] text-[#00274d] font-semibold px-5 py-2.5 rounded-md text-sm hover:bg-[#00274d] hover:text-white transition-colors">
+              <SiteButton variant="onGold" arrow={false} className="normal-case tracking-normal">
                 <ArrowLeft className="w-4 h-4" /> Back to Sectors
-              </button>
+              </SiteButton>
             </Link>
           </div>
         </div>

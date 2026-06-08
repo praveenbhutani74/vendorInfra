@@ -1,9 +1,9 @@
 import { Link, useLocation } from "wouter";
-import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingCart, ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteCart } from "@/lib/quoteCart";
+import { siteButtonClasses } from "@/components/SiteButton";
 
 const logoUrl = `${import.meta.env.BASE_URL}brand/Logo-Blue-1.png`;
 
@@ -123,9 +123,17 @@ export function Navbar() {
             )}
           </Link>
 
-          <Button asChild className="rounded-full px-6 bg-[#edad1a] hover:bg-[#d49a10] text-white border-0 shadow-none font-medium">
-            <a href="https://customer.vendorinfra.com/#/login-2" target="_blank" rel="noopener noreferrer">Register</a>
-          </Button>
+   <a
+  href="https://customer.vendorinfra.com/#/login-2"
+  target="_blank"
+  rel="noopener noreferrer"
+  className={siteButtonClasses(
+    "primary",
+    "rounded-full px-7 py-3 normal-case tracking-normal"
+  )}
+>
+  Register
+</a>  
         </nav>
 
         {/* Mobile: cart + hamburger */}
@@ -198,9 +206,14 @@ export function Navbar() {
                 ))}
               </div>
               <div className="pt-2">
-                <Button asChild className="w-full rounded-full bg-[#edad1a] hover:bg-[#d49a10] text-white border-0 shadow-none font-medium">
-                  <a href="https://customer.vendorinfra.com/#/login-2" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Register</a>
-                </Button>
+                          <a
+              href="https://customer.vendorinfra.com/#/login-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full px-7 py-3 font-medium bg-[#edad1a] text-[#00274d] hover:bg-[#d89b18] transition-colors"
+            >
+              Register
+            </a>
               </div>
             </div>
           </motion.div>

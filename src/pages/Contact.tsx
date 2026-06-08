@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { siteButtonClasses } from "@/components/SiteButton";
 
 export default function Contact() {
   usePageSeo("Contact Us | Vendor Infra", "Get in touch with the Vendor Infra team. Book a demo, ask about pricing, or send us any enquiry.");
@@ -180,11 +181,11 @@ export default function Contact() {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full flex items-center justify-center gap-2 bg-[#edad1a] hover:bg-[#d49a10] disabled:opacity-60 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg shadow-yellow-400/20 text-base"
+                        className={siteButtonClasses("primary", "w-full py-4 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-60")}
                       >
                         {isSubmitting ? (
                           <>
-                            <span className="animate-spin rounded-full h-4 w-4 border-2 border-white/30 border-t-white" />
+                            <span className="animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/30 border-t-[#00274d]" />
                             Sending...
                           </>
                         ) : (
@@ -211,7 +212,7 @@ export default function Contact() {
                         <p className="text-xs text-white/70">Landmark Cyber Park, Sector 67, Gurugram</p>
                       </div>
                     </div>
-                    <a href="https://maps.google.com/?q=Landmark+Cyber+Park+Sector+67+Gurugram" target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold bg-[#edad1a] hover:bg-[#d49a10] text-white px-3 py-2 rounded-lg transition-colors">
+                    <a href="https://maps.google.com/?q=Landmark+Cyber+Park+Sector+67+Gurugram" target="_blank" rel="noopener noreferrer" className={siteButtonClasses("primary", "hidden sm:inline-flex px-3 py-2 text-xs normal-case tracking-normal")}>
                       Get Directions
                     </a>
                   </div>

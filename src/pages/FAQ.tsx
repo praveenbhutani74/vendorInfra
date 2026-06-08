@@ -16,6 +16,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PageHero } from "@/components/layout/PageHero";
 import { CtaArrow } from "@/components/CtaArrow";
+import { siteButtonClasses } from "@/components/SiteButton";
 
 const faqGroups = [
   {
@@ -253,7 +254,7 @@ export default function FAQ() {
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#d49a10] text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition-colors w-full justify-center"
+                    className={siteButtonClasses("primary", "w-full px-4 py-2.5 normal-case tracking-normal")}
                   >
                     Contact Us <CtaArrow variant="dark" />
                   </Link>

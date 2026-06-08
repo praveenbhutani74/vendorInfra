@@ -1,4 +1,4 @@
-import { C as ClientApp } from "./ClientApp-py4KxpoR.js";
+import { C as ClientApp } from "./ClientApp-IzeDKUtf.js";
 import "react/jsx-runtime";
 import "react";
 import "wouter";
@@ -10,7 +10,6 @@ import "clsx";
 import "tailwind-merge";
 import "@radix-ui/react-tooltip";
 import "framer-motion";
-import "@radix-ui/react-slot";
 import "@radix-ui/react-label";
 const SplitComponent = ClientApp;
 export {

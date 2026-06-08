@@ -21,6 +21,7 @@ import {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CtaArrow } from "@/components/CtaArrow";
+import { siteButtonClasses } from "@/components/SiteButton";
 
 const heroImages = [
   "/contract-manufacturing-ai.jpg",
@@ -133,7 +134,7 @@ export default function ContractManufacturing() {
                 Vendor Infra enables businesses to design, source, manufacture, and deliver products through a connected ecosystem of verified manufacturers, intelligent workflows, and real-time execution visibility.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-2xl bg-[#edad1a] px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-[#d4941a]">
+                <Link href="/contact" className={siteButtonClasses("primary", "rounded-2xl px-7 py-4")}>
                   Start Your Project <CtaArrow variant="dark" />
                 </Link>
                 <a href="#capabilities" className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/35 bg-white/10 px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-white/15">
@@ -449,7 +450,7 @@ export default function ContractManufacturing() {
                   <h3 className="mt-8 text-2xl md:text-3xl font-semibold text-[#edad1a]">Build Smarter. Scale Faster. Deliver Better.</h3>
                   <p className="mt-4 text-slate-600">Join businesses and manufacturers operating on a connected platform where every stage of production is structured, visible, and optimized.</p>
                   <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                    <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-xl bg-[#edad1a] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#d4941a]">Start Your Manufacturing Project <CtaArrow variant="dark" /></Link>
+                    <Link href="/contact" className={siteButtonClasses()}>Start Your Manufacturing Project <CtaArrow variant="dark" /></Link>
                     <Link href="/services" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#00274d]/15 bg-white px-6 py-3 text-sm font-semibold text-[#00274d] transition-all hover:bg-[#00274d] hover:text-white">Discover Verified Partners</Link>
                   </div>
                 </div>

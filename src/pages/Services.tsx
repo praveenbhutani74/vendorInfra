@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { CtaArrow } from "@/components/CtaArrow";
+import { SiteButton } from "@/components/SiteButton";
 
 const services = [
   {
@@ -490,10 +490,9 @@ export default function Services() {
 
           <FadeUp delay={0.2} className="text-center mt-12">
             <Link href="/contact">
-              <button className="group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5">
+              <SiteButton className="normal-case tracking-normal">
                 Get Started with Us
-                <CtaArrow variant="blue" />
-              </button>
+              </SiteButton>
             </Link>
           </FadeUp>
         </div>

@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Linkedin, Shield, Target } from "lucide-react
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CtaArrow } from "@/components/CtaArrow";
+import { siteButtonClasses } from "@/components/SiteButton";
 
 const base = import.meta.env.BASE_URL;
 
@@ -181,7 +182,7 @@ export default function About() {
                   <p>Headquartered in Delhi NCR, Vendor Infra was founded by industry leaders with over two decades of experience in managing and executing large-scale infrastructure projects.</p>
                   <p>Our platform is built to simplify vendor discovery and collaboration, enable supply chain finance, offer a dedicated plants and equipment marketplace, and facilitate project insurance - empowering businesses to overcome industry challenges and drive greater efficiency, transparency, and growth.</p>
                 </div>
-                <a href="/services" className="group mt-7 inline-flex items-center gap-3 rounded-lg bg-[#edad1a] px-5 py-3 text-sm font-bold text-white hover:bg-[#d49a10] transition-colors">
+                <a href="/services" className={siteButtonClasses("primary", "mt-7 px-5")}>
                   Explore Services <CtaArrow variant="dark" />
                 </a>
               </motion.div>
@@ -200,9 +201,9 @@ export default function About() {
                     <p>Our AI- and ML Powered seamlessly blends technology with the real-world needs of infrastructure stakeholders, enabling smarter decision-making, cost optimization, profit maximization, and faster collaboration.</p>
                     <p>Vendor Infra brings integrated services on a single platform, empowering contractors, suppliers, consultants, and developers to connect, collaborate, and construct more efficiently than ever before.</p>
                   </div>
-                  <a href="/contact" className="group mt-7 inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5">
+                  <a href="/contact" className={siteButtonClasses("primary", "mt-7 px-5 py-2.5 normal-case tracking-normal")}>
                     Book a demo
-                    <CtaArrow variant="blue" />
+                    <CtaArrow variant="dark" />
                   </a>
                 </div>
               </motion.div>

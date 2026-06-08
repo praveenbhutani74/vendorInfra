@@ -5,12 +5,11 @@ import { useLocation, Link, useParams, Router as Router$1, Switch, Route } from 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva } from "class-variance-authority";
-import { X, AlertCircle, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, ArrowRight, Play, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
+import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { Slot } from "@radix-ui/react-slot";
 import * as LabelPrimitive from "@radix-ui/react-label";
 const TOAST_LIMIT = 1;
 const TOAST_REMOVE_DELAY = 1e6;
@@ -336,58 +335,46 @@ function NotFound() {
     /* @__PURE__ */ jsx("p", { className: "mt-4 text-sm text-gray-600", children: "Did you forget to add the page to the router?" })
   ] }) }) });
 }
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover-elevate active-elevate-2",
-  {
-    variants: {
-      variant: {
-        default: (
-          // @replit: no hover, and add primary border
-          "bg-primary text-primary-foreground border border-primary-border"
-        ),
-        destructive: "bg-destructive text-destructive-foreground shadow-sm border-destructive-border",
-        outline: (
-          // @replit Shows the background color of whatever card / sidebar / accent background it is inside of.
-          // Inherits the current text color. Uses shadow-xs. no shadow on active
-          // No hover state
-          " border [border-color:var(--button-outline)] shadow-xs active:shadow-none "
-        ),
-        secondary: (
-          // @replit border, no hover, no shadow, secondary border.
-          "border bg-secondary text-secondary-foreground border border-secondary-border "
-        ),
-        // @replit no hover, transparent border
-        ghost: "border border-transparent",
-        link: "text-primary underline-offset-4 hover:underline"
-      },
-      size: {
-        // @replit changed sizes
-        default: "min-h-9 px-4 py-2",
-        sm: "min-h-8 rounded-md px-3 text-xs",
-        lg: "min-h-10 rounded-md px-8",
-        icon: "h-9 w-9"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
+function CtaArrow({
+  variant = "dark",
+  className
+}) {
+  return /* @__PURE__ */ jsx(
+    "span",
+    {
+      className: cn(
+        "inline-flex items-center justify-center rounded-full w-6 h-6 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5",
+        variant === "dark" ? "bg-[#00274d] text-white" : variant === "light" ? "bg-white text-[#00274d]" : variant === "gold" ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white",
+        className
+      ),
+      children: /* @__PURE__ */ jsx(ArrowRight, { className: "w-3.5 h-3.5" })
     }
-  }
-);
-const Button = React.forwardRef(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
-    return /* @__PURE__ */ jsx(
-      Comp,
-      {
-        className: cn(buttonVariants({ variant, size, className })),
-        ref,
-        ...props
-      }
-    );
-  }
-);
-Button.displayName = "Button";
+  );
+}
+const buttonVariants = {
+  primary: "bg-[#edad1a] text-[#00274d] hover:bg-[#f7c44a] shadow-[0_10px_28px_-10px_rgba(237,173,26,0.75)] hover:shadow-[0_14px_36px_-10px_rgba(237,173,26,0.85)]",
+  onGold: "bg-[#00274d] text-[#edad1a] hover:bg-[#003a73] shadow-[0_10px_28px_-12px_rgba(0,39,77,0.75)] hover:shadow-[0_14px_36px_-12px_rgba(0,39,77,0.85)]",
+  navy: "bg-[#00274d] text-[#edad1a] hover:bg-[#003a73] shadow-[0_10px_28px_-12px_rgba(0,39,77,0.55)] hover:shadow-[0_14px_36px_-12px_rgba(0,39,77,0.75)]"
+};
+function siteButtonClasses(variant = "primary", className) {
+  return cn(
+    "group inline-flex items-center justify-center gap-3 rounded-lg px-6 py-3 text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:-translate-y-0.5",
+    buttonVariants[variant],
+    className
+  );
+}
+function SiteButton({
+  children,
+  variant = "primary",
+  className,
+  arrow = true,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxs("button", { className: siteButtonClasses(variant, className), ...props, children: [
+    children,
+    arrow && /* @__PURE__ */ jsx(CtaArrow, { variant: variant === "primary" ? "dark" : "gold" })
+  ] });
+}
 const logoUrl = `${"/"}brand/Logo-Blue-1.png`;
 const MORE_LINKS = [
   { href: "/pricing", label: "Pricing" },
@@ -478,7 +465,19 @@ function Navbar() {
           /* @__PURE__ */ jsx(ShoppingCart, { className: "w-5 h-5" }),
           total > 0 && /* @__PURE__ */ jsx("span", { className: "absolute -top-0.5 -right-0.5 w-4 h-4 bg-[#edad1a] text-white text-[10px] font-black rounded-full flex items-center justify-center leading-none", children: total > 9 ? "9+" : total })
         ] }),
-        /* @__PURE__ */ jsx(Button, { asChild: true, className: "rounded-full px-6 bg-[#edad1a] hover:bg-[#d49a10] text-white border-0 shadow-none font-medium", children: /* @__PURE__ */ jsx("a", { href: "https://customer.vendorinfra.com/#/login-2", target: "_blank", rel: "noopener noreferrer", children: "Register" }) })
+        /* @__PURE__ */ jsx(
+          "a",
+          {
+            href: "https://customer.vendorinfra.com/#/login-2",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: siteButtonClasses(
+              "primary",
+              "rounded-full px-7 py-3 normal-case tracking-normal"
+            ),
+            children: "Register"
+          }
+        )
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "md:hidden flex items-center gap-3", children: [
         /* @__PURE__ */ jsxs(Link, { href: "/quote-cart", className: "relative p-2 text-gray-500", children: [
@@ -517,7 +516,16 @@ function Navbar() {
             },
             link.href
           )) }),
-          /* @__PURE__ */ jsx("div", { className: "pt-2", children: /* @__PURE__ */ jsx(Button, { asChild: true, className: "w-full rounded-full bg-[#edad1a] hover:bg-[#d49a10] text-white border-0 shadow-none font-medium", children: /* @__PURE__ */ jsx("a", { href: "https://customer.vendorinfra.com/#/login-2", target: "_blank", rel: "noopener noreferrer", onClick: () => setIsOpen(false), children: "Register" }) }) })
+          /* @__PURE__ */ jsx("div", { className: "pt-2", children: /* @__PURE__ */ jsx(
+            "a",
+            {
+              href: "https://customer.vendorinfra.com/#/login-2",
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "inline-flex items-center justify-center rounded-full px-7 py-3 font-medium bg-[#edad1a] text-[#00274d] hover:bg-[#d89b18] transition-colors",
+              children: "Register"
+            }
+          ) })
         ] })
       },
       "mobile-menu"
@@ -828,22 +836,6 @@ function Field$1({ icon, error, children }) {
     ] }),
     error && /* @__PURE__ */ jsx("p", { className: "text-red-500 text-xs mt-1 ml-1", children: error })
   ] });
-}
-function CtaArrow({
-  variant = "dark",
-  className
-}) {
-  return /* @__PURE__ */ jsx(
-    "span",
-    {
-      className: cn(
-        "inline-flex items-center justify-center rounded-full w-6 h-6 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5",
-        variant === "dark" ? "bg-white text-[#00274d]" : variant === "light" ? "bg-white text-[#00274d]" : "bg-[#00274d] text-white",
-        className
-      ),
-      children: /* @__PURE__ */ jsx(ArrowRight, { className: "w-3.5 h-3.5" })
-    }
-  );
 }
 const categories = [
   {
@@ -2517,38 +2509,38 @@ const testimonials = [
   { name: "Prabhat Shrivastava", role: "Entrepreneur", image: "/testimonials/prabhat-shrivastava.jpg", text: "Vendor Infra is the most unique platform in the infrastructure space. The founder Rahul has conceptualized this technology enabled platform which I am sure would be a boon in the infrastructure space. I am sure Vendor Infra will enhance the potentials of businesses and help them increase their growth, margins and reach!" }
 ];
 const trustedBy$1 = [
-  { name: "Adani Group", logo: "/logos/adani-group.svg" },
-  { name: "NCC", logo: "/logos/ncc.svg" },
-  { name: "Tata Projects", logo: "/logos/tata-projects.svg" },
-  { name: "JWIL", logo: "/logos/jwil.svg" },
-  { name: "Gawar", logo: "/logos/gawar.svg" },
-  { name: "JMC Projects", logo: "/logos/jmc-projects.svg" },
-  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
-  { name: "INOX Wind", logo: "/logos/inox-wind.svg" },
-  { name: "IndInfravit", logo: "/logos/indinfravit.svg" },
-  { name: "KEC", logo: "/logos/kec.svg" },
-  { name: "Kalpataru", logo: "/logos/kalpataru.svg" },
-  { name: "IRB Infra", logo: "/logos/irb-infra.svg" }
+  { name: "Adani Group", logo: "/logos/Adani-Group.png" },
+  { name: "NCC", logo: "/logos/NCC.png" },
+  { name: "Tata Projects", logo: "/logos/tata-projects.png" },
+  { name: "JWIL", logo: "/logos/JWIL.jpg" },
+  { name: "Gawar", logo: "/logos/Gawar.png" },
+  { name: "JMC Projects", logo: "/logos/jmc-projects.png" },
+  { name: "Dilip Buildcon", logo: "/logos/DBL.png" },
+  { name: "INOX Wind", logo: "/logos/inox-wind.png" },
+  { name: "IndInfravit", logo: "/logos/Indinfravit.png" },
+  { name: "KEC", logo: "/logos/kec.png" },
+  { name: "Kalpataru", logo: "/logos/KPILLOGO.png" },
+  { name: "IRB Infra", logo: "/logos/IRB-logo.jpg" }
 ];
 const associations = [
-  { name: "ISO 14001", logo: "/logos/iso-14001.svg" },
-  { name: "ISO 27001", logo: "/logos/iso-27001.svg" },
+  { name: "ISO 14001", logo: "/logos/ISO-14001.jpg" },
+  { name: "ISO 27001", logo: "/logos/ISO-27001.jpg" },
   { name: "ISO Certified", logo: "/logos/iso-certified.svg" },
-  { name: "GEM", logo: "/logos/gem.svg" },
-  { name: "FICCI", logo: "/logos/ficci.svg" },
-  { name: "Startup India", logo: "/logos/startup-india.svg" },
-  { name: "CII", logo: "/logos/cii.svg" },
+  { name: "GEM", logo: "/logos/GeM.jpg" },
+  { name: "FICCI", logo: "/logos/FICCI.jpg" },
+  { name: "Startup India", logo: "/logos/startupindia.jpg" },
+  { name: "CII", logo: "/logos/CII.jpg" },
   { name: "DPIIT", logo: "/logos/dpiit.svg" },
   { name: "InvoiceMart", logo: "/logos/invoicemart.svg" },
-  { name: "MSME", logo: "/logos/msme.svg" }
+  { name: "MSME", logo: "/logos/MEME.jpg" }
 ];
 const financingPartners = [
-  { name: "HDFC Bank", logo: "/logos/hdfc-bank.svg" },
-  { name: "Aditya Birla Capital", logo: "/logos/aditya-birla-capital.svg" },
-  { name: "Tata Capital", logo: "/logos/tata-capital.svg" },
-  { name: "Shriram Finance", logo: "/logos/shriram-finance.svg" },
-  { name: "L&T Finance", logo: "/logos/l-t-finance.svg" },
-  { name: "IDFC FIRST Bank", logo: "/logos/idfc-first-bank.svg" }
+  { name: "HDFC Bank", logo: "/logos/Hdfc-Bank.png" },
+  { name: "Aditya Birla Capital", logo: "/logos/ABC.jpg" },
+  { name: "Tata Capital", logo: "/logos/Tata-capital.jpg" },
+  { name: "Shriram Finance", logo: "/logos/shriram.jpg" },
+  { name: "L&T Finance", logo: "/logos/L&T.jpg" },
+  { name: "IDFC FIRST Bank", logo: "/logos/IDFC-BANK.png" }
 ];
 const awards = [
   {
@@ -2686,14 +2678,8 @@ function Home() {
             transition: { duration: 0.55, delay: 0.38 },
             className: "flex flex-wrap items-center gap-3 mb-10",
             children: [
-              /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5", children: [
-                "Explore Services",
-                /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-              ] }) }),
-              /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsxs("button", { className: "inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors shadow-md shadow-[#00274d]/30", children: [
-                /* @__PURE__ */ jsx(Play, { className: "w-3 h-3 fill-current" }),
-                "Explore Materials"
-              ] }) })
+              /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Services" }) }),
+              /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Materials" }) })
             ]
           }
         )
@@ -2844,10 +2830,7 @@ function Home() {
               ))
             }
           ),
-          /* @__PURE__ */ jsx("div", { className: "mt-7 flex flex-wrap items-center gap-4", children: /* @__PURE__ */ jsx(Link, { href: "/about", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-bold tracking-wide px-5 py-2.5 rounded-lg text-sm uppercase transition-all duration-300 shadow-[0_10px_28px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_14px_36px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5", children: [
-            "KNOW MORE",
-            /* @__PURE__ */ jsx("span", { className: "flex h-7 w-7 items-center justify-center rounded-full bg-[#00274d] text-white transition-transform duration-300 group-hover:translate-x-1", children: /* @__PURE__ */ jsx(ArrowRight, { className: "w-3.5 h-3.5" }) })
-          ] }) }) })
+          /* @__PURE__ */ jsx("div", { className: "mt-7 flex flex-wrap items-center gap-4", children: /* @__PURE__ */ jsx(Link, { href: "/about", children: /* @__PURE__ */ jsx(SiteButton, { className: "px-5 py-2.5", children: "KNOW MORE" }) }) })
         ] }),
         /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.2, className: "lg:col-span-5 hidden lg:block", children: /* @__PURE__ */ jsxs("div", { className: "relative pl-6 pr-2 pb-10", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-4 bottom-12 w-[3px] rounded-full bg-gradient-to-b from-[#edad1a] via-[#edad1a]/40 to-transparent" }),
@@ -2947,10 +2930,7 @@ function Home() {
             })
           }
         ),
-        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5", children: [
-          "View All Services ",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-        ] }) }) })
+        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "View All Services" }) }) })
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-14 md:py-20 bg-white overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-12 lg:gap-20 items-center", children: [
@@ -2972,10 +2952,7 @@ function Home() {
             /* @__PURE__ */ jsx("p", { className: "text-[0.95rem] text-gray-600 leading-relaxed font-normal", children: p.desc })
           ] })
         ] }, p.num)) }),
-        /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsxs("button", { className: "group mt-8 inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#d49a10] text-white font-medium px-6 py-3 rounded-lg text-sm transition-colors shadow-md shadow-[#edad1a]/20", children: [
-          "Explore Materials ",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-        ] }) })
+        /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { className: "mt-8", children: "Explore Materials" }) })
       ] }),
       /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
@@ -3060,10 +3037,7 @@ function Home() {
               /* @__PURE__ */ jsx("p", { className: "text-[0.95rem] text-gray-600 leading-relaxed font-normal", children: p.desc })
             ] })
           ] }, p.num)) }),
-          /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5", children: [
-            "Explore Sectors ",
-            /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-          ] }) })
+          /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Sectors" }) })
         ] })
       ] }) })
     ] }),
@@ -3084,10 +3058,7 @@ function Home() {
           /* @__PURE__ */ jsx("p", { className: "text-2xl font-bold text-[#00274d] leading-none tabular-nums", children: item2.value }),
           /* @__PURE__ */ jsx("p", { className: "text-[11px] font-medium uppercase tracking-wider text-gray-400 mt-2", children: item2.label })
         ] }, item2.label)) }),
-        /* @__PURE__ */ jsx(Link, { href: "/why-us", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#d49a10] text-white font-medium px-6 py-3 rounded-lg text-sm transition-colors shadow-md shadow-[#edad1a]/20", children: [
-          "Learn More ",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-        ] }) })
+        /* @__PURE__ */ jsx(Link, { href: "/why-us", children: /* @__PURE__ */ jsx(SiteButton, { children: "Learn More" }) })
       ] }),
       /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
@@ -3274,10 +3245,7 @@ function Home() {
           ] }) }) }, i))
         }
       ),
-      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5", children: [
-        "All Articles ",
-        /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-      ] }) }) })
+      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsx(SiteButton, { children: "All Articles" }) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-[#00274d] py-20", children: [
       /* @__PURE__ */ jsx("div", { className: "pointer-events-none absolute inset-0 opacity-[0.5]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px)", backgroundSize: "44px 44px" } }),
@@ -3358,16 +3326,7 @@ function Home() {
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
             " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
-          /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
-            /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#00274d] text-white font-semibold px-5 py-2.5 text-sm rounded-md hover:bg-[#003a73] transition-colors", children: [
-              "Get in Touch",
-              /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-            ] }) }),
-            /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors", children: [
-              "Explore Services",
-              /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-            ] }) })
-          ] })
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
       }
     ),
@@ -3583,7 +3542,7 @@ function About() {
               /* @__PURE__ */ jsx("p", { children: "Headquartered in Delhi NCR, Vendor Infra was founded by industry leaders with over two decades of experience in managing and executing large-scale infrastructure projects." }),
               /* @__PURE__ */ jsx("p", { children: "Our platform is built to simplify vendor discovery and collaboration, enable supply chain finance, offer a dedicated plants and equipment marketplace, and facilitate project insurance - empowering businesses to overcome industry challenges and drive greater efficiency, transparency, and growth." })
             ] }),
-            /* @__PURE__ */ jsxs("a", { href: "/services", className: "group mt-7 inline-flex items-center gap-3 rounded-lg bg-[#edad1a] px-5 py-3 text-sm font-bold text-white hover:bg-[#d49a10] transition-colors", children: [
+            /* @__PURE__ */ jsxs("a", { href: "/services", className: siteButtonClasses("primary", "mt-7 px-5"), children: [
               "Explore Services ",
               /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
             ] })
@@ -3600,9 +3559,9 @@ function About() {
                 /* @__PURE__ */ jsx("p", { children: "Our AI- and ML Powered seamlessly blends technology with the real-world needs of infrastructure stakeholders, enabling smarter decision-making, cost optimization, profit maximization, and faster collaboration." }),
                 /* @__PURE__ */ jsx("p", { children: "Vendor Infra brings integrated services on a single platform, empowering contractors, suppliers, consultants, and developers to connect, collaborate, and construct more efficiently than ever before." })
               ] }),
-              /* @__PURE__ */ jsxs("a", { href: "/contact", className: "group mt-7 inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5", children: [
+              /* @__PURE__ */ jsxs("a", { href: "/contact", className: siteButtonClasses("primary", "mt-7 px-5 py-2.5 normal-case tracking-normal"), children: [
                 "Book a demo",
-                /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
+                /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
               ] })
             ] })
           ] })
@@ -4127,10 +4086,7 @@ function Services() {
           /* @__PURE__ */ jsx("p", { className: "type-body-lg text-white/70 mt-4 max-w-xl mx-auto", children: "Explore how our ecosystem supports your business from opportunity to execution." })
         ] }),
         /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.15, children: /* @__PURE__ */ jsx(VideoPlayer, {}) }),
-        /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.2, className: "text-center mt-12", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5", children: [
-          "Get Started with Us",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-        ] }) }) })
+        /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.2, className: "text-center mt-12", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Get Started with Us" }) }) })
       ] })
     ] }),
     /* @__PURE__ */ jsx(Footer, {})
@@ -4226,7 +4182,7 @@ function ContractManufacturing() {
             /* @__PURE__ */ jsx(motion.h1, { initial: { opacity: 0, y: 24 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.1 }, className: "text-4xl md:text-6xl font-semibold leading-tight tracking-tight", children: "Build Products at Scale, Without Building Factories." }),
             /* @__PURE__ */ jsx(motion.p, { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.2 }, className: "mt-6 text-base md:text-xl leading-relaxed text-white/78 max-w-2xl", children: "Vendor Infra enables businesses to design, source, manufacture, and deliver products through a connected ecosystem of verified manufacturers, intelligent workflows, and real-time execution visibility." }),
             /* @__PURE__ */ jsxs(motion.div, { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.3 }, className: "mt-8 flex flex-col sm:flex-row gap-4", children: [
-              /* @__PURE__ */ jsxs(Link, { href: "/contact", className: "group inline-flex items-center justify-center gap-3 rounded-2xl bg-[#edad1a] px-7 py-4 text-sm font-semibold text-white transition-all hover:bg-[#d4941a]", children: [
+              /* @__PURE__ */ jsxs(Link, { href: "/contact", className: siteButtonClasses("primary", "rounded-2xl px-7 py-4"), children: [
                 "Start Your Project ",
                 /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
               ] }),
@@ -4448,7 +4404,7 @@ function ContractManufacturing() {
         /* @__PURE__ */ jsx("h3", { className: "mt-8 text-2xl md:text-3xl font-semibold text-[#edad1a]", children: "Build Smarter. Scale Faster. Deliver Better." }),
         /* @__PURE__ */ jsx("p", { className: "mt-4 text-slate-600", children: "Join businesses and manufacturers operating on a connected platform where every stage of production is structured, visible, and optimized." }),
         /* @__PURE__ */ jsxs("div", { className: "mt-8 flex flex-col sm:flex-row gap-3", children: [
-          /* @__PURE__ */ jsxs(Link, { href: "/contact", className: "group inline-flex items-center justify-center gap-3 rounded-xl bg-[#edad1a] px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-[#d4941a]", children: [
+          /* @__PURE__ */ jsxs(Link, { href: "/contact", className: siteButtonClasses(), children: [
             "Start Your Manufacturing Project ",
             /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
           ] }),
@@ -4659,9 +4615,9 @@ function Contact() {
                 {
                   type: "submit",
                   disabled: isSubmitting,
-                  className: "w-full flex items-center justify-center gap-2 bg-[#edad1a] hover:bg-[#d49a10] disabled:opacity-60 text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.01] shadow-lg shadow-yellow-400/20 text-base",
+                  className: siteButtonClasses("primary", "w-full py-4 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-60"),
                   children: isSubmitting ? /* @__PURE__ */ jsxs(Fragment, { children: [
-                    /* @__PURE__ */ jsx("span", { className: "animate-spin rounded-full h-4 w-4 border-2 border-white/30 border-t-white" }),
+                    /* @__PURE__ */ jsx("span", { className: "animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/30 border-t-[#00274d]" }),
                     "Sending..."
                   ] }) : /* @__PURE__ */ jsxs(Fragment, { children: [
                     /* @__PURE__ */ jsx(Send, { className: "w-4 h-4" }),
@@ -4681,7 +4637,7 @@ function Contact() {
                 /* @__PURE__ */ jsx("p", { className: "text-xs text-white/70", children: "Landmark Cyber Park, Sector 67, Gurugram" })
               ] })
             ] }),
-            /* @__PURE__ */ jsx("a", { href: "https://maps.google.com/?q=Landmark+Cyber+Park+Sector+67+Gurugram", target: "_blank", rel: "noopener noreferrer", className: "hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold bg-[#edad1a] hover:bg-[#d49a10] text-white px-3 py-2 rounded-lg transition-colors", children: "Get Directions" })
+            /* @__PURE__ */ jsx("a", { href: "https://maps.google.com/?q=Landmark+Cyber+Park+Sector+67+Gurugram", target: "_blank", rel: "noopener noreferrer", className: siteButtonClasses("primary", "hidden sm:inline-flex px-3 py-2 text-xs normal-case tracking-normal"), children: "Get Directions" })
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "relative", children: [
             /* @__PURE__ */ jsx(
@@ -5194,10 +5150,7 @@ function Sectors() {
     /* @__PURE__ */ jsx("section", { className: "py-16 bg-[#edad1a]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 text-center", children: [
       /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-4", children: "Ready to streamline your sector's supply chain?" }),
       /* @__PURE__ */ jsx("p", { className: "text-[#00274d]/75 mb-8 max-w-xl mx-auto font-medium", children: "Join thousands of contractors, vendors and EPC companies already on Vendor Infra." }),
-      /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors shadow-lg", children: [
-        "Get in Touch",
-        /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-      ] }) })
+      /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) })
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -5305,14 +5258,8 @@ function SectorDetail() {
           ] }),
           /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-base mb-8", children: sector.overview }),
           /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3", children: [
-            /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5", children: [
-              "Get Started",
-              /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-            ] }) }),
-            /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors", children: [
-              "Our Services",
-              /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-            ] }) })
+            /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Get Started" }) }),
+            /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Our Services" }) })
           ] })
         ]
       }
@@ -5418,11 +5365,8 @@ function SectorDetail() {
       ] }),
       /* @__PURE__ */ jsx("p", { className: "text-white/85 mb-8 max-w-xl mx-auto text-base", children: "Join thousands of contractors, vendors and EPC companies already on Vendor Infra." }),
       /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-4 justify-center", children: [
-        /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-semibold px-5 py-2.5 rounded-md text-sm transition-colors shadow-lg", children: [
-          "Get in Touch",
-          /* @__PURE__ */ jsx(CtaArrow, { variant: "blue" })
-        ] }) }),
-        /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsxs("button", { className: "group inline-flex items-center gap-2 border-2 border-[#00274d] text-[#00274d] font-semibold px-5 py-2.5 rounded-md text-sm hover:bg-[#00274d] hover:text-white transition-colors", children: [
+        /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
+        /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsxs(SiteButton, { variant: "onGold", arrow: false, className: "normal-case tracking-normal", children: [
           /* @__PURE__ */ jsx(ArrowLeft, { className: "w-4 h-4" }),
           " Back to Sectors"
         ] }) })
@@ -6073,20 +6017,7 @@ function WhyUs() {
                     },
                     node.label
                   ))
-                ] }),
-                /* @__PURE__ */ jsxs(
-                  "a",
-                  {
-                    href: "https://youtu.be/tn81mJqaeEM",
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    className: "absolute bottom-6 right-6 inline-flex items-center gap-3 rounded-lg bg-white/95 px-5 py-3 text-sm font-bold text-[#00274d] shadow-lg hover:bg-white transition-colors",
-                    children: [
-                      /* @__PURE__ */ jsx("span", { className: "flex h-8 w-8 items-center justify-center rounded-full bg-[#edad1a] text-white", children: /* @__PURE__ */ jsx(Play, { className: "h-4 w-4", fill: "currentColor" }) }),
-                      "Know more"
-                    ]
-                  }
-                )
+                ] })
               ] }),
               /* @__PURE__ */ jsx("div", { className: "relative grid sm:grid-cols-3 gap-3 p-5", children: stats.map((stat) => /* @__PURE__ */ jsxs("div", { className: "rounded-xl border border-white/10 bg-white/8 p-4", children: [
                 /* @__PURE__ */ jsx(stat.icon, { className: "h-5 w-5 text-[#edad1a] mb-4" }),
@@ -6120,10 +6051,7 @@ function WhyUs() {
               /* @__PURE__ */ jsx("strong", { children: "certified suppliers, contractors, consultants, and developers" }),
               " across the infrastructure and construction ecosystem. We ensure reliability, transparency, and speed by bringing the entire vendor discovery, management, and collaboration process under one secure digital roof - helping businesses make smarter, faster, and data-backed decisions."
             ] }),
-            /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsxs("button", { className: "group mt-9 inline-flex items-center gap-3 rounded-lg bg-[#edad1a] px-6 py-3 text-sm font-bold text-white shadow-lg shadow-[#edad1a]/20 hover:bg-[#d49a10] transition-colors", children: [
-              "Explore Services ",
-              /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })
-            ] }) })
+            /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { className: "mt-9", children: "Explore Services" }) })
           ]
         }
       )
@@ -7137,7 +7065,7 @@ function FAQ() {
                     Link,
                     {
                       href: "/contact",
-                      className: "inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#d49a10] text-white font-semibold px-4 py-2.5 rounded-lg text-sm transition-colors w-full justify-center",
+                      className: siteButtonClasses("primary", "w-full px-4 py-2.5 normal-case tracking-normal"),
                       children: [
                         "Contact Us ",
                         /* @__PURE__ */ jsx(CtaArrow, { variant: "dark" })

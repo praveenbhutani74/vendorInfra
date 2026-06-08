@@ -4,13 +4,14 @@ import { Link } from "wouter";
 import {
   Search, Zap, Building2, ShieldCheck, TrendingUp, Handshake,
   ArrowRight, Star, ChevronLeft, ChevronRight, CheckCircle2,
-  Package, FileText, BarChart3, Play, ArrowUpRight, Sparkles, Users, Activity,
+  Package, FileText, BarChart3, ArrowUpRight, Sparkles, Users, Activity,
   Calculator, Tractor, Briefcase, Factory
 } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ContactSalesModal } from "@/components/ContactSalesModal";
 import { CtaArrow } from "@/components/CtaArrow";
+import { SiteButton, siteButtonClasses } from "@/components/SiteButton";
 import { categories } from "@/lib/materialsData";
 import { sectors as allSectors } from "@/lib/sectorsData";
 import heroImage from "@/assets/hero-construction.png";
@@ -108,40 +109,40 @@ const testimonials = [
 ];
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "/logos/adani-group.svg" },
-  { name: "NCC",            logo: "/logos/ncc.svg" },
-  { name: "Tata Projects",  logo: "/logos/tata-projects.svg" },
-  { name: "JWIL",           logo: "/logos/jwil.svg" },
-  { name: "Gawar",          logo: "/logos/gawar.svg" },
-  { name: "JMC Projects",   logo: "/logos/jmc-projects.svg" },
-  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
-  { name: "INOX Wind",      logo: "/logos/inox-wind.svg" },
-  { name: "IndInfravit",    logo: "/logos/indinfravit.svg" },
-  { name: "KEC",            logo: "/logos/kec.svg" },
-  { name: "Kalpataru",      logo: "/logos/kalpataru.svg" },
-  { name: "IRB Infra",      logo: "/logos/irb-infra.svg" },
+  { name: "Adani Group",    logo: "/logos/Adani-Group.png" },
+  { name: "NCC",            logo: "/logos/NCC.png" },
+  { name: "Tata Projects",  logo: "/logos/tata-projects.png" },
+  { name: "JWIL",           logo: "/logos/JWIL.jpg" },
+  { name: "Gawar",          logo: "/logos/Gawar.png" },
+  { name: "JMC Projects",   logo: "/logos/jmc-projects.png" },
+  { name: "Dilip Buildcon", logo: "/logos/DBL.png" },
+  { name: "INOX Wind",      logo: "/logos/inox-wind.png" },
+  { name: "IndInfravit",    logo: "/logos/Indinfravit.png" },
+  { name: "KEC",            logo: "/logos/kec.png" },
+  { name: "Kalpataru",      logo: "/logos/KPILLOGO.png" },
+  { name: "IRB Infra",      logo: "/logos/IRB-logo.jpg" },
 ];
 
 const associations = [
-  { name: "ISO 14001",     logo: "/logos/iso-14001.svg" },
-  { name: "ISO 27001",     logo: "/logos/iso-27001.svg" },
+  { name: "ISO 14001",     logo: "/logos/ISO-14001.jpg" },
+  { name: "ISO 27001",     logo: "/logos/ISO-27001.jpg" },
   { name: "ISO Certified", logo: "/logos/iso-certified.svg" },
-  { name: "GEM",           logo: "/logos/gem.svg" },
-  { name: "FICCI",         logo: "/logos/ficci.svg" },
-  { name: "Startup India", logo: "/logos/startup-india.svg" },
-  { name: "CII",           logo: "/logos/cii.svg" },
+  { name: "GEM",           logo: "/logos/GeM.jpg" },
+  { name: "FICCI",         logo: "/logos/FICCI.jpg" },
+  { name: "Startup India", logo: "/logos/startupindia.jpg" },
+  { name: "CII",           logo: "/logos/CII.jpg" },
   { name: "DPIIT",         logo: "/logos/dpiit.svg" },
   { name: "InvoiceMart",   logo: "/logos/invoicemart.svg" },
-  { name: "MSME",          logo: "/logos/msme.svg" },
+  { name: "MSME",          logo: "/logos/MEME.jpg" },
 ];
 
 const financingPartners = [
-  { name: "HDFC Bank",             logo: "/logos/hdfc-bank.svg" },
-  { name: "Aditya Birla Capital",  logo: "/logos/aditya-birla-capital.svg" },
-  { name: "Tata Capital",          logo: "/logos/tata-capital.svg" },
-  { name: "Shriram Finance",       logo: "/logos/shriram-finance.svg" },
-  { name: "L&T Finance",           logo: "/logos/l-t-finance.svg" },
-  { name: "IDFC FIRST Bank",       logo: "/logos/idfc-first-bank.svg" },
+  { name: "HDFC Bank",             logo: "/logos/Hdfc-Bank.png" },
+  { name: "Aditya Birla Capital",  logo: "/logos/ABC.jpg" },
+  { name: "Tata Capital",          logo: "/logos/Tata-capital.jpg" },
+  { name: "Shriram Finance",       logo: "/logos/shriram.jpg" },
+  { name: "L&T Finance",           logo: "/logos/L&T.jpg" },
+  { name: "IDFC FIRST Bank",       logo: "/logos/IDFC-BANK.png" },
 ];
 
 const awards = [
@@ -362,7 +363,7 @@ function HeroDemoForm() {
         )}
 
         <button type="submit" disabled={status === "loading"}
-          className="w-full bg-[#edad1a] hover:bg-[#d49a10] text-white font-semibold py-3 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-md shadow-[#edad1a]/25">
+          className={siteButtonClasses("primary", "w-full py-3 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-70")}>
           {status === "loading" ? (
             <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
           ) : (
@@ -452,16 +453,14 @@ export default function Home() {
               className="flex flex-wrap items-center gap-3 mb-10"
             >
               <Link href="/services">
-                <button className="group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_20px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_10px_24px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5">
+                <SiteButton>
                   Explore Services
-                  <CtaArrow variant="blue" />
-                </button>
+                </SiteButton>
               </Link>
               <Link href="/materials">
-                <button className="inline-flex items-center gap-2 bg-[#00274d] hover:bg-[#003a73] text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-colors shadow-md shadow-[#00274d]/30">
-                  <Play className="w-3 h-3 fill-current" />
+                <SiteButton>
                   Explore Materials
-                </button>
+                </SiteButton>
               </Link>
             </motion.div>
 
@@ -614,13 +613,10 @@ export default function Home() {
               </motion.ul>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <Link href="/about">
-                  <button className="group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f5bb2e] text-[#00274d] font-bold tracking-wide px-5 py-2.5 rounded-lg text-sm uppercase transition-all duration-300 shadow-[0_10px_28px_-10px_rgba(237,173,26,0.7)] hover:shadow-[0_14px_36px_-10px_rgba(237,173,26,0.85)] hover:-translate-y-0.5">
+              <Link href="/about">
+                  <SiteButton className="px-5 py-2.5">
                     KNOW MORE
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#00274d] text-white transition-transform duration-300 group-hover:translate-x-1">
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </button>
+                  </SiteButton>
                 </Link>
               </div>
 
@@ -790,9 +786,7 @@ export default function Home() {
           {/* CTA */}
           <FadeUp delay={0.1} className="mt-12 text-left">
             <Link href="/services">
-              <button className="group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5">
-                View All Services <CtaArrow variant="dark" />
-              </button>
+              <SiteButton>View All Services</SiteButton>
             </Link>
           </FadeUp>
 
@@ -832,9 +826,7 @@ export default function Home() {
               </div>
 
               <Link href="/materials">
-                <button className="group mt-8 inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#d49a10] text-white font-medium px-6 py-3 rounded-lg text-sm transition-colors shadow-md shadow-[#edad1a]/20">
-                  Explore Materials <CtaArrow variant="dark" />
-                </button>
+                <SiteButton className="mt-8">Explore Materials</SiteButton>
               </Link>
             </FadeUp>
 
@@ -944,9 +936,7 @@ export default function Home() {
               </div>
 
               <Link href="/sectors">
-                <button className="group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5">
-                  Explore Sectors <CtaArrow variant="dark" />
-                </button>
+                <SiteButton>Explore Sectors</SiteButton>
               </Link>
             </FadeUp>
           </div>
@@ -985,9 +975,7 @@ export default function Home() {
               </div>
 
               <Link href="/why-us">
-                <button className="group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#d49a10] text-white font-medium px-6 py-3 rounded-lg text-sm transition-colors shadow-md shadow-[#edad1a]/20">
-                  Learn More <CtaArrow variant="dark" />
-                </button>
+                <SiteButton>Learn More</SiteButton>
               </Link>
             </FadeUp>
 
@@ -1217,9 +1205,7 @@ export default function Home() {
 
           <FadeUp delay={0.1} className="mt-12 text-left">
             <Link href="/blog">
-              <button className="group inline-flex items-center gap-3 bg-[#edad1a] hover:bg-[#f7c44a] text-white font-semibold px-6 py-3 rounded-lg text-sm transition-all duration-300 shadow-[0_8px_28px_-8px_rgba(237,173,26,0.5)] hover:shadow-[0_14px_36px_-8px_rgba(237,173,26,0.6)] hover:-translate-y-0.5">
-                All Articles <CtaArrow variant="dark" />
-              </button>
+              <SiteButton>All Articles</SiteButton>
             </Link>
           </FadeUp>
         </div>
@@ -1448,17 +1434,16 @@ export default function Home() {
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
               <Link href="/contact">
-                <button className="group inline-flex items-center gap-2 bg-[#00274d] text-white font-semibold px-5 py-2.5 text-sm rounded-md hover:bg-[#003a73] transition-colors">
+                <SiteButton variant="onGold" className="normal-case tracking-normal">
                   Get in Touch
-                  <CtaArrow variant="blue" />
-                </button>
+                </SiteButton>
               </Link>
-              <Link href="/services">
+              {/* <Link href="/services">
                 <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
                   Explore Services
                   <CtaArrow variant="blue" />
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
