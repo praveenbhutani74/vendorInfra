@@ -546,8 +546,8 @@ function Footer() {
         /* @__PURE__ */ jsxs("h3", { className: "text-white text-lg md:text-xl font-bold leading-snug", children: [
           "AI - Powered Operating System for",
           " ",
-          /* @__PURE__ */ jsx("span", { className: "text-[#edad1a] underline decoration-[#edad1a] decoration-2 underline-offset-4", children: "Infrastructure" }),
-          ", Construction & Manufacturing Industry"
+          /* @__PURE__ */ jsx("span", { className: "text-[#edad1a] underline decoration-[#edad1a] decoration-2 underline-offset-4", children: "Infrastructure," }),
+          " Construction & Manufacturing Industry"
         ] }),
         /* @__PURE__ */ jsx("p", { className: "text-white/70 text-sm mt-3", children: "Unleashing the potential through Ecosystem." }),
         /* @__PURE__ */ jsxs("div", { className: "flex gap-3 mt-6", children: [
@@ -2653,10 +2653,10 @@ function Home() {
               "AI - Powered Operating System for",
               " ",
               /* @__PURE__ */ jsxs("span", { className: "relative inline-block text-[#edad1a]", children: [
-                "Infrastructure",
+                "Infrastructure,",
                 /* @__PURE__ */ jsx("svg", { className: "absolute left-0 -bottom-2 w-full", height: "6", viewBox: "0 0 300 6", preserveAspectRatio: "none", fill: "none", children: /* @__PURE__ */ jsx("path", { d: "M2 3 Q150 0 298 3", stroke: "#edad1a", strokeWidth: "3", strokeLinecap: "round" }) })
               ] }),
-              ", Construction & Manufacturing Industry"
+              " Construction & Manufacturing Industry"
             ]
           }
         ),

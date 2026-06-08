@@ -430,11 +430,11 @@ export default function Home() {
             >
               AI - Powered Operating System for{" "}
               <span className="relative inline-block text-[#edad1a]">
-                Infrastructure
+                Infrastructure,
                 <svg className="absolute left-0 -bottom-2 w-full" height="6" viewBox="0 0 300 6" preserveAspectRatio="none" fill="none">
                   <path d="M2 3 Q150 0 298 3" stroke="#edad1a" strokeWidth="3" strokeLinecap="round" />
                 </svg>
-              </span>, Construction & Manufacturing Industry
+              </span> Construction & Manufacturing Industry
             </motion.h1>
 
             <motion.p

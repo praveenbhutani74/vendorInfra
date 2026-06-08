@@ -20,7 +20,7 @@ export function Footer() {
             </div>
             <h3 className="text-white text-lg md:text-xl font-bold leading-snug">
               AI - Powered Operating System for{" "}
-              <span className="text-[#edad1a] underline decoration-[#edad1a] decoration-2 underline-offset-4">Infrastructure</span>, Construction &amp; Manufacturing Industry
+              <span className="text-[#edad1a] underline decoration-[#edad1a] decoration-2 underline-offset-4">Infrastructure,</span> Construction &amp; Manufacturing Industry
             </h3>
             <p className="text-white/70 text-sm mt-3">
               Unleashing the potential through Ecosystem.
