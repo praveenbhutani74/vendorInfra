@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             ))}
           </div>
           <p className="text-center text-gray-400 text-xs mt-8">
-            Last updated: January 2026 · For questions, contact enquiry@vendorinfra.com
+            Have questions? Reach out to us at enquiry@vendorinfra.com
           </p>
         </div>
       </section>

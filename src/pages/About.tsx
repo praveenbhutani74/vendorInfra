@@ -9,18 +9,18 @@ import { siteButtonClasses } from "@/components/SiteButton";
 const base = import.meta.env.BASE_URL;
 
 const trustedBy = [
-  { name: "Adani Group",    logo: "/logos/adani-group.svg" },
-  { name: "NCC",            logo: "/logos/ncc.svg" },
-  { name: "Tata Projects",  logo: "/logos/tata-projects.svg" },
-  { name: "JWIL",           logo: "/logos/jwil.svg" },
-  { name: "Gawar",          logo: "/logos/gawar.svg" },
-  { name: "JMC Projects",   logo: "/logos/jmc-projects.svg" },
-  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
-  { name: "INOX Wind",      logo: "/logos/inox-wind.svg" },
-  { name: "IndInfravit",    logo: "/logos/indinfravit.svg" },
-  { name: "KEC",            logo: "/logos/kec.svg" },
-  { name: "Kalpataru",      logo: "/logos/kalpataru.svg" },
-  { name: "IRB Infra",      logo: "/logos/irb-infra.svg" },
+  { name: "Adani Group",    logo: "/logos/Adani-Group.png" },
+  { name: "NCC",            logo: "/logos/NCC.png" },
+  { name: "Tata Projects",  logo: "/logos/tata-projects.png" },
+  { name: "JWIL",           logo: "/logos/JWIL.jpg" },
+  { name: "Gawar",          logo: "/logos/Gawar.png" },
+  { name: "JMC Projects",   logo: "/logos/jmc-projects.png" },
+  { name: "Dilip Buildcon", logo: "/logos/DBL.png" },
+  { name: "INOX Wind",      logo: "/logos/inox-wind.png" },
+  { name: "IndInfravit",    logo: "/logos/Indinfravit.png" },
+  { name: "KEC",            logo: "/logos/kec.png" },
+  { name: "Kalpataru",      logo: "/logos/KPILLOGO.png" },
+  { name: "IRB Infra",      logo: "/logos/IRB-logo.jpg" },
 ];
 
 function LogoMarquee({ logos }: { logos: { name: string; logo: string }[] }) {

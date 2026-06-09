@@ -97,7 +97,7 @@ export default function PricingPolicy() {
             ))}
           </div>
           <p className="text-center text-gray-400 text-xs mt-8">
-            For questions, contact enquiry@vendorinfra.com
+            Have questions? Reach out to us at enquiry@vendorinfra.com
           </p>
         </div>
       </section>

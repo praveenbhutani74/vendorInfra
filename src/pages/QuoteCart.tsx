@@ -65,7 +65,7 @@ export default function QuoteCart() {
             </div>
             <h2 className="text-2xl font-semibold text-[#00274d] mb-3">Quote Request Sent!</h2>
             <p className="text-gray-500 mb-8 leading-relaxed">
-              Our team will review your requirements and contact you within 24 hours with pricing and availability.
+              Our team will review your requirements and contact you within 12 hours with pricing and availability.
             </p>
             <Link href="/materials">
               <button className="bg-[#edad1a] text-white font-bold px-8 py-3 rounded-full hover:bg-[#00274d] transition-colors shadow-md">
@@ -85,7 +85,7 @@ export default function QuoteCart() {
       <PageHero
         eyebrow="Materials"
         title="Your Quote Cart"
-        subtitle="Review your selected items and submit a quote request. Our team will respond within 24 hours."
+        subtitle="Review your selected items and submit a quote request. Our team will respond within 12 hours."
       />
 
       <section className="flex-1 bg-gray-50 py-12">
@@ -239,7 +239,7 @@ export default function QuoteCart() {
                           </>
                         )}
                       </button>
-                      <p className="text-center text-xs text-gray-400">We'll respond within 24 hours</p>
+                      <p className="text-center text-xs text-gray-400">We'll respond within 12 hours</p>
                     </form>
                   </div>
                 </div>

@@ -4,9 +4,11 @@ import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
+  BadgeIndianRupee,
   BarChart3,
   CheckCircle2,
   ChevronRight,
+  MapPinned,
   PackageSearch,
   Search,
   ShieldCheck,
@@ -21,10 +23,10 @@ import { categories } from "@/lib/materialsData";
 import { useQuoteCart } from "@/lib/quoteCart";
 
 const features = [
-  { icon: ShoppingCart, label: "Price discovery" },
-  { icon: ShieldCheck, label: "Verified sourcing" },
-  { icon: Truck, label: "Pan India delivery" },
-  { icon: BarChart3, label: "Order visibility" },
+  { icon: Truck, label: "On-Time Delivery" },
+  { icon: ShieldCheck, label: "Quality Assured" },
+  { icon: BadgeIndianRupee, label: "Competitive Pricing" },
+  { icon: MapPinned, label: "Pan-India Availability" },
 ];
 
 interface SearchResult {
@@ -302,16 +304,16 @@ export default function Materials() {
                     Material categories
                     <span className="w-6 h-px bg-[#edad1a]/60" />
                   </span>
-                  <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#00274d]">Find the right supply category</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#00274d]">Discover the right materials for your project.</h2>
                   <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-500">
-                    Select a category to view product groups, units, variants, and add items to your quote cart.
+                   Browse categories, explore product options and variants, and add the required items to your quotation cart.
                   </p>
                 </>
               )}
             </div>
 
             {/* Persistent inline search */}
-            <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm w-full md:w-72 shrink-0">
+            {/* <div className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm w-full md:w-72 shrink-0">
               <Search className="h-4 w-4 shrink-0 text-gray-400" />
               <input
                 type="text"
@@ -325,7 +327,7 @@ export default function Materials() {
                   <X className="h-4 w-4" />
                 </button>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Feature Strip — always visible */}
@@ -371,7 +373,7 @@ export default function Materials() {
                             <h3 className="truncate text-base font-semibold text-[#00274d]">
                               {isSearching ? highlight(cat.name, query) : cat.name}
                             </h3>
-                            <p className="mt-1 text-sm text-gray-500">Variants, units, and quote-ready items</p>
+                            <p className="mt-1 text-sm text-gray-500">Select a product, variant and unit, then add to cart.</p>
                           </div>
                           <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#edad1a] transition-colors group-hover:border-[#edad1a] group-hover:bg-[#edad1a] group-hover:text-white">
                             <ArrowRight className="h-4 w-4" />
@@ -405,7 +407,7 @@ export default function Materials() {
               </span>
               <div>
                 <h3 className="font-semibold text-[#00274d]">Product category index</h3>
-                <p className="text-sm text-gray-500">Jump directly to a material family.</p>
+                <p className="text-sm text-gray-500">Find categories based on your project requirements</p>
               </div>
             </div>
             <div className="flex flex-wrap gap-2">

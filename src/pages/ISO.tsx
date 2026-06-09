@@ -7,21 +7,21 @@ import { BadgeCheck, Leaf, Lock, ShieldCheck } from "lucide-react";
 const certifications = [
   {
     title: "ISO 9001",
-    image: "/images/wp/9001-2015.png",
+    image: "/images/wp/ISO-9001-img.png",
     icon: ShieldCheck,
     content:
       "Vendor Infra is ISO 9001 certified. This is one of the most popular ISO standards for creating, implementing, and maintaining a Quality Management System (QMS) for any given company, regardless of its industry, capital, or size",
   },
   {
     title: "ISO 14001",
-    image: "/images/wp/14001-2015.png",
+    image: "/images/wp/ISO-14001.png",
     icon: Leaf,
     content:
       "Vendor Infra is ISO 14001 certified. This ISO standard provides guidelines on what has to be done to implement an environmental management system (EMS). It includes policies, processes, plans, records, and best practices that define rules regarding how your company interacts with the environment. ISO 14001 requirements give you a framework, along with guidelines. for creating EMS for any organization",
   },
   {
     title: "ISO 27001",
-    image: "/images/wp/27001-2013.png",
+    image: "/images/wp/iso-27000.png",
     icon: Lock,
     content:
       "Vendor Infra is ISO 27001 certified. This ISO Standard is for information security. It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management and continually improving an information security management system within the context of the organization. It also includes requirements for the assessment and treatment of information security risks tailored to the needs of the organization.",

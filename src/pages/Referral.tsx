@@ -4,6 +4,8 @@ import { PageHero } from "@/components/layout/PageHero";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { ArrowRight, CheckCircle2, Loader2, User, Mail, Phone, MapPin, MessageSquare, X } from "lucide-react";
+import { Link } from "wouter";
+import { SiteButton } from "@/components/SiteButton";
 
 const referralPrograms = [
   {
@@ -116,7 +118,7 @@ export default function Referral() {
                   <p className="text-gray-600 leading-relaxed text-base md:text-lg mb-8">
                     {program.description}
                   </p>
-                  <div>
+                  {/* <div>
                     <button
                       onClick={() => openModal(program.title)}
                       className="group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#d4941a] text-[#071827] font-semibold text-base px-7 py-3.5 rounded-lg shadow-[0_8px_24px_-6px_rgba(237,173,26,0.55)] transition-all hover:shadow-[0_12px_28px_-6px_rgba(237,173,26,0.7)] hover:-translate-y-0.5"
@@ -124,7 +126,15 @@ export default function Referral() {
                       Join Now
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                     </button>
-                  </div>
+                  </div> */}
+<div className="flex flex-wrap gap-3 items-center">
+  <SiteButton
+    onClick={() => openModal(program?.title || "Join Now")}
+    className="normal-case tracking-normal"
+  >
+    Join Now
+  </SiteButton>
+</div>
                 </div>
               </motion.article>
 
@@ -174,7 +184,7 @@ export default function Referral() {
                     Join {selectedProgram}
                   </h2>
                   <p className="text-white/70 text-sm mt-2 relative z-10">
-                    Share your details and our team will get back within 24 hours.
+                    Share your details and our team will get back within 12 hours.
                   </p>
                 </div>
 
@@ -219,7 +229,7 @@ export default function Referral() {
                         </div>
                         <button type="submit"
                           className="w-full bg-[#edad1a] hover:bg-[#d4941a] text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-yellow-400/20 text-sm">
-                          Submit Application →
+                          Submit →
                         </button>
                         <p className="text-center text-xs text-gray-400">
                           By submitting, you agree to be contacted about the {selectedProgram}.
@@ -248,7 +258,7 @@ export default function Referral() {
                         <h3 className="text-xl font-semibold text-[#00274d]">Application Received!</h3>
                         <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
                           Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
-                          <span className="font-semibold text-gray-700">{form.phone}</span> within 24 hours.
+                          <span className="font-semibold text-gray-700">{form.phone}</span> within 12 hours.
                         </p>
                         <button onClick={handleClose}
                           className="mt-2 bg-[#00274d] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#003a6e] transition-colors text-sm">

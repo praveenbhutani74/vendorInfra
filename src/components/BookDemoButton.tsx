@@ -214,7 +214,7 @@ export function BookDemoButton() {
                     <h3 className="text-base font-semibold text-[#00274d]">Demo Booked!</h3>
                     <p className="text-gray-500 text-xs leading-relaxed max-w-[200px]">
                       Thanks <strong className="text-gray-700">{form.name}</strong>! We'll reach out to{" "}
-                      <strong className="text-gray-700">{form.phone}</strong> within 24 hours.
+                      <strong className="text-gray-700">{form.phone}</strong> within 12 hours.
                     </p>
                     <button onClick={close}
                       className="mt-1 bg-[#00274d] text-white font-medium px-6 py-2.5 rounded-full text-sm hover:bg-[#003a6e] transition-colors">

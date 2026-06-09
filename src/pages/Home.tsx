@@ -309,7 +309,7 @@ function HeroDemoForm() {
         </div>
         <h3 className="text-lg font-semibold text-[#00274d] mb-2">Demo Booked Successfully</h3>
         <p className="text-gray-500 text-sm mb-1">Thank you, <strong className="font-medium">{form.name}</strong>.</p>
-        <p className="text-gray-400 text-sm">Our team will reach out on <strong className="font-medium">{form.phone}</strong> within 24 hours.</p>
+        <p className="text-gray-400 text-sm">Our team will reach out on <strong className="font-medium">{form.phone}</strong> within 12 hours.</p>
       </div>
     );
   }
@@ -371,7 +371,7 @@ function HeroDemoForm() {
           )}
         </button>
 
-        <p className="text-center text-gray-400 text-[11px]">Our team responds within 24 hours</p>
+        <p className="text-center text-gray-400 text-[11px]">Our team responds within 12 hours</p>
       </form>
     </div>
   );
@@ -670,31 +670,33 @@ export default function Home() {
         </div>
 
       </section>
+<section className="relative overflow-hidden bg-[#f7f8fc] py-8 md:py-12" aria-label="AI SaaS platform marquee">
+  <div className="flex flex-col">
 
-      <section className="relative overflow-hidden bg-[#f7f8fc] py-10 md:py-14" aria-label="AI SaaS platform marquee">
-        <div className="relative h-36 md:h-48">
-          <div className="absolute left-1/2 top-3 w-[125vw] -translate-x-1/2 -rotate-[2.4deg] overflow-hidden rounded-sm bg-[#00274d] py-5 md:py-7 shadow-xl shadow-[#00274d]/15">
-            <div className="ai-marquee-track">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <span key={`blue-${index}`} className="ai-marquee-item">
-                  SaaS Platform with Artificial Intelligence &amp; Machine Learning
-                </span>
-              ))}
-            </div>
-          </div>
+    {/* Navy - TOP */}
+    <div className="w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6">
+      <div className="ai-marquee-track">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <span key={`navy-${index}`} className="ai-marquee-item">
+            SaaS Platform with Artificial Intelligence &amp; Machine Learning
+          </span>
+        ))}
+      </div>
+    </div>
 
-          <div className="absolute left-1/2 top-20 md:top-28 w-[125vw] -translate-x-1/2 rotate-[2.1deg] overflow-hidden rounded-sm bg-[#edad1a] py-5 md:py-7 shadow-xl shadow-[#edad1a]/20">
-            <div className="ai-marquee-track ai-marquee-track-reverse">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <span key={`gold-${index}`} className="ai-marquee-item">
-                  SaaS Platform with Artificial Intelligence &amp; Machine Learning
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Yellow - BOTTOM */}
+    <div className="w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6">
+      <div className="ai-marquee-track ai-marquee-track-reverse">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <span key={`gold-${index}`} className="ai-marquee-item">
+            SaaS Platform with Artificial Intelligence &amp; Machine Learning
+          </span>
+        ))}
+      </div>
+    </div>
 
+  </div>
+</section>
 
       {/* ── SERVICES ──────────────────────────────────── */}
       <section className="py-16 md:py-24 bg-white relative overflow-hidden">

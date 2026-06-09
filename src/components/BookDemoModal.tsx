@@ -251,7 +251,7 @@ export function BookDemoModal({ open, onClose }: Props) {
                       </button>
 
                       <p className="text-center text-xs text-gray-400">
-                        No commitment. Our team will reach out within 24 hours.
+                        No commitment. Our team will reach out within 12 hours.
                       </p>
                       {submitError && (
                         <p className="text-center text-xs text-red-500">{submitError}</p>
@@ -289,7 +289,7 @@ export function BookDemoModal({ open, onClose }: Props) {
                       <h3 className="text-xl font-semibold text-[#00274d]">Demo Booked!</h3>
                       <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
                         Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
-                        <span className="font-semibold text-gray-700">{form.phone}</span> within 24 hours.
+                        <span className="font-semibold text-gray-700">{form.phone}</span> within 12 hours.
                       </p>
                       <button
                         onClick={handleClose}

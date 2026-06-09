@@ -160,7 +160,8 @@ export default function WhyUs() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#00274d] relative overflow-hidden">
+  <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" />
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12">
           <div className="mb-12 max-w-4xl">
             <span className="inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
@@ -168,7 +169,7 @@ export default function WhyUs() {
               USP
               <span className="w-6 h-px bg-[#edad1a]/60" />
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
+           <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
               Empowering Smarter, Faster, and Safer Business Decisions in the Infrastructure Industry
             </h2>
           </div>
@@ -181,8 +182,7 @@ export default function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="group rounded-2xl border border-gray-200 bg-[#f6f8fb] p-6 shadow-sm hover:-translate-y-1 hover:border-[#edad1a]/40 hover:shadow-xl transition-all duration-300"
-              >
+className="group rounded-3xl border border-white/10 bg-white p-7 shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:border-[#edad1a]/40 transition-all duration-300"              >
                 <div className="mb-5 flex items-center justify-between">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#00274d] text-[#edad1a] font-semibold">
                     {item.number}
@@ -199,8 +199,9 @@ export default function WhyUs() {
         </div>
       </section>
 
-      <section className="py-24 bg-[#00274d] relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" />
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[450px] w-[450px] rounded-full bg-[#edad1a]/10 blur-3xl" />
+        {/* <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" /> */}
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
@@ -209,11 +210,11 @@ export default function WhyUs() {
                 Video
                 <span className="w-6 h-px bg-[#edad1a]/60" />
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white">
+              <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#00274d]">
                 Get to know more about us and our Services
               </h2>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl aspect-video">
+           <div className="overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_25px_70px_rgba(0,39,77,0.15)] aspect-video">
               <iframe
                 src="https://www.youtube.com/embed/tn81mJqaeEM?rel=0&modestbranding=1"
                 title="Vendor Infra overview"

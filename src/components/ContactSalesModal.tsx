@@ -149,7 +149,7 @@ export function ContactSalesModal({ open, onClose, planName }: Props) {
                         Submit →
                       </button>
                       <p className="text-center text-xs text-gray-400">
-                        We'll get back to you within 24 hours.
+                        We'll get back to you within 12 hours.
                       </p>
                       {submitError && (
                         <p className="text-center text-xs text-red-500">{submitError}</p>
@@ -173,7 +173,7 @@ export function ContactSalesModal({ open, onClose, planName }: Props) {
                       <h3 className="text-xl font-semibold text-[#00274d]">Request Sent!</h3>
                       <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
                         Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
-                        <span className="font-semibold text-gray-700">{form.contact}</span> within 24 hours.
+                        <span className="font-semibold text-gray-700">{form.contact}</span> within 12 hours.
                       </p>
                       <button onClick={handleClose}
                         className="mt-2 bg-[#00274d] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#003a6e] transition-colors text-sm">

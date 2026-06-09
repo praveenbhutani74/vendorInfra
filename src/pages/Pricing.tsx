@@ -21,6 +21,8 @@ function FeatureLabel({ text }: { text: string }) {
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ContactSalesModal } from "@/components/ContactSalesModal";
+import { Link } from "wouter";
+import { SiteButton } from "@/components/SiteButton";
 
 const PORTAL_REGISTER_URL = "https://portal.vendorinfra.com/register";
 
@@ -36,6 +38,21 @@ type Plan = {
   excluded?: string[];
   ctaType: "register" | "contact";
 };
+
+/* -- fade-up wrapper -------------------------------- */
+function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as const }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function PlanCard({
   plan,
@@ -510,48 +527,66 @@ export default function Pricing() {
       />
 
       {/* FAQ */}
-      <section className="py-20 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#00274d] text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {[
-              {
-                q: "How is billing handled?",
-                a: "All listed plans are monthly pricing plans, billed annually. You pay once for the year and get the lower monthly rate.",
-              },
-              {
-                q: "Can I switch plans later?",
-                a: "Yes, you can upgrade or downgrade your plan at any time. Contact our support team and we will assist with the transition.",
-              },
-              {
-                q: "How do I get started?",
-                a: "Click 'Get Started' on any plan to register on our portal. For the Premium plan, click 'Contact Us' and our team will reach out with a custom quote.",
-              },
-              {
-                q: "Do you offer volume or enterprise discounts?",
-                a: "Yes — for organisations with large user bases or multi-entity procurement needs, contact our sales team for a custom enterprise quote.",
-              },
-            ].map(({ q, a }) => (
-              <details
-                key={q}
-                className="group bg-gray-50 border border-gray-200 rounded-xl overflow-hidden"
-              >
-                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-[#00274d] text-sm select-none list-none">
-                  {q}
-                  <span className="ml-4 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0">
-                    ▾
-                  </span>
-                </summary>
-                <div className="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-4">
-                  {a}
-                </div>
-              </details>
-            ))}
+   <section className="py-24 bg-[#00274d] relative overflow-hidden">
+  <div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" />
+
+  <div className="container mx-auto px-4 max-w-4xl relative z-10">
+    <FadeUp className="text-center mb-14">
+      <span className="inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
+        <span className="w-6 h-px bg-[#edad1a]/60" />
+        FAQ
+        <span className="w-6 h-px bg-[#edad1a]/60" />
+      </span>
+
+      <h2 className="text-3xl md:text-4xl font-bold leading-tight text-white max-w-3xl mx-auto">
+        Explore Answers To Frequently Asked Questions
+      </h2>
+
+      {/* <p className="mt-5 text-white/70 max-w-2xl mx-auto">
+        Everything you need to know about Vendor Infra, pricing,
+        onboarding, and platform features.
+      </p> */}
+    </FadeUp>
+
+    <div className="space-y-5">
+      {[
+        {
+          q: "How is billing handled?",
+          a: "All listed plans are monthly pricing plans billed annually. You pay once for the year and receive the discounted monthly rate.",
+        },
+        {
+          q: "Can I switch plans later?",
+          a: "Yes. You can upgrade or downgrade your subscription at any time. Our support team will help you transition smoothly.",
+        },
+        {
+          q: "How do I get started?",
+          a: "Click Get Started on your preferred plan to register. For Premium plans, our team will contact you with a customized proposal.",
+        },
+        {
+          q: "Do you offer volume or enterprise discounts?",
+          a: "Yes. Organizations with large procurement requirements or multiple business entities can request a custom enterprise quotation.",
+        },
+      ].map(({ q, a }) => (
+        <details
+          key={q}
+          className="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#edad1a]/40"
+        >
+          <summary className="flex items-center justify-between cursor-pointer px-7 py-6 text-white font-semibold text-base list-none">
+            <span>{q}</span>
+
+            <span className="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#edad1a]/15 text-[#edad1a] group-open:rotate-180 transition-transform duration-300">
+              ▾
+            </span>
+          </summary>
+
+          <div className="px-7 pb-6 pt-2 border-t border-white/10 text-white/75 leading-7">
+            {a}
           </div>
-        </div>
-      </section>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* CTA */}
       <section className="py-20 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
@@ -568,9 +603,44 @@ export default function Pricing() {
             Not sure which plan is right for you?
           </h2>
           <p className="text-gray-600 mb-10 text-lg">
-            Our team will help you find the best fit. Talk to sales and we will walk you through everything.
+            Our experts will help you choose the right plan for your business and walk you through everything.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+             <div className="flex flex-wrap gap-3 justify-center items-center">
+                        {/* <Link href="/contact">
+                          <SiteButton variant="onGold" className="normal-case tracking-normal">
+                            Get in Touch
+                          </SiteButton>
+                        </Link> */}
+                        {/* <Link href="/services">
+                          <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
+                            Explore Services
+                            <CtaArrow variant="blue" />
+                          </button>
+                        </Link> */}
+                      {/* </div>
+                        <div className="flex flex-wrap gap-3 justify-center items-center"> */}
+                    <FadeUp delay={0.1} className="mt-2 text-left">
+                        <a
+                          href="https://customer.vendorinfra.com/#/login-2"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <SiteButton>Get Started</SiteButton>
+                        </a>
+                      </FadeUp>
+                               <FadeUp delay={0.1} className="mt-2 text-left">
+                              <Link href="/contact">
+                                <SiteButton> Contact Us</SiteButton>
+                              </Link>
+                            </FadeUp>
+                        {/* <Link href="/services">
+                          <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
+                            Explore Services
+                            <CtaArrow variant="blue" />
+                          </button>
+                        </Link> */}
+                      </div>
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={PORTAL_REGISTER_URL}
               target="_blank"
@@ -583,9 +653,9 @@ export default function Pricing() {
               onClick={() => openContact("Enterprise")}
               className="inline-block bg-white border border-gray-200 text-[#00274d] font-semibold px-8 py-4 rounded-xl hover:border-[#edad1a] hover:text-[#edad1a] transition-colors shadow-sm"
             >
-              Talk to Sales
+              Contact Us
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 

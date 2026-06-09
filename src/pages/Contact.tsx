@@ -135,11 +135,11 @@ export default function Contact() {
                   <div className="mb-7">
                     <span className="inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
                       <span className="w-6 h-px bg-[#edad1a]/60" />
-                      SEND ENQUIRY
+                      Send an Enquiry
                       <span className="w-6 h-px bg-[#edad1a]/60" />
                     </span>
                     <h3 className="text-2xl font-bold text-[#00274d] leading-tight">
-                      Share your requirement
+                      Tell us your requirements, and our team will get back to you shortly.
                     </h3>
                   </div>
 
@@ -167,12 +167,12 @@ export default function Contact() {
                       </div>
 
                       <div className="space-y-1.5">
-                        <Label htmlFor="message" className="text-[#00274d] font-semibold text-sm">Write Your Query Here</Label>
+                        <Label htmlFor="message" className="text-[#00274d] font-semibold text-sm">Write your query here</Label>
                         <Textarea
                           id="message"
                           name="message"
                           required
-                          placeholder="Write Your Query Here"
+                          placeholder="Write your query here"
                           rows={5}
                           className="bg-gray-50 border-gray-200 resize-none placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20"
                         />

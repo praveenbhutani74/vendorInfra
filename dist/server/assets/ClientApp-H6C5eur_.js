@@ -5,7 +5,7 @@ import { useLocation, Link, useParams, Router as Router$1, Switch, Route } from 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva } from "class-variance-authority";
-import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
+import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, BadgeIndianRupee, MapPinned, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
@@ -771,7 +771,7 @@ function ContactSalesModal({ open, onClose, planName }) {
                       children: "Submit →"
                     }
                   ),
-                  /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400", children: "We'll get back to you within 24 hours." }),
+                  /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400", children: "We'll get back to you within 12 hours." }),
                   submitError && /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-red-500", children: submitError })
                 ]
               },
@@ -808,7 +808,7 @@ function ContactSalesModal({ open, onClose, planName }) {
                     "! Our team will contact you on",
                     " ",
                     /* @__PURE__ */ jsx("span", { className: "font-semibold text-gray-700", children: form.contact }),
-                    " within 24 hours."
+                    " within 12 hours."
                   ] }),
                   /* @__PURE__ */ jsx(
                     "button",
@@ -2457,7 +2457,7 @@ function Counter({ target, suffix = "", prefix = "" }) {
     suffix
   ] });
 }
-function FadeUp$2({ children, delay = 0, className = "" }) {
+function FadeUp$3({ children, delay = 0, className = "" }) {
   return /* @__PURE__ */ jsx(
     motion.div,
     {
@@ -2761,7 +2761,7 @@ function Home() {
       /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#edad1a]/60 to-transparent" }),
       /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#edad1a]/40 to-transparent" }),
       /* @__PURE__ */ jsx("div", { className: "relative max-w-6xl mx-auto px-6 sm:px-8 lg:px-10", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12 gap-10 lg:gap-16 items-center", children: [
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "lg:col-span-7", children: [
+        /* @__PURE__ */ jsxs(FadeUp$3, { className: "lg:col-span-7", children: [
           /* @__PURE__ */ jsxs(
             motion.span,
             {
@@ -2832,7 +2832,7 @@ function Home() {
           ),
           /* @__PURE__ */ jsx("div", { className: "mt-7 flex flex-wrap items-center gap-4", children: /* @__PURE__ */ jsx(Link, { href: "/about", children: /* @__PURE__ */ jsx(SiteButton, { className: "px-5 py-2.5", children: "KNOW MORE" }) }) })
         ] }),
-        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.2, className: "lg:col-span-5 hidden lg:block", children: /* @__PURE__ */ jsxs("div", { className: "relative pl-6 pr-2 pb-10", children: [
+        /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.2, className: "lg:col-span-5 hidden lg:block", children: /* @__PURE__ */ jsxs("div", { className: "relative pl-6 pr-2 pb-10", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-4 bottom-12 w-[3px] rounded-full bg-gradient-to-b from-[#edad1a] via-[#edad1a]/40 to-transparent" }),
           /* @__PURE__ */ jsx(
             motion.div,
@@ -2868,9 +2868,9 @@ function Home() {
         ] }) })
       ] }) })
     ] }),
-    /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-[#f7f8fc] py-10 md:py-14", "aria-label": "AI SaaS platform marquee", children: /* @__PURE__ */ jsxs("div", { className: "relative h-36 md:h-48", children: [
-      /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 top-3 w-[125vw] -translate-x-1/2 -rotate-[2.4deg] overflow-hidden rounded-sm bg-[#00274d] py-5 md:py-7 shadow-xl shadow-[#00274d]/15", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track", children: Array.from({ length: 6 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `blue-${index}`)) }) }),
-      /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 top-20 md:top-28 w-[125vw] -translate-x-1/2 rotate-[2.1deg] overflow-hidden rounded-sm bg-[#edad1a] py-5 md:py-7 shadow-xl shadow-[#edad1a]/20", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track ai-marquee-track-reverse", children: Array.from({ length: 6 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `gold-${index}`)) }) })
+    /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-[#f7f8fc] py-8 md:py-12", "aria-label": "AI SaaS platform marquee", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
+      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `navy-${index}`)) }) }),
+      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track ai-marquee-track-reverse", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `gold-${index}`)) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-16 md:py-24 bg-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsxs("div", { className: "pointer-events-none absolute inset-0", children: [
@@ -2879,7 +2879,7 @@ function Home() {
         /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/8 to-transparent" })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-14", children: [
+        /* @__PURE__ */ jsxs(FadeUp$3, { className: "text-center mb-14", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Services",
@@ -2930,11 +2930,11 @@ function Home() {
             })
           }
         ),
-        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "View All Services" }) }) })
+        /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "View All Services" }) }) })
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-14 md:py-20 bg-white overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-12 lg:gap-20 items-center", children: [
-      /* @__PURE__ */ jsxs(FadeUp$2, { children: [
+      /* @__PURE__ */ jsxs(FadeUp$3, { children: [
         /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
           "Materials",
@@ -2954,7 +2954,7 @@ function Home() {
         ] }, p.num)) }),
         /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { className: "mt-8", children: "Explore Materials" }) })
       ] }),
-      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+      /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
         /* @__PURE__ */ jsxs("div", { className: "relative overflow-hidden rounded-2xl bg-[#082b4f] p-5 sm:p-6 shadow-2xl", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.06]", style: { backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "24px 24px" } }),
@@ -2986,7 +2986,7 @@ function Home() {
         /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/10 to-transparent" })
       ] }),
       /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-12 lg:gap-20 items-center", children: [
-        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.12, className: "lg:order-2", children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+        /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.12, className: "lg:order-2", children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute -inset-4 bg-[#00274d]/6 blur-3xl rounded-3xl" }),
           /* @__PURE__ */ jsxs("div", { className: "relative overflow-hidden rounded-3xl bg-[#00274d] p-5 sm:p-6 shadow-[0_32px_72px_-20px_rgba(0,39,77,0.45)]", children: [
             /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.07]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "28px 28px" } }),
@@ -3015,7 +3015,7 @@ function Home() {
             ] }) }, sector.slug)) })
           ] })
         ] }) }),
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "lg:order-1", children: [
+        /* @__PURE__ */ jsxs(FadeUp$3, { className: "lg:order-1", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Sectors",
@@ -3042,7 +3042,7 @@ function Home() {
       ] }) })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-14 md:py-20 bg-white", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-12 lg:gap-20 items-start", children: [
-      /* @__PURE__ */ jsxs(FadeUp$2, { children: [
+      /* @__PURE__ */ jsxs(FadeUp$3, { children: [
         /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
           "Why Us",
@@ -3060,7 +3060,7 @@ function Home() {
         ] }, item2.label)) }),
         /* @__PURE__ */ jsx(Link, { href: "/why-us", children: /* @__PURE__ */ jsx(SiteButton, { children: "Learn More" }) })
       ] }),
-      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+      /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
         /* @__PURE__ */ jsxs("div", { className: "relative overflow-hidden rounded-2xl bg-white border border-gray-100 p-5 sm:p-6 shadow-xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "relative flex items-center justify-between mb-5", children: [
@@ -3097,7 +3097,7 @@ function Home() {
         /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#edad1a]/20 to-transparent" })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-14", children: [
+        /* @__PURE__ */ jsxs(FadeUp$3, { className: "text-center mb-14", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Testimonials",
@@ -3203,7 +3203,7 @@ function Home() {
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-14 md:py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsx("div", { className: "flex flex-col items-center text-center mb-14", children: /* @__PURE__ */ jsxs(FadeUp$2, { children: [
+      /* @__PURE__ */ jsx("div", { className: "flex flex-col items-center text-center mb-14", children: /* @__PURE__ */ jsxs(FadeUp$3, { children: [
         /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
           "Blog",
@@ -3245,7 +3245,7 @@ function Home() {
           ] }) }) }, i))
         }
       ),
-      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsx(SiteButton, { children: "All Articles" }) }) })
+      /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsx(SiteButton, { children: "All Articles" }) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-[#00274d] py-20", children: [
       /* @__PURE__ */ jsx("div", { className: "pointer-events-none absolute inset-0 opacity-[0.5]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px)", backgroundSize: "44px 44px" } }),
@@ -3254,7 +3254,7 @@ function Home() {
         { title: "Trusted By", subtitle: "Chosen by the companies building India's National Infrastructure pipeline.", logos: trustedBy$1 },
         { title: "Associations", subtitle: "We are Proud to be a part of", logos: associations },
         { title: "Our Financing Partners", subtitle: "Who help us drive innovation in the Supply Chain Financing", logos: financingPartners }
-      ].map((block) => /* @__PURE__ */ jsx(FadeUp$2, { children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12 gap-6 lg:gap-10 items-center", children: [
+      ].map((block) => /* @__PURE__ */ jsx(FadeUp$3, { children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12 gap-6 lg:gap-10 items-center", children: [
         /* @__PURE__ */ jsxs("div", { className: "lg:col-span-3 text-left", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
@@ -3272,7 +3272,7 @@ function Home() {
     /* @__PURE__ */ jsxs("section", { className: "py-14 md:py-20 bg-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.5]", style: { backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,39,77,0.12) 1px, transparent 0)", backgroundSize: "28px 28px" } }),
       /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-12", children: [
+        /* @__PURE__ */ jsxs(FadeUp$3, { className: "text-center mb-12", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Awards & Recognitions",
@@ -3390,18 +3390,18 @@ function usePageSeo(title, description) {
 }
 const base = "/";
 const trustedBy = [
-  { name: "Adani Group", logo: "/logos/adani-group.svg" },
-  { name: "NCC", logo: "/logos/ncc.svg" },
-  { name: "Tata Projects", logo: "/logos/tata-projects.svg" },
-  { name: "JWIL", logo: "/logos/jwil.svg" },
-  { name: "Gawar", logo: "/logos/gawar.svg" },
-  { name: "JMC Projects", logo: "/logos/jmc-projects.svg" },
-  { name: "Dilip Buildcon", logo: "/logos/dilip-buildcon.svg" },
-  { name: "INOX Wind", logo: "/logos/inox-wind.svg" },
-  { name: "IndInfravit", logo: "/logos/indinfravit.svg" },
-  { name: "KEC", logo: "/logos/kec.svg" },
-  { name: "Kalpataru", logo: "/logos/kalpataru.svg" },
-  { name: "IRB Infra", logo: "/logos/irb-infra.svg" }
+  { name: "Adani Group", logo: "/logos/Adani-Group.png" },
+  { name: "NCC", logo: "/logos/NCC.png" },
+  { name: "Tata Projects", logo: "/logos/tata-projects.png" },
+  { name: "JWIL", logo: "/logos/JWIL.jpg" },
+  { name: "Gawar", logo: "/logos/Gawar.png" },
+  { name: "JMC Projects", logo: "/logos/jmc-projects.png" },
+  { name: "Dilip Buildcon", logo: "/logos/DBL.png" },
+  { name: "INOX Wind", logo: "/logos/inox-wind.png" },
+  { name: "IndInfravit", logo: "/logos/Indinfravit.png" },
+  { name: "KEC", logo: "/logos/kec.png" },
+  { name: "Kalpataru", logo: "/logos/KPILLOGO.png" },
+  { name: "IRB Infra", logo: "/logos/IRB-logo.jpg" }
 ];
 function LogoMarquee({ logos }) {
   const doubled = [...logos, ...logos];
@@ -3870,7 +3870,7 @@ const faqs = [
   }
 ];
 const VIDEO_ID = "tn81mJqaeEM";
-function FadeUp$1({
+function FadeUp$2({
   children,
   delay = 0,
   className = ""
@@ -4017,7 +4017,7 @@ function Services() {
           ] }, i)) })
         ] })
       ] });
-      return /* @__PURE__ */ jsx(FadeUp$1, { children: "href" in service && service.href ? /* @__PURE__ */ jsx(Link, { href: service.href, className: "block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4", children: section }) : section }, idx);
+      return /* @__PURE__ */ jsx(FadeUp$2, { children: "href" in service && service.href ? /* @__PURE__ */ jsx(Link, { href: service.href, className: "block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4", children: section }) : section }, idx);
     }) }) }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-24 md:py-28 bg-[#0a1d36] text-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsx(
@@ -4029,7 +4029,7 @@ function Services() {
       ),
       /* @__PURE__ */ jsx("div", { className: "pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-[#edad1a]/10 blur-[140px]" }),
       /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10", children: [
-        /* @__PURE__ */ jsxs(FadeUp$1, { className: "text-center max-w-3xl mx-auto mb-16", children: [
+        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center max-w-3xl mx-auto mb-16", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Advantages",
@@ -4056,7 +4056,7 @@ function Services() {
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-24 md:py-28 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-4xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp$1, { className: "text-center mb-14", children: [
+      /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-14", children: [
         /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
           "FAQ",
@@ -4064,7 +4064,7 @@ function Services() {
         ] }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: "Explore answers to frequently asked questions." })
       ] }),
-      /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.1, className: "space-y-3", children: faqs.map((faq, i) => /* @__PURE__ */ jsx(FAQItem$1, { q: faq.q, a: faq.a }, i)) })
+      /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.1, className: "space-y-3", children: faqs.map((faq, i) => /* @__PURE__ */ jsx(FAQItem$1, { q: faq.q, a: faq.a }, i)) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-24 md:py-28 bg-[#00274d] relative overflow-hidden", children: [
       /* @__PURE__ */ jsx(
@@ -4076,7 +4076,7 @@ function Services() {
       ),
       /* @__PURE__ */ jsx("div", { className: "pointer-events-none absolute -bottom-32 -right-20 w-[520px] h-[520px] rounded-full bg-[#edad1a]/15 blur-[140px]" }),
       /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 relative z-10 max-w-5xl", children: [
-        /* @__PURE__ */ jsxs(FadeUp$1, { className: "text-center mb-12", children: [
+        /* @__PURE__ */ jsxs(FadeUp$2, { className: "text-center mb-12", children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
             "Explore more",
@@ -4085,8 +4085,8 @@ function Services() {
           /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-white", children: "Get to know more about our Services" }),
           /* @__PURE__ */ jsx("p", { className: "type-body-lg text-white/70 mt-4 max-w-xl mx-auto", children: "Explore how our ecosystem supports your business from opportunity to execution." })
         ] }),
-        /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.15, children: /* @__PURE__ */ jsx(VideoPlayer, {}) }),
-        /* @__PURE__ */ jsx(FadeUp$1, { delay: 0.2, className: "text-center mt-12", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Get Started with Us" }) }) })
+        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.15, children: /* @__PURE__ */ jsx(VideoPlayer, {}) }),
+        /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.2, className: "text-center mt-12", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Get Started with Us" }) }) })
       ] })
     ] }),
     /* @__PURE__ */ jsx(Footer, {})
@@ -4150,7 +4150,7 @@ const comparison = [
   ["Quality Control", "Informal, end-of-line", "Multi-stage, digital, traceable"],
   ["Scalability", "Limited by existing relationships", "Built for large-scale, multi-order demand"]
 ];
-function FadeUp({ children, delay = 0, className = "" }) {
+function FadeUp$1({ children, delay = 0, className = "" }) {
   return /* @__PURE__ */ jsx(
     motion.div,
     {
@@ -4226,7 +4226,7 @@ function ContractManufacturing() {
         }
       ),
       /* @__PURE__ */ jsx("div", { className: "relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12 gap-14 lg:gap-20", children: [
-        /* @__PURE__ */ jsxs(FadeUp, { className: "lg:col-span-5 lg:sticky lg:top-28 lg:self-start", children: [
+        /* @__PURE__ */ jsxs(FadeUp$1, { className: "lg:col-span-5 lg:sticky lg:top-28 lg:self-start", children: [
           /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#edad1a]" }),
             /* @__PURE__ */ jsx("span", { className: "text-xs font-semibold uppercase tracking-[0.32em] text-[#edad1a]", children: "The Problem" })
@@ -4280,7 +4280,7 @@ function ContractManufacturing() {
               className: "absolute left-[28px] top-4 bottom-4 w-px bg-gradient-to-b from-transparent via-[#edad1a]/40 to-transparent hidden md:block"
             }
           ),
-          problemPoints.map(([title, desc], index) => /* @__PURE__ */ jsx(FadeUp, { delay: index * 0.05, children: /* @__PURE__ */ jsxs("div", { className: "group relative rounded-2xl border border-white/10 bg-white/[0.04] p-5 md:p-6 transition-all duration-300 hover:border-[#edad1a]/50 hover:bg-white/[0.06] hover:-translate-y-0.5", children: [
+          problemPoints.map(([title, desc], index) => /* @__PURE__ */ jsx(FadeUp$1, { delay: index * 0.05, children: /* @__PURE__ */ jsxs("div", { className: "group relative rounded-2xl border border-white/10 bg-white/[0.04] p-5 md:p-6 transition-all duration-300 hover:border-[#edad1a]/50 hover:bg-white/[0.06] hover:-translate-y-0.5", children: [
             /* @__PURE__ */ jsx(
               "span",
               {
@@ -4303,35 +4303,35 @@ function ContractManufacturing() {
       ] }) })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-[#f7f9fc]", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "text-center max-w-3xl mx-auto", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "text-center max-w-3xl mx-auto", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Our Approach" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "A connected manufacturing ecosystem, not just a marketplace." }),
         /* @__PURE__ */ jsx("p", { className: "mt-5 text-slate-600 leading-relaxed", children: "Vendor Infra integrates every layer of the production lifecycle into a single operating environment, from initial specification to final delivery." })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5", children: approach.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp, { delay: index * 0.04, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl bg-white border border-slate-200 p-6 shadow-sm", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-5", children: approach.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp$1, { delay: index * 0.04, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl bg-white border border-slate-200 p-6 shadow-sm", children: [
         /* @__PURE__ */ jsx("div", { className: "mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a]", children: /* @__PURE__ */ jsx(Icon, { className: "h-5 w-5" }) }),
         /* @__PURE__ */ jsx("h3", { className: "font-semibold text-[#00274d]", children: title }),
         /* @__PURE__ */ jsx("p", { className: "mt-3 text-sm leading-relaxed text-slate-600", children: desc })
       ] }) }, title)) })
     ] }) }),
     /* @__PURE__ */ jsx("section", { id: "capabilities", className: "py-20 md:py-24 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "max-w-3xl", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "max-w-3xl", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Capabilities" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "End-to-end manufacturing, every capability on one platform." })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5", children: capabilities.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp, { delay: index * 0.03, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl border border-slate-200 p-6 transition-all hover:-translate-y-1 hover:shadow-xl", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5", children: capabilities.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp$1, { delay: index * 0.03, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl border border-slate-200 p-6 transition-all hover:-translate-y-1 hover:shadow-xl", children: [
         /* @__PURE__ */ jsx("div", { className: "mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#00274d] text-white", children: /* @__PURE__ */ jsx(Icon, { className: "h-5 w-5" }) }),
         /* @__PURE__ */ jsx("h3", { className: "font-semibold text-[#00274d]", children: title }),
         /* @__PURE__ */ jsx("p", { className: "mt-3 text-sm leading-relaxed text-slate-600", children: desc })
       ] }) }, title)) })
     ] }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-[#0a1d36] text-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "max-w-3xl", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "max-w-3xl", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Process" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight", children: "How it works, from requirement to delivery." }),
         /* @__PURE__ */ jsx("p", { className: "mt-5 text-white/68 leading-relaxed", children: "A structured nine-stage process removes ambiguity, eliminates coordination gaps, and gives every stakeholder the right information at each step." })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4", children: process.map(([title, desc], index) => /* @__PURE__ */ jsx(FadeUp, { delay: index * 0.025, children: /* @__PURE__ */ jsxs("div", { className: "flex h-full gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4", children: process.map(([title, desc], index) => /* @__PURE__ */ jsx(FadeUp$1, { delay: index * 0.025, children: /* @__PURE__ */ jsxs("div", { className: "flex h-full gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5", children: [
         /* @__PURE__ */ jsx("span", { className: "mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#edad1a] text-white", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "h-5 w-5" }) }),
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx("h3", { className: "font-semibold", children: title }),
@@ -4340,7 +4340,7 @@ function ContractManufacturing() {
       ] }) }, title)) })
     ] }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Industries" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Built for sectors that cannot afford manufacturing risk." }),
         /* @__PURE__ */ jsx("div", { className: "mt-8 space-y-3", children: industries.map((industry) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-xl border border-slate-200 p-4", children: [
@@ -4348,18 +4348,18 @@ function ContractManufacturing() {
           /* @__PURE__ */ jsx("span", { className: "font-medium text-[#00274d]", children: industry })
         ] }, industry)) })
       ] }),
-      /* @__PURE__ */ jsxs(FadeUp, { delay: 0.08, children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { delay: 0.08, children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Manufacturing" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Core and advanced manufacturing capabilities." }),
         /* @__PURE__ */ jsx("div", { className: "mt-8 flex flex-wrap gap-3", children: manufacturing.map((item2) => /* @__PURE__ */ jsx("span", { className: "rounded-full border border-[#00274d]/10 bg-[#f7f9fc] px-4 py-2 text-sm font-medium text-slate-700", children: item2 }, item2)) })
       ] })
     ] }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-[#f7f9fc]", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "text-center max-w-3xl mx-auto", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "text-center max-w-3xl mx-auto", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Value Proposition" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Built for both sides of the manufacturing equation." })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-12 grid lg:grid-cols-2 gap-6", children: [["For Businesses", buyerValue], ["For Manufacturers", vendorValue]].map(([title, values]) => /* @__PURE__ */ jsx(FadeUp, { children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl bg-white border border-slate-200 p-7 shadow-sm", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-12 grid lg:grid-cols-2 gap-6", children: [["For Businesses", buyerValue], ["For Manufacturers", vendorValue]].map(([title, values]) => /* @__PURE__ */ jsx(FadeUp$1, { children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl bg-white border border-slate-200 p-7 shadow-sm", children: [
         /* @__PURE__ */ jsx("h3", { className: "text-xl font-semibold text-[#00274d]", children: title }),
         /* @__PURE__ */ jsx("div", { className: "mt-6 space-y-4", children: values.map((value) => /* @__PURE__ */ jsxs("div", { className: "flex gap-3", children: [
           /* @__PURE__ */ jsx(CheckCircle2, { className: "mt-0.5 h-5 w-5 shrink-0 text-[#edad1a]" }),
@@ -4368,22 +4368,22 @@ function ContractManufacturing() {
       ] }) }, title)) })
     ] }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-[#00274d] text-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "max-w-3xl", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "max-w-3xl", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Technology" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-white leading-tight", children: "The intelligence layer behind every decision." })
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-5 gap-5", children: technology.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp, { delay: index * 0.03, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl border border-white/15 bg-white/[0.06] p-5", children: [
+      /* @__PURE__ */ jsx("div", { className: "mt-12 grid md:grid-cols-2 lg:grid-cols-5 gap-5", children: technology.map(([Icon, title, desc], index) => /* @__PURE__ */ jsx(FadeUp$1, { delay: index * 0.03, children: /* @__PURE__ */ jsxs("div", { className: "h-full rounded-2xl border border-white/15 bg-white/[0.06] p-5", children: [
         /* @__PURE__ */ jsx("div", { className: "mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-[#edad1a]/20 text-[#edad1a]", children: /* @__PURE__ */ jsx(Icon, { className: "h-5 w-5" }) }),
         /* @__PURE__ */ jsx("h3", { className: "font-semibold text-white leading-snug", children: title }),
         /* @__PURE__ */ jsx("p", { className: "mt-3 text-sm leading-relaxed text-white/70", children: desc })
       ] }) }, title)) })
     ] }) }),
     /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-[#f7f9fc]", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
-      /* @__PURE__ */ jsxs(FadeUp, { className: "max-w-3xl", children: [
+      /* @__PURE__ */ jsxs(FadeUp$1, { className: "max-w-3xl", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Competitive Advantage" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Why Vendor Infra outperforms every alternative." })
       ] }),
-      /* @__PURE__ */ jsx(FadeUp, { className: "mt-10 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm", children: /* @__PURE__ */ jsxs("table", { className: "w-full min-w-[760px] text-left text-sm", children: [
+      /* @__PURE__ */ jsx(FadeUp$1, { className: "mt-10 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm", children: /* @__PURE__ */ jsxs("table", { className: "w-full min-w-[760px] text-left text-sm", children: [
         /* @__PURE__ */ jsx("thead", { className: "bg-[#00274d] text-white", children: /* @__PURE__ */ jsxs("tr", { children: [
           /* @__PURE__ */ jsx("th", { className: "px-5 py-4 font-semibold", children: "Dimension" }),
           /* @__PURE__ */ jsx("th", { className: "px-5 py-4 font-semibold", children: "Traditional Approach" }),
@@ -4396,7 +4396,7 @@ function ContractManufacturing() {
         ] }, dimension)) })
       ] }) })
     ] }) }),
-    /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-white", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsx(FadeUp, { children: /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-3xl bg-[#f7f9fc] border border-slate-200", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12", children: [
+    /* @__PURE__ */ jsx("section", { className: "py-20 md:py-24 bg-white", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsx(FadeUp$1, { children: /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-3xl bg-[#f7f9fc] border border-slate-200", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-12", children: [
       /* @__PURE__ */ jsxs("div", { className: "lg:col-span-7 p-8 md:p-12", children: [
         /* @__PURE__ */ jsx(SectionLabel, { label: "Vision" }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-bold leading-tight text-[#00274d]", children: "Building the operating system for manufacturing." }),
@@ -4570,10 +4570,10 @@ function Contact() {
             /* @__PURE__ */ jsxs("div", { className: "mb-7", children: [
               /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-                "SEND ENQUIRY",
+                "Send an Enquiry",
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
               ] }),
-              /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold text-[#00274d] leading-tight", children: "Share your requirement" })
+              /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold text-[#00274d] leading-tight", children: "Tell us your requirements, and our team will get back to you shortly." })
             ] }),
             /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-5", children: [
               /* @__PURE__ */ jsxs("div", { className: "grid sm:grid-cols-2 gap-5", children: [
@@ -4597,14 +4597,14 @@ function Contact() {
                 ] })
               ] }),
               /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                /* @__PURE__ */ jsx(Label, { htmlFor: "message", className: "text-[#00274d] font-semibold text-sm", children: "Write Your Query Here" }),
+                /* @__PURE__ */ jsx(Label, { htmlFor: "message", className: "text-[#00274d] font-semibold text-sm", children: "Write your query here" }),
                 /* @__PURE__ */ jsx(
                   Textarea,
                   {
                     id: "message",
                     name: "message",
                     required: true,
-                    placeholder: "Write Your Query Here",
+                    placeholder: "Write your query here",
                     rows: 5,
                     className: "bg-gray-50 border-gray-200 resize-none placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20"
                   }
@@ -5113,13 +5113,13 @@ function Sectors() {
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-24 bg-gray-50 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-14", children: [
+      /* @__PURE__ */ jsxs("div", { className: "text-center max-w-5xl mx-auto mb-14", children: [
         /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-          "Infrastructure Sectors",
+          "Sectors",
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
         ] }),
-        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Explore sectors powered by Vendor Infra" })
+        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "One ecosystem serving multiple sectors with seamless business support" })
       ] }),
       /* @__PURE__ */ jsx(
         motion.div,
@@ -5147,11 +5147,30 @@ function Sectors() {
         }
       )
     ] }) }),
-    /* @__PURE__ */ jsx("section", { className: "py-16 bg-[#edad1a]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 text-center", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-4", children: "Ready to streamline your sector's supply chain?" }),
-      /* @__PURE__ */ jsx("p", { className: "text-[#00274d]/75 mb-8 max-w-xl mx-auto font-medium", children: "Join thousands of contractors, vendors and EPC companies already on Vendor Infra." }),
-      /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) })
-    ] }) }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -5357,21 +5376,33 @@ function SectorDetail() {
         }
       ) }, s.slug)) })
     ] }) }),
-    /* @__PURE__ */ jsx("section", { className: "py-16 bg-[#edad1a]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 text-center", children: [
-      /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-bold text-white mb-4 leading-tight", children: [
-        "Ready to streamline your ",
-        sector.name,
-        " supply chain?"
-      ] }),
-      /* @__PURE__ */ jsx("p", { className: "text-white/85 mb-8 max-w-xl mx-auto text-base", children: "Join thousands of contractors, vendors and EPC companies already on Vendor Infra." }),
-      /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-4 justify-center", children: [
-        /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
-        /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsxs(SiteButton, { variant: "onGold", arrow: false, className: "normal-case tracking-normal", children: [
-          /* @__PURE__ */ jsx(ArrowLeft, { className: "w-4 h-4" }),
-          " Back to Sectors"
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
+            /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
+            /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Back to Sectors" }) })
+          ] })
         ] }) })
-      ] })
-    ] }) }),
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -5382,6 +5413,19 @@ function FeatureLabel({ text }) {
   ) });
 }
 const PORTAL_REGISTER_URL = "https://portal.vendorinfra.com/register";
+function FadeUp({ children, delay = 0, className = "" }) {
+  return /* @__PURE__ */ jsx(
+    motion.div,
+    {
+      initial: { opacity: 0, y: 24 },
+      whileInView: { opacity: 1, y: 0 },
+      viewport: { once: true, margin: "-50px" },
+      transition: { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] },
+      className,
+      children
+    }
+  );
+}
 function PlanCard({
   plan,
   index,
@@ -5797,40 +5841,50 @@ function Pricing() {
         onContact: openContact
       }
     ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-white border-t border-gray-100", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-3xl", children: [
-      /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] text-center mb-12", children: "Frequently Asked Questions" }),
-      /* @__PURE__ */ jsx("div", { className: "space-y-4", children: [
-        {
-          q: "How is billing handled?",
-          a: "All listed plans are monthly pricing plans, billed annually. You pay once for the year and get the lower monthly rate."
-        },
-        {
-          q: "Can I switch plans later?",
-          a: "Yes, you can upgrade or downgrade your plan at any time. Contact our support team and we will assist with the transition."
-        },
-        {
-          q: "How do I get started?",
-          a: "Click 'Get Started' on any plan to register on our portal. For the Premium plan, click 'Contact Us' and our team will reach out with a custom quote."
-        },
-        {
-          q: "Do you offer volume or enterprise discounts?",
-          a: "Yes — for organisations with large user bases or multi-entity procurement needs, contact our sales team for a custom enterprise quote."
-        }
-      ].map(({ q, a }) => /* @__PURE__ */ jsxs(
-        "details",
-        {
-          className: "group bg-gray-50 border border-gray-200 rounded-xl overflow-hidden",
-          children: [
-            /* @__PURE__ */ jsxs("summary", { className: "flex items-center justify-between cursor-pointer px-6 py-5 font-semibold text-[#00274d] text-sm select-none list-none", children: [
-              q,
-              /* @__PURE__ */ jsx("span", { className: "ml-4 text-gray-400 group-open:rotate-180 transition-transform duration-200 flex-shrink-0", children: "▾" })
-            ] }),
-            /* @__PURE__ */ jsx("div", { className: "px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-200 pt-4", children: a })
-          ]
-        },
-        q
-      )) })
-    ] }) }),
+    /* @__PURE__ */ jsxs("section", { className: "py-24 bg-[#00274d] relative overflow-hidden", children: [
+      /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" }),
+      /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-4xl relative z-10", children: [
+        /* @__PURE__ */ jsxs(FadeUp, { className: "text-center mb-14", children: [
+          /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
+            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
+            "FAQ",
+            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-white max-w-3xl mx-auto", children: "Explore Answers To Frequently Asked Questions" })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "space-y-5", children: [
+          {
+            q: "How is billing handled?",
+            a: "All listed plans are monthly pricing plans billed annually. You pay once for the year and receive the discounted monthly rate."
+          },
+          {
+            q: "Can I switch plans later?",
+            a: "Yes. You can upgrade or downgrade your subscription at any time. Our support team will help you transition smoothly."
+          },
+          {
+            q: "How do I get started?",
+            a: "Click Get Started on your preferred plan to register. For Premium plans, our team will contact you with a customized proposal."
+          },
+          {
+            q: "Do you offer volume or enterprise discounts?",
+            a: "Yes. Organizations with large procurement requirements or multiple business entities can request a custom enterprise quotation."
+          }
+        ].map(({ q, a }) => /* @__PURE__ */ jsxs(
+          "details",
+          {
+            className: "group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-[#edad1a]/40",
+            children: [
+              /* @__PURE__ */ jsxs("summary", { className: "flex items-center justify-between cursor-pointer px-7 py-6 text-white font-semibold text-base list-none", children: [
+                /* @__PURE__ */ jsx("span", { children: q }),
+                /* @__PURE__ */ jsx("span", { className: "ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#edad1a]/15 text-[#edad1a] group-open:rotate-180 transition-transform duration-300", children: "▾" })
+              ] }),
+              /* @__PURE__ */ jsx("div", { className: "px-7 pb-6 pt-2 border-t border-white/10 text-white/75 leading-7", children: a })
+            ]
+          },
+          q
+        )) })
+      ] })
+    ] }),
     /* @__PURE__ */ jsxs("section", { className: "py-20 bg-gray-50 border-t border-gray-100 relative overflow-hidden", children: [
       /* @__PURE__ */ jsx(
         "div",
@@ -5844,26 +5898,18 @@ function Pricing() {
       ),
       /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 text-center relative z-10 max-w-2xl", children: [
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-4", children: "Not sure which plan is right for you?" }),
-        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-10 text-lg", children: "Our team will help you find the best fit. Talk to sales and we will walk you through everything." }),
-        /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-4 justify-center", children: [
-          /* @__PURE__ */ jsx(
+        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-10 text-lg", children: "Our experts will help you choose the right plan for your business and walk you through everything." }),
+        /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
+          /* @__PURE__ */ jsx(FadeUp, { delay: 0.1, className: "mt-2 text-left", children: /* @__PURE__ */ jsx(
             "a",
             {
-              href: PORTAL_REGISTER_URL,
+              href: "https://customer.vendorinfra.com/#/login-2",
               target: "_blank",
               rel: "noopener noreferrer",
-              className: "inline-block bg-[#edad1a] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#d4941a] transition-colors shadow-lg shadow-yellow-500/20",
-              children: "Get Started"
+              children: /* @__PURE__ */ jsx(SiteButton, { children: "Get Started" })
             }
-          ),
-          /* @__PURE__ */ jsx(
-            "button",
-            {
-              onClick: () => openContact("Enterprise"),
-              className: "inline-block bg-white border border-gray-200 text-[#00274d] font-semibold px-8 py-4 rounded-xl hover:border-[#edad1a] hover:text-[#edad1a] transition-colors shadow-sm",
-              children: "Talk to Sales"
-            }
-          )
+          ) }),
+          /* @__PURE__ */ jsx(FadeUp, { delay: 0.1, className: "mt-2 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { children: " Contact Us" }) }) })
         ] })
       ] })
     ] }),
@@ -6056,37 +6102,40 @@ function WhyUs() {
         }
       )
     ] }) }) }),
-    /* @__PURE__ */ jsx("section", { className: "py-24 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12", children: [
-      /* @__PURE__ */ jsxs("div", { className: "mb-12 max-w-4xl", children: [
-        /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
-          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-          "USP",
-          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
-        ] }),
-        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Empowering Smarter, Faster, and Safer Business Decisions in the Infrastructure Industry" })
-      ] }),
-      /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-5", children: uspItems.map((item2, i) => /* @__PURE__ */ jsxs(
-        motion.div,
-        {
-          initial: { opacity: 0, y: 24 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: true },
-          transition: { delay: i * 0.05 },
-          className: "group rounded-2xl border border-gray-200 bg-[#f6f8fb] p-6 shadow-sm hover:-translate-y-1 hover:border-[#edad1a]/40 hover:shadow-xl transition-all duration-300",
-          children: [
-            /* @__PURE__ */ jsxs("div", { className: "mb-5 flex items-center justify-between", children: [
-              /* @__PURE__ */ jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-[#00274d] text-[#edad1a] font-semibold", children: item2.number }),
-              /* @__PURE__ */ jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#edad1a] shadow-sm", children: /* @__PURE__ */ jsx(item2.icon, { className: "h-6 w-6" }) })
-            ] }),
-            /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-[#00274d] leading-snug", children: item2.title }),
-            /* @__PURE__ */ jsx("p", { className: "mt-3 text-sm leading-7 text-gray-600", children: item2.desc })
-          ]
-        },
-        item2.number
-      )) })
-    ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-24 bg-[#00274d] relative overflow-hidden", children: [
-      /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.07] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" }),
+      /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.05] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:28px_28px]" }),
+      /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12", children: [
+        /* @__PURE__ */ jsxs("div", { className: "mb-12 max-w-4xl", children: [
+          /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
+            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
+            "USP",
+            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-white leading-tight", children: "Empowering Smarter, Faster, and Safer Business Decisions in the Infrastructure Industry" })
+        ] }),
+        /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-5", children: uspItems.map((item2, i) => /* @__PURE__ */ jsxs(
+          motion.div,
+          {
+            initial: { opacity: 0, y: 24 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true },
+            transition: { delay: i * 0.05 },
+            className: "group rounded-3xl border border-white/10 bg-white p-7 shadow-xl hover:-translate-y-2 hover:shadow-2xl hover:border-[#edad1a]/40 transition-all duration-300",
+            children: [
+              /* @__PURE__ */ jsxs("div", { className: "mb-5 flex items-center justify-between", children: [
+                /* @__PURE__ */ jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-[#00274d] text-[#edad1a] font-semibold", children: item2.number }),
+                /* @__PURE__ */ jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#edad1a] shadow-sm", children: /* @__PURE__ */ jsx(item2.icon, { className: "h-6 w-6" }) })
+              ] }),
+              /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-[#00274d] leading-snug", children: item2.title }),
+              /* @__PURE__ */ jsx("p", { className: "mt-3 text-sm leading-7 text-gray-600", children: item2.desc })
+            ]
+          },
+          item2.number
+        )) })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxs("section", { className: "py-24 bg-white relative overflow-hidden", children: [
+      /* @__PURE__ */ jsx("div", { className: "absolute right-0 top-1/2 -translate-y-1/2 h-[450px] w-[450px] rounded-full bg-[#edad1a]/10 blur-3xl" }),
       /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 xl:px-12 relative z-10", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-10 lg:gap-16 items-center", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
@@ -6094,9 +6143,9 @@ function WhyUs() {
             "Video",
             /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-white", children: "Get to know more about us and our Services" })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: "Get to know more about us and our Services" })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-2xl border border-white/10 bg-black shadow-2xl aspect-video", children: /* @__PURE__ */ jsx(
+        /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_25px_70px_rgba(0,39,77,0.15)] aspect-video", children: /* @__PURE__ */ jsx(
           "iframe",
           {
             src: "https://www.youtube.com/embed/tn81mJqaeEM?rel=0&modestbranding=1",
@@ -6204,15 +6253,12 @@ function Referral() {
             /* @__PURE__ */ jsx("div", { className: "w-16 h-16 rounded-2xl bg-[#edad1a] text-[#071827] flex items-center justify-center font-semibold text-xl mb-8", children: program.code }),
             /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#071827] mb-6", children: program.title }),
             /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-base md:text-lg mb-8", children: program.description }),
-            /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsxs(
-              "button",
+            /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 items-center", children: /* @__PURE__ */ jsx(
+              SiteButton,
               {
-                onClick: () => openModal(program.title),
-                className: "group inline-flex items-center gap-2 bg-[#edad1a] hover:bg-[#d4941a] text-[#071827] font-semibold text-base px-7 py-3.5 rounded-lg shadow-[0_8px_24px_-6px_rgba(237,173,26,0.55)] transition-all hover:shadow-[0_12px_28px_-6px_rgba(237,173,26,0.7)] hover:-translate-y-0.5",
-                children: [
-                  "Join Now",
-                  /* @__PURE__ */ jsx(ArrowRight, { className: "w-4 h-4 transition-transform group-hover:translate-x-1" })
-                ]
+                onClick: () => openModal(program?.title || "Join Now"),
+                className: "normal-case tracking-normal",
+                children: "Join Now"
               }
             ) })
           ] })
@@ -6263,7 +6309,7 @@ function Referral() {
                 "Join ",
                 selectedProgram
               ] }),
-              /* @__PURE__ */ jsx("p", { className: "text-white/70 text-sm mt-2 relative z-10", children: "Share your details and our team will get back within 24 hours." })
+              /* @__PURE__ */ jsx("p", { className: "text-white/70 text-sm mt-2 relative z-10", children: "Share your details and our team will get back within 12 hours." })
             ] }),
             /* @__PURE__ */ jsx("div", { className: "h-4 bg-[#00274d] relative", children: /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-4 bg-white rounded-t-3xl" }) }),
             /* @__PURE__ */ jsx("div", { className: "px-8 pb-8", children: /* @__PURE__ */ jsxs(AnimatePresence, { mode: "wait", children: [
@@ -6343,7 +6389,7 @@ function Referral() {
                       {
                         type: "submit",
                         className: "w-full bg-[#edad1a] hover:bg-[#d4941a] text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-yellow-400/20 text-sm",
-                        children: "Submit Application →"
+                        children: "Submit →"
                       }
                     ),
                     /* @__PURE__ */ jsxs("p", { className: "text-center text-xs text-gray-400", children: [
@@ -6387,7 +6433,7 @@ function Referral() {
                       "! Our team will contact you on",
                       " ",
                       /* @__PURE__ */ jsx("span", { className: "font-semibold text-gray-700", children: form.phone }),
-                      " within 24 hours."
+                      " within 12 hours."
                     ] }),
                     /* @__PURE__ */ jsx(
                       "button",
@@ -6420,19 +6466,19 @@ function Field({ icon, error, children }) {
 const certifications = [
   {
     title: "ISO 9001",
-    image: "/images/wp/9001-2015.png",
+    image: "/images/wp/ISO-9001-img.png",
     icon: ShieldCheck,
     content: "Vendor Infra is ISO 9001 certified. This is one of the most popular ISO standards for creating, implementing, and maintaining a Quality Management System (QMS) for any given company, regardless of its industry, capital, or size"
   },
   {
     title: "ISO 14001",
-    image: "/images/wp/14001-2015.png",
+    image: "/images/wp/ISO-14001.png",
     icon: Leaf,
     content: "Vendor Infra is ISO 14001 certified. This ISO standard provides guidelines on what has to be done to implement an environmental management system (EMS). It includes policies, processes, plans, records, and best practices that define rules regarding how your company interacts with the environment. ISO 14001 requirements give you a framework, along with guidelines. for creating EMS for any organization"
   },
   {
     title: "ISO 27001",
-    image: "/images/wp/27001-2013.png",
+    image: "/images/wp/iso-27000.png",
     icon: Lock,
     content: "Vendor Infra is ISO 27001 certified. This ISO Standard is for information security. It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management and continually improving an information security management system within the context of the organization. It also includes requirements for the assessment and treatment of information security risks tailored to the needs of the organization."
   }
@@ -6581,7 +6627,7 @@ function PricingPolicy() {
         },
         section.title
       )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "For questions, contact enquiry@vendorinfra.com" })
+      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -6658,7 +6704,7 @@ function PrivacyPolicy() {
         },
         s.title
       )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Last updated: January 2026 · For questions, contact enquiry@vendorinfra.com" })
+      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -6667,119 +6713,286 @@ const securityPillars = [
   {
     title: "Physical Security",
     icon: Building2,
+    number: "01",
+    summary: "Hardened data centers with zero-trust physical access controls.",
     points: [
-      "Technologies like biometric identification, metal detection, cameras, vehicle barriers, and laser-based intrusion detection systems are used to protect Data Center floors",
-      "Security guards are present 24/7/365 to protect access to the servers",
-      "Human audits are regularly run to check the inviolability of sites",
-      "Remote access of the servers requires multiple levels of authentication",
-      "No sensitive server can be accessed directly from the Internet"
+      "Biometric ID, metal detection, cameras, vehicle barriers & laser intrusion detection",
+      "Security personnel on-site 24 / 7 / 365",
+      "Regular human audits to verify site inviolability",
+      "Multi-factor authentication for all remote server access",
+      "No sensitive server directly reachable from the public internet"
     ]
   },
   {
     title: "Network Security",
     icon: Network,
+    number: "02",
+    summary: "Custom-hardened OS with real-time traffic inspection.",
     points: [
-      "The Platform runs on custom hardware running a custom hardened operating system and file system.",
-      "Rigorous firewall rules are set up to control ingress and egress of data",
-      "Intrusion Detection System and Intrusion Protection System with alarms of abnormalities",
-      "All actions are logged on an external central logging server configured with alarms & automatic notifications"
+      "Custom hardware running a hardened OS and proprietary file system",
+      "Strict firewall rules governing all ingress and egress traffic",
+      "IDS / IPS with automated alerts for anomalous behavior",
+      "All actions logged to an isolated external server with alarm triggers"
     ]
   },
   {
     title: "Data Security",
     icon: Database,
+    number: "03",
+    summary: "End-to-end encryption for data in transit and at rest.",
     points: [
-      "All communication between your browser and our servers is secured via a strong SSL certificate",
-      "All communications between our internal servers are re-encrypted to ensure it cannot be monitored",
-      "Persistent disks, for instance, are already encrypted using AES-256, and the keys themselves are encrypted with master keys.",
-      "Daily encrypted backups of the database are stored in multiple locations for disaster recovery",
-      "All passwords are encrypted in our database using strong encryption and cannot be decoded"
+      "All browser-to-server communication secured via SSL / TLS",
+      "Internal server traffic re-encrypted to prevent interception",
+      "Persistent disks encrypted with AES-256; keys protected by master keys",
+      "Daily encrypted backups stored across distributed sites",
+      "All passwords hashed — never stored in plaintext"
     ]
   },
   {
     title: "Operational Security",
     icon: LockKeyhole,
+    number: "04",
+    summary: "Strict developer controls and continuous system observability.",
     points: [
-      "No sensitive data is displayed in our Customer Support portal",
-      "All developers require strong authentication to be able to push code to our central repository",
-      "All committed code is automatically tested for errors, bugs, and security holes by third party services",
-      "All systems are monitored 24/7 using leading 3rd party tools for errors, exceptions, and performance issues"
+      "Zero sensitive data exposed in the customer support portal",
+      "Strong MFA required for all code pushes to the central repository",
+      "Every commit automatically scanned for bugs and vulnerabilities",
+      "Systems monitored 24 / 7 with leading third-party observability tooling"
     ]
   }
 ];
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 28 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay }
+});
 function Security() {
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", style: { background: "#f4f6fa" }, children: [
     /* @__PURE__ */ jsx(Navbar, {}),
-    /* @__PURE__ */ jsx(
-      PageHero,
-      {
-        eyebrow: "Policy",
-        title: "Security Policy"
-      }
-    ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-[#f5f7fb] flex-1", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-6xl mx-auto", children: [
-      /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-8 items-stretch mb-10", children: [
+    /* @__PURE__ */ jsx(PageHero, { eyebrow: "Policy", title: "Security Policy" }),
+    /* @__PURE__ */ jsx("section", { className: "py-24", style: { background: "#f4f6fa" }, children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-6", children: /* @__PURE__ */ jsxs("div", { className: "max-w-6xl mx-auto", children: [
+      /* @__PURE__ */ jsxs(motion.div, { ...fadeUp(0), className: "flex items-center gap-3 mb-10", children: [
         /* @__PURE__ */ jsxs(
-          motion.div,
+          "div",
           {
-            initial: { opacity: 0, y: 24 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            className: "bg-[#071827] text-white rounded-2xl p-8 md:p-10 flex flex-col justify-between overflow-hidden relative",
+            className: "flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest",
+            style: { background: "#00274d", color: "#edad1a" },
             children: [
-              /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_15%,#edad1a_0,transparent_28%),radial-gradient(circle_at_85%_20%,#2e6ba8_0,transparent_32%)]" }),
-              /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-14 h-14 rounded-2xl bg-[#edad1a] text-[#071827] flex items-center justify-center mb-8", children: /* @__PURE__ */ jsx(ShieldCheck, { className: "w-7 h-7", "aria-hidden": "true" }) }),
-                /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight max-w-xl", children: "Built for confidential procurement data" }),
-                /* @__PURE__ */ jsx("p", { className: "mt-5 text-white/70 leading-relaxed", children: "Vendor Infra protects project, vendor, pricing, and procurement information with layered controls across physical, network, data, and operational security." })
-              ] })
+              /* @__PURE__ */ jsx(ShieldCheck, { className: "w-3.5 h-3.5" }),
+              "Enterprise Grade Security"
             ]
           }
         ),
-        /* @__PURE__ */ jsxs(
-          motion.div,
+        /* @__PURE__ */ jsx(
+          "div",
           {
-            initial: { opacity: 0, y: 24 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { delay: 0.08 },
-            className: "bg-white rounded-2xl border border-gray-100 shadow-sm p-8 md:p-10",
-            children: [
-              /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Cloud & Data Security is Critical to everything we do at Vendor Infra" }),
-              /* @__PURE__ */ jsxs("div", { className: "space-y-5 text-gray-600 leading-relaxed", children: [
-                /* @__PURE__ */ jsx("p", { children: "We know how important and confidential your pricing information is to your business and competitive edge. Feel reassured knowing that Vendor Infra was built from the ground up and is operated on a daily basis to ensure that your confidential data is always secure and confidential." }),
-                /* @__PURE__ */ jsx("p", { children: "This page describes some of the security measures we've set up to protect your data. We are extremely concerned and active in security. We are always doing our best to maintain and increase the security of Vendor Infra. As such, this page will be regularly updated with new measures and information." })
-              ] })
-            ]
+            className: "h-px flex-1",
+            style: { background: "linear-gradient(to right, #00274d 0%, transparent 100%)", maxWidth: 120, opacity: 0.15 }
           }
         )
       ] }),
-      /* @__PURE__ */ jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-6", children: securityPillars.map((pillar, index) => {
+      /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-5 gap-6 items-stretch", children: [
+        /* @__PURE__ */ jsxs(
+          motion.div,
+          {
+            ...fadeUp(0.05),
+            className: "lg:col-span-2 relative rounded-3xl overflow-hidden flex flex-col justify-between",
+            style: { background: "#00274d", minHeight: 360, padding: "2.5rem" },
+            children: [
+              /* @__PURE__ */ jsx(
+                "div",
+                {
+                  className: "absolute",
+                  style: {
+                    top: -60,
+                    right: -60,
+                    width: 220,
+                    height: 220,
+                    borderRadius: "50%",
+                    border: "40px solid #edad1a",
+                    opacity: 0.12
+                  }
+                }
+              ),
+              /* @__PURE__ */ jsx(
+                "div",
+                {
+                  className: "absolute",
+                  style: {
+                    bottom: 40,
+                    right: 40,
+                    width: 64,
+                    height: 64,
+                    borderRadius: "50%",
+                    background: "#edad1a",
+                    opacity: 0.1
+                  }
+                }
+              ),
+              /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+                /* @__PURE__ */ jsx(
+                  "div",
+                  {
+                    className: "w-14 h-14 rounded-2xl flex items-center justify-center mb-8",
+                    style: { background: "#edad1a" },
+                    children: /* @__PURE__ */ jsx(ShieldCheck, { className: "w-7 h-7", style: { color: "#00274d" } })
+                  }
+                ),
+                /* @__PURE__ */ jsxs(
+                  "h2",
+                  {
+                    className: "font-extrabold leading-tight tracking-tight",
+                    style: { fontSize: "clamp(1.75rem, 3vw, 2.5rem)", color: "#ffffff" },
+                    children: [
+                      "Built for",
+                      /* @__PURE__ */ jsx("br", {}),
+                      /* @__PURE__ */ jsx("span", { style: { color: "#edad1a" }, children: "confidential" }),
+                      /* @__PURE__ */ jsx("br", {}),
+                      "procurement data."
+                    ]
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsx("p", { className: "relative mt-6 leading-relaxed text-sm", style: { color: "rgba(255,255,255,0.55)" }, children: "Vendor Infra protects project, vendor, pricing, and procurement information with layered controls across every security dimension." })
+            ]
+          }
+        ),
+        /* @__PURE__ */ jsxs("div", { className: "lg:col-span-3 flex flex-col gap-6", children: [
+          /* @__PURE__ */ jsxs(
+            motion.div,
+            {
+              ...fadeUp(0.1),
+              className: "rounded-3xl flex-1",
+              style: { background: "#ffffff", padding: "2rem 2.25rem", border: "1px solid rgba(7,24,39,0.08)" },
+              children: [
+                /* @__PURE__ */ jsx(
+                  "h3",
+                  {
+                    className: "font-bold mb-4 leading-snug",
+                    style: { fontSize: "1.2rem", color: "#00274d" },
+                    children: "Cloud & Data Security is critical to everything we do"
+                  }
+                ),
+                /* @__PURE__ */ jsx("p", { className: "leading-relaxed text-sm", style: { color: "#64748b" }, children: "We know how important and confidential your pricing information is to your business and competitive edge. Vendor Infra was built from the ground up and operated daily to keep your data secure and confidential at all times." }),
+                /* @__PURE__ */ jsx("p", { className: "leading-relaxed text-sm mt-4", style: { color: "#64748b" }, children: "This page describes key security measures we maintain. We are extremely active in security and constantly working to raise the bar — updated regularly as new controls are added." })
+              ]
+            }
+          ),
+          /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 gap-4", children: [
+            { label: "Encryption", value: "AES-256" },
+            { label: "Uptime SLA", value: "99.99%" },
+            { label: "Monitoring", value: "24 / 7" }
+          ].map(({ label, value }, i) => /* @__PURE__ */ jsxs(
+            motion.div,
+            {
+              ...fadeUp(0.15 + i * 0.05),
+              className: "rounded-2xl flex flex-col items-center justify-center py-5 px-3 text-center",
+              style: { background: "#00274d" },
+              children: [
+                /* @__PURE__ */ jsx(
+                  "span",
+                  {
+                    className: "font-extrabold tracking-tight leading-none",
+                    style: { fontSize: "1.35rem", color: "#edad1a" },
+                    children: value
+                  }
+                ),
+                /* @__PURE__ */ jsx(
+                  "span",
+                  {
+                    className: "mt-1.5 text-xs font-semibold uppercase tracking-widest",
+                    style: { color: "rgba(255,255,255,0.4)" },
+                    children: label
+                  }
+                )
+              ]
+            },
+            label
+          )) })
+        ] })
+      ] })
+    ] }) }) }),
+    /* @__PURE__ */ jsx("section", { className: "pb-28", style: { background: "#f4f6fa" }, children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-6", children: /* @__PURE__ */ jsxs("div", { className: "max-w-6xl mx-auto", children: [
+      /* @__PURE__ */ jsxs(motion.div, { ...fadeUp(0), className: "mb-12", children: [
+        /* @__PURE__ */ jsx(
+          "p",
+          {
+            className: "text-xs font-bold uppercase tracking-widest mb-2",
+            style: { color: "#edad1a" },
+            children: "Security Framework"
+          }
+        ),
+        /* @__PURE__ */ jsx(
+          "h2",
+          {
+            className: "font-extrabold tracking-tight",
+            style: { fontSize: "clamp(1.6rem, 3vw, 2.25rem)", color: "#071827" },
+            children: "Four layers of protection"
+          }
+        )
+      ] }),
+      /* @__PURE__ */ jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 gap-5", children: securityPillars.map((pillar, index) => {
         const Icon = pillar.icon;
         return /* @__PURE__ */ jsxs(
           motion.article,
           {
-            initial: { opacity: 0, y: 24 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { delay: index * 0.06 },
-            className: "bg-white rounded-2xl border border-gray-100 shadow-sm p-7 md:p-8",
+            ...fadeUp(index * 0.08),
+            className: "group relative rounded-3xl overflow-hidden",
+            style: {
+              background: "#ffffff",
+              border: "1px solid rgba(7,24,39,0.07)",
+              transition: "box-shadow 0.25s ease, transform 0.25s ease"
+            },
+            whileHover: { y: -4, boxShadow: "0 20px 48px rgba(7,24,39,0.10)" },
             children: [
-              /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4 mb-7", children: [
-                /* @__PURE__ */ jsx("div", { className: "w-12 h-12 rounded-xl bg-[#fef3c7] text-[#071827] flex items-center justify-center", children: /* @__PURE__ */ jsx(Icon, { className: "w-6 h-6", "aria-hidden": "true" }) }),
-                /* @__PURE__ */ jsx("h3", { className: "text-xl md:text-2xl font-bold text-[#071827]", children: pillar.title })
-              ] }),
-              /* @__PURE__ */ jsx("ul", { className: "space-y-4", children: pillar.points.map((point) => /* @__PURE__ */ jsxs(
-                "li",
+              /* @__PURE__ */ jsx(
+                "div",
                 {
-                  className: "flex gap-3 text-sm md:text-base text-gray-600 leading-relaxed",
-                  children: [
-                    /* @__PURE__ */ jsx("span", { className: "mt-1.5 h-2 w-2 rounded-full bg-[#edad1a] shrink-0" }),
-                    /* @__PURE__ */ jsx("span", { children: point })
-                  ]
-                },
-                point
-              )) })
+                  className: "absolute left-0 top-0 bottom-0 w-1 rounded-l-3xl",
+                  style: { background: "#edad1a" }
+                }
+              ),
+              /* @__PURE__ */ jsxs("div", { style: { padding: "2rem 2rem 2rem 2.25rem" }, children: [
+                /* @__PURE__ */ jsx("div", { className: "flex items-start justify-between mb-6", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-4", children: [
+                  /* @__PURE__ */ jsx(
+                    "div",
+                    {
+                      className: "w-12 h-12 rounded-2xl flex items-center justify-center shrink-0",
+                      style: { background: "#071827" },
+                      children: /* @__PURE__ */ jsx(Icon, { className: "w-5 h-5", style: { color: "#edad1a" } })
+                    }
+                  ),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsx(
+                      "h3",
+                      {
+                        className: "font-bold leading-tight",
+                        style: { fontSize: "1.05rem", color: "#071827" },
+                        children: pillar.title
+                      }
+                    ),
+                    /* @__PURE__ */ jsx("p", { className: "text-xs mt-0.5 leading-snug", style: { color: "#94a3b8" }, children: pillar.summary })
+                  ] })
+                ] }) }),
+                /* @__PURE__ */ jsx(
+                  "div",
+                  {
+                    className: "mb-5",
+                    style: { height: 1, background: "rgba(7,24,39,0.06)" }
+                  }
+                ),
+                /* @__PURE__ */ jsx("ul", { className: "space-y-3", children: pillar.points.map((point) => /* @__PURE__ */ jsxs("li", { className: "flex gap-3 items-start", children: [
+                  /* @__PURE__ */ jsx(
+                    ArrowRight,
+                    {
+                      className: "w-3.5 h-3.5 shrink-0 mt-1",
+                      style: { color: "#edad1a" }
+                    }
+                  ),
+                  /* @__PURE__ */ jsx("span", { className: "text-sm leading-relaxed", style: { color: "#475569" }, children: point })
+                ] }, point)) })
+              ] })
             ]
           },
           pillar.title
@@ -6870,7 +7083,7 @@ function Terms() {
         },
         s.title
       )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Last updated: January 2026 · For questions, contact enquiry@vendorinfra.com" })
+      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -7138,10 +7351,10 @@ function MaterialImage({
   );
 }
 const features = [
-  { icon: ShoppingCart, label: "Price discovery" },
-  { icon: ShieldCheck, label: "Verified sourcing" },
-  { icon: Truck, label: "Pan India delivery" },
-  { icon: BarChart3, label: "Order visibility" }
+  { icon: Truck, label: "On-Time Delivery" },
+  { icon: ShieldCheck, label: "Quality Assured" },
+  { icon: BadgeIndianRupee, label: "Competitive Pricing" },
+  { icon: MapPinned, label: "Pan-India Availability" }
 ];
 function highlight(text, query) {
   if (!query.trim()) return /* @__PURE__ */ jsx(Fragment, { children: text });
@@ -7345,56 +7558,40 @@ function Materials() {
       ] })
     ] }) }),
     /* @__PURE__ */ jsx("main", { className: "flex-1 py-12", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4", children: [
-      /* @__PURE__ */ jsxs("div", { className: "mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between", children: [
-        /* @__PURE__ */ jsx("div", { children: isSearching ? /* @__PURE__ */ jsxs(Fragment, { children: [
-          /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-            "Search results",
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
-          ] }),
-          /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: [
-            filteredCategories.length,
-            " ",
-            filteredCategories.length === 1 ? "category" : "categories",
-            ' matching "',
-            query,
-            '"'
-          ] }),
-          /* @__PURE__ */ jsxs(
-            "button",
-            {
-              onClick: clearSearch,
-              className: "mt-2 inline-flex items-center gap-1 text-sm text-gray-500 hover:text-[#edad1a] transition-colors",
-              children: [
-                /* @__PURE__ */ jsx(X, { className: "h-3.5 w-3.5" }),
-                " Clear search"
-              ]
-            }
-          )
-        ] }) : /* @__PURE__ */ jsxs(Fragment, { children: [
-          /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
-            "Material categories",
-            /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
-          ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: "Find the right supply category" }),
-          /* @__PURE__ */ jsx("p", { className: "mt-2 max-w-2xl text-sm leading-relaxed text-gray-500", children: "Select a category to view product groups, units, variants, and add items to your quote cart." })
-        ] }) }),
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 shadow-sm w-full md:w-72 shrink-0", children: [
-          /* @__PURE__ */ jsx(Search, { className: "h-4 w-4 shrink-0 text-gray-400" }),
-          /* @__PURE__ */ jsx(
-            "input",
-            {
-              type: "text",
-              value: query,
-              onChange: (e) => setQuery(e.target.value),
-              placeholder: "Filter categories…",
-              className: "flex-1 bg-transparent text-sm text-[#00274d] placeholder:text-gray-400 outline-none"
-            }
-          ),
-          query && /* @__PURE__ */ jsx("button", { onClick: clearSearch, className: "text-gray-400 hover:text-[#00274d]", children: /* @__PURE__ */ jsx(X, { className: "h-4 w-4" }) })
-        ] })
-      ] }),
+      /* @__PURE__ */ jsx("div", { className: "mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between", children: /* @__PURE__ */ jsx("div", { children: isSearching ? /* @__PURE__ */ jsxs(Fragment, { children: [
+        /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
+          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
+          "Search results",
+          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
+        ] }),
+        /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: [
+          filteredCategories.length,
+          " ",
+          filteredCategories.length === 1 ? "category" : "categories",
+          ' matching "',
+          query,
+          '"'
+        ] }),
+        /* @__PURE__ */ jsxs(
+          "button",
+          {
+            onClick: clearSearch,
+            className: "mt-2 inline-flex items-center gap-1 text-sm text-gray-500 hover:text-[#edad1a] transition-colors",
+            children: [
+              /* @__PURE__ */ jsx(X, { className: "h-3.5 w-3.5" }),
+              " Clear search"
+            ]
+          }
+        )
+      ] }) : /* @__PURE__ */ jsxs(Fragment, { children: [
+        /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
+          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
+          "Material categories",
+          /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
+        ] }),
+        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: "Discover the right materials for your project." }),
+        /* @__PURE__ */ jsx("p", { className: "mt-2 max-w-2xl text-sm leading-relaxed text-gray-500", children: "Browse categories, explore product options and variants, and add the required items to your quotation cart." })
+      ] }) }) }),
       /* @__PURE__ */ jsx("div", { className: "mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4", children: features.map((feature) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm", children: [
         /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#edad1a]/10", children: /* @__PURE__ */ jsx(feature.icon, { className: "h-4 w-4 text-[#edad1a]" }) }),
         /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-[#00274d]", children: feature.label })
@@ -7426,7 +7623,7 @@ function Materials() {
             /* @__PURE__ */ jsx("div", { className: "p-4", children: /* @__PURE__ */ jsxs("div", { className: "flex items-start justify-between gap-3", children: [
               /* @__PURE__ */ jsxs("div", { className: "min-w-0", children: [
                 /* @__PURE__ */ jsx("h3", { className: "truncate text-base font-semibold text-[#00274d]", children: isSearching ? highlight(cat.name, query) : cat.name }),
-                /* @__PURE__ */ jsx("p", { className: "mt-1 text-sm text-gray-500", children: "Variants, units, and quote-ready items" })
+                /* @__PURE__ */ jsx("p", { className: "mt-1 text-sm text-gray-500", children: "Select a product, variant and unit, then add to cart." })
               ] }),
               /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#edad1a] transition-colors group-hover:border-[#edad1a] group-hover:bg-[#edad1a] group-hover:text-white", children: /* @__PURE__ */ jsx(ArrowRight, { className: "h-4 w-4" }) })
             ] }) })
@@ -7455,7 +7652,7 @@ function Materials() {
           /* @__PURE__ */ jsx("span", { className: "flex h-10 w-10 items-center justify-center rounded-lg bg-[#edad1a]/20 text-[#00274d]", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "h-5 w-5" }) }),
           /* @__PURE__ */ jsxs("div", { children: [
             /* @__PURE__ */ jsx("h3", { className: "font-semibold text-[#00274d]", children: "Product category index" }),
-            /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-500", children: "Jump directly to a material family." })
+            /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-500", children: "Find categories based on your project requirements" })
           ] })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-2", children: categories.map((cat) => /* @__PURE__ */ jsxs(Link, { href: `/materials/${cat.slug}`, className: "inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-[#00274d] transition-colors hover:border-[#edad1a] hover:bg-[#edad1a] hover:text-white", children: [
@@ -7638,7 +7835,7 @@ function MaterialCategory() {
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
         ] }),
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "We cover 1000+ Products" }),
-        /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Select your product and unit, then add to your quote cart." })
+        /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-500 mt-2", children: "Discover the right materials for your project." })
       ] }),
       category.products.length === 0 && /* @__PURE__ */ jsxs("div", { className: "text-center py-16 mb-8", children: [
         /* @__PURE__ */ jsx("p", { className: "text-gray-400 text-lg font-medium", children: "Products coming soon" }),
@@ -7670,8 +7867,7 @@ function MaterialCategory() {
                 /* @__PURE__ */ jsx("p", { className: "font-semibold text-[#00274d] text-sm", children: product.name }),
                 /* @__PURE__ */ jsxs("p", { className: "text-[11px] text-gray-400 mt-0.5", children: [
                   product.variants.length,
-                  " variants · ",
-                  product.units.join(", ")
+                  " variants "
                 ] })
               ] })
             ] }),
@@ -7706,6 +7902,33 @@ function MaterialCategory() {
         )) })
       ] })
     ] }) }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
+            /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
+            /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Back to Materials" }) })
+          ] })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -8005,7 +8228,7 @@ function QuoteCart() {
           children: [
             /* @__PURE__ */ jsx("div", { className: "w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6", children: /* @__PURE__ */ jsx(CheckCircle, { className: "w-10 h-10 text-green-500" }) }),
             /* @__PURE__ */ jsx("h2", { className: "text-2xl font-semibold text-[#00274d] mb-3", children: "Quote Request Sent!" }),
-            /* @__PURE__ */ jsx("p", { className: "text-gray-500 mb-8 leading-relaxed", children: "Our team will review your requirements and contact you within 24 hours with pricing and availability." }),
+            /* @__PURE__ */ jsx("p", { className: "text-gray-500 mb-8 leading-relaxed", children: "Our team will review your requirements and contact you within 12 hours with pricing and availability." }),
             /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx("button", { className: "bg-[#edad1a] text-white font-bold px-8 py-3 rounded-full hover:bg-[#00274d] transition-colors shadow-md", children: "Continue Shopping" }) })
           ]
         }
@@ -8020,7 +8243,7 @@ function QuoteCart() {
       {
         eyebrow: "Materials",
         title: "Your Quote Cart",
-        subtitle: "Review your selected items and submit a quote request. Our team will respond within 24 hours."
+        subtitle: "Review your selected items and submit a quote request. Our team will respond within 12 hours."
       }
     ),
     /* @__PURE__ */ jsx("section", { className: "flex-1 bg-gray-50 py-12", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-5xl", children: [
@@ -8212,7 +8435,7 @@ function QuoteCart() {
                   ] })
                 }
               ),
-              /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400", children: "We'll respond within 24 hours" })
+              /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400", children: "We'll respond within 12 hours" })
             ] })
           ] })
         ] }) })
@@ -8598,7 +8821,7 @@ function BookDemoButton() {
                     "! We'll reach out to",
                     " ",
                     /* @__PURE__ */ jsx("strong", { className: "text-gray-700", children: form.phone }),
-                    " within 24 hours."
+                    " within 12 hours."
                   ] }),
                   /* @__PURE__ */ jsx(
                     "button",

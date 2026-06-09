@@ -7,6 +7,7 @@ import { MaterialImage } from "@/components/materials/MaterialImage";
 import { categories, getCategoryBySlug } from "@/lib/materialsData";
 import { useQuoteCart } from "@/lib/quoteCart";
 import { useState } from "react";
+import { SiteButton } from "@/components/SiteButton";
 
 function AddToQuoteBtn({
   categorySlug,
@@ -201,7 +202,7 @@ export default function MaterialCategory() {
               <span className="w-6 h-px bg-[#edad1a]/60" />
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">We cover 1000+ Products</h2>
-            <p className="text-sm text-gray-500 mt-2">Select your product and unit, then add to your quote cart.</p>
+            <p className="text-sm text-gray-500 mt-2">Discover the right materials for your project.</p>
           </div>
 
           {/* Products Grid */}
@@ -237,7 +238,7 @@ export default function MaterialCategory() {
                   </div>
                   <div className="px-3 pt-3 pb-1">
                     <p className="font-semibold text-[#00274d] text-sm">{product.name}</p>
-                    <p className="text-[11px] text-gray-400 mt-0.5">{product.variants.length} variants · {product.units.join(", ")}</p>
+                    <p className="text-[11px] text-gray-400 mt-0.5">{product.variants.length} variants </p>
                   </div>
                 </Link>
 
@@ -283,6 +284,54 @@ export default function MaterialCategory() {
           </div>
         </div>
       </main>
+         <section
+              className="bg-[#edad1a] py-16 relative"
+              style={{
+                backgroundImage:
+                  "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+                backgroundSize: "22px 22px",
+              }}
+            >
+              <div className="container mx-auto px-4">
+                <div className="max-w-3xl mx-auto text-center">
+                  {/* Get Started Today badge — PRICING-style, blue theme */}
+                  <div className="flex items-center justify-center gap-3 mb-5">
+                    <span className="h-px w-10 bg-[#00274d]/40" />
+                    <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]">
+                      GET STARTED TODAY
+                    </span>
+                    <span className="h-px w-10 bg-[#00274d]/40" />
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
+                    Ready to Grow and Transform Your Business?
+                  </h2>
+                  <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
+                    Join <span className="font-semibold">32,000+</span> ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
+                  </p>
+                  <div className="flex flex-wrap gap-3 justify-center items-center">
+                    <Link href="/contact">
+                      <SiteButton variant="onGold" className="normal-case tracking-normal">
+                        Get in Touch
+                      </SiteButton>
+                    </Link>
+                       <Link href="/materials">
+                      <SiteButton variant="onGold" className="normal-case tracking-normal">
+                        Back to Materials
+                      </SiteButton>
+                    </Link>
+      
+                    
+                    {/* <Link href="/services">
+                      <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
+                        Explore Services
+                        <CtaArrow variant="blue" />
+                      </button>
+                    </Link> */}
+                  </div>
+                  
+                </div>
+              </div>
+            </section>
 
       <Footer />
     </div>
