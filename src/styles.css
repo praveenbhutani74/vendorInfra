@@ -332,6 +332,8 @@
     z-index: 999;
   }
 
+  
+
   .hover-elevate:hover:not(.no-default-hover-elevate)::after,
   .active-elevate:active:not(.no-default-active-elevate)::after {
     background-color: var(--elevate-1);
@@ -420,12 +422,12 @@ body :is(section, article, main) :is(.text-base):not(nav *):not(footer *):not([d
 .ai-marquee-track {
   display: flex;
   width: max-content;
-  animation: ai-marquee-left 30s linear infinite;
+  animation: ai-marquee-left 60s linear infinite;
 }
 
 .ai-marquee-track-reverse {
   animation-name: ai-marquee-right;
-  animation-duration: 34s;
+  animation-duration: 64s;
 }
 
 .ai-marquee-item {

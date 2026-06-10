@@ -2506,7 +2506,7 @@ const testimonials = [
   { name: "Pankaj Tandon", role: "Entrepreneur, Former Finance Professional of large Infrastructure Groups, CA", image: "/testimonials/pankaj-tandon.jpg", text: "I am delighted to see this concept in construction and infrastructure industry because it is one of its kind. I've never seen this type of Collaboration platform before. My wishes are with Rahul & Vendor Infra Team." },
   { name: "Sanjeev Kumar Gupta", role: "CEO, Karnataka Digital Economy Mission (A GOK initiative)", image: "/testimonials/sanjeev-gupta.jpg", text: "Vendor Infra is much needed for the infra ecosystem. The bundle of IT, Knowledge and experience of infrastructure makes this platform unique. I am very impressed with their solution which is ready to digitally transform the Infrastructure, Construction & Manufacturing industry. All the best team!" },
   { name: "OP Pandey", role: "Dy. President, JMC Projects Limited (Kalpataru Group)", image: "/testimonials/op-pandey.jpg", text: "When you have a project, you need a construction company committed to doing construction — someone who knows and understands the flow of companies and vendors. Vendor Infra fits us perfectly. I highly recommend it to eliminate your business risks, achieve your goals and improve your ROI." },
-  { name: "Prabhat Shrivastava", role: "Entrepreneur", image: "/testimonials/prabhat-shrivastava.jpg", text: "Vendor Infra is the most unique platform in the infrastructure space. The founder Rahul has conceptualized this technology enabled platform which I am sure would be a boon in the infrastructure space. I am sure Vendor Infra will enhance the potentials of businesses and help them increase their growth, margins and reach!" }
+  { name: "Amit Jain", role: "Sales Director", image: "about-members/2025-11-VI-employee-photos-13.png", text: "Vendor Infra has been a trusted partner, combining technology, industry expertise, and seamless execution to help us achieve our business goals. Their commitment to quality, efficiency, and customer success has consistently delivered measurable results." }
 ];
 const trustedBy$1 = [
   { name: "Adani Group", logo: "/logos/Adani-Group.png" },
@@ -2869,8 +2869,8 @@ function Home() {
       ] }) })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-[#f7f8fc] py-8 md:py-12", "aria-label": "AI SaaS platform marquee", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
-      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `navy-${index}`)) }) }),
-      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track ai-marquee-track-reverse", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `gold-${index}`)) }) })
+      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track [animation-duration:80s]", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `navy-${index}`)) }) }),
+      /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track ai-marquee-track-reverse [animation-duration:75s]", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `gold-${index}`)) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-16 md:py-24 bg-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsxs("div", { className: "pointer-events-none absolute inset-0", children: [
@@ -3466,7 +3466,7 @@ const management = [
 const advisory = [
   { name: "Shailendra Kumar Tripathi", role: "MD & CEO, JMC Project (India) Limited - Kalpataru Group", photo: "about-members/2025-11-1.png", linkedin: "https://www.linkedin.com/in/shailendra-kumar-tripathi-866330106/" },
   { name: "Sanjeev Kumar Gupta", role: "CEO-KEDM | Ex MD & CEO Lahari (GOI) | Ex Accenture, Microsoft, IBM", photo: "about-members/2025-11-4.png", linkedin: "https://www.linkedin.com/in/sanjeevkgupta/" },
-  { name: "Amit Jain", role: "Sales Director, HoneyWell", photo: "about-members/2025-11-VI-employee-photos-13.png", linkedin: "https://www.linkedin.com/in/andleeb-jain-7a2026a/" },
+  { name: "Amit Jain", role: "Sales Director, HoneyWell", photo: "about-members/2025-11-VI-employee-photos-13.png", linkedin: "https://www.linkedin.com/in/amit-jain-0b27651b/" },
   { name: "Nitin Jain", role: "Head Corporate Center, L&T | Ex Sr. VP Kalpataru", photo: "about-members/2025-11-2.png", linkedin: "https://www.linkedin.com/in/njain2000/" }
 ];
 const team = [
@@ -3476,19 +3476,19 @@ const team = [
   { name: "Abhishek Srivastav", role: "Procurement", tag: "Procurement", photo: "about-members/2026-03-2.png", linkedin: "https://www.linkedin.com/in/abhishek-srivastav-01495a119" },
   { name: "Shaurya Sonu", role: "Finance & Accounts", tag: "Finance", photo: "about-members/2026-03-3.png", linkedin: "https://www.linkedin.com/in/shaurya-sonu-840aa8247" },
   { name: "Ashutosh Pandey", role: "Procurement", tag: "Procurement", photo: "about-members/2025-11-26.png", linkedin: "https://www.linkedin.com/in/ashutosh-pandey-83889945/" },
-  { name: "Astha Tiwari", role: "Human Resources", tag: "HR", photo: "about-members/2025-11-VI-employee-photos-12.png", linkedin: "https://www.linkedin.com/in/manju-saroj-5b0050229" },
+  { name: "Astha Tiwari", role: "Human Resources", tag: "HR", photo: "about-members/2025-11-VI-employee-photos-12.png", linkedin: "https://www.linkedin.com/in/astha-tiwari-6990511b2/" },
   { name: "Aman Goyal", role: "Finance", tag: "Finance", photo: "about-members/2025-11-22.png", linkedin: "https://www.linkedin.com/in/amangoyal824" },
   { name: "Rajat Singh", role: "Supplier Relations", tag: "Operations", photo: "about-members/2026-03-5.png", linkedin: "https://www.linkedin.com/in/rajat-singh-3b010a145" },
   { name: "Rajni Kumar", role: "Product & IT", tag: "Product & IT", photo: "about-members/2025-11-VI-employee-photos-16.png", linkedin: "https://www.linkedin.com/in/rajni-kumar-628477123" },
   { name: "Praveen Bhutani", role: "Software Developer", tag: "Engineering", photo: "about-members/praveen-bhutani.png", linkedin: "https://www.linkedin.com/in/praveen-bhutani/" },
   { name: "Utkarsh Kashyap", role: "Strategy & IR", tag: "Strategy", photo: "about-members/2025-11-19.png", linkedin: "https://www.linkedin.com/in/utkarsh-kashyap/" },
-  { name: "Pawanpreet Singh", role: "Procurement", tag: "Procurement", photo: "about-members/2025-11-25.png", linkedin: "https://www.linkedin.com/in/pawanpreet-singh-2a4278143/" },
+  { name: "Pawanpreet Singh", role: "Procurement", tag: "Procurement", photo: "about-members/2025-11-25.png", linkedin: "https://www.linkedin.com/in/pawanpreet-singh-b68b7b3b3/" },
   { name: "Deepak Kumar", role: "Supplier Relations", tag: "Operations", photo: "about-members/deepak-kumar.png", linkedin: "https://www.linkedin.com/in/deepak-kumar-89702321b" },
-  { name: "Rahul Maurya", role: "Accounts", tag: "Accounts", photo: "about-members/2025-11-VI-employee-photos-20.png", linkedin: "https://www.linkedin.com/in/rahul-maurya-indirect-taxation-b8b566280/" },
-  { name: "Ankit Yadav", role: "Data Optimization", tag: "Data", photo: "about-members/2025-11-27.png" },
-  { name: "Kaushal Kumar", role: "Supplier Relations", tag: "Operations", photo: "about-members/2025-12-VI-employee-photos-4.png" },
+  { name: "Rahul Maurya", role: "Accounts", tag: "Accounts", photo: "about-members/2025-11-VI-employee-photos-20.png", linkedin: "https://www.linkedin.com/in/rahul-maurya-indirect-taxation%F0%9F%8F%A6-b8b566280/" },
+  { name: "Ankit Yadav", role: "Data Optimization", tag: "Data", photo: "about-members/2025-11-27.png", linkedin: "https://www.linkedin.com/in/yashika-nimh-9bab51271/" },
+  { name: "Kaushal Kumar", role: "Supplier Relations", tag: "Operations", photo: "about-members/2025-12-VI-employee-photos-4.png", linkedin: "https://www.linkedin.com/in/kaushal-kumar-166a0b347" },
   { name: "Yashika Nimesh", role: "Data Optimization", tag: "Data", photo: "about-members/2026-03-1.png", linkedin: "https://www.linkedin.com/in/yashika-nimesh-9bab51271/" },
-  { name: "Shruti Mohrya", role: "Data Optimization", tag: "Data", photo: "about-members/2025-12-VI-employee-photos-6.png" },
+  { name: "Shruti Mohrya", role: "Data Optimization", tag: "Data", photo: "about-members/2025-12-VI-employee-photos-6.png", linkedin: "https://www.linkedin.com/in/shruti-mohrya-7a03b3327" },
   { name: "Yojit Pareek", role: "Legal & Compliance", tag: "Legal", photo: "about-members/2025-11-14.png", linkedin: "https://www.linkedin.com/in/yojit-pareek-b41a0080/" }
 ];
 const tagColors = {
@@ -3667,6 +3667,30 @@ function About() {
         ] }, i)) })
       ] }) })
     ] }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -4089,6 +4113,30 @@ function Services() {
         /* @__PURE__ */ jsx(FadeUp$2, { delay: 0.2, className: "text-center mt-12", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { className: "normal-case tracking-normal", children: "Get Started with Us" }) }) })
       ] })
     ] }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -7381,33 +7429,36 @@ function Materials() {
       return { dropdownResults: [], filteredCategories: categories };
     }
     const q = query.toLowerCase();
-    const results = [];
+    const categoryResults = [];
+    const productResults = [];
+    const variantResults = [];
     const gridMatchedSlugs = /* @__PURE__ */ new Set();
     for (const cat of categories) {
-      const catMatches = cat.name.toLowerCase().includes(q);
+      const catMatches = cat.name.toLowerCase().includes(q) || cat.slug.toLowerCase().includes(q);
       if (catMatches) {
         gridMatchedSlugs.add(cat.slug);
-        results.push({ type: "category", categorySlug: cat.slug, categoryName: cat.name, image: cat.image });
+        categoryResults.push({ type: "category", categorySlug: cat.slug, categoryName: cat.name, image: cat.image });
       }
       for (const prod of cat.products) {
-        const prodMatches = prod.name.toLowerCase().includes(q);
+        const prodMatches = prod.name.toLowerCase().includes(q) || prod.slug.toLowerCase().includes(q);
         if (prodMatches) {
           gridMatchedSlugs.add(cat.slug);
-          results.push({ type: "product", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, image: prod.image });
+          productResults.push({ type: "product", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, image: prod.image });
         }
         for (const variant of prod.variants) {
           if (variant.toLowerCase().includes(q)) {
-            const already = results.find((r) => r.type === "product" && r.productSlug === prod.slug && r.categorySlug === cat.slug);
-            if (!already) {
-              results.push({ type: "product", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, image: prod.image });
+            gridMatchedSlugs.add(cat.slug);
+            if (!productResults.find((r) => r.productSlug === prod.slug && r.categorySlug === cat.slug)) {
+              productResults.push({ type: "product", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, image: prod.image });
             }
-            results.push({ type: "variant", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, variantName: variant, image: prod.image });
+            variantResults.push({ type: "variant", categorySlug: cat.slug, categoryName: cat.name, productSlug: prod.slug, productName: prod.name, variantName: variant, image: prod.image });
           }
         }
       }
     }
+    const results = [...categoryResults, ...productResults, ...variantResults];
     return {
-      dropdownResults: results.slice(0, 8),
+      dropdownResults: results.slice(0, 10),
       filteredCategories: categories.filter((c) => gridMatchedSlugs.has(c.slug))
     };
   }, [query]);
@@ -7661,6 +7712,30 @@ function Materials() {
         ] }, cat.slug)) })
       ] })
     ] }) }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-center gap-3 mb-5", children: [
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" }),
+            /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
+            /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
+            "Join ",
+            /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -7672,9 +7747,17 @@ function AddToQuoteBtn({
   const { addItem } = useQuoteCart();
   const [selectedVariant, setSelectedVariant] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState("");
+  const [customVariant, setCustomVariant] = useState("");
   const [added, setAdded] = useState(false);
   const [error, setError] = useState("");
+  const isSteel = categorySlug === "steel";
   const handleAdd = () => {
+    if (isSteel && !selectedGrade) {
+      setError("Select Primary or Secondary");
+      setTimeout(() => setError(""), 2500);
+      return;
+    }
     if (!selectedVariant) {
       setError("Select a product option");
       setTimeout(() => setError(""), 2500);
@@ -7691,15 +7774,32 @@ function AddToQuoteBtn({
       categoryName,
       productSlug: product.slug,
       productName: product.name,
-      variant: selectedVariant,
+      variant: isSteel ? `${selectedGrade} · ${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}` : `${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`,
       unit: selectedUnit,
       image: product.image,
       qty: 1
     });
     setAdded(true);
+    setCustomVariant("");
     setTimeout(() => setAdded(false), 2e3);
   };
   return /* @__PURE__ */ jsxs("div", { className: "px-3 pb-3 space-y-2", children: [
+    isSteel && /* @__PURE__ */ jsxs(
+      "select",
+      {
+        value: selectedGrade,
+        onChange: (e) => {
+          setSelectedGrade(e.target.value);
+          setError("");
+        },
+        className: "w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
+        children: [
+          /* @__PURE__ */ jsx("option", { value: "", children: "Type — Choose an option" }),
+          /* @__PURE__ */ jsx("option", { value: "Primary", children: "Primary" }),
+          /* @__PURE__ */ jsx("option", { value: "Secondary", children: "Secondary" })
+        ]
+      }
+    ),
     /* @__PURE__ */ jsxs(
       "select",
       {
@@ -7713,6 +7813,16 @@ function AddToQuoteBtn({
           /* @__PURE__ */ jsx("option", { value: "", children: "Products — Choose an option" }),
           product.variants.map((v) => /* @__PURE__ */ jsx("option", { value: v, children: v }, v))
         ]
+      }
+    ),
+    /* @__PURE__ */ jsx(
+      "input",
+      {
+        type: "text",
+        value: customVariant,
+        onChange: (e) => setCustomVariant(e.target.value),
+        placeholder: "Enter specification (e.g., Grade, Size, Model, Capacity)",
+        className: "w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 placeholder:text-[11px] placeholder:text-gray-300 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
       }
     ),
     /* @__PURE__ */ jsxs(
@@ -7749,7 +7859,7 @@ function AddToQuoteBtn({
       "a",
       {
         href: `https://wa.me/918800119885?text=${encodeURIComponent(
-          selectedVariant ? `Hi! I'm interested in ${selectedVariant} (${product.name}) from the ${categoryName} category. Can you share pricing and availability?` : `Hi! I'm interested in ${product.name} from the ${categoryName} category on Vendor Infra. Can you share pricing and availability?`
+          selectedVariant ? `Hi! I'm interested in ${isSteel && selectedGrade ? selectedGrade + " · " : ""}${selectedVariant}${customVariant ? ` · ${customVariant}` : ""} (${product.name}) from the ${categoryName} category. Can you share pricing and availability?` : `Hi! I'm interested in ${product.name} from the ${categoryName} category on Vendor Infra. Can you share pricing and availability?`
         )}`,
         target: "_blank",
         rel: "noopener noreferrer",
@@ -7867,7 +7977,7 @@ function MaterialCategory() {
                 /* @__PURE__ */ jsx("p", { className: "font-semibold text-[#00274d] text-sm", children: product.name }),
                 /* @__PURE__ */ jsxs("p", { className: "text-[11px] text-gray-400 mt-0.5", children: [
                   product.variants.length,
-                  " variants "
+                  " variants"
                 ] })
               ] })
             ] }),
@@ -7920,7 +8030,7 @@ function MaterialCategory() {
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
             /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
@@ -7938,6 +8048,8 @@ function MaterialProduct() {
   const result = getProductBySlug(catSlug ?? "", prodSlug ?? "");
   const [selectedVariant, setSelectedVariant] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState("");
+  const [customVariant, setCustomVariant] = useState("");
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [validationError, setValidationError] = useState("");
@@ -7952,7 +8064,13 @@ function MaterialProduct() {
     ] });
   }
   const { category, product } = result;
+  const isSteel = category.slug === "steel";
   const handleAddToQuote = () => {
+    if (isSteel && !selectedGrade) {
+      setValidationError("Please select Primary or Secondary.");
+      setTimeout(() => setValidationError(""), 3e3);
+      return;
+    }
     if (!selectedVariant) {
       setValidationError("Please select a product option.");
       setTimeout(() => setValidationError(""), 3e3);
@@ -7969,12 +8087,13 @@ function MaterialProduct() {
       categoryName: category.name,
       productSlug: product.slug,
       productName: product.name,
-      variant: selectedVariant,
+      variant: isSteel ? `${selectedGrade} · ${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}` : `${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`,
       unit: selectedUnit,
       image: product.image,
       qty
     });
     setAdded(true);
+    setCustomVariant("");
     setTimeout(() => setAdded(false), 3e3);
   };
   const relatedProducts = category.products.filter((p) => p.slug !== product.slug);
@@ -8029,6 +8148,25 @@ function MaterialProduct() {
               /* @__PURE__ */ jsx("h1", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-2", children: product.name }),
               product.description && /* @__PURE__ */ jsx("p", { className: "text-gray-500 text-sm mb-6 leading-relaxed", children: product.description }),
               /* @__PURE__ */ jsx("div", { className: "border-t border-gray-100 my-4" }),
+              isSteel && /* @__PURE__ */ jsxs("div", { className: "mb-4", children: [
+                /* @__PURE__ */ jsx("label", { className: "block text-sm font-semibold text-gray-700 mb-1.5", children: "Type" }),
+                /* @__PURE__ */ jsxs(
+                  "select",
+                  {
+                    value: selectedGrade,
+                    onChange: (e) => {
+                      setSelectedGrade(e.target.value);
+                      setValidationError("");
+                    },
+                    className: "w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 focus:border-[#edad1a] bg-white",
+                    children: [
+                      /* @__PURE__ */ jsx("option", { value: "", children: "Choose an option" }),
+                      /* @__PURE__ */ jsx("option", { value: "Primary", children: "Primary" }),
+                      /* @__PURE__ */ jsx("option", { value: "Secondary", children: "Secondary" })
+                    ]
+                  }
+                )
+              ] }),
               /* @__PURE__ */ jsxs("div", { className: "mb-4", children: [
                 /* @__PURE__ */ jsx("label", { className: "block text-sm font-semibold text-gray-700 mb-1.5", children: "Products" }),
                 /* @__PURE__ */ jsxs(
@@ -8044,6 +8182,22 @@ function MaterialProduct() {
                       /* @__PURE__ */ jsx("option", { value: "", children: "Choose an option" }),
                       product.variants.map((v) => /* @__PURE__ */ jsx("option", { value: v, children: v }, v))
                     ]
+                  }
+                )
+              ] }),
+              /* @__PURE__ */ jsxs("div", { className: "mb-4", children: [
+                /* @__PURE__ */ jsxs("label", { className: "block text-sm font-semibold text-gray-700 mb-1.5", children: [
+                  "Additional Notes ",
+                  /* @__PURE__ */ jsx("span", { className: "text-gray-400 font-normal", children: "(optional)" })
+                ] }),
+                /* @__PURE__ */ jsx(
+                  "input",
+                  {
+                    type: "text",
+                    value: customVariant,
+                    onChange: (e) => setCustomVariant(e.target.value),
+                    placeholder: "Enter specification (e.g., Grade, Size, Model, Capacity)",
+                    className: "w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm placeholder:text-[11px] placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 focus:border-[#edad1a] bg-white"
                   }
                 )
               ] }),
@@ -8082,13 +8236,14 @@ function MaterialProduct() {
                     {
                       type: "number",
                       min: 1,
-                      value: qty,
-                      onChange: (e) => {
+                      defaultValue: qty,
+                      onBlur: (e) => {
                         const v = parseInt(e.target.value, 10);
                         setQty(Number.isFinite(v) && v > 0 ? v : 1);
                       },
                       className: "w-20 text-center text-sm font-semibold border-x border-gray-300 h-10 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                    }
+                    },
+                    qty
                   ),
                   /* @__PURE__ */ jsx(
                     "button",
@@ -8243,7 +8398,7 @@ function QuoteCart() {
       {
         eyebrow: "Materials",
         title: "Your Quote Cart",
-        subtitle: "Review your selected items and submit a quote request. Our team will respond within 12 hours."
+        subtitle: "Our team will review your requirements and get in touch with you soon."
       }
     ),
     /* @__PURE__ */ jsx("section", { className: "flex-1 bg-gray-50 py-12", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-5xl", children: [
@@ -8302,13 +8457,14 @@ function QuoteCart() {
                         {
                           type: "number",
                           min: 1,
-                          value: item2.qty,
-                          onChange: (e) => {
+                          defaultValue: item2.qty,
+                          onBlur: (e) => {
                             const v = parseInt(e.target.value, 10);
                             updateQty(item2.productSlug, item2.variant, Number.isFinite(v) && v > 0 ? v : 1);
                           },
                           className: "w-16 h-8 text-center text-sm font-semibold border-x border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                        }
+                        },
+                        item2.qty
                       ),
                       /* @__PURE__ */ jsx(
                         "button",
@@ -8344,7 +8500,7 @@ function QuoteCart() {
               total,
               " item",
               total !== 1 ? "s" : "",
-              " · We'll reply within 24 hrs"
+              " "
             ] })
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "p-6", children: [
@@ -8435,7 +8591,7 @@ function QuoteCart() {
                   ] })
                 }
               ),
-              /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400", children: "We'll respond within 12 hours" })
+              /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400" })
             ] })
           ] })
         ] }) })

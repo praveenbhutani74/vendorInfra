@@ -14,6 +14,8 @@ export default function MaterialProduct() {
   const result = getProductBySlug(catSlug ?? "", prodSlug ?? "");
   const [selectedVariant, setSelectedVariant] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState("");
+  const [customVariant, setCustomVariant] = useState("");
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [validationError, setValidationError] = useState("");
@@ -34,8 +36,14 @@ export default function MaterialProduct() {
   }
 
   const { category, product } = result;
+  const isSteel = category.slug === "steel";
 
   const handleAddToQuote = () => {
+    if (isSteel && !selectedGrade) {
+      setValidationError("Please select Primary or Secondary.");
+      setTimeout(() => setValidationError(""), 3000);
+      return;
+    }
     if (!selectedVariant) {
       setValidationError("Please select a product option.");
       setTimeout(() => setValidationError(""), 3000);
@@ -52,12 +60,15 @@ export default function MaterialProduct() {
       categoryName: category.name,
       productSlug: product.slug,
       productName: product.name,
-      variant: selectedVariant,
+      variant: isSteel
+        ? `${selectedGrade} · ${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`
+        : `${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`,
       unit: selectedUnit,
       image: product.image,
       qty,
     });
     setAdded(true);
+    setCustomVariant("");
     setTimeout(() => setAdded(false), 3000);
   };
 
@@ -88,7 +99,6 @@ export default function MaterialProduct() {
 
       <main className="flex-1 py-12 bg-white">
         <div className="container mx-auto px-4">
-          {/* Product Detail */}
           <div className="grid md:grid-cols-2 gap-10 mb-16 max-w-4xl mx-auto">
             {/* Image */}
             <motion.div
@@ -120,8 +130,23 @@ export default function MaterialProduct() {
                 <p className="text-gray-500 text-sm mb-6 leading-relaxed">{product.description}</p>
               )}
 
-              {/* Divider */}
               <div className="border-t border-gray-100 my-4" />
+
+              {/* Steel-only: Grade dropdown */}
+              {isSteel && (
+                <div className="mb-4">
+                  <label className="block text-sm font-semibold text-gray-700 mb-1.5">Type</label>
+                  <select
+                    value={selectedGrade}
+                    onChange={e => { setSelectedGrade(e.target.value); setValidationError(""); }}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 focus:border-[#edad1a] bg-white"
+                  >
+                    <option value="">Choose an option</option>
+                    <option value="Primary">Primary</option>
+                    <option value="Secondary">Secondary</option>
+                  </select>
+                </div>
+              )}
 
               {/* Products (variant) selector */}
               <div className="mb-4">
@@ -136,6 +161,19 @@ export default function MaterialProduct() {
                     <option key={v} value={v}>{v}</option>
                   ))}
                 </select>
+              </div>
+
+                      <div className="mb-4">
+                <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+                  Additional Notes <span className="text-gray-400 font-normal">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  value={customVariant}
+                  onChange={e => setCustomVariant(e.target.value)}
+                  placeholder="Enter specification (e.g., Grade, Size, Model, Capacity)"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm placeholder:text-[11px] placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 focus:border-[#edad1a] bg-white"
+                />
               </div>
 
               {/* Unit selector */}
@@ -153,6 +191,9 @@ export default function MaterialProduct() {
                 </select>
               </div>
 
+              {/* Additional notes — all categories */}
+      
+
               <div className="border-t border-gray-100 my-4" />
 
               {/* Quantity */}
@@ -169,8 +210,9 @@ export default function MaterialProduct() {
                     <input
                       type="number"
                       min={1}
-                      value={qty}
-                      onChange={e => {
+                      key={qty}
+                      defaultValue={qty}
+                      onBlur={e => {
                         const v = parseInt(e.target.value, 10);
                         setQty(Number.isFinite(v) && v > 0 ? v : 1);
                       }}

@@ -4,7 +4,8 @@ import { ArrowRight, CheckCircle2, Linkedin, Shield, Target } from "lucide-react
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CtaArrow } from "@/components/CtaArrow";
-import { siteButtonClasses } from "@/components/SiteButton";
+import { SiteButton, siteButtonClasses } from "@/components/SiteButton";
+import { Link } from "wouter";
 
 const base = import.meta.env.BASE_URL;
 
@@ -89,7 +90,7 @@ const management = [
 const advisory = [
   { name: "Shailendra Kumar Tripathi", role: "MD & CEO, JMC Project (India) Limited - Kalpataru Group",          photo: "about-members/2025-11-1.png",                    linkedin: "https://www.linkedin.com/in/shailendra-kumar-tripathi-866330106/" },
   { name: "Sanjeev Kumar Gupta",       role: "CEO-KEDM | Ex MD & CEO Lahari (GOI) | Ex Accenture, Microsoft, IBM",   photo: "about-members/2025-11-4.png",                    linkedin: "https://www.linkedin.com/in/sanjeevkgupta/" },
-  { name: "Amit Jain",                 role: "Sales Director, HoneyWell",                                             photo: "about-members/2025-11-VI-employee-photos-13.png", linkedin: "https://www.linkedin.com/in/andleeb-jain-7a2026a/" },
+  { name: "Amit Jain",                 role: "Sales Director, HoneyWell",                                             photo: "about-members/2025-11-VI-employee-photos-13.png", linkedin: "https://www.linkedin.com/in/amit-jain-0b27651b/" },
   { name: "Nitin Jain",                role: "Head Corporate Center, L&T | Ex Sr. VP Kalpataru",                       photo: "about-members/2025-11-2.png",                    linkedin: "https://www.linkedin.com/in/njain2000/" },
 ];
 
@@ -100,19 +101,19 @@ const team = [
   { name: "Abhishek Srivastav", role: "Procurement",         tag: "Procurement",  photo: "about-members/2026-03-2.png",                     linkedin: "https://www.linkedin.com/in/abhishek-srivastav-01495a119" },
   { name: "Shaurya Sonu",       role: "Finance & Accounts",  tag: "Finance",      photo: "about-members/2026-03-3.png",                     linkedin: "https://www.linkedin.com/in/shaurya-sonu-840aa8247" },
   { name: "Ashutosh Pandey",    role: "Procurement",         tag: "Procurement",  photo: "about-members/2025-11-26.png",                    linkedin: "https://www.linkedin.com/in/ashutosh-pandey-83889945/" },
-  { name: "Astha Tiwari",       role: "Human Resources",     tag: "HR",           photo: "about-members/2025-11-VI-employee-photos-12.png", linkedin: "https://www.linkedin.com/in/manju-saroj-5b0050229" },
+  { name: "Astha Tiwari",       role: "Human Resources",     tag: "HR",           photo: "about-members/2025-11-VI-employee-photos-12.png", linkedin: "https://www.linkedin.com/in/astha-tiwari-6990511b2/" },
   { name: "Aman Goyal",         role: "Finance",             tag: "Finance",      photo: "about-members/2025-11-22.png",                    linkedin: "https://www.linkedin.com/in/amangoyal824" },
   { name: "Rajat Singh",        role: "Supplier Relations",  tag: "Operations",   photo: "about-members/2026-03-5.png",                     linkedin: "https://www.linkedin.com/in/rajat-singh-3b010a145" },
   { name: "Rajni Kumar",        role: "Product & IT",        tag: "Product & IT", photo: "about-members/2025-11-VI-employee-photos-16.png", linkedin: "https://www.linkedin.com/in/rajni-kumar-628477123" },
   { name: "Praveen Bhutani",    role: "Software Developer", tag: "Engineering",  photo: "about-members/praveen-bhutani.png",               linkedin: "https://www.linkedin.com/in/praveen-bhutani/" },
   { name: "Utkarsh Kashyap",    role: "Strategy & IR",       tag: "Strategy",     photo: "about-members/2025-11-19.png",                    linkedin: "https://www.linkedin.com/in/utkarsh-kashyap/" },
-  { name: "Pawanpreet Singh",   role: "Procurement",         tag: "Procurement",  photo: "about-members/2025-11-25.png",                    linkedin: "https://www.linkedin.com/in/pawanpreet-singh-2a4278143/" },
+  { name: "Pawanpreet Singh",   role: "Procurement",         tag: "Procurement",  photo: "about-members/2025-11-25.png",                    linkedin: "https://www.linkedin.com/in/pawanpreet-singh-b68b7b3b3/" },
   { name: "Deepak Kumar",       role: "Supplier Relations",  tag: "Operations",   photo: "about-members/deepak-kumar.png",                  linkedin: "https://www.linkedin.com/in/deepak-kumar-89702321b" },
-  { name: "Rahul Maurya",       role: "Accounts",            tag: "Accounts",     photo: "about-members/2025-11-VI-employee-photos-20.png", linkedin: "https://www.linkedin.com/in/rahul-maurya-indirect-taxation-b8b566280/" },
-  { name: "Ankit Yadav",        role: "Data Optimization",   tag: "Data",         photo: "about-members/2025-11-27.png" },
-  { name: "Kaushal Kumar",      role: "Supplier Relations",  tag: "Operations",   photo: "about-members/2025-12-VI-employee-photos-4.png" },
+  { name: "Rahul Maurya",       role: "Accounts",            tag: "Accounts",     photo: "about-members/2025-11-VI-employee-photos-20.png", linkedin: "https://www.linkedin.com/in/rahul-maurya-indirect-taxation%F0%9F%8F%A6-b8b566280/" },
+  { name: "Ankit Yadav",        role: "Data Optimization",   tag: "Data",         photo: "about-members/2025-11-27.png" ,linkedin: "https://www.linkedin.com/in/yashika-nimh-9bab51271/" },
+  { name: "Kaushal Kumar",      role: "Supplier Relations",  tag: "Operations",   photo: "about-members/2025-12-VI-employee-photos-4.png",linkedin: "https://www.linkedin.com/in/kaushal-kumar-166a0b347" },
   { name: "Yashika Nimesh",     role: "Data Optimization",   tag: "Data",         photo: "about-members/2026-03-1.png",                     linkedin: "https://www.linkedin.com/in/yashika-nimesh-9bab51271/" },
-  { name: "Shruti Mohrya",      role: "Data Optimization",   tag: "Data",         photo: "about-members/2025-12-VI-employee-photos-6.png" },
+  { name: "Shruti Mohrya",      role: "Data Optimization",   tag: "Data",         photo: "about-members/2025-12-VI-employee-photos-6.png",linkedin: "https://www.linkedin.com/in/shruti-mohrya-7a03b3327" },
   { name: "Yojit Pareek",       role: "Legal & Compliance",  tag: "Legal",        photo: "about-members/2025-11-14.png",                    linkedin: "https://www.linkedin.com/in/yojit-pareek-b41a0080/" },
 ];
 
@@ -351,6 +352,46 @@ export default function About() {
         </section>
 
       </main>
+          <section
+              className="bg-[#edad1a] py-16 relative"
+              style={{
+                backgroundImage:
+                  "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+                backgroundSize: "22px 22px",
+              }}
+            >
+              <div className="container mx-auto px-4">
+                <div className="max-w-3xl mx-auto text-center">
+                  {/* Get Started Today badge — PRICING-style, blue theme */}
+                  <div className="flex items-center justify-center gap-3 mb-5">
+                    <span className="h-px w-10 bg-[#00274d]/40" />
+                    <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]">
+                      GET STARTED TODAY
+                    </span>
+                    <span className="h-px w-10 bg-[#00274d]/40" />
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
+                    Ready to Grow and Transform Your Business?
+                  </h2>
+                  <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
+                    Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
+                  </p>
+                  <div className="flex flex-wrap gap-3 justify-center items-center">
+                    <Link href="/contact">
+                      <SiteButton variant="onGold" className="normal-case tracking-normal">
+                        Get in Touch
+                      </SiteButton>
+                    </Link>
+                    {/* <Link href="/services">
+                      <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
+                        Explore Services
+                        <CtaArrow variant="blue" />
+                      </button>
+                    </Link> */}
+                  </div>
+                </div>
+              </div>
+            </section>
       <Footer />
     </div>
   );

@@ -105,7 +105,7 @@ const testimonials = [
   { name: "Pankaj Tandon",        role: "Entrepreneur, Former Finance Professional of large Infrastructure Groups, CA", image: "/testimonials/pankaj-tandon.jpg",  text: "I am delighted to see this concept in construction and infrastructure industry because it is one of its kind. I've never seen this type of Collaboration platform before. My wishes are with Rahul & Vendor Infra Team." },
   { name: "Sanjeev Kumar Gupta",  role: "CEO, Karnataka Digital Economy Mission (A GOK initiative)",        image: "/testimonials/sanjeev-gupta.jpg",          text: "Vendor Infra is much needed for the infra ecosystem. The bundle of IT, Knowledge and experience of infrastructure makes this platform unique. I am very impressed with their solution which is ready to digitally transform the Infrastructure, Construction & Manufacturing industry. All the best team!" },
   { name: "OP Pandey",            role: "Dy. President, JMC Projects Limited (Kalpataru Group)",           image: "/testimonials/op-pandey.jpg",              text: "When you have a project, you need a construction company committed to doing construction — someone who knows and understands the flow of companies and vendors. Vendor Infra fits us perfectly. I highly recommend it to eliminate your business risks, achieve your goals and improve your ROI." },
-  { name: "Prabhat Shrivastava",  role: "Entrepreneur",                                                    image: "/testimonials/prabhat-shrivastava.jpg",    text: "Vendor Infra is the most unique platform in the infrastructure space. The founder Rahul has conceptualized this technology enabled platform which I am sure would be a boon in the infrastructure space. I am sure Vendor Infra will enhance the potentials of businesses and help them increase their growth, margins and reach!" },
+  { name: "Amit Jain",  role: "Sales Director",                                                    image: "about-members/2025-11-VI-employee-photos-13.png",    text: "Vendor Infra has been a trusted partner, combining technology, industry expertise, and seamless execution to help us achieve our business goals. Their commitment to quality, efficiency, and customer success has consistently delivered measurable results." },
 ];
 
 const trustedBy = [
@@ -675,7 +675,7 @@ export default function Home() {
 
     {/* Navy - TOP */}
     <div className="w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6">
-      <div className="ai-marquee-track">
+       <div className="ai-marquee-track [animation-duration:80s]">
         {Array.from({ length: 8 }).map((_, index) => (
           <span key={`navy-${index}`} className="ai-marquee-item">
             SaaS Platform with Artificial Intelligence &amp; Machine Learning
@@ -686,7 +686,7 @@ export default function Home() {
 
     {/* Yellow - BOTTOM */}
     <div className="w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6">
-      <div className="ai-marquee-track ai-marquee-track-reverse">
+      <div className="ai-marquee-track ai-marquee-track-reverse [animation-duration:75s]">
         {Array.from({ length: 8 }).map((_, index) => (
           <span key={`gold-${index}`} className="ai-marquee-item">
             SaaS Platform with Artificial Intelligence &amp; Machine Learning

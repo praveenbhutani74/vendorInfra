@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, useParams } from "wouter";
 import { motion } from "framer-motion";
 import { ChevronRight, ShoppingCart, ShoppingBag, AlertCircle } from "lucide-react";
@@ -21,10 +22,19 @@ function AddToQuoteBtn({
   const { addItem } = useQuoteCart();
   const [selectedVariant, setSelectedVariant] = useState("");
   const [selectedUnit, setSelectedUnit] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState("");
+  const [customVariant, setCustomVariant] = useState("");
   const [added, setAdded] = useState(false);
   const [error, setError] = useState("");
 
+  const isSteel = categorySlug === "steel";
+
   const handleAdd = () => {
+    if (isSteel && !selectedGrade) {
+      setError("Select Primary or Secondary");
+      setTimeout(() => setError(""), 2500);
+      return;
+    }
     if (!selectedVariant) {
       setError("Select a product option");
       setTimeout(() => setError(""), 2500);
@@ -41,17 +51,34 @@ function AddToQuoteBtn({
       categoryName,
       productSlug: product.slug,
       productName: product.name,
-      variant: selectedVariant,
+      variant: isSteel
+        ? `${selectedGrade} · ${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`
+        : `${selectedVariant}${customVariant ? ` · ${customVariant}` : ""}`,
       unit: selectedUnit,
       image: product.image,
       qty: 1,
     });
     setAdded(true);
+    setCustomVariant("");
     setTimeout(() => setAdded(false), 2000);
   };
 
   return (
     <div className="px-3 pb-3 space-y-2">
+
+      {/* Steel-only: Primary / Secondary dropdown */}
+      {isSteel && (
+        <select
+          value={selectedGrade}
+          onChange={e => { setSelectedGrade(e.target.value); setError(""); }}
+          className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
+        >
+          <option value="">Type — Choose an option</option>
+          <option value="Primary">Primary</option>
+          <option value="Secondary">Secondary</option>
+        </select>
+      )}
+
       {/* Products dropdown */}
       <select
         value={selectedVariant}
@@ -65,7 +92,17 @@ function AddToQuoteBtn({
       </select>
 
       {/* Unit dropdown */}
-      <select
+     
+
+      {/* Optional notes — all categories */}
+   <input
+  type="text"
+  value={customVariant}
+  onChange={e => setCustomVariant(e.target.value)}
+  placeholder="Enter specification (e.g., Grade, Size, Model, Capacity)"
+  className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 placeholder:text-[11px] placeholder:text-gray-300 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
+/>
+       <select
         value={selectedUnit}
         onChange={e => { setSelectedUnit(e.target.value); setError(""); }}
         className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
@@ -101,7 +138,7 @@ function AddToQuoteBtn({
       <a
         href={`https://wa.me/918800119885?text=${encodeURIComponent(
           selectedVariant
-            ? `Hi! I'm interested in ${selectedVariant} (${product.name}) from the ${categoryName} category. Can you share pricing and availability?`
+            ? `Hi! I'm interested in ${isSteel && selectedGrade ? selectedGrade + " · " : ""}${selectedVariant}${customVariant ? ` · ${customVariant}` : ""} (${product.name}) from the ${categoryName} category. Can you share pricing and availability?`
             : `Hi! I'm interested in ${product.name} from the ${categoryName} category on Vendor Infra. Can you share pricing and availability?`
         )}`}
         target="_blank"
@@ -223,7 +260,6 @@ export default function MaterialCategory() {
                 transition={{ delay: i * 0.06 }}
                 className="border border-gray-200 rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
               >
-                {/* Image — clicking goes to product detail */}
                 <Link href={`/materials/${category.slug}/${product.slug}`} className="block">
                   <div className="relative h-36 overflow-hidden bg-gray-50">
                     <MaterialImage
@@ -238,11 +274,10 @@ export default function MaterialCategory() {
                   </div>
                   <div className="px-3 pt-3 pb-1">
                     <p className="font-semibold text-[#00274d] text-sm">{product.name}</p>
-                    <p className="text-[11px] text-gray-400 mt-0.5">{product.variants.length} variants </p>
+                    <p className="text-[11px] text-gray-400 mt-0.5">{product.variants.length} variants</p>
                   </div>
                 </Link>
 
-                {/* Dropdowns + Add to Quote */}
                 <div className="mt-auto">
                   <AddToQuoteBtn categorySlug={category.slug} categoryName={category.name} product={product} />
                 </div>
@@ -284,54 +319,44 @@ export default function MaterialCategory() {
           </div>
         </div>
       </main>
-         <section
-              className="bg-[#edad1a] py-16 relative"
-              style={{
-                backgroundImage:
-                  "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
-                backgroundSize: "22px 22px",
-              }}
-            >
-              <div className="container mx-auto px-4">
-                <div className="max-w-3xl mx-auto text-center">
-                  {/* Get Started Today badge — PRICING-style, blue theme */}
-                  <div className="flex items-center justify-center gap-3 mb-5">
-                    <span className="h-px w-10 bg-[#00274d]/40" />
-                    <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]">
-                      GET STARTED TODAY
-                    </span>
-                    <span className="h-px w-10 bg-[#00274d]/40" />
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
-                    Ready to Grow and Transform Your Business?
-                  </h2>
-                  <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
-                    Join <span className="font-semibold">32,000+</span> ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
-                  </p>
-                  <div className="flex flex-wrap gap-3 justify-center items-center">
-                    <Link href="/contact">
-                      <SiteButton variant="onGold" className="normal-case tracking-normal">
-                        Get in Touch
-                      </SiteButton>
-                    </Link>
-                       <Link href="/materials">
-                      <SiteButton variant="onGold" className="normal-case tracking-normal">
-                        Back to Materials
-                      </SiteButton>
-                    </Link>
-      
-                    
-                    {/* <Link href="/services">
-                      <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
-                        Explore Services
-                        <CtaArrow variant="blue" />
-                      </button>
-                    </Link> */}
-                  </div>
-                  
-                </div>
-              </div>
-            </section>
+
+      <section
+        className="bg-[#edad1a] py-16 relative"
+        style={{
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex items-center justify-center gap-3 mb-5">
+              <span className="h-px w-10 bg-[#00274d]/40" />
+              <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]">
+                GET STARTED TODAY
+              </span>
+              <span className="h-px w-10 bg-[#00274d]/40" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
+              Ready to Grow and Transform Your Business?
+            </h2>
+            <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
+              Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center items-center">
+              <Link href="/contact">
+                <SiteButton variant="onGold" className="normal-case tracking-normal">
+                  Get in Touch
+                </SiteButton>
+              </Link>
+              <Link href="/materials">
+                <SiteButton variant="onGold" className="normal-case tracking-normal">
+                  Back to Materials
+                </SiteButton>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

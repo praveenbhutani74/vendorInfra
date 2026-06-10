@@ -85,7 +85,7 @@ export default function QuoteCart() {
       <PageHero
         eyebrow="Materials"
         title="Your Quote Cart"
-        subtitle="Review your selected items and submit a quote request. Our team will respond within 12 hours."
+        subtitle="Our team will review your requirements and get in touch with you soon."
       />
 
       <section className="flex-1 bg-gray-50 py-12">
@@ -138,16 +138,17 @@ export default function QuoteCart() {
                             >
                               <Minus className="w-3.5 h-3.5 text-gray-600" />
                             </button>
-                            <input
-                              type="number"
-                              min={1}
-                              value={item.qty}
-                              onChange={e => {
-                                const v = parseInt(e.target.value, 10);
-                                updateQty(item.productSlug, item.variant, Number.isFinite(v) && v > 0 ? v : 1);
-                              }}
-                              className="w-16 h-8 text-center text-sm font-semibold border-x border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            />
+                     <input
+                      type="number"
+                      min={1}
+                      key={item.qty}
+                      defaultValue={item.qty}
+                      onBlur={e => {
+                        const v = parseInt(e.target.value, 10);
+                        updateQty(item.productSlug, item.variant, Number.isFinite(v) && v > 0 ? v : 1);
+                      }}
+                      className="w-16 h-8 text-center text-sm font-semibold border-x border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    />
                             <button
                               onClick={() => updateQty(item.productSlug, item.variant, item.qty + 1)}
                               className="w-8 h-8 flex items-center justify-center hover:bg-gray-50 transition-colors"
@@ -175,7 +176,7 @@ export default function QuoteCart() {
                     <h3 className="font-semibold text-white text-base flex items-center gap-2">
                       <Send className="w-4 h-4 text-[#edad1a]" /> Submit Quote Request
                     </h3>
-                    <p className="text-white/60 text-xs mt-1">{total} item{total !== 1 ? "s" : ""} · We'll reply within 24 hrs</p>
+                    <p className="text-white/60 text-xs mt-1">{total} item{total !== 1 ? "s" : ""} </p>
                   </div>
 
                   <div className="p-6">
@@ -239,7 +240,7 @@ export default function QuoteCart() {
                           </>
                         )}
                       </button>
-                      <p className="text-center text-xs text-gray-400">We'll respond within 12 hours</p>
+                      <p className="text-center text-xs text-gray-400"></p>
                     </form>
                   </div>
                 </div>
