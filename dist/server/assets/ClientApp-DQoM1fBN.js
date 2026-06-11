@@ -381,8 +381,7 @@ const MORE_LINKS = [
   { href: "/blog", label: "Blog" },
   { href: "/why-us", label: "Why Us" },
   { href: "/faq", label: "FAQ" },
-  { href: "/referral", label: "Referral Programme" },
-  { href: "/pricing-policy", label: "Pricing Policy" }
+  { href: "/referral", label: "Referral Programme" }
 ];
 function Navbar() {
   const [location] = useLocation();
@@ -535,14 +534,15 @@ function Navbar() {
 function Footer() {
   return /* @__PURE__ */ jsxs("footer", { className: "bg-[#00274d] text-white", children: [
     /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col md:flex-row md:justify-between gap-10", children: [
-      /* @__PURE__ */ jsxs("div", { className: "shrink-0 max-w-[220px] space-y-4", children: [
-        /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2.5", children: [
-          /* @__PURE__ */ jsx("img", { src: "/favicon.ico", alt: "Vendor Infra icon", className: "h-9 w-9" }),
-          /* @__PURE__ */ jsxs("span", { className: "text-xl font-semibold tracking-tight text-white leading-none", children: [
-            "vendor infra",
-            /* @__PURE__ */ jsx("sup", { className: "text-[#edad1a] text-xs font-bold ml-0.5", children: "®" })
-          ] })
-        ] }),
+      /* @__PURE__ */ jsxs("div", { className: "shrink-0 max-w-[280px] space-y-4", children: [
+        /* @__PURE__ */ jsx(
+          "img",
+          {
+            src: `${"/"}brand/White.png`,
+            alt: "Vendor Infra",
+            className: "h-[48px] w-auto -ml-4"
+          }
+        ),
         /* @__PURE__ */ jsxs("h3", { className: "text-white text-lg md:text-xl font-bold leading-snug", children: [
           "AI - Powered Operating System for",
           " ",
@@ -565,6 +565,7 @@ function Footer() {
           { href: "/services", label: "Services" },
           { href: "/sectors", label: "Sectors" },
           { href: "/materials", label: "Materials" },
+          { href: "/why-us", label: "Why Us" },
           { href: "/pricing", label: "Pricing Plans" },
           { href: "/blog", label: "Blog" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
@@ -572,14 +573,14 @@ function Footer() {
       /* @__PURE__ */ jsxs("div", { className: "shrink-0", children: [
         /* @__PURE__ */ jsx("h3", { className: "font-semibold text-base mb-5", children: "Quick Links" }),
         /* @__PURE__ */ jsx("ul", { className: "space-y-3 text-sm", children: [
-          { href: "/why-us", label: "Why Us" },
           { href: "/referral", label: "Referral" },
           { href: "/iso", label: "ISO Certification" },
           { href: "/faq", label: "FAQ" },
           { href: "/privacy-policy", label: "Privacy Policy" },
           { href: "/terms", label: "Terms of Service" },
           { href: "/pricing-policy", label: "Pricing Policy" },
-          { href: "/security", label: "Security" }
+          { href: "/security", label: "Security" },
+          { href: "/contact", label: "Contact Us" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "shrink-0 max-w-[240px]", children: [
@@ -600,7 +601,7 @@ function Footer() {
     ] }) }),
     /* @__PURE__ */ jsx("div", { className: "border-t border-white/10", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2", children: [
       /* @__PURE__ */ jsx("p", { className: "text-white/40 text-xs", children: "© Vendor Infra 2026. All rights reserved." }),
-      /* @__PURE__ */ jsx("p", { className: "text-white/30 text-xs", children: "Built for Infrastructure & Construction" })
+      /* @__PURE__ */ jsx("p", { className: "text-white/30 text-xs", children: "Meet. Collaborate. Construct" })
     ] }) })
   ] });
 }
@@ -909,6 +910,34 @@ const categories = [
           "TMT Bar",
           "TMT Coil",
           "Without Ribs"
+        ],
+        units: ["KG", "MT"],
+        description: ""
+      },
+      {
+        slug: "plates-coils",
+        name: "Plates & Coils",
+        image: "/materials/Plates-Coils.png",
+        variants: [
+          "MS Plates",
+          "HR Plates",
+          "HR Coils",
+          "CR Sheets",
+          "GI Sheets",
+          "GP Coils",
+          "Galvalume Coils",
+          "Stainless Steel Plates",
+          "Color Coated Coils",
+          "Roofing Sheets",
+          "Chequered Plates",
+          "High Tensile Plates",
+          "Wear Resistant Plates",
+          "Boiler Quality Plates",
+          "Pressure Vessel Plates",
+          "Structural Steel Plates",
+          "Alloy Steel Plates",
+          "Electrical Steel Coils",
+          "Shipbuilding Plates"
         ],
         units: ["KG", "MT"],
         description: ""
@@ -2478,11 +2507,11 @@ const gridItem = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } }
 };
-const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
+const PORTAL_LOGIN_URL$1 = "https://customer.vendorinfra.com/#/login-2";
 const services$1 = [
-  { icon: Search, title: "AI-Powered Vendor Discovery", href: PORTAL_LOGIN_URL, external: true, image: "/images/services/ai-vendor-discovery.jpg", desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
-  { icon: Calculator, title: "Smart Price Discovery", href: PORTAL_LOGIN_URL, external: true, image: "/images/services/smart-price-discovery.jpg", desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
-  { icon: Tractor, title: "AI-Powered Plants & Equipment", href: PORTAL_LOGIN_URL, external: true, image: "/images/services/plants-equipment-marketplace.png", desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
+  { icon: Search, title: "AI-Powered Vendor Discovery", href: PORTAL_LOGIN_URL$1, external: true, image: "/images/services/ai-vendor-discovery.jpg", desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
+  { icon: Calculator, title: "Smart Price Discovery", href: PORTAL_LOGIN_URL$1, external: true, image: "/images/services/smart-price-discovery.jpg", desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
+  { icon: Tractor, title: "AI-Powered Plants & Equipment", href: PORTAL_LOGIN_URL$1, external: true, image: "/images/services/plants-equipment-marketplace.png", desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
   { icon: Package, title: "Smart Material Procurement", href: "/materials", image: "/images/services/smart-material-procurement.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
   { icon: Factory, title: "Contract Manufacturing", href: "/contract-manufacturing", image: "/contract-manufacturing-ai.jpg", desc: "Design, source, manufacture, and deliver products through verified manufacturers, structured workflows, and real-time execution visibility." },
   { icon: ShieldCheck, title: "Smart Project Insurance", href: "/contact", image: "/images/services/insurance.png", desc: "Get competitive rates and customized quotes for project, material, and equipment insurance from reputed insurers and trusted partners." },
@@ -2490,10 +2519,10 @@ const services$1 = [
   { icon: BarChart3, title: "Other Services", href: "/services", image: "/images/services/otherServices.png", desc: "Stay ahead with tender updates, sector intelligence, and access to 75+ Schedules of Rates (SOR) for accurate estimation and benchmarking." }
 ];
 const stats$1 = [
-  { value: 31637, suffix: "", label: "Contractors & Vendors", sub: "Certified across 20+ infrastructure sectors." },
-  { value: 263, suffix: "", label: "Live Users", sub: "Actively using our platform today." },
-  { value: 6052, suffix: " Cr", label: "Project Value", sub: "Total value of projects posted." },
-  { value: 159, suffix: "", label: "Plants & Equipment", sub: "Listed for hire, sale, or purchase." }
+  { value: 31637, suffix: "", label: "Contractors & Vendors", sub: "Certified Contractors & Vendors & accross 20+ Sectors." },
+  { value: 263, suffix: "", label: "Live Users", sub: "Total number of customers who are using our products." },
+  { value: 6052, suffix: " Cr", label: "Project Value", sub: "Value of the projects posted in our portal." },
+  { value: 159, suffix: "", label: "Plants & Equipment", sub: "Number of Plants & Equipment." }
 ];
 const blogs = [
   { img: "/images/blog/Blog-promote-digitalisation.png", date: "March 31, 2026", cat: "Marketplace", title: "Vendor Infra Marketplace for Plants & Equipment: Unlocking the Power of a Marketplace", excerpt: "In the ever-evolving landscape of industries, effective management of plants and equipment is crucial for businesses seeking to optimize their ROI." },
@@ -2940,7 +2969,7 @@ function Home() {
           "Materials",
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
         ] }),
-        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] mb-5 max-w-lg", children: "One Destination for All Project Materials Needs" }),
+        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] mb-5 max-w-lg", children: "One Destination for all Project Materials needs" }),
         /* @__PURE__ */ jsx("p", { className: "type-body-lg text-gray-600 max-w-lg mb-8", children: "Market Place to provide end-to-end requirement for all Raw Material needs for your projects." }),
         /* @__PURE__ */ jsx("div", { className: "space-y-4 max-w-lg", children: [
           { num: "01", title: "Categories", desc: "These include core inputs such as steel, cement, sand and aggregates, chemicals, and petroleum products, along with specialized categories covering civil and infrastructure materials, electrical and electronic components, fire protection systems, security solutions, solar and renewable energy equipment, and interior and architectural materials." },
@@ -2959,7 +2988,7 @@ function Home() {
         /* @__PURE__ */ jsxs("div", { className: "relative overflow-hidden rounded-2xl bg-[#082b4f] p-5 sm:p-6 shadow-2xl", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.06]", style: { backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "24px 24px" } }),
           /* @__PURE__ */ jsxs("div", { className: "relative flex items-center justify-between mb-5", children: [
-            /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("h3", { className: "text-white text-xl font-semibold leading-tight mt-1", children: "Material Categories" }) }),
+            /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5", children: "Material" }) }),
             /* @__PURE__ */ jsxs(Link, { href: "/materials", className: "inline-flex items-center gap-1.5 rounded-full bg-[#edad1a]/15 hover:bg-[#edad1a]/25 border border-[#edad1a]/25 px-3 py-1.5 text-xs font-semibold text-[#edad1a] transition-colors", children: [
               "View All ",
               /* @__PURE__ */ jsx(ArrowUpRight, { className: "w-3 h-3" })
@@ -2992,10 +3021,7 @@ function Home() {
             /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.07]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.1) 1px,transparent 1px)", backgroundSize: "28px 28px" } }),
             /* @__PURE__ */ jsx("div", { className: "absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#edad1a] via-[#f7c44a]/60 to-transparent" }),
             /* @__PURE__ */ jsxs("div", { className: "relative flex items-center justify-between mb-5", children: [
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5", children: "Coverage" }),
-                /* @__PURE__ */ jsx("h3", { className: "text-white text-lg font-bold", children: "20+ Infrastructure Sectors" })
-              ] }),
+              /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5", children: "Sectors" }) }),
               /* @__PURE__ */ jsxs(Link, { href: "/sectors", className: "inline-flex items-center gap-1.5 rounded-full bg-[#edad1a]/15 hover:bg-[#edad1a]/25 border border-[#edad1a]/25 px-3 py-1.5 text-xs font-semibold text-[#edad1a] transition-colors", children: [
                 "View All ",
                 /* @__PURE__ */ jsx(ArrowUpRight, { className: "w-3 h-3" })
@@ -3048,7 +3074,7 @@ function Home() {
           "Why Us",
           /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
         ] }),
-        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5 max-w-lg", children: "Everything You Need to Know About Our Platform" }),
+        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5 max-w-lg", children: "Everything you need to know about our Platform" }),
         /* @__PURE__ */ jsx("p", { className: "text-gray-500 text-base leading-relaxed font-normal max-w-lg mb-8", children: "From discovery to delivery, we digitize every step — giving vendors the exposure they deserve and contractors the reliability they demand." }),
         /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 divide-x divide-gray-200 border-y border-gray-200 max-w-md mb-8", children: [
           { value: "20+", label: "Sectors" },
@@ -3320,11 +3346,11 @@ function Home() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
@@ -3681,11 +3707,11 @@ function About() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
@@ -3694,6 +3720,7 @@ function About() {
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
+const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
 const services = [
   {
     title: "AI-Powered Vendor Discovery",
@@ -3701,6 +3728,7 @@ const services = [
     image: "/images/services/ai-vendor-discovery.jpg",
     imageAlt: "AI vendor discovery platform",
     flip: false,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Multiple Vendors",
@@ -3722,6 +3750,7 @@ const services = [
     image: "/images/services/smart-price-discovery.jpg",
     imageAlt: "Smart price discovery and quotation",
     flip: true,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Hassle Free Management",
@@ -3743,6 +3772,7 @@ const services = [
     image: "/images/services/plants-equipment-marketplace.png",
     imageAlt: "Plants and heavy equipment marketplace",
     flip: false,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Search",
@@ -3764,6 +3794,7 @@ const services = [
     image: "/images/services/smart-material-procurement.jpg",
     imageAlt: "Smart material procurement for construction",
     flip: true,
+    href: "/materials",
     points: [
       {
         label: "One-Stop Solution for All Raw Material Needs",
@@ -3807,6 +3838,7 @@ const services = [
     image: "/images/services/insurance.png",
     imageAlt: "Smart project insurance and protection",
     flip: false,
+    href: "/contact",
     points: [
       {
         label: "Project Insurance",
@@ -3828,6 +3860,7 @@ const services = [
     image: "/images/services/ai-enterprise-services.jpg",
     imageAlt: "Enterprise services and business growth",
     flip: true,
+    href: "/contact",
     points: [
       {
         label: "Subcontracting",
@@ -4041,7 +4074,16 @@ function Services() {
           ] }, i)) })
         ] })
       ] });
-      return /* @__PURE__ */ jsx(FadeUp$2, { children: "href" in service && service.href ? /* @__PURE__ */ jsx(Link, { href: service.href, className: "block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4", children: section }) : section }, idx);
+      return /* @__PURE__ */ jsx(FadeUp$2, { children: "href" in service && service.href ? /* @__PURE__ */ jsx(
+        "a",
+        {
+          href: service.href,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4",
+          children: section
+        }
+      ) : section }, idx);
     }) }) }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-24 md:py-28 bg-[#0a1d36] text-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsx(
@@ -4127,11 +4169,11 @@ function Services() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
@@ -4626,21 +4668,30 @@ function Contact() {
             /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-5", children: [
               /* @__PURE__ */ jsxs("div", { className: "grid sm:grid-cols-2 gap-5", children: [
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsx(Label, { htmlFor: "name", className: "text-[#00274d] font-semibold text-sm", children: "Your Name" }),
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "name", className: "text-[#00274d] font-semibold text-sm", children: [
+                    "Your Name ",
+                    /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
+                  ] }),
                   /* @__PURE__ */ jsx(Input, { id: "name", name: "name", required: true, placeholder: "Your Name", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
                 ] }),
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
                   /* @__PURE__ */ jsx(Label, { htmlFor: "company", className: "text-[#00274d] font-semibold text-sm", children: "Company Name" }),
-                  /* @__PURE__ */ jsx(Input, { id: "company", name: "company", required: true, placeholder: "Company Name", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
+                  /* @__PURE__ */ jsx(Input, { id: "company", name: "company", placeholder: "Company Name", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
                 ] })
               ] }),
               /* @__PURE__ */ jsxs("div", { className: "grid sm:grid-cols-2 gap-5", children: [
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsx(Label, { htmlFor: "email", className: "text-[#00274d] font-semibold text-sm", children: "Your Email" }),
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "email", className: "text-[#00274d] font-semibold text-sm", children: [
+                    "Your Email ",
+                    /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
+                  ] }),
                   /* @__PURE__ */ jsx(Input, { id: "email", name: "email", type: "email", required: true, placeholder: "Your Email", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
                 ] }),
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsx(Label, { htmlFor: "phone", className: "text-[#00274d] font-semibold text-sm", children: "Contact Number" }),
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "phone", className: "text-[#00274d] font-semibold text-sm", children: [
+                    "Contact Number ",
+                    /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
+                  ] }),
                   /* @__PURE__ */ jsx(Input, { id: "phone", name: "phone", type: "tel", required: true, placeholder: "Contact Number", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
                 ] })
               ] }),
@@ -4651,7 +4702,6 @@ function Contact() {
                   {
                     id: "message",
                     name: "message",
-                    required: true,
                     placeholder: "Write your query here",
                     rows: 5,
                     className: "bg-gray-50 border-gray-200 resize-none placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20"
@@ -5209,11 +5259,11 @@ function Sectors() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
@@ -5438,11 +5488,11 @@ function SectorDetail() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
             /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
@@ -7726,11 +7776,11 @@ function Materials() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }) })
         ] }) })
@@ -8026,11 +8076,11 @@ function MaterialCategory() {
             /* @__PURE__ */ jsx("span", { className: "text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]", children: "GET STARTED TODAY" }),
             /* @__PURE__ */ jsx("span", { className: "h-px w-10 bg-[#00274d]/40" })
           ] }),
-          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform Your Business?" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Ready to Grow and Transform your Business?" }),
           /* @__PURE__ */ jsxs("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: [
             "Join ",
             /* @__PURE__ */ jsx("span", { className: "font-semibold", children: "32,000+" }),
-            " contractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
+            " contractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform."
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
             /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Get in Touch" }) }),
@@ -8972,12 +9022,9 @@ function BookDemoButton() {
                   /* @__PURE__ */ jsx("div", { className: "w-14 h-14 bg-green-50 rounded-full flex items-center justify-center", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "w-8 h-8 text-green-500" }) }),
                   /* @__PURE__ */ jsx("h3", { className: "text-base font-semibold text-[#00274d]", children: "Demo Booked!" }),
                   /* @__PURE__ */ jsxs("p", { className: "text-gray-500 text-xs leading-relaxed max-w-[200px]", children: [
-                    "Thanks ",
+                    "Thank you,  ",
                     /* @__PURE__ */ jsx("strong", { className: "text-gray-700", children: form.name }),
-                    "! We'll reach out to",
-                    " ",
-                    /* @__PURE__ */ jsx("strong", { className: "text-gray-700", children: form.phone }),
-                    " within 12 hours."
+                    "!  One of our experts will contact you shortly."
                   ] }),
                   /* @__PURE__ */ jsx(
                     "button",

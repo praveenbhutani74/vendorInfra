@@ -86,10 +86,10 @@ const services: ServiceItem[] = [
 ];
 
 const stats = [
-  { value: 31637, suffix: "",    label: "Contractors & Vendors", sub: "Certified across 20+ infrastructure sectors." },
-  { value: 263,   suffix: "",    label: "Live Users",             sub: "Actively using our platform today." },
-  { value: 6052,  suffix: " Cr", label: "Project Value",         sub: "Total value of projects posted." },
-  { value: 159,   suffix: "",    label: "Plants & Equipment",    sub: "Listed for hire, sale, or purchase." },
+  { value: 31637, suffix: "",    label: "Contractors & Vendors", sub: "Certified Contractors & Vendors & accross 20+ Sectors." },
+  { value: 263,   suffix: "",    label: "Live Users",             sub: "Total number of customers who are using our products." },
+  { value: 6052,  suffix: " Cr", label: "Project Value",         sub: "Value of the projects posted in our portal." },
+  { value: 159,   suffix: "",    label: "Plants & Equipment",    sub: "Number of Plants & Equipment." },
 ];
 
 const blogs = [
@@ -806,7 +806,7 @@ export default function Home() {
                 <span className="w-6 h-px bg-[#edad1a]/60" />
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] mb-5 max-w-lg">
-                One Destination for All Project Materials Needs
+                One Destination for all Project Materials needs
               </h2>
               <p className="type-body-lg text-gray-600 max-w-lg mb-8">
                 Market Place to provide end-to-end requirement for all Raw Material needs for your projects.
@@ -839,7 +839,9 @@ export default function Home() {
                   <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#ffffff 1px,transparent 0)", backgroundSize: "24px 24px" }} />
                   <div className="relative flex items-center justify-between mb-5">
                     <div>
-                      <h3 className="text-white text-xl font-semibold leading-tight mt-1">Material Categories</h3>
+                      {/* <h3 className="text-white text-xl font-semibold leading-tight mt-1">Material Categories</h3>
+                       */}
+                          <p className="text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5">Material</p>
                     </div>
                     <Link href="/materials" className="inline-flex items-center gap-1.5 rounded-full bg-[#edad1a]/15 hover:bg-[#edad1a]/25 border border-[#edad1a]/25 px-3 py-1.5 text-xs font-semibold text-[#edad1a] transition-colors">
                       View All <ArrowUpRight className="w-3 h-3" />
@@ -884,8 +886,8 @@ export default function Home() {
                   <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#edad1a] via-[#f7c44a]/60 to-transparent" />
                   <div className="relative flex items-center justify-between mb-5">
                     <div>
-                      <p className="text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5">Coverage</p>
-                      <h3 className="text-white text-lg font-bold">20+ Infrastructure Sectors</h3>
+                      <p className="text-[#edad1a] text-[10px] font-bold uppercase tracking-[0.25em] mb-0.5">Sectors</p>
+                      {/* <h3 className="text-white text-lg font-bold">20+ Infrastructure Sectors</h3> */}
                     </div>
                     <Link href="/sectors" className="inline-flex items-center gap-1.5 rounded-full bg-[#edad1a]/15 hover:bg-[#edad1a]/25 border border-[#edad1a]/25 px-3 py-1.5 text-xs font-semibold text-[#edad1a] transition-colors">
                       View All <ArrowUpRight className="w-3 h-3" />
@@ -956,7 +958,7 @@ export default function Home() {
                 <span className="w-6 h-px bg-[#edad1a]/60" />
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5 max-w-lg">
-                Everything You Need to Know About Our Platform
+                Everything you need to know about our Platform
               </h2>
 
               <p className="text-gray-500 text-base leading-relaxed font-normal max-w-lg mb-8">
@@ -1429,10 +1431,10 @@ export default function Home() {
               <span className="h-px w-10 bg-[#00274d]/40" />
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
-              Ready to Grow and Transform Your Business?
+              Ready to Grow and Transform your Business?
             </h2>
             <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
-              Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
+              Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
               <Link href="/contact">

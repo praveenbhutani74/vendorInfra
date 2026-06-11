@@ -11,13 +11,13 @@ export function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between gap-10">
 
           {/* Column 1: Brand */}
-          <div className="shrink-0 max-w-[220px] space-y-4">
-            <div className="flex items-center gap-2.5">
-            <img src="/favicon.ico" alt="Vendor Infra icon" className="h-9 w-9" />
-              <span className="text-xl font-semibold tracking-tight text-white leading-none">
-                vendor infra<sup className="text-[#edad1a] text-xs font-bold ml-0.5">®</sup>
-              </span>
-            </div>
+{/* Column 1: Brand */}
+<div className="shrink-0 max-w-[280px] space-y-4">
+<img
+  src={`${import.meta.env.BASE_URL}brand/White.png`}
+  alt="Vendor Infra"
+  className="h-[48px] w-auto -ml-4"
+/>
             <h3 className="text-white text-lg md:text-xl font-bold leading-snug">
               AI - Powered Operating System for{" "}
               <span className="text-[#edad1a] underline decoration-[#edad1a] decoration-2 underline-offset-4">Infrastructure,</span> Construction &amp; Manufacturing Industry
@@ -51,6 +51,7 @@ export function Footer() {
                 { href: "/services", label: "Services" },
                 { href: "/sectors", label: "Sectors" },
                 { href: "/materials", label: "Materials" },
+                  { href: "/why-us", label: "Why Us" },
                 { href: "/pricing", label: "Pricing Plans" },
                 { href: "/blog", label: "Blog" },
               ].map(({ href, label }) => (
@@ -66,7 +67,7 @@ export function Footer() {
             <h3 className="font-semibold text-base mb-5">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               {[
-                { href: "/why-us", label: "Why Us" },
+              
                 { href: "/referral", label: "Referral" },
                 { href: "/iso", label: "ISO Certification" },
                 { href: "/faq", label: "FAQ" },
@@ -74,6 +75,7 @@ export function Footer() {
                 { href: "/terms", label: "Terms of Service" },
                 { href: "/pricing-policy", label: "Pricing Policy" },
                 { href: "/security", label: "Security" },
+                 { href: "/contact", label: "Contact Us" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-white/75 hover:text-[#edad1a] transition-colors">{label}</Link>
@@ -113,7 +115,7 @@ export function Footer() {
             &copy; Vendor Infra 2026. All rights reserved.
           </p>
           <p className="text-white/30 text-xs">
-            Built for Infrastructure &amp; Construction
+           Meet. Collaborate. Construct
           </p>
         </div>
       </div>

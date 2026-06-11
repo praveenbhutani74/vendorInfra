@@ -13,7 +13,6 @@ const MORE_LINKS = [
   { href: "/why-us",   label: "Why Us" },
   { href: "/faq",      label: "FAQ" },
   { href: "/referral", label: "Referral Programme" },
-  { href: "/pricing-policy", label: "Pricing Policy" },
 ];
 
 export function Navbar() {

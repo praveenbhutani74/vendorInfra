@@ -11,6 +11,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SiteButton } from "@/components/SiteButton";
 
+const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
+
 const services = [
   {
     title: "AI-Powered Vendor Discovery",
@@ -18,6 +20,7 @@ const services = [
     image: "/images/services/ai-vendor-discovery.jpg",
     imageAlt: "AI vendor discovery platform",
     flip: false,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Multiple Vendors",
@@ -39,6 +42,7 @@ const services = [
     image: "/images/services/smart-price-discovery.jpg",
     imageAlt: "Smart price discovery and quotation",
     flip: true,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Hassle Free Management",
@@ -60,6 +64,7 @@ const services = [
     image: "/images/services/plants-equipment-marketplace.png",
     imageAlt: "Plants and heavy equipment marketplace",
     flip: false,
+    href: PORTAL_LOGIN_URL,
     points: [
       {
         label: "Search",
@@ -81,6 +86,7 @@ const services = [
     image: "/images/services/smart-material-procurement.jpg",
     imageAlt: "Smart material procurement for construction",
     flip: true,
+     href: "/materials",
     points: [
       {
         label: "One-Stop Solution for All Raw Material Needs",
@@ -124,6 +130,7 @@ const services = [
     image: "/images/services/insurance.png",
     imageAlt: "Smart project insurance and protection",
     flip: false,
+      href: "/contact",
     points: [
       {
         label: "Project Insurance",
@@ -145,6 +152,7 @@ const services = [
     image: "/images/services/ai-enterprise-services.jpg",
     imageAlt: "Enterprise services and business growth",
     flip: true,
+     href: "/contact",
     points: [
       {
         label: "Subcontracting",
@@ -389,9 +397,14 @@ export default function Services() {
               return (
                 <FadeUp key={idx}>
                   {"href" in service && service.href ? (
-                    <Link href={service.href} className="block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4">
-                      {section}
-                    </Link>
+                                  <a
+                    href={service.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-3xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4"
+                  >
+                    {section}
+                  </a>
                   ) : section}
                 </FadeUp>
               );
@@ -516,10 +529,10 @@ export default function Services() {
               <span className="h-px w-10 bg-[#00274d]/40" />
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
-              Ready to Grow and Transform Your Business?
+              Ready to Grow and Transform your Business?
             </h2>
             <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
-              Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, access plant and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
+              Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
               <Link href="/contact">

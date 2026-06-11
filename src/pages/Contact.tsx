@@ -146,22 +146,22 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} className="space-y-5">
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div className="space-y-1.5">
-                          <Label htmlFor="name" className="text-[#00274d] font-semibold text-sm">Your Name</Label>
+                          <Label htmlFor="name" className="text-[#00274d] font-semibold text-sm">Your Name <span className="text-red-500">*</span></Label>
                           <Input id="name" name="name" required placeholder="Your Name" className="bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" />
                         </div>
                         <div className="space-y-1.5">
                           <Label htmlFor="company" className="text-[#00274d] font-semibold text-sm">Company Name</Label>
-                          <Input id="company" name="company" required placeholder="Company Name" className="bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" />
+                          <Input id="company" name="company" placeholder="Company Name" className="bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" />
                         </div>
                       </div>
 
                       <div className="grid sm:grid-cols-2 gap-5">
                         <div className="space-y-1.5">
-                          <Label htmlFor="email" className="text-[#00274d] font-semibold text-sm">Your Email</Label>
+                          <Label htmlFor="email" className="text-[#00274d] font-semibold text-sm">Your Email <span className="text-red-500">*</span></Label>
                           <Input id="email" name="email" type="email" required placeholder="Your Email" className="bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" />
                         </div>
                         <div className="space-y-1.5">
-                          <Label htmlFor="phone" className="text-[#00274d] font-semibold text-sm">Contact Number</Label>
+                          <Label htmlFor="phone" className="text-[#00274d] font-semibold text-sm">Contact Number <span className="text-red-500">*</span></Label>
                           <Input id="phone" name="phone" type="tel" required placeholder="Contact Number" className="bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" />
                         </div>
                       </div>
@@ -171,7 +171,6 @@ export default function Contact() {
                         <Textarea
                           id="message"
                           name="message"
-                          required
                           placeholder="Write your query here"
                           rows={5}
                           className="bg-gray-50 border-gray-200 resize-none placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20"
