@@ -16,7 +16,7 @@ import { categories } from "@/lib/materialsData";
 import { sectors as allSectors } from "@/lib/sectorsData";
 import heroImage from "@/assets/hero-construction.png";
 
-const PORTAL_REGISTER_URL = "https://portal.vendorinfra.com/register";
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
 
 /* -- animated counter ------------------------------- */
 function Counter({ target, suffix = "", prefix = "" }: { target: number; suffix?: string; prefix?: string }) {
@@ -63,7 +63,7 @@ const gridItem = {
 };
 
 /* -- data ------------------------------------------- */
-const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
+const PORTAL_LOGIN_URL = "http://3.110.208.157/customer/";
 
 type ServiceItem = {
   icon: typeof Search;
@@ -409,8 +409,8 @@ export default function Home() {
             alt="Infrastructure construction site"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2548]/95 via-[#0a2548]/85 to-[#0a2548]/65" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a1f3d]/60 via-[#0a2548]/40 to-[#0a2548]/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2548]/80 via-[#0a2548]/65 to-[#0a2548]/40" />
+<div className="absolute inset-0 bg-gradient-to-b from-[#0a1f3d]/40 via-[#0a2548]/25 to-[#0a2548]/60" />
           <div className="absolute inset-0 bg-black/25" />
           <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse at 50% 50%, rgba(10,37,72,0.35) 0%, rgba(10,37,72,0.7) 100%)" }} />
           <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
@@ -454,12 +454,12 @@ export default function Home() {
             >
               <Link href="/services">
                 <SiteButton>
-                  Explore Services
+                   Services
                 </SiteButton>
               </Link>
               <Link href="/materials">
                 <SiteButton>
-                  Explore Materials
+                   Materials
                 </SiteButton>
               </Link>
             </motion.div>
@@ -670,7 +670,7 @@ export default function Home() {
         </div>
 
       </section>
-<section className="relative overflow-hidden bg-[#f7f8fc] py-8 md:py-12" aria-label="AI SaaS platform marquee">
+<section className="relative overflow-hidden bg-white py-8 md:py-12" aria-label="AI SaaS platform marquee">
   <div className="flex flex-col">
 
     {/* Navy - TOP */}
@@ -698,102 +698,111 @@ export default function Home() {
   </div>
 </section>
 
+
       {/* ── SERVICES ──────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-white relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#00274d 1px,transparent 0)", backgroundSize: "32px 32px" }} />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/12 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/8 to-transparent" />
-        </div>
+     <section className="py-16 md:py-24 bg-white relative overflow-hidden">
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute inset-0 opacity-[0.025]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px,#00274d 1px,transparent 0)", backgroundSize: "32px 32px" }} />
+    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/8 to-transparent" />
+  </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-          {/* Header */}
-          <FadeUp className="text-center mb-14">
-            <span className="inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
-              <span className="w-6 h-px bg-[#edad1a]/60" />
-              Services
-              <span className="w-6 h-px bg-[#edad1a]/60" />
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] mb-3">Our Comprehensive Services</h2>
-            <p className="text-[#00274d]/60 text-base md:text-lg max-w-2xl mx-auto">AI-powered solutions that enhance efficiency, fuel growth, and create measurable business impact.</p>
+  <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+    {/* Header */}
+    <FadeUp className="text-center mb-14">
+      <span className="inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
+        <span className="w-6 h-px bg-[#edad1a]/60" />
+        Services
+        <span className="w-6 h-px bg-[#edad1a]/60" />
+      </span>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] mb-3">Our Comprehensive Services</h2>
+      <p className="text-[#00274d]/60 text-base md:text-lg max-w-2xl mx-auto">AI-powered solutions that enhance efficiency, fuel growth, and create measurable business impact.</p>
+    </FadeUp>
 
-          </FadeUp>
+    {/* Cards */}
+    <motion.div
+      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+      variants={gridVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-60px" }}
+    >
+      {services.map((s, i) => {
+        const card = (
+<div className="group relative rounded-2xl bg-[#00274d] overflow-hidden h-full transition-all duration-300  flex flex-col">
 
-          {/* Cards — 3-col symmetric grid, 7th card centered in last row */}
-          <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
-            variants={gridVariants}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
-          >
-            {services.map((s, i) => {
-              const card = (
-                <div className="group relative rounded-2xl bg-[#00274d] border border-[#00274d] overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_52px_-16px_rgba(0,39,77,0.45)]">
-                  {/* Subtle inner grid */}
-                  <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.4) 1px,transparent 1px)", backgroundSize: "28px 28px" }} />
+            
+            {/* Subtle inner grid — z-0 stays behind everything */}
+            {/* <div
+              className="absolute inset-0 opacity-[0.06] z-0"
+              style={{
+                backgroundImage: "linear-gradient(rgba(255,255,255,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.4) 1px,transparent 1px)",
+                backgroundSize: "28px 28px"
+              }}
+            /> */}
 
-                  {/* Image */}
-                  {s.image && (
-                    <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-b from-white via-[#e6eef7] to-[#cdd9e8]">
-                      <img
-                        src={s.image}
-                        alt={s.title}
-                        className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                        loading="eager"
-                      />
-                      {/* Soft white wash on top for brightness */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-white/55 via-white/10 to-transparent" />
-                      {/* Subtle blue highlight tint (glassmorphism) */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-[#3b6fa0]/10 via-transparent to-[#cfe0f2]/25" />
-                      {/* Smooth blend into navy lower section */}
-                      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent via-[#00274d]/55 to-[#00274d]" />
-                    </div>
-                  )}
+            {/* Image */}
+            {s.image && (
+             
+              <div className="relative aspect-[16/9] overflow-hidden bg-[#00274d] z-10">
+ 
+              <img
+                  src={s.image}
+                  alt={s.title}
+                  className="w-full h-full object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  loading="eager"
+                />
+                {/* Soft white wash on top */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white/55 via-white/10 to-transparent" />
+                {/* Subtle blue highlight tint */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#3b6fa0]/10 via-transparent to-[#cfe0f2]/25" />
+                {/* Full height gradient to fully cover seam */}
+                <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-[#00274d]/50 to-[#00274d]" />
+              </div>
+            )}
 
-                  {/* Content */}
-                  <div className="relative p-5">
-                    <div className="flex items-center gap-2.5 mb-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#edad1a]/20 border border-[#edad1a]/40 flex items-center justify-center flex-shrink-0 group-hover:bg-[#edad1a]/30 transition-colors">
-                        <s.icon className="w-4 h-4 text-[#edad1a]" />
-                      </div>
-                    </div>
-                    <h3 className="text-white font-semibold text-sm leading-snug mb-2">{s.title}</h3>
-                    <p className="text-white/70 text-xs leading-relaxed">{s.desc}</p>
-                  </div>
+            {/* Content */}
+            <div className="relative p-5 z-10 -mt-2">
+              <div className="flex items-center gap-2.5 mb-3">
+                <div className="w-9 h-9 rounded-xl bg-[#edad1a]/20 border border-[#edad1a]/40 flex items-center justify-center flex-shrink-0 group-hover:bg-[#edad1a]/30 transition-colors">
+                  <s.icon className="w-4 h-4 text-[#edad1a]" />
                 </div>
-              );
+              </div>
+              <h3 className="text-white font-semibold text-sm leading-snug mb-2">{s.title}</h3>
+              <p className="text-white/70 text-xs leading-relaxed">{s.desc}</p>
+            </div>
+          </div>
+        );
 
-              return (
-                <motion.div
-                  key={i}
-                  variants={gridItem}
-                >
-                  {s.href ? (
-                    s.external ? (
-                      <a href={s.href} target="_blank" rel="noopener noreferrer" className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4 rounded-2xl">
-                        {card}
-                      </a>
-                    ) : (
-                      <Link href={s.href} className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4 rounded-2xl">
-                        {card}
-                      </Link>
-                    )
-                  ) : card}
-                </motion.div>
-              );
-            })}
+        return (
+          <motion.div
+            key={i}
+            variants={gridItem}
+          >
+            {s.href ? (
+              s.external ? (
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4 rounded-2xl">
+                  {card}
+                </a>
+              ) : (
+                <Link href={s.href} className="block h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#edad1a] focus-visible:ring-offset-4 rounded-2xl">
+                  {card}
+                </Link>
+              )
+            ) : card}
           </motion.div>
+        );
+      })}
+    </motion.div>
 
-          {/* CTA */}
-          <FadeUp delay={0.1} className="mt-12 text-left">
-            <Link href="/services">
-              <SiteButton>View All Services</SiteButton>
-            </Link>
-          </FadeUp>
+    {/* CTA */}
+    <FadeUp delay={0.1} className="mt-12 text-left">
+      <Link href="/services">
+        <SiteButton>Know More</SiteButton>
+      </Link>
+    </FadeUp>
 
-        </div>
-      </section>
+  </div>
+</section>
 
       {/* ── MATERIALS ─────────────────────────────────── */}
       <section className="py-14 md:py-20 bg-white overflow-hidden">
@@ -828,7 +837,7 @@ export default function Home() {
               </div>
 
               <Link href="/materials">
-                <SiteButton className="mt-8">Explore Materials</SiteButton>
+                <SiteButton className="mt-8">Know More</SiteButton>
               </Link>
             </FadeUp>
 
@@ -869,7 +878,7 @@ export default function Home() {
       </section>
 
       {/* ── SECTORS ───────────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-white overflow-hidden relative">
+     <section className="py-16 md:py-24 bg-gray-50 overflow-hidden relative">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/15 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/10 to-transparent" />
@@ -929,7 +938,8 @@ export default function Home() {
                   { num: "01", title: "Sectors", desc: "Vendor Infra serves a wide range of infrastructure sectors including roads & bridges, urban transport, railways, transmission lines and substations, airports, industrial corridors, smart cities, ports, water & wastewater, renewable energy, power, buildings & industrial projects, oil & gas, irrigation & tunneling, and solid waste management." },
                   { num: "02", title: "Seamless Collaboration for all Stakeholders across sectors", desc: "This broad sector coverage enables companies and vendors to discover opportunities, collaborate, and execute projects across diverse domains through a single platform." },
                 ].map(p => (
-                  <div key={p.num} className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-sm transition-all duration-200">
+                  <div key={p.num} className="flex gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:bg-white hover:shadow-sm transition-all duration-200"
+>
                     <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#00274d] text-[#edad1a] flex items-center justify-center text-xs font-semibold">{p.num}</div>
                     <div>
                       <h3 className="type-card-title text-[#00274d] mb-1">{p.title}</h3>
@@ -940,7 +950,7 @@ export default function Home() {
               </div>
 
               <Link href="/sectors">
-                <SiteButton>Explore Sectors</SiteButton>
+                <SiteButton>Know More</SiteButton>
               </Link>
             </FadeUp>
           </div>
@@ -979,7 +989,7 @@ export default function Home() {
               </div>
 
               <Link href="/why-us">
-                <SiteButton>Learn More</SiteButton>
+                <SiteButton>Know More</SiteButton>
               </Link>
             </FadeUp>
 
@@ -1209,7 +1219,7 @@ export default function Home() {
 
           <FadeUp delay={0.1} className="mt-12 text-left">
             <Link href="/blog">
-              <SiteButton>All Articles</SiteButton>
+              <SiteButton>Know More</SiteButton>
             </Link>
           </FadeUp>
         </div>

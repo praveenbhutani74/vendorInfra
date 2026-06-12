@@ -24,7 +24,7 @@ import { ContactSalesModal } from "@/components/ContactSalesModal";
 import { Link } from "wouter";
 import { SiteButton } from "@/components/SiteButton";
 
-const PORTAL_REGISTER_URL = "https://portal.vendorinfra.com/register";
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
 
 type Plan = {
   name: string;
@@ -589,75 +589,47 @@ export default function Pricing() {
 </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.45]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, rgba(0,39,77,0.12) 1px, transparent 0)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-        <div className="container mx-auto px-4 text-center relative z-10 max-w-2xl">
-          <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-4">
+ <section
+        className="bg-[#edad1a] py-16 relative"
+        style={{
+          backgroundImage:
+            "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
+        }}
+      >
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            {/* Get Started Today badge — PRICING-style, blue theme */}
+            <div className="flex items-center justify-center gap-3 mb-5">
+              {/* <span className="h-px w-10 bg-[#00274d]/40" /> */}
+              {/* <span className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#00274d]">
+                GET STARTED TODAY
+              </span> */}
+              {/* <span className="h-px w-10 bg-[#00274d]/40" /> */}
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#00274d] mb-3">
             Not sure which plan is right for you?
-          </h2>
-          <p className="text-gray-600 mb-10 text-lg">
-            Our experts will help you choose the right plan for your business and walk you through everything.
-          </p>
-             <div className="flex flex-wrap gap-3 justify-center items-center">
-                        {/* <Link href="/contact">
-                          <SiteButton variant="onGold" className="normal-case tracking-normal">
-                            Get in Touch
-                          </SiteButton>
-                        </Link> */}
-                        {/* <Link href="/services">
-                          <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
-                            Explore Services
-                            <CtaArrow variant="blue" />
-                          </button>
-                        </Link> */}
-                      {/* </div>
-                        <div className="flex flex-wrap gap-3 justify-center items-center"> */}
-                    <FadeUp delay={0.1} className="mt-2 text-left">
-                        <a
-                          href="https://customer.vendorinfra.com/#/login-2"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <SiteButton>Get Started</SiteButton>
-                        </a>
-                      </FadeUp>
-                               <FadeUp delay={0.1} className="mt-2 text-left">
-                              <Link href="/contact">
-                                <SiteButton> Contact Us</SiteButton>
-                              </Link>
-                            </FadeUp>
-                        {/* <Link href="/services">
-                          <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
-                            Explore Services
-                            <CtaArrow variant="blue" />
-                          </button>
-                        </Link> */}
-                      </div>
-          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={PORTAL_REGISTER_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[#edad1a] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#d4941a] transition-colors shadow-lg shadow-yellow-500/20"
-            >
-              Get Started
-            </a>
-            <button
-              onClick={() => openContact("Enterprise")}
-              className="inline-block bg-white border border-gray-200 text-[#00274d] font-semibold px-8 py-4 rounded-xl hover:border-[#edad1a] hover:text-[#edad1a] transition-colors shadow-sm"
-            >
-              Contact Us
-            </button>
-          </div> */}
+            </h2>
+            <p className="text-[#00274d]/85 mb-6 text-sm md:text-base">
+               Our experts will help you choose the right plan for your business and walk you through everything.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center items-center">
+              <Link href="/contact">
+                <SiteButton variant="onGold" className="normal-case tracking-normal">
+                  Contact Us
+                </SiteButton>
+              </Link>
+              {/* <Link href="/services">
+                <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
+                  Explore Services
+                  <CtaArrow variant="blue" />
+                </button>
+              </Link> */}
+            </div>
+          </div>
         </div>
       </section>
+
 
       <Footer />
 

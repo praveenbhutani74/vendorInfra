@@ -11,7 +11,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SiteButton } from "@/components/SiteButton";
 
-const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
+const PORTAL_LOGIN_URL = "http://3.110.208.157/customer/";
 
 const services = [
   {
@@ -367,7 +367,7 @@ export default function Services() {
                     {/* CONTENT */}
                     <div className={`lg:col-span-6 ${reverse ? "lg:order-1" : ""}`}>
                       <div className="flex items-baseline gap-4 mb-5">
-                        <span className="text-5xl md:text-6xl font-bold text-[#edad1a]/20 tracking-tight tabular-nums">
+                        <span className="text-5xl md:text-6xl font-bold text-[#edad1a] tracking-tight tabular-nums">
                           {String(idx + 1).padStart(2, "0")}
                         </span>
                         <span className="h-px flex-1 bg-gradient-to-r from-[#edad1a]/40 to-transparent" />

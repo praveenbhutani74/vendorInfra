@@ -467,7 +467,7 @@ function Navbar() {
         /* @__PURE__ */ jsx(
           "a",
           {
-            href: "https://customer.vendorinfra.com/#/login-2",
+            href: "http://3.110.208.157/customer/",
             target: "_blank",
             rel: "noopener noreferrer",
             className: siteButtonClasses(
@@ -2507,7 +2507,7 @@ const gridItem = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] } }
 };
-const PORTAL_LOGIN_URL$1 = "https://customer.vendorinfra.com/#/login-2";
+const PORTAL_LOGIN_URL$1 = "http://3.110.208.157/customer/";
 const services$1 = [
   { icon: Search, title: "AI-Powered Vendor Discovery", href: PORTAL_LOGIN_URL$1, external: true, image: "/images/services/ai-vendor-discovery.jpg", desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
   { icon: Calculator, title: "Smart Price Discovery", href: PORTAL_LOGIN_URL$1, external: true, image: "/images/services/smart-price-discovery.jpg", desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
@@ -2662,8 +2662,8 @@ function Home() {
             className: "w-full h-full object-cover"
           }
         ),
-        /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-[#0a2548]/95 via-[#0a2548]/85 to-[#0a2548]/65" }),
-        /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-b from-[#0a1f3d]/60 via-[#0a2548]/40 to-[#0a2548]/80" }),
+        /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-r from-[#0a2548]/80 via-[#0a2548]/65 to-[#0a2548]/40" }),
+        /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-b from-[#0a1f3d]/40 via-[#0a2548]/25 to-[#0a2548]/60" }),
         /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-black/25" }),
         /* @__PURE__ */ jsx("div", { className: "absolute inset-0", style: { background: "radial-gradient(ellipse at 50% 50%, rgba(10,37,72,0.35) 0%, rgba(10,37,72,0.7) 100%)" } }),
         /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.04]", style: { backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "28px 28px" } }),
@@ -2707,8 +2707,8 @@ function Home() {
             transition: { duration: 0.55, delay: 0.38 },
             className: "flex flex-wrap items-center gap-3 mb-10",
             children: [
-              /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Services" }) }),
-              /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Materials" }) })
+              /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "Services" }) }),
+              /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { children: "Materials" }) })
             ]
           }
         )
@@ -2897,14 +2897,13 @@ function Home() {
         ] }) })
       ] }) })
     ] }),
-    /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-[#f7f8fc] py-8 md:py-12", "aria-label": "AI SaaS platform marquee", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
+    /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-white py-8 md:py-12", "aria-label": "AI SaaS platform marquee", children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col", children: [
       /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -rotate-[0.8deg] overflow-hidden bg-[#00274d] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track [animation-duration:80s]", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `navy-${index}`)) }) }),
       /* @__PURE__ */ jsx("div", { className: "w-[150vw] -ml-[25vw] -mt-6 rotate-[0.8deg] overflow-hidden bg-[#edad1a] py-5 md:py-6", children: /* @__PURE__ */ jsx("div", { className: "ai-marquee-track ai-marquee-track-reverse [animation-duration:75s]", children: Array.from({ length: 8 }).map((_, index) => /* @__PURE__ */ jsx("span", { className: "ai-marquee-item", children: "SaaS Platform with Artificial Intelligence & Machine Learning" }, `gold-${index}`)) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "py-16 md:py-24 bg-white relative overflow-hidden", children: [
       /* @__PURE__ */ jsxs("div", { className: "pointer-events-none absolute inset-0", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.025]", style: { backgroundImage: "radial-gradient(circle at 1px 1px,#00274d 1px,transparent 0)", backgroundSize: "32px 32px" } }),
-        /* @__PURE__ */ jsx("div", { className: "absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/12 to-transparent" }),
         /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/8 to-transparent" })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: [
@@ -2926,9 +2925,8 @@ function Home() {
             whileInView: "show",
             viewport: { once: true, margin: "-60px" },
             children: services$1.map((s, i) => {
-              const card = /* @__PURE__ */ jsxs("div", { className: "group relative rounded-2xl bg-[#00274d] border border-[#00274d] overflow-hidden h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_52px_-16px_rgba(0,39,77,0.45)]", children: [
-                /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.06]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.4) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.4) 1px,transparent 1px)", backgroundSize: "28px 28px" } }),
-                s.image && /* @__PURE__ */ jsxs("div", { className: "relative aspect-[16/9] overflow-hidden bg-gradient-to-b from-white via-[#e6eef7] to-[#cdd9e8]", children: [
+              const card = /* @__PURE__ */ jsxs("div", { className: "group relative rounded-2xl bg-[#00274d] overflow-hidden h-full transition-all duration-300  flex flex-col", children: [
+                s.image && /* @__PURE__ */ jsxs("div", { className: "relative aspect-[16/9] overflow-hidden bg-[#00274d] z-10", children: [
                   /* @__PURE__ */ jsx(
                     "img",
                     {
@@ -2940,9 +2938,9 @@ function Home() {
                   ),
                   /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-b from-white/55 via-white/10 to-transparent" }),
                   /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-tr from-[#3b6fa0]/10 via-transparent to-[#cfe0f2]/25" }),
-                  /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-b from-transparent via-[#00274d]/55 to-[#00274d]" })
+                  /* @__PURE__ */ jsx("div", { className: "absolute inset-x-0 bottom-0 h-full bg-gradient-to-b from-transparent via-[#00274d]/50 to-[#00274d]" })
                 ] }),
-                /* @__PURE__ */ jsxs("div", { className: "relative p-5", children: [
+                /* @__PURE__ */ jsxs("div", { className: "relative p-5 z-10 -mt-2", children: [
                   /* @__PURE__ */ jsx("div", { className: "flex items-center gap-2.5 mb-3", children: /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-xl bg-[#edad1a]/20 border border-[#edad1a]/40 flex items-center justify-center flex-shrink-0 group-hover:bg-[#edad1a]/30 transition-colors", children: /* @__PURE__ */ jsx(s.icon, { className: "w-4 h-4 text-[#edad1a]" }) }) }),
                   /* @__PURE__ */ jsx("h3", { className: "text-white font-semibold text-sm leading-snug mb-2", children: s.title }),
                   /* @__PURE__ */ jsx("p", { className: "text-white/70 text-xs leading-relaxed", children: s.desc })
@@ -2959,7 +2957,7 @@ function Home() {
             })
           }
         ),
-        /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "View All Services" }) }) })
+        /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/services", children: /* @__PURE__ */ jsx(SiteButton, { children: "Know More" }) }) })
       ] })
     ] }),
     /* @__PURE__ */ jsx("section", { className: "py-14 md:py-20 bg-white overflow-hidden", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-2 gap-12 lg:gap-20 items-center", children: [
@@ -2981,7 +2979,7 @@ function Home() {
             /* @__PURE__ */ jsx("p", { className: "text-[0.95rem] text-gray-600 leading-relaxed font-normal", children: p.desc })
           ] })
         ] }, p.num)) }),
-        /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { className: "mt-8", children: "Explore Materials" }) })
+        /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx(SiteButton, { className: "mt-8", children: "Know More" }) })
       ] }),
       /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
@@ -3009,7 +3007,7 @@ function Home() {
         ] })
       ] }) })
     ] }) }) }),
-    /* @__PURE__ */ jsxs("section", { className: "py-16 md:py-24 bg-white overflow-hidden relative", children: [
+    /* @__PURE__ */ jsxs("section", { className: "py-16 md:py-24 bg-gray-50 overflow-hidden relative", children: [
       /* @__PURE__ */ jsxs("div", { className: "pointer-events-none absolute inset-0", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/15 to-transparent" }),
         /* @__PURE__ */ jsx("div", { className: "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00274d]/10 to-transparent" })
@@ -3056,14 +3054,21 @@ function Home() {
           /* @__PURE__ */ jsx("div", { className: "space-y-6 max-w-xl mb-8", children: [
             { num: "01", title: "Sectors", desc: "Vendor Infra serves a wide range of infrastructure sectors including roads & bridges, urban transport, railways, transmission lines and substations, airports, industrial corridors, smart cities, ports, water & wastewater, renewable energy, power, buildings & industrial projects, oil & gas, irrigation & tunneling, and solid waste management." },
             { num: "02", title: "Seamless Collaboration for all Stakeholders across sectors", desc: "This broad sector coverage enables companies and vendors to discover opportunities, collaborate, and execute projects across diverse domains through a single platform." }
-          ].map((p) => /* @__PURE__ */ jsxs("div", { className: "flex gap-4 p-4 rounded-xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-sm transition-all duration-200", children: [
-            /* @__PURE__ */ jsx("div", { className: "flex-shrink-0 w-9 h-9 rounded-lg bg-[#00274d] text-[#edad1a] flex items-center justify-center text-xs font-semibold", children: p.num }),
-            /* @__PURE__ */ jsxs("div", { children: [
-              /* @__PURE__ */ jsx("h3", { className: "type-card-title text-[#00274d] mb-1", children: p.title }),
-              /* @__PURE__ */ jsx("p", { className: "text-[0.95rem] text-gray-600 leading-relaxed font-normal", children: p.desc })
-            ] })
-          ] }, p.num)) }),
-          /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsx(SiteButton, { children: "Explore Sectors" }) })
+          ].map((p) => /* @__PURE__ */ jsxs(
+            "div",
+            {
+              className: "flex gap-4 p-4 rounded-xl border border-gray-100 bg-white hover:bg-white hover:shadow-sm transition-all duration-200",
+              children: [
+                /* @__PURE__ */ jsx("div", { className: "flex-shrink-0 w-9 h-9 rounded-lg bg-[#00274d] text-[#edad1a] flex items-center justify-center text-xs font-semibold", children: p.num }),
+                /* @__PURE__ */ jsxs("div", { children: [
+                  /* @__PURE__ */ jsx("h3", { className: "type-card-title text-[#00274d] mb-1", children: p.title }),
+                  /* @__PURE__ */ jsx("p", { className: "text-[0.95rem] text-gray-600 leading-relaxed font-normal", children: p.desc })
+                ] })
+              ]
+            },
+            p.num
+          )) }),
+          /* @__PURE__ */ jsx(Link, { href: "/sectors", children: /* @__PURE__ */ jsx(SiteButton, { children: "Know More" }) })
         ] })
       ] }) })
     ] }),
@@ -3084,7 +3089,7 @@ function Home() {
           /* @__PURE__ */ jsx("p", { className: "text-2xl font-bold text-[#00274d] leading-none tabular-nums", children: item2.value }),
           /* @__PURE__ */ jsx("p", { className: "text-[11px] font-medium uppercase tracking-wider text-gray-400 mt-2", children: item2.label })
         ] }, item2.label)) }),
-        /* @__PURE__ */ jsx(Link, { href: "/why-us", children: /* @__PURE__ */ jsx(SiteButton, { children: "Learn More" }) })
+        /* @__PURE__ */ jsx(Link, { href: "/why-us", children: /* @__PURE__ */ jsx(SiteButton, { children: "Know More" }) })
       ] }),
       /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.12, children: /* @__PURE__ */ jsxs("div", { className: "relative", children: [
         /* @__PURE__ */ jsx("div", { className: "absolute -inset-6 bg-[#edad1a]/6 blur-3xl" }),
@@ -3271,7 +3276,7 @@ function Home() {
           ] }) }) }, i))
         }
       ),
-      /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsx(SiteButton, { children: "All Articles" }) }) })
+      /* @__PURE__ */ jsx(FadeUp$3, { delay: 0.1, className: "mt-12 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/blog", children: /* @__PURE__ */ jsx(SiteButton, { children: "Know More" }) }) })
     ] }) }),
     /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-[#00274d] py-20", children: [
       /* @__PURE__ */ jsx("div", { className: "pointer-events-none absolute inset-0 opacity-[0.5]", style: { backgroundImage: "linear-gradient(rgba(255,255,255,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.06) 1px,transparent 1px)", backgroundSize: "44px 44px" } }),
@@ -3720,7 +3725,7 @@ function About() {
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
-const PORTAL_LOGIN_URL = "https://customer.vendorinfra.com/#/login-2";
+const PORTAL_LOGIN_URL = "http://3.110.208.157/customer/";
 const services = [
   {
     title: "AI-Powered Vendor Discovery",
@@ -4061,7 +4066,7 @@ function Services() {
         ] }) }),
         /* @__PURE__ */ jsxs("div", { className: `lg:col-span-6 ${reverse ? "lg:order-1" : ""}`, children: [
           /* @__PURE__ */ jsxs("div", { className: "flex items-baseline gap-4 mb-5", children: [
-            /* @__PURE__ */ jsx("span", { className: "text-5xl md:text-6xl font-bold text-[#edad1a]/20 tracking-tight tabular-nums", children: String(idx + 1).padStart(2, "0") }),
+            /* @__PURE__ */ jsx("span", { className: "text-5xl md:text-6xl font-bold text-[#edad1a] tracking-tight tabular-nums", children: String(idx + 1).padStart(2, "0") }),
             /* @__PURE__ */ jsx("span", { className: "h-px flex-1 bg-gradient-to-r from-[#edad1a]/40 to-transparent" })
           ] }),
           /* @__PURE__ */ jsx("h3", { className: "text-2xl md:text-3xl font-semibold text-[#00274d] tracking-normal leading-tight mb-7", children: service.title }),
@@ -4595,45 +4600,60 @@ function Contact() {
           /* @__PURE__ */ jsx("h1", { className: "text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-6", children: "Let's connect and build something great together" })
         ] })
       ] }),
-      /* @__PURE__ */ jsx("section", { className: "py-24 bg-[#f6f8fb]", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-6xl mx-auto", children: [
+      /* @__PURE__ */ jsx("section", { className: "py-20 bg-[#f5f5f7]", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-6xl mx-auto", children: [
         /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch", children: [
-          /* @__PURE__ */ jsxs("div", { className: "rounded-2xl bg-[#00274d] text-white p-7 md:p-8 relative overflow-hidden", children: [
+          /* @__PURE__ */ jsxs("div", { className: "rounded-2xl bg-[#00274d] text-white p-8 relative overflow-hidden flex flex-col", children: [
             /* @__PURE__ */ jsx("div", { className: "absolute inset-0 opacity-[0.08] bg-[radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] bg-[size:24px_24px]" }),
-            /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-              /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-5", children: [
+            /* @__PURE__ */ jsx("div", { className: "absolute -top-16 -right-16 w-56 h-56 rounded-full border-[28px] border-[#edad1a]/10 pointer-events-none" }),
+            /* @__PURE__ */ jsx("div", { className: "absolute -bottom-10 -left-10 w-40 h-40 rounded-full border-[20px] border-[#edad1a]/8 pointer-events-none" }),
+            /* @__PURE__ */ jsxs("div", { className: "relative flex flex-col h-full", children: [
+              /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.35em] mb-5", children: [
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
                 "Get in touch",
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
               ] }),
-              /* @__PURE__ */ jsx("h3", { className: "text-2xl md:text-3xl font-bold leading-tight mb-2", children: "We are here to help you move faster." }),
-              /* @__PURE__ */ jsx("p", { className: "text-white/70 mb-8", children: "Let's connect and collaborate — the Vendor Infra team is just a message away." }),
-              /* @__PURE__ */ jsxs("div", { className: "space-y-4", children: [
-                /* @__PURE__ */ jsxs("a", { href: "tel:+918800119885", className: "flex items-start gap-4 rounded-xl border border-white/10 bg-white/6 p-4 hover:bg-white/10 transition-colors", children: [
-                  /* @__PURE__ */ jsx(Phone, { className: "w-5 h-5 text-[#edad1a] mt-1 shrink-0" }),
-                  /* @__PURE__ */ jsxs("span", { children: [
-                    /* @__PURE__ */ jsx("span", { className: "block font-semibold", children: "Call Center (SaaS)" }),
-                    /* @__PURE__ */ jsx("span", { className: "block text-white/70 text-sm", children: "8800119885" })
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxs("a", { href: "tel:+918800404840", className: "flex items-start gap-4 rounded-xl border border-white/10 bg-white/6 p-4 hover:bg-white/10 transition-colors", children: [
-                  /* @__PURE__ */ jsx(Phone, { className: "w-5 h-5 text-[#edad1a] mt-1 shrink-0" }),
-                  /* @__PURE__ */ jsxs("span", { children: [
-                    /* @__PURE__ */ jsx("span", { className: "block font-semibold", children: "Call Center (Supply Chain)" }),
-                    /* @__PURE__ */ jsx("span", { className: "block text-white/70 text-sm", children: "8800404840" })
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: "flex items-start gap-4 rounded-xl border border-white/10 bg-white/6 p-4 hover:bg-white/10 transition-colors", children: [
-                  /* @__PURE__ */ jsx(Mail, { className: "w-5 h-5 text-[#edad1a] mt-1 shrink-0" }),
-                  /* @__PURE__ */ jsxs("span", { children: [
-                    /* @__PURE__ */ jsx("span", { className: "block font-semibold", children: "Email" }),
-                    /* @__PURE__ */ jsx("span", { className: "block text-white/70 text-sm", children: "enquiry@vendorinfra.com" })
-                  ] })
-                ] }),
-                /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4 rounded-xl border border-white/10 bg-white/6 p-4", children: [
-                  /* @__PURE__ */ jsx(MapPin, { className: "w-5 h-5 text-[#edad1a] mt-1 shrink-0" }),
-                  /* @__PURE__ */ jsxs("span", { children: [
-                    /* @__PURE__ */ jsx("span", { className: "block font-semibold", children: "Head Office" }),
-                    /* @__PURE__ */ jsxs("span", { className: "block text-white/70 text-sm leading-relaxed", children: [
+              /* @__PURE__ */ jsx("h3", { className: "text-2xl md:text-[1.65rem] font-bold leading-tight mb-2", children: "We are here to help you move faster." }),
+              /* @__PURE__ */ jsx("p", { className: "text-white/60 text-[0.92rem] leading-relaxed mb-8", children: "Let's connect and collaborate — the Vendor Infra team is just a message away." }),
+              /* @__PURE__ */ jsxs("div", { className: "space-y-3 flex-1", children: [
+                [
+                  {
+                    href: "tel:+918800119885",
+                    icon: /* @__PURE__ */ jsx(Phone, { className: "w-[18px] h-[18px] text-[#edad1a]" }),
+                    label: "Call Center (SaaS)",
+                    value: "8800119885"
+                  },
+                  {
+                    href: "tel:+918800404840",
+                    icon: /* @__PURE__ */ jsx(Phone, { className: "w-[18px] h-[18px] text-[#edad1a]" }),
+                    label: "Call Center (Supply Chain)",
+                    value: "8800404840"
+                  },
+                  {
+                    href: "mailto:enquiry@vendorinfra.com",
+                    icon: /* @__PURE__ */ jsx(Mail, { className: "w-[18px] h-[18px] text-[#edad1a]" }),
+                    label: "Email",
+                    value: "enquiry@vendorinfra.com"
+                  }
+                ].map((item2) => /* @__PURE__ */ jsxs(
+                  "a",
+                  {
+                    href: item2.href,
+                    className: "group flex items-center gap-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3.5 hover:bg-white/10 hover:border-[#edad1a]/30 transition-all duration-200",
+                    children: [
+                      /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-lg bg-[#edad1a]/15 flex items-center justify-center shrink-0 group-hover:bg-[#edad1a]/25 transition-colors", children: item2.icon }),
+                      /* @__PURE__ */ jsxs("div", { className: "min-w-0", children: [
+                        /* @__PURE__ */ jsx("span", { className: "block text-[11px] text-white/50 font-semibold uppercase tracking-wide mb-0.5", children: item2.label }),
+                        /* @__PURE__ */ jsx("span", { className: "block text-white font-semibold text-[0.9rem] truncate", children: item2.value })
+                      ] })
+                    ]
+                  },
+                  item2.value
+                )),
+                /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4 rounded-xl border border-white/10 bg-white/5 px-4 py-3.5", children: [
+                  /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-lg bg-[#edad1a]/15 flex items-center justify-center shrink-0 mt-0.5", children: /* @__PURE__ */ jsx(MapPin, { className: "w-[18px] h-[18px] text-[#edad1a]" }) }),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsx("span", { className: "block text-[11px] text-white/50 font-semibold uppercase tracking-wide mb-0.5", children: "Head Office" }),
+                    /* @__PURE__ */ jsxs("span", { className: "block text-white font-semibold text-[0.9rem] leading-relaxed", children: [
                       "Suit No. 1436-1440, Plus Offices,",
                       /* @__PURE__ */ jsx("br", {}),
                       "Landmark Cyber Park,",
@@ -4646,65 +4666,138 @@ function Contact() {
                 ] })
               ] }),
               /* @__PURE__ */ jsxs("div", { className: "mt-8 pt-6 border-t border-white/10", children: [
-                /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: "Follow Us" }),
-                /* @__PURE__ */ jsxs("div", { className: "flex gap-3", children: [
-                  /* @__PURE__ */ jsx("a", { href: "https://www.facebook.com/VENDORINFRA/", target: "_blank", rel: "noopener noreferrer", className: "w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-[#1877F2] transition-colors", children: /* @__PURE__ */ jsx(Facebook, { className: "w-4 h-4" }) }),
-                  /* @__PURE__ */ jsx("a", { href: "https://x.com/vendorinfra", target: "_blank", rel: "noopener noreferrer", className: "w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-black transition-colors", children: /* @__PURE__ */ jsx(Twitter, { className: "w-4 h-4" }) }),
-                  /* @__PURE__ */ jsx("a", { href: "https://www.linkedin.com/company/vendor-infra/", target: "_blank", rel: "noopener noreferrer", className: "w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-[#0077B5] transition-colors", children: /* @__PURE__ */ jsx(Linkedin, { className: "w-4 h-4" }) }),
-                  /* @__PURE__ */ jsx("a", { href: "https://www.instagram.com/vendorinfra/", target: "_blank", rel: "noopener noreferrer", className: "w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:bg-[#E1306C] transition-colors", children: /* @__PURE__ */ jsx(Instagram, { className: "w-4 h-4" }) })
+                /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.3em] mb-4", children: "Follow Us" }),
+                /* @__PURE__ */ jsxs("div", { className: "flex gap-2.5", children: [
+                  /* @__PURE__ */ jsx(
+                    "a",
+                    {
+                      href: "https://www.facebook.com/VENDORINFRA/",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white hover:bg-[#1877F2] hover:border-[#1877F2] transition-all duration-200",
+                      children: /* @__PURE__ */ jsx(Facebook, { className: "w-4 h-4" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "a",
+                    {
+                      href: "https://x.com/vendorinfra",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white hover:bg-black hover:border-black transition-all duration-200",
+                      children: /* @__PURE__ */ jsx(Twitter, { className: "w-4 h-4" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "a",
+                    {
+                      href: "https://www.linkedin.com/company/vendor-infra/",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white hover:bg-[#0077B5] hover:border-[#0077B5] transition-all duration-200",
+                      children: /* @__PURE__ */ jsx(Linkedin, { className: "w-4 h-4" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "a",
+                    {
+                      href: "https://www.instagram.com/vendorinfra/",
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      className: "w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white hover:bg-[#E1306C] hover:border-[#E1306C] transition-all duration-200",
+                      children: /* @__PURE__ */ jsx(Instagram, { className: "w-4 h-4" })
+                    }
+                  )
                 ] })
               ] })
             ] })
           ] }),
-          /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 p-7 md:p-8", children: [
+          /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col", style: { backgroundColor: "#ffffff" }, children: [
             /* @__PURE__ */ jsxs("div", { className: "mb-7", children: [
-              /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4", children: [
+              /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.35em] mb-4", children: [
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
                 "Send an Enquiry",
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" })
               ] }),
-              /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold text-[#00274d] leading-tight", children: "Tell us your requirements, and our team will get back to you shortly." })
+              /* @__PURE__ */ jsx("h3", { className: "text-2xl font-bold text-[#00274d] leading-snug", children: "Tell us your requirements, and our team will get back to you shortly." })
             ] }),
-            /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-5", children: [
+            /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-5 flex-1 flex flex-col", children: [
               /* @__PURE__ */ jsxs("div", { className: "grid sm:grid-cols-2 gap-5", children: [
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsxs(Label, { htmlFor: "name", className: "text-[#00274d] font-semibold text-sm", children: [
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "name", className: "text-[#00274d] font-semibold text-[13px]", children: [
                     "Your Name ",
                     /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
                   ] }),
-                  /* @__PURE__ */ jsx(Input, { id: "name", name: "name", required: true, placeholder: "Your Name", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
+                  /* @__PURE__ */ jsx(
+                    Input,
+                    {
+                      id: "name",
+                      name: "name",
+                      required: true,
+                      placeholder: "Your Name",
+                      className: "h-11 bg-gray-50 border-gray-200 rounded-lg text-[13.5px] placeholder:text-[12.5px] placeholder:text-gray-400 focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/15 transition-all"
+                    }
+                  )
                 ] }),
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsx(Label, { htmlFor: "company", className: "text-[#00274d] font-semibold text-sm", children: "Company Name" }),
-                  /* @__PURE__ */ jsx(Input, { id: "company", name: "company", placeholder: "Company Name", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
+                  /* @__PURE__ */ jsx(Label, { htmlFor: "company", className: "text-[#00274d] font-semibold text-[13px]", children: "Company Name" }),
+                  /* @__PURE__ */ jsx(
+                    Input,
+                    {
+                      id: "company",
+                      name: "company",
+                      placeholder: "Company Name",
+                      className: "h-11 bg-gray-50 border-gray-200 rounded-lg text-[13.5px] placeholder:text-[12.5px] placeholder:text-gray-400 focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/15 transition-all"
+                    }
+                  )
                 ] })
               ] }),
               /* @__PURE__ */ jsxs("div", { className: "grid sm:grid-cols-2 gap-5", children: [
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsxs(Label, { htmlFor: "email", className: "text-[#00274d] font-semibold text-sm", children: [
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "email", className: "text-[#00274d] font-semibold text-[13px]", children: [
                     "Your Email ",
                     /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
                   ] }),
-                  /* @__PURE__ */ jsx(Input, { id: "email", name: "email", type: "email", required: true, placeholder: "Your Email", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
+                  /* @__PURE__ */ jsx(
+                    Input,
+                    {
+                      id: "email",
+                      name: "email",
+                      type: "email",
+                      required: true,
+                      placeholder: "Your Email",
+                      className: "h-11 bg-gray-50 border-gray-200 rounded-lg text-[13.5px] placeholder:text-[12.5px] placeholder:text-gray-400 focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/15 transition-all"
+                    }
+                  )
                 ] }),
                 /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                  /* @__PURE__ */ jsxs(Label, { htmlFor: "phone", className: "text-[#00274d] font-semibold text-sm", children: [
+                  /* @__PURE__ */ jsxs(Label, { htmlFor: "phone", className: "text-[#00274d] font-semibold text-[13px]", children: [
                     "Contact Number ",
                     /* @__PURE__ */ jsx("span", { className: "text-red-500", children: "*" })
                   ] }),
-                  /* @__PURE__ */ jsx(Input, { id: "phone", name: "phone", type: "tel", required: true, placeholder: "Contact Number", className: "bg-gray-50 border-gray-200 placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20" })
+                  /* @__PURE__ */ jsx(
+                    Input,
+                    {
+                      id: "phone",
+                      name: "phone",
+                      type: "tel",
+                      required: true,
+                      placeholder: "Contact Number",
+                      className: "h-11 bg-gray-50 border-gray-200 rounded-lg text-[13.5px] placeholder:text-[12.5px] placeholder:text-gray-400 focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/15 transition-all"
+                    }
+                  )
                 ] })
               ] }),
               /* @__PURE__ */ jsxs("div", { className: "space-y-1.5", children: [
-                /* @__PURE__ */ jsx(Label, { htmlFor: "message", className: "text-[#00274d] font-semibold text-sm", children: "Write your query here" }),
+                /* @__PURE__ */ jsx(Label, { htmlFor: "message", className: "text-[#00274d] font-semibold text-[13px]", children: "Write your query here" }),
                 /* @__PURE__ */ jsx(
                   Textarea,
                   {
                     id: "message",
                     name: "message",
                     placeholder: "Write your query here",
-                    rows: 5,
-                    className: "bg-gray-50 border-gray-200 resize-none placeholder:text-[12.5px] placeholder:text-gray-400 placeholder:font-normal focus:border-[#edad1a] focus:ring-[#edad1a]/20"
+                    rows: 4,
+                    className: "bg-gray-50 border-gray-200 rounded-lg resize-none text-[13.5px] placeholder:text-[12.5px] placeholder:text-gray-400 focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/15 transition-all"
                   }
                 )
               ] }),
@@ -4713,7 +4806,7 @@ function Contact() {
                 {
                   type: "submit",
                   disabled: isSubmitting,
-                  className: siteButtonClasses("primary", "w-full py-4 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-60"),
+                  className: siteButtonClasses("primary", "w-full py-3.5 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-60 text-[15px] font-semibold"),
                   children: isSubmitting ? /* @__PURE__ */ jsxs(Fragment, { children: [
                     /* @__PURE__ */ jsx("span", { className: "animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/30 border-t-[#00274d]" }),
                     "Sending..."
@@ -5510,7 +5603,7 @@ function FeatureLabel({ text }) {
     (p, i) => p.startsWith("(") && p.endsWith(")") ? /* @__PURE__ */ jsx("span", { className: "text-[#edad1a] font-semibold", children: p }, i) : /* @__PURE__ */ jsx("span", { children: p }, i)
   ) });
 }
-const PORTAL_REGISTER_URL = "https://portal.vendorinfra.com/register";
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
 function FadeUp({ children, delay = 0, className = "" }) {
   return /* @__PURE__ */ jsx(
     motion.div,
@@ -5983,34 +6076,22 @@ function Pricing() {
         )) })
       ] })
     ] }),
-    /* @__PURE__ */ jsxs("section", { className: "py-20 bg-gray-50 border-t border-gray-100 relative overflow-hidden", children: [
-      /* @__PURE__ */ jsx(
-        "div",
-        {
-          className: "absolute inset-0 opacity-[0.45]",
-          style: {
-            backgroundImage: "radial-gradient(circle at 1px 1px, rgba(0,39,77,0.12) 1px, transparent 0)",
-            backgroundSize: "28px 28px"
-          }
-        }
-      ),
-      /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 text-center relative z-10 max-w-2xl", children: [
-        /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-4", children: "Not sure which plan is right for you?" }),
-        /* @__PURE__ */ jsx("p", { className: "text-gray-600 mb-10 text-lg", children: "Our experts will help you choose the right plan for your business and walk you through everything." }),
-        /* @__PURE__ */ jsxs("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: [
-          /* @__PURE__ */ jsx(FadeUp, { delay: 0.1, className: "mt-2 text-left", children: /* @__PURE__ */ jsx(
-            "a",
-            {
-              href: "https://customer.vendorinfra.com/#/login-2",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: /* @__PURE__ */ jsx(SiteButton, { children: "Get Started" })
-            }
-          ) }),
-          /* @__PURE__ */ jsx(FadeUp, { delay: 0.1, className: "mt-2 text-left", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { children: " Contact Us" }) }) })
-        ] })
-      ] })
-    ] }),
+    /* @__PURE__ */ jsx(
+      "section",
+      {
+        className: "bg-[#edad1a] py-16 relative",
+        style: {
+          backgroundImage: "radial-gradient(rgba(0,39,77,0.18) 1px, transparent 1px)",
+          backgroundSize: "22px 22px"
+        },
+        children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-3xl mx-auto text-center", children: [
+          /* @__PURE__ */ jsx("div", { className: "flex items-center justify-center gap-3 mb-5" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold text-[#00274d] mb-3", children: "Not sure which plan is right for you?" }),
+          /* @__PURE__ */ jsx("p", { className: "text-[#00274d]/85 mb-6 text-sm md:text-base", children: "Our experts will help you choose the right plan for your business and walk you through everything." }),
+          /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-3 justify-center items-center", children: /* @__PURE__ */ jsx(Link, { href: "/contact", children: /* @__PURE__ */ jsx(SiteButton, { variant: "onGold", className: "normal-case tracking-normal", children: "Contact Us" }) }) })
+        ] }) })
+      }
+    ),
     /* @__PURE__ */ jsx(Footer, {}),
     /* @__PURE__ */ jsx(
       ContactSalesModal,
@@ -7251,7 +7332,7 @@ function FAQItem({ q, a, index }) {
       whileInView: { opacity: 1, y: 0 },
       viewport: { once: true },
       transition: { delay: index * 0.04 },
-      className: `group rounded-2xl overflow-hidden bg-white border transition-all duration-300 ${open ? "border-[#edad1a]/60 shadow-[0_18px_40px_-22px_rgba(237,173,26,0.45)]" : "border-gray-200 hover:border-[#00274d]/30 hover:shadow-md"}`,
+      className: `group rounded-2xl overflow-hidden bg-white border border-l-4 border-l-[#00274d] transition-all duration-300 ${open ? "border-[#edad1a]/60 shadow-[0_18px_40px_-22px_rgba(237,173,26,0.45)]" : "border-gray-200 hover:border-[#00274d]/30 hover:shadow-md"}`,
       children: [
         /* @__PURE__ */ jsxs(
           "button",
@@ -7304,6 +7385,7 @@ function FAQ() {
     (f) => query.trim() === "" || f.q.toLowerCase().includes(query.toLowerCase()) || f.a.toLowerCase().includes(query.toLowerCase())
   );
   return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+    /* @__PURE__ */ jsx("div", { className: "fixed right-0 top-0 h-full w-[18px] bg-[#00274d] z-50 pointer-events-none" }),
     /* @__PURE__ */ jsx(Navbar, {}),
     /* @__PURE__ */ jsx(PageHero, { eyebrow: "FAQ", title: "Answers to your most common questions" }),
     /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-gradient-to-b from-[#f6f8fb] to-white flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-6xl", children: [
@@ -7693,11 +7775,11 @@ function Materials() {
         /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d]", children: "Discover the right materials for your project." }),
         /* @__PURE__ */ jsx("p", { className: "mt-2 max-w-2xl text-sm leading-relaxed text-gray-500", children: "Browse categories, explore product options and variants, and add the required items to your quotation cart." })
       ] }) }) }),
-      /* @__PURE__ */ jsx("div", { className: "mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4", children: features.map((feature) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm", children: [
-        /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#edad1a]/10", children: /* @__PURE__ */ jsx(feature.icon, { className: "h-4 w-4 text-[#edad1a]" }) }),
+      /* @__PURE__ */ jsx("div", { className: "mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4", children: features.map((feature) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-lg border border-[#00274d] bg-white px-4 py-3 shadow-sm relative overflow-hidden border-l-4 border-l-[#00274d]", children: [
+        /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#00274d]/10", children: /* @__PURE__ */ jsx(feature.icon, { className: "h-4 w-4 text-[#00274d]" }) }),
         /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-[#00274d]", children: feature.label })
       ] }, feature.label)) }),
-      displayedCategories.length > 0 ? /* @__PURE__ */ jsx("div", { className: "mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4", children: displayedCategories.map((cat, i) => /* @__PURE__ */ jsx(
+      displayedCategories.length > 0 ? /* @__PURE__ */ jsx("div", { className: "mb-12 mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4", children: displayedCategories.map((cat, i) => /* @__PURE__ */ jsx(
         motion.div,
         {
           initial: { opacity: 0, y: 30 },
@@ -7716,17 +7798,17 @@ function Materials() {
                 }
               ),
               /* @__PURE__ */ jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-[#00274d]/70 via-transparent to-transparent" }),
-              /* @__PURE__ */ jsxs("div", { className: "absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-xs font-medium text-[#00274d] shadow-sm", children: [
+              /* @__PURE__ */ jsxs("div", { className: "absolute bottom-3 left-3 rounded-full bg-[#edad1a]/95 px-3 py-1 text-xs font-medium text-[#00274d] shadow-sm", children: [
                 cat.products.length,
                 " groups"
               ] })
             ] }),
-            /* @__PURE__ */ jsx("div", { className: "p-4", children: /* @__PURE__ */ jsxs("div", { className: "flex items-start justify-between gap-3", children: [
+            /* @__PURE__ */ jsx("div", { className: "p-4 bg-[#00274d]", children: /* @__PURE__ */ jsxs("div", { className: "flex items-start justify-between gap-3", children: [
               /* @__PURE__ */ jsxs("div", { className: "min-w-0", children: [
-                /* @__PURE__ */ jsx("h3", { className: "truncate text-base font-semibold text-[#00274d]", children: isSearching ? highlight(cat.name, query) : cat.name }),
-                /* @__PURE__ */ jsx("p", { className: "mt-1 text-sm text-gray-500", children: "Select a product, variant and unit, then add to cart." })
+                /* @__PURE__ */ jsx("h3", { className: "truncate text-base font-semibold text-[#edad1a]", children: isSearching ? highlight(cat.name, query) : cat.name }),
+                /* @__PURE__ */ jsx("p", { className: "mt-1 text-sm text-white/70", children: "Select a product, variant and unit, then add to cart." })
               ] }),
-              /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#edad1a] transition-colors group-hover:border-[#edad1a] group-hover:bg-[#edad1a] group-hover:text-white", children: /* @__PURE__ */ jsx(ArrowRight, { className: "h-4 w-4" }) })
+              /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#edad1a] text-white transition-colors group-hover:bg-[#edad1a]/80", children: /* @__PURE__ */ jsx(ArrowRight, { className: "h-4 w-4" }) })
             ] }) })
           ] }) })
         },
@@ -7833,7 +7915,7 @@ function AddToQuoteBtn({
     setCustomVariant("");
     setTimeout(() => setAdded(false), 2e3);
   };
-  return /* @__PURE__ */ jsxs("div", { className: "px-3 pb-3 space-y-2", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "px-3 pb-3 space-y-2 bg-[#00274d]", children: [
     isSteel && /* @__PURE__ */ jsxs(
       "select",
       {
@@ -7842,7 +7924,7 @@ function AddToQuoteBtn({
           setSelectedGrade(e.target.value);
           setError("");
         },
-        className: "w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
+        className: "w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
         children: [
           /* @__PURE__ */ jsx("option", { value: "", children: "Type — Choose an option" }),
           /* @__PURE__ */ jsx("option", { value: "Primary", children: "Primary" }),
@@ -7858,7 +7940,7 @@ function AddToQuoteBtn({
           setSelectedVariant(e.target.value);
           setError("");
         },
-        className: "w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
+        className: "w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
         children: [
           /* @__PURE__ */ jsx("option", { value: "", children: "Products — Choose an option" }),
           product.variants.map((v) => /* @__PURE__ */ jsx("option", { value: v, children: v }, v))
@@ -7883,7 +7965,7 @@ function AddToQuoteBtn({
           setSelectedUnit(e.target.value);
           setError("");
         },
-        className: "w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
+        className: "w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white",
         children: [
           /* @__PURE__ */ jsx("option", { value: "", children: "Unit — Choose an option" }),
           product.units.map((u) => /* @__PURE__ */ jsx("option", { value: u, children: u }, u))
@@ -7898,7 +7980,7 @@ function AddToQuoteBtn({
       "button",
       {
         onClick: handleAdd,
-        className: `w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${added ? "bg-green-600 text-white" : "bg-[#00274d] hover:bg-[#edad1a] text-white hover:text-[#00274d]"}`,
+        className: `w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${added ? "bg-green-600 text-white border border-green-400" : "bg-[#00274d] hover:bg-[#edad1a] text-white hover:text-[#00274d] border border-white/40 hover:border-[#edad1a]"}`,
         children: [
           /* @__PURE__ */ jsx(ShoppingBag, { className: "w-4 h-4" }),
           added ? "Added!" : "Add to Quote"
@@ -7913,7 +7995,7 @@ function AddToQuoteBtn({
         )}`,
         target: "_blank",
         rel: "noopener noreferrer",
-        className: "w-full flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold bg-[#25D366]/10 hover:bg-[#25D366] text-[#128C7E] hover:text-white transition-all duration-200",
+        className: "w-full flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold bg-[#edad1a]/20 hover:bg-[#edad1a] text-[#edad1a] hover:text-[#00274d] transition-all duration-200",
         children: [
           /* @__PURE__ */ jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", className: "w-3.5 h-3.5 shrink-0", children: /* @__PURE__ */ jsx("path", { d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" }) }),
           "Enquire on WhatsApp"
@@ -8023,9 +8105,9 @@ function MaterialCategory() {
                 ),
                 /* @__PURE__ */ jsx("div", { className: "absolute bottom-2 right-2 w-7 h-7 bg-[#edad1a] rounded-full flex items-center justify-center shadow", children: /* @__PURE__ */ jsx(ShoppingBag, { className: "w-3.5 h-3.5 text-[#00274d]" }) })
               ] }),
-              /* @__PURE__ */ jsxs("div", { className: "px-3 pt-3 pb-1", children: [
-                /* @__PURE__ */ jsx("p", { className: "font-semibold text-[#00274d] text-sm", children: product.name }),
-                /* @__PURE__ */ jsxs("p", { className: "text-[11px] text-gray-400 mt-0.5", children: [
+              /* @__PURE__ */ jsxs("div", { className: "px-3 pt-3 pb-1 bg-[#00274d]", children: [
+                /* @__PURE__ */ jsx("p", { className: "font-semibold text-white text-sm", children: product.name }),
+                /* @__PURE__ */ jsxs("p", { className: "text-[11px] text-white/60 mt-0.5", children: [
                   product.variants.length,
                   " variants"
                 ] })
@@ -8383,12 +8465,19 @@ function MaterialProduct() {
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
+const inputCls$1 = "w-full bg-white border border-white/20 rounded-xl px-4 py-3 text-sm text-[#00274d] placeholder:text-gray-400 focus:outline-none focus:border-[#edad1a] focus:ring-2 focus:ring-[#edad1a]/20 transition-all duration-150 font-[inherit]";
 function QuoteCart() {
   const { items, removeItem, updateQty, clearCart, total } = useQuoteCart();
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
-  const [form, setForm] = useState({ name: "", company: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -8399,12 +8488,12 @@ function QuoteCart() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          items: items.map((item2) => ({
-            categoryName: item2.categoryName,
-            productName: item2.productName,
-            variant: item2.variant,
-            unit: item2.unit,
-            qty: item2.qty
+          items: items.map((i) => ({
+            categoryName: i.categoryName,
+            productName: i.productName,
+            variant: i.variant,
+            unit: i.unit,
+            qty: i.qty
           }))
         })
       });
@@ -8412,8 +8501,8 @@ function QuoteCart() {
         setSubmitted(true);
         clearCart();
       } else {
-        const data = await res.json().catch(() => ({}));
-        setError(data.error ?? "Something went wrong. Please try again or call us directly.");
+        const d = await res.json().catch(() => ({}));
+        setError(d.error ?? "Something went wrong. Please try again or call us directly.");
       }
     } catch {
       setError("Network error. Please check your connection and try again.");
@@ -8422,26 +8511,48 @@ function QuoteCart() {
     }
   };
   if (submitted) {
-    return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+    return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-[#f7f8fa]", children: [
       /* @__PURE__ */ jsx(Navbar, {}),
-      /* @__PURE__ */ jsx("div", { className: "flex-1 flex items-center justify-center bg-gray-50 py-20", children: /* @__PURE__ */ jsxs(
+      /* @__PURE__ */ jsx("div", { className: "flex-1 flex items-center justify-center py-24 px-4", children: /* @__PURE__ */ jsxs(
         motion.div,
         {
-          initial: { opacity: 0, scale: 0.9 },
-          animate: { opacity: 1, scale: 1 },
-          className: "bg-white rounded-2xl p-12 shadow-sm border border-gray-100 text-center max-w-md",
+          initial: { opacity: 0, scale: 0.88, y: 24 },
+          animate: { opacity: 1, scale: 1, y: 0 },
+          transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+          className: "bg-[#00274d] rounded-3xl p-14 shadow-2xl text-center max-w-sm w-full border border-white/5",
           children: [
-            /* @__PURE__ */ jsx("div", { className: "w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-6", children: /* @__PURE__ */ jsx(CheckCircle, { className: "w-10 h-10 text-green-500" }) }),
-            /* @__PURE__ */ jsx("h2", { className: "text-2xl font-semibold text-[#00274d] mb-3", children: "Quote Request Sent!" }),
-            /* @__PURE__ */ jsx("p", { className: "text-gray-500 mb-8 leading-relaxed", children: "Our team will review your requirements and contact you within 12 hours with pricing and availability." }),
-            /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx("button", { className: "bg-[#edad1a] text-white font-bold px-8 py-3 rounded-full hover:bg-[#00274d] transition-colors shadow-md", children: "Continue Shopping" }) })
+            /* @__PURE__ */ jsxs("div", { className: "relative mx-auto w-20 h-20 mb-8", children: [
+              /* @__PURE__ */ jsx(
+                motion.div,
+                {
+                  initial: { scale: 0.6, opacity: 0 },
+                  animate: { scale: 1.4, opacity: 0 },
+                  transition: { repeat: Infinity, duration: 1.8, ease: "easeOut" },
+                  className: "absolute inset-0 rounded-full bg-[#edad1a]/20"
+                }
+              ),
+              /* @__PURE__ */ jsx("div", { className: "relative w-20 h-20 rounded-full bg-[#edad1a]/10 border-2 border-[#edad1a]/30 flex items-center justify-center", children: /* @__PURE__ */ jsx(CheckCircle, { className: "w-9 h-9 text-[#edad1a]" }) })
+            ] }),
+            /* @__PURE__ */ jsx("div", { className: "inline-flex items-center gap-2 bg-[#edad1a]/10 border border-[#edad1a]/20 text-[#edad1a] text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-widest mb-5", children: "Request sent" }),
+            /* @__PURE__ */ jsxs("h2", { className: "text-2xl font-extrabold text-white mb-3 tracking-tight leading-snug", children: [
+              "We've got your quote",
+              /* @__PURE__ */ jsx("br", {}),
+              "request!"
+            ] }),
+            /* @__PURE__ */ jsxs("p", { className: "text-white/40 text-sm leading-relaxed mb-8", children: [
+              "Our team personally reviews every request and will contact you within",
+              " ",
+              /* @__PURE__ */ jsx("span", { className: "text-white/70 font-semibold", children: "12 hours" }),
+              " with pricing and availability."
+            ] }),
+            /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx("button", { className: "w-full bg-[#edad1a] text-[#00274d] font-extrabold py-4 rounded-2xl hover:bg-[#f5c43a] transition-all duration-200 tracking-wide text-sm", children: "Continue browsing" }) })
           ]
         }
       ) }),
       /* @__PURE__ */ jsx(Footer, {})
     ] });
   }
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-[#f7f8fa]", children: [
     /* @__PURE__ */ jsx(Navbar, {}),
     /* @__PURE__ */ jsx(
       PageHero,
@@ -8451,55 +8562,87 @@ function QuoteCart() {
         subtitle: "Our team will review your requirements and get in touch with you soon."
       }
     ),
-    /* @__PURE__ */ jsx("section", { className: "flex-1 bg-gray-50 py-12", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-5xl", children: [
-      /* @__PURE__ */ jsxs(Link, { href: "/materials", className: "inline-flex items-center gap-2 text-[#edad1a] text-sm font-medium mb-8 hover:gap-3 transition-all", children: [
-        /* @__PURE__ */ jsx(ArrowLeft, { className: "w-4 h-4" }),
-        " Back to Materials"
+    /* @__PURE__ */ jsx("section", { className: "flex-1 py-12", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-6xl", children: [
+      /* @__PURE__ */ jsxs(Link, { href: "/materials", className: "inline-flex items-center gap-2 text-[#edad1a] text-xs font-bold uppercase tracking-widest mb-10 group", children: [
+        /* @__PURE__ */ jsx(ArrowLeft, { className: "w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" }),
+        "Back to materials"
       ] }),
-      items.length === 0 ? /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl p-16 text-center border border-gray-100 shadow-sm", children: [
-        /* @__PURE__ */ jsx(ShoppingCart, { className: "w-16 h-16 text-gray-200 mx-auto mb-6" }),
-        /* @__PURE__ */ jsx("h3", { className: "text-xl font-bold text-[#00274d] mb-3", children: "Your cart is empty" }),
-        /* @__PURE__ */ jsx("p", { className: "text-gray-400 mb-8", children: "Browse our materials catalogue and add items to get a quote." }),
-        /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx("button", { className: "bg-[#edad1a] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#00274d] transition-colors", children: "Browse Materials" }) })
-      ] }) : /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-3 gap-8", children: [
-        /* @__PURE__ */ jsxs("div", { className: "lg:col-span-2 space-y-4", children: [
-          /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between mb-2", children: [
-            /* @__PURE__ */ jsxs("h2", { className: "font-bold text-[#00274d] text-lg", children: [
-              total,
-              " item",
-              total !== 1 ? "s" : "",
-              " in cart"
+      items.length === 0 ? /* @__PURE__ */ jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          className: "bg-white rounded-3xl p-20 text-center border border-gray-100 shadow-sm",
+          children: [
+            /* @__PURE__ */ jsx("div", { className: "w-16 h-16 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center mx-auto mb-6", children: /* @__PURE__ */ jsx(ShoppingCart, { className: "w-8 h-8 text-gray-200" }) }),
+            /* @__PURE__ */ jsx("h3", { className: "text-xl font-extrabold text-[#00274d] mb-3 tracking-tight", children: "Nothing here yet" }),
+            /* @__PURE__ */ jsx("p", { className: "text-gray-400 text-sm mb-8 max-w-xs mx-auto leading-relaxed", children: "Browse our materials catalogue and add items to get a personalised quote." }),
+            /* @__PURE__ */ jsx(Link, { href: "/materials", children: /* @__PURE__ */ jsx("button", { className: "bg-[#00274d] text-white font-bold px-10 py-3.5 rounded-2xl hover:bg-[#edad1a] hover:text-white transition-all duration-200 text-sm tracking-wide", children: "Browse Materials" }) })
+          ]
+        }
+      ) : /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[1fr_380px] gap-8 items-start", children: [
+        /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-end justify-between mb-6", children: [
+            /* @__PURE__ */ jsxs("div", { children: [
+              /* @__PURE__ */ jsx("p", { className: "text-[10px] font-bold tracking-[0.16em] uppercase text-[#00274d] mb-1.5", children: "Your selection" }),
+              /* @__PURE__ */ jsxs("h2", { className: "text-[28px] font-extrabold text-[#00274d] tracking-tight leading-none", children: [
+                total,
+                " ",
+                total === 1 ? "item" : "items",
+                /* @__PURE__ */ jsx("span", { className: "text-[14px] font-normal text-[#b0b8c8] ml-2 tracking-normal", children: "in cart" })
+              ] })
             ] }),
-            /* @__PURE__ */ jsxs("button", { onClick: clearCart, className: "text-red-400 hover:text-red-600 text-sm font-medium flex items-center gap-1 transition-colors", children: [
-              /* @__PURE__ */ jsx(Trash2, { className: "w-4 h-4" }),
-              " Clear All"
-            ] })
+            /* @__PURE__ */ jsxs(
+              "button",
+              {
+                onClick: clearCart,
+                className: "flex items-center gap-1.5 text-xs text-red-400 hover:text-red-600 font-semibold px-3 py-2 rounded-xl hover:bg-red-50 transition-all",
+                children: [
+                  /* @__PURE__ */ jsx(Trash2, { className: "w-3.5 h-3.5" }),
+                  " Clear all"
+                ]
+              }
+            )
           ] }),
-          /* @__PURE__ */ jsx(AnimatePresence, { children: items.map((item2) => /* @__PURE__ */ jsxs(
+          /* @__PURE__ */ jsx("div", { className: "space-y-3", children: /* @__PURE__ */ jsx(AnimatePresence, { children: items.map((item2, i) => /* @__PURE__ */ jsxs(
             motion.div,
             {
-              initial: { opacity: 0, x: -20 },
-              animate: { opacity: 1, x: 0 },
-              exit: { opacity: 0, x: 20, height: 0 },
-              className: "bg-white rounded-xl border border-gray-100 shadow-sm p-5 flex gap-4",
+              initial: { opacity: 0, y: 10 },
+              animate: { opacity: 1, y: 0 },
+              exit: { opacity: 0, x: 40, height: 0, marginBottom: 0 },
+              transition: { delay: i * 0.07, duration: 0.32, ease: [0.22, 1, 0.36, 1] },
+              className: "group bg-white rounded-[20px] border border-[#eef0f4] hover:border-[#edad1a]/60 hover:shadow-[0_8px_32px_rgba(237,173,26,0.09)] transition-all duration-200 p-5 flex gap-4 relative overflow-hidden",
               children: [
-                /* @__PURE__ */ jsx(MaterialImage, { src: item2.image, alt: item2.productName, label: item2.productName, className: "w-20 h-20 object-cover rounded-lg shrink-0" }),
-                /* @__PURE__ */ jsxs("div", { className: "flex-1 min-w-0", children: [
-                  /* @__PURE__ */ jsx("p", { className: "text-xs text-gray-400 uppercase tracking-wide", children: item2.categoryName }),
-                  /* @__PURE__ */ jsx("p", { className: "font-bold text-[#00274d] mt-0.5", children: item2.productName }),
-                  /* @__PURE__ */ jsxs("p", { className: "text-sm text-gray-500 mt-0.5", children: [
-                    item2.variant,
-                    " · ",
-                    item2.unit
+                /* @__PURE__ */ jsx("span", { className: "absolute top-3.5 right-4 text-[11px] font-black text-[#e8ecf4] tracking-widest select-none", children: String(i + 1).padStart(2, "0") }),
+                /* @__PURE__ */ jsx("div", { className: "w-[68px] h-[68px] rounded-[14px] bg-[#f3f5f8] border border-[#eef0f4] flex-shrink-0 overflow-hidden flex items-center justify-center", children: /* @__PURE__ */ jsx(
+                  MaterialImage,
+                  {
+                    src: item2.image,
+                    alt: item2.productName,
+                    label: item2.productName,
+                    className: "w-full h-full object-cover"
+                  }
+                ) }),
+                /* @__PURE__ */ jsxs("div", { className: "flex-1 min-w-0 pr-6", children: [
+                  /* @__PURE__ */ jsx("p", { className: "text-[10px] font-bold tracking-[0.14em] uppercase text-[#00274d] mb-1", children: item2.categoryName }),
+                  /* @__PURE__ */ jsx("p", { className: "text-[15px] font-extrabold text-[#00274d] tracking-tight leading-snug mb-1.5", children: item2.productName }),
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 flex-wrap", children: [
+                    /* @__PURE__ */ jsx("span", { className: "text-xs text-[#b0b8c8]", children: item2.variant }),
+                    /* @__PURE__ */ jsx("span", { className: "text-[#dde2ea]", children: "·" }),
+                    /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-1.5 bg-[#fdf3d8] text-[#a07010] text-[11px] font-bold px-2.5 py-0.5 rounded-lg", children: [
+                      /* @__PURE__ */ jsx(Package, { className: "w-3 h-3" }),
+                      item2.unit
+                    ] })
                   ] }),
-                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 mt-3", children: [
-                    /* @__PURE__ */ jsxs("div", { className: "flex items-center border border-gray-200 rounded-lg overflow-hidden", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 mt-3.5", children: [
+                    /* @__PURE__ */ jsxs("div", { className: "flex items-center rounded-xl overflow-hidden border-[1.5px] border-[#eef0f4] bg-[#f8fafc]", children: [
                       /* @__PURE__ */ jsx(
                         "button",
                         {
                           onClick: () => updateQty(item2.productSlug, item2.variant, item2.qty - 1),
-                          className: "w-8 h-8 flex items-center justify-center hover:bg-gray-50 transition-colors",
-                          children: /* @__PURE__ */ jsx(Minus, { className: "w-3.5 h-3.5 text-gray-600" })
+                          className: "w-9 h-9 flex items-center justify-center text-[#8896aa] hover:bg-[#edad1a] hover:text-white transition-all",
+                          "aria-label": "Decrease",
+                          children: /* @__PURE__ */ jsx(Minus, { className: "w-3.5 h-3.5" })
                         }
                       ),
                       /* @__PURE__ */ jsx(
@@ -8512,7 +8655,7 @@ function QuoteCart() {
                             const v = parseInt(e.target.value, 10);
                             updateQty(item2.productSlug, item2.variant, Number.isFinite(v) && v > 0 ? v : 1);
                           },
-                          className: "w-16 h-8 text-center text-sm font-semibold border-x border-gray-200 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/40 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                          className: "w-12 h-9 text-center text-sm font-black text-[#00274d] bg-white border-x-[1.5px] border-[#eef0f4] focus:outline-none focus:ring-2 focus:ring-[#edad1a]/20 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                         },
                         item2.qty
                       ),
@@ -8520,8 +8663,9 @@ function QuoteCart() {
                         "button",
                         {
                           onClick: () => updateQty(item2.productSlug, item2.variant, item2.qty + 1),
-                          className: "w-8 h-8 flex items-center justify-center hover:bg-gray-50 transition-colors",
-                          children: /* @__PURE__ */ jsx(Plus, { className: "w-3.5 h-3.5 text-gray-600" })
+                          className: "w-9 h-9 flex items-center justify-center text-[#8896aa] hover:bg-[#edad1a] hover:text-white transition-all",
+                          "aria-label": "Increase",
+                          children: /* @__PURE__ */ jsx(Plus, { className: "w-3.5 h-3.5" })
                         }
                       )
                     ] }),
@@ -8529,7 +8673,8 @@ function QuoteCart() {
                       "button",
                       {
                         onClick: () => removeItem(item2.productSlug, item2.variant),
-                        className: "text-red-400 hover:text-red-600 transition-colors ml-auto",
+                        className: "ml-auto w-9 h-9 flex items-center justify-center rounded-xl bg-[#fff5f5] hover:bg-[#fee2e2] text-[#f87171] hover:text-[#ef4444] transition-all",
+                        "aria-label": `Remove ${item2.productName}`,
                         children: /* @__PURE__ */ jsx(Trash2, { className: "w-4 h-4" })
                       }
                     )
@@ -8538,113 +8683,130 @@ function QuoteCart() {
               ]
             },
             `${item2.productSlug}-${item2.variant}`
-          )) })
+          )) }) })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "lg:col-span-1", children: /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden sticky top-24", children: [
-          /* @__PURE__ */ jsxs("div", { className: "bg-[#00274d] px-6 py-5 border-b-2 border-[#edad1a]", children: [
-            /* @__PURE__ */ jsxs("h3", { className: "font-semibold text-white text-base flex items-center gap-2", children: [
-              /* @__PURE__ */ jsx(Send, { className: "w-4 h-4 text-[#edad1a]" }),
-              " Submit Quote Request"
-            ] }),
-            /* @__PURE__ */ jsxs("p", { className: "text-white/60 text-xs mt-1", children: [
-              total,
-              " item",
-              total !== 1 ? "s" : "",
-              " "
+        /* @__PURE__ */ jsx(
+          motion.div,
+          {
+            initial: { opacity: 0, y: 16 },
+            animate: { opacity: 1, y: 0 },
+            transition: { duration: 0.4, delay: 0.12 },
+            className: "sticky top-24",
+            children: /* @__PURE__ */ jsxs("div", { className: "bg-[#00274d] rounded-3xl overflow-hidden border border-white/5 shadow-2xl shadow-[#00274d]/20", children: [
+              /* @__PURE__ */ jsxs("div", { className: "px-7 pt-7 pb-6 border-b-2 border-[#edad1a]", children: [
+                /* @__PURE__ */ jsx("p", { className: "text-[10px] font-bold tracking-[0.18em] uppercase text-white mb-2", children: "Quote request" }),
+                /* @__PURE__ */ jsx("p", { className: "text-xs text-white/35 leading-relaxed", children: "We'll confirm pricing and stock availability." })
+              ] }),
+              /* @__PURE__ */ jsxs("div", { className: "px-7 py-6", children: [
+                error && /* @__PURE__ */ jsxs("div", { className: "mb-5 flex items-start gap-3 p-3.5 bg-red-500/10 border border-red-500/20 rounded-xl text-xs text-red-300", children: [
+                  /* @__PURE__ */ jsx(AlertCircle, { className: "w-4 h-4 shrink-0 mt-0.5 text-red-400" }),
+                  /* @__PURE__ */ jsx("span", { children: error })
+                ] }),
+                /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-3.5", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
+                    /* @__PURE__ */ jsxs("div", { children: [
+                      /* @__PURE__ */ jsxs("label", { className: "block text-[10px] font-bold tracking-[0.1em] uppercase text-white mb-2", children: [
+                        "Full name ",
+                        /* @__PURE__ */ jsx("span", { className: "text-white", children: "*" })
+                      ] }),
+                      /* @__PURE__ */ jsx(
+                        "input",
+                        {
+                          required: true,
+                          value: form.name,
+                          onChange: (e) => setForm((f) => ({ ...f, name: e.target.value })),
+                          placeholder: "John Smith",
+                          className: inputCls$1
+                        }
+                      )
+                    ] }),
+                    /* @__PURE__ */ jsxs("div", { children: [
+                      /* @__PURE__ */ jsxs("label", { className: "block text-[10px] font-bold tracking-[0.1em] uppercase text-white mb-2", children: [
+                        "Company ",
+                        /* @__PURE__ */ jsx("span", { className: "text-white", children: "*" })
+                      ] }),
+                      /* @__PURE__ */ jsx(
+                        "input",
+                        {
+                          required: true,
+                          value: form.company,
+                          onChange: (e) => setForm((f) => ({ ...f, company: e.target.value })),
+                          placeholder: "Acme Ltd.",
+                          className: inputCls$1
+                        }
+                      )
+                    ] })
+                  ] }),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsxs("label", { className: "block text-[10px] font-bold tracking-[0.1em] uppercase text-white mb-2", children: [
+                      "Email address ",
+                      /* @__PURE__ */ jsx("span", { className: "text-white", children: "*" })
+                    ] }),
+                    /* @__PURE__ */ jsx(
+                      "input",
+                      {
+                        required: true,
+                        type: "email",
+                        value: form.email,
+                        onChange: (e) => setForm((f) => ({ ...f, email: e.target.value })),
+                        placeholder: "you@company.com",
+                        className: inputCls$1
+                      }
+                    )
+                  ] }),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsxs("label", { className: "block text-[10px] font-bold tracking-[0.1em] uppercase text-white mb-2", children: [
+                      "Phone number ",
+                      /* @__PURE__ */ jsx("span", { className: "text-white", children: "*" })
+                    ] }),
+                    /* @__PURE__ */ jsx(
+                      "input",
+                      {
+                        required: true,
+                        type: "tel",
+                        value: form.phone,
+                        onChange: (e) => setForm((f) => ({ ...f, phone: e.target.value })),
+                        placeholder: "+91-XXXXX XXXXX",
+                        className: inputCls$1
+                      }
+                    )
+                  ] }),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsxs("label", { className: "block text-[10px] font-bold tracking-[0.1em] uppercase text-white mb-2", children: [
+                      "Notes",
+                      " "
+                    ] }),
+                    /* @__PURE__ */ jsx(
+                      "textarea",
+                      {
+                        rows: 3,
+                        value: form.message,
+                        onChange: (e) => setForm((f) => ({ ...f, message: e.target.value })),
+                        placeholder: "Delivery location, timeline, special requirements…",
+                        className: `${inputCls$1} resize-none`
+                      }
+                    )
+                  ] }),
+                  /* @__PURE__ */ jsx(
+                    "button",
+                    {
+                      type: "submit",
+                      disabled: isSubmitting,
+                      className: "w-full bg-[#edad1a] hover:bg-[#f5c43a] disabled:opacity-50 text-[#00274d] font-extrabold py-4 rounded-2xl transition-all duration-200 flex items-center justify-center gap-2.5 text-sm tracking-wide hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-[#edad1a]/20 mt-1",
+                      children: isSubmitting ? /* @__PURE__ */ jsxs(Fragment, { children: [
+                        /* @__PURE__ */ jsx("span", { className: "animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/20 border-t-[#00274d]" }),
+                        "Sending…"
+                      ] }) : /* @__PURE__ */ jsxs(Fragment, { children: [
+                        /* @__PURE__ */ jsx(Send, { className: "w-4 h-4" }),
+                        "Send quote request"
+                      ] })
+                    }
+                  )
+                ] })
+              ] })
             ] })
-          ] }),
-          /* @__PURE__ */ jsxs("div", { className: "p-6", children: [
-            error && /* @__PURE__ */ jsxs("div", { className: "mb-4 flex items-start gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700", children: [
-              /* @__PURE__ */ jsx(AlertCircle, { className: "w-4 h-4 shrink-0 mt-0.5" }),
-              error
-            ] }),
-            /* @__PURE__ */ jsxs("form", { onSubmit: handleSubmit, className: "space-y-4", children: [
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("label", { className: "text-xs font-semibold text-[#00274d] block mb-1", children: "Full Name *" }),
-                /* @__PURE__ */ jsx(
-                  "input",
-                  {
-                    required: true,
-                    value: form.name,
-                    onChange: (e) => setForm((f) => ({ ...f, name: e.target.value })),
-                    className: "w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder:font-light placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/30 focus:border-[#edad1a]",
-                    placeholder: "John Smith"
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("label", { className: "text-xs font-semibold text-[#00274d] block mb-1", children: "Company Name *" }),
-                /* @__PURE__ */ jsx(
-                  "input",
-                  {
-                    required: true,
-                    value: form.company,
-                    onChange: (e) => setForm((f) => ({ ...f, company: e.target.value })),
-                    className: "w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder:font-light placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/30 focus:border-[#edad1a]",
-                    placeholder: "Your Company Pvt. Ltd."
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("label", { className: "text-xs font-semibold text-[#00274d] block mb-1", children: "Email *" }),
-                /* @__PURE__ */ jsx(
-                  "input",
-                  {
-                    required: true,
-                    type: "email",
-                    value: form.email,
-                    onChange: (e) => setForm((f) => ({ ...f, email: e.target.value })),
-                    className: "w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder:font-light placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/30 focus:border-[#edad1a]",
-                    placeholder: "you@company.com"
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("label", { className: "text-xs font-semibold text-[#00274d] block mb-1", children: "Phone *" }),
-                /* @__PURE__ */ jsx(
-                  "input",
-                  {
-                    required: true,
-                    type: "tel",
-                    value: form.phone,
-                    onChange: (e) => setForm((f) => ({ ...f, phone: e.target.value })),
-                    className: "w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder:font-light placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/30 focus:border-[#edad1a]",
-                    placeholder: "+91-XXXXX XXXXX"
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsxs("div", { children: [
-                /* @__PURE__ */ jsx("label", { className: "text-xs font-semibold text-[#00274d] block mb-1", children: "Additional Notes" }),
-                /* @__PURE__ */ jsx(
-                  "textarea",
-                  {
-                    value: form.message,
-                    onChange: (e) => setForm((f) => ({ ...f, message: e.target.value })),
-                    rows: 3,
-                    className: "w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm placeholder:font-light placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-[#edad1a]/30 focus:border-[#edad1a] resize-none",
-                    placeholder: "Delivery location, project timeline, special requirements..."
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsx(
-                "button",
-                {
-                  type: "submit",
-                  disabled: isSubmitting,
-                  className: "w-full bg-[#edad1a] hover:bg-[#d49a10] disabled:opacity-60 text-white font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2 shadow-md shadow-yellow-400/20",
-                  children: isSubmitting ? /* @__PURE__ */ jsxs(Fragment, { children: [
-                    /* @__PURE__ */ jsx("span", { className: "animate-spin rounded-full h-4 w-4 border-2 border-white/30 border-t-white" }),
-                    "Sending…"
-                  ] }) : /* @__PURE__ */ jsxs(Fragment, { children: [
-                    /* @__PURE__ */ jsx(Send, { className: "w-4 h-4" }),
-                    " Submit Quote Request"
-                  ] })
-                }
-              ),
-              /* @__PURE__ */ jsx("p", { className: "text-center text-xs text-gray-400" })
-            ] })
-          ] })
-        ] }) })
+          }
+        )
       ] })
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})

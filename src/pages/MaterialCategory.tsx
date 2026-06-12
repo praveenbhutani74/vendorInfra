@@ -64,14 +64,14 @@ function AddToQuoteBtn({
   };
 
   return (
-    <div className="px-3 pb-3 space-y-2">
+  <div className="px-3 pb-3 space-y-2 bg-[#00274d]">
 
       {/* Steel-only: Primary / Secondary dropdown */}
       {isSteel && (
         <select
           value={selectedGrade}
           onChange={e => { setSelectedGrade(e.target.value); setError(""); }}
-          className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
+          className="w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
         >
           <option value="">Type — Choose an option</option>
           <option value="Primary">Primary</option>
@@ -83,7 +83,7 @@ function AddToQuoteBtn({
       <select
         value={selectedVariant}
         onChange={e => { setSelectedVariant(e.target.value); setError(""); }}
-        className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
+        className="w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
       >
         <option value="">Products — Choose an option</option>
         {product.variants.map(v => (
@@ -105,7 +105,7 @@ function AddToQuoteBtn({
        <select
         value={selectedUnit}
         onChange={e => { setSelectedUnit(e.target.value); setError(""); }}
-        className="w-full border border-gray-200 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
+        className="w-full border border-white/20 rounded-lg px-2.5 py-2 text-xs text-gray-700 focus:outline-none focus:border-[#edad1a] focus:ring-1 focus:ring-[#edad1a]/30 bg-white"
       >
         <option value="">Unit — Choose an option</option>
         {product.units.map(u => (
@@ -124,11 +124,11 @@ function AddToQuoteBtn({
       {/* Add to Quote button */}
       <button
         onClick={handleAdd}
-        className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
-          added
-            ? "bg-green-600 text-white"
-            : "bg-[#00274d] hover:bg-[#edad1a] text-white hover:text-[#00274d]"
-        }`}
+       className={`w-full flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+  added
+    ? "bg-green-600 text-white border border-green-400"
+    : "bg-[#00274d] hover:bg-[#edad1a] text-white hover:text-[#00274d] border border-white/40 hover:border-[#edad1a]"
+}`}
       >
         <ShoppingBag className="w-4 h-4" />
         {added ? "Added!" : "Add to Quote"}
@@ -143,7 +143,7 @@ function AddToQuoteBtn({
         )}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold bg-[#25D366]/10 hover:bg-[#25D366] text-[#128C7E] hover:text-white transition-all duration-200"
+       className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg text-xs font-semibold bg-[#edad1a]/20 hover:bg-[#edad1a] text-[#edad1a] hover:text-[#00274d] transition-all duration-200"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
@@ -272,10 +272,10 @@ export default function MaterialCategory() {
                       <ShoppingBag className="w-3.5 h-3.5 text-[#00274d]" />
                     </div>
                   </div>
-                  <div className="px-3 pt-3 pb-1">
-                    <p className="font-semibold text-[#00274d] text-sm">{product.name}</p>
-                    <p className="text-[11px] text-gray-400 mt-0.5">{product.variants.length} variants</p>
-                  </div>
+              <div className="px-3 pt-3 pb-1 bg-[#00274d]">
+  <p className="font-semibold text-white text-sm">{product.name}</p>
+  <p className="text-[11px] text-white/60 mt-0.5">{product.variants.length} variants</p>
+</div>
                 </Link>
 
                 <div className="mt-auto">
@@ -306,11 +306,11 @@ export default function MaterialCategory() {
                       <div className="h-24 overflow-hidden">
                         <MaterialImage src={cat.image} alt={cat.name} label={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       </div>
-                      <div className="p-2.5">
-                        <span className="flex items-center gap-1 text-[#00274d] group-hover:text-[#edad1a] text-sm font-semibold transition-colors">
-                          <ChevronRight className="w-3.5 h-3.5" /> {cat.name}
-                        </span>
-                      </div>
+<div className="p-2.5">
+  <span className="flex items-center gap-1 text-[#00274d] group-hover:text-[#edad1a] text-sm font-semibold transition-colors">
+    <ChevronRight className="w-3.5 h-3.5" /> {cat.name}
+  </span>
+</div>
                     </div>
                   </Link>
                 </motion.div>

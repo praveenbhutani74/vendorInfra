@@ -123,7 +123,7 @@ export function Navbar() {
           </Link>
 
    <a
-  href="https://customer.vendorinfra.com/#/login-2"
+  href="http://3.110.208.157/customer/"
   target="_blank"
   rel="noopener noreferrer"
   className={siteButtonClasses(

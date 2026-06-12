@@ -339,19 +339,23 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
 
           {/* Feature Strip — always visible */}
           <div className="mb-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
-            {features.map((feature) => (
-              <div key={feature.label} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 shadow-sm">
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#edad1a]/10">
-                  <feature.icon className="h-4 w-4 text-[#edad1a]" />
-                </span>
-                <span className="text-sm font-bold text-[#00274d]">{feature.label}</span>
-              </div>
-            ))}
+         {features.map((feature) => (
+<div key={feature.label} className="flex items-center gap-3 rounded-lg border border-[#00274d] bg-white px-4 py-3 shadow-sm relative overflow-hidden border-l-4 border-l-[#00274d]">
+
+  {/* <div className="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl bg-[#00274d]" /> */}
+ 
+  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#00274d]/10">
+   
+    <feature.icon className="h-4 w-4 text-[#00274d]" />
+  </span>
+  <span className="text-sm font-bold text-[#00274d]">{feature.label}</span>
+</div>
+))}
           </div>
 
           {/* Category Grid */}
           {displayedCategories.length > 0 ? (
-            <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="mb-12 mt-20 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {displayedCategories.map((cat, i) => (
                 <motion.div
                   key={cat.slug}
@@ -370,23 +374,23 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#00274d]/70 via-transparent to-transparent" />
-                        <div className="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-xs font-medium text-[#00274d] shadow-sm">
+                        <div className="absolute bottom-3 left-3 rounded-full bg-[#edad1a]/95 px-3 py-1 text-xs font-medium text-[#00274d] shadow-sm">
                           {cat.products.length} groups
                         </div>
                       </div>
-                      <div className="p-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="min-w-0">
-                            <h3 className="truncate text-base font-semibold text-[#00274d]">
-                              {isSearching ? highlight(cat.name, query) : cat.name}
-                            </h3>
-                            <p className="mt-1 text-sm text-gray-500">Select a product, variant and unit, then add to cart.</p>
-                          </div>
-                          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#edad1a] transition-colors group-hover:border-[#edad1a] group-hover:bg-[#edad1a] group-hover:text-white">
-                            <ArrowRight className="h-4 w-4" />
-                          </span>
-                        </div>
-                      </div>
+                    <div className="p-4 bg-[#00274d]">
+  <div className="flex items-start justify-between gap-3">
+    <div className="min-w-0">
+      <h3 className="truncate text-base font-semibold text-[#edad1a]">
+        {isSearching ? highlight(cat.name, query) : cat.name}
+      </h3>
+      <p className="mt-1 text-sm text-white/70">Select a product, variant and unit, then add to cart.</p>
+    </div>
+    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#edad1a] text-white transition-colors group-hover:bg-[#edad1a]/80">
+      <ArrowRight className="h-4 w-4" />
+    </span>
+  </div>
+</div>
                     </div>
                   </Link>
                 </motion.div>

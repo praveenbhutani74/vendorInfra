@@ -83,11 +83,11 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.04 }}
-      className={`group rounded-2xl overflow-hidden bg-white border transition-all duration-300 ${
-        open
-          ? "border-[#edad1a]/60 shadow-[0_18px_40px_-22px_rgba(237,173,26,0.45)]"
-          : "border-gray-200 hover:border-[#00274d]/30 hover:shadow-md"
-      }`}
+      className={`group rounded-2xl overflow-hidden bg-white border border-l-4 border-l-[#00274d] transition-all duration-300 ${
+  open
+    ? "border-[#edad1a]/60 shadow-[0_18px_40px_-22px_rgba(237,173,26,0.45)]"
+    : "border-gray-200 hover:border-[#00274d]/30 hover:shadow-md"
+}`}
     >
       <button
         onClick={() => setOpen(!open)}
@@ -155,6 +155,9 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen flex flex-col">
+          {/* <div className="fixed right-0 top-0 h-full w-[18px] bg-[#00274d] z-50 pointer-events-none" /> */}
+    <div className="fixed right-0 top-0 h-full w-[18px] bg-[#00274d] z-50 pointer-events-none" />
+
       <Navbar />
       <PageHero eyebrow="FAQ" title="Answers to your most common questions" />
 
