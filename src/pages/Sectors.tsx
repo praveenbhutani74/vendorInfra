@@ -75,7 +75,7 @@ export default function Sectors() {
             {sectors.map((sector) => (
               <motion.div key={sector.slug} variants={item}>
                 <Link href={`/sectors/${sector.slug}`}>
-                  <div className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer">
+                  <div className="group relative overflow-hidden rounded-2xl shadow-md cursor-pointer border-2 border-[#00274d]">
                     <div className="aspect-[4/3] overflow-hidden">
                       <img
                         src={sector.image}

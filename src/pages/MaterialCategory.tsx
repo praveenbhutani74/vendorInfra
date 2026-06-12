@@ -258,7 +258,7 @@ export default function MaterialCategory() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="border border-gray-200 rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="border-2 border-[#00274d] rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <Link href={`/materials/${category.slug}/${product.slug}`} className="block">
                   <div className="relative h-36 overflow-hidden bg-gray-50">
@@ -302,7 +302,7 @@ export default function MaterialCategory() {
                   transition={{ delay: i * 0.04 }}
                 >
                   <Link href={`/materials/${cat.slug}`}>
-                    <div className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a]/40 transition-all duration-300 group cursor-pointer">
+                    <div className="border-2 border-[#00274d] rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a] transition-all duration-300 group cursor-pointer">
                       <div className="h-24 overflow-hidden">
                         <MaterialImage src={cat.image} alt={cat.name} label={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       </div>

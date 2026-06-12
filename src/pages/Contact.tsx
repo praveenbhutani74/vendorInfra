@@ -173,7 +173,7 @@ export default function Contact() {
                 </div>
 
                 {/* ── RIGHT: Enquiry Form Card ── */}
-                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col" style={{ backgroundColor: '#ffffff' }}>
+                <div className="bg-white rounded-2xl shadow-sm border-2 border-[#00274d] p-8 flex flex-col" style={{ backgroundColor: '#ffffff' }}>
                   <div className="mb-7">
                     <span className="inline-flex items-center gap-2 text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.35em] mb-4">
                       <span className="w-6 h-px bg-[#edad1a]/60" />

@@ -4712,7 +4712,7 @@ function Contact() {
               ] })
             ] })
           ] }),
-          /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col", style: { backgroundColor: "#ffffff" }, children: [
+          /* @__PURE__ */ jsxs("div", { className: "bg-white rounded-2xl shadow-sm border-2 border-[#00274d] p-8 flex flex-col", style: { backgroundColor: "#ffffff" }, children: [
             /* @__PURE__ */ jsxs("div", { className: "mb-7", children: [
               /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.35em] mb-4", children: [
                 /* @__PURE__ */ jsx("span", { className: "w-6 h-px bg-[#edad1a]/60" }),
@@ -5320,7 +5320,7 @@ function Sectors() {
           whileInView: "show",
           viewport: { once: true },
           className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6",
-          children: sectors.map((sector) => /* @__PURE__ */ jsx(motion.div, { variants: item, children: /* @__PURE__ */ jsx(Link, { href: `/sectors/${sector.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "group relative overflow-hidden rounded-2xl shadow-md cursor-pointer", children: [
+          children: sectors.map((sector) => /* @__PURE__ */ jsx(motion.div, { variants: item, children: /* @__PURE__ */ jsx(Link, { href: `/sectors/${sector.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "group relative overflow-hidden rounded-2xl shadow-md cursor-pointer border-2 border-[#00274d]", children: [
             /* @__PURE__ */ jsx("div", { className: "aspect-[4/3] overflow-hidden", children: /* @__PURE__ */ jsx(
               "img",
               {
@@ -7786,7 +7786,7 @@ function Materials() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: true },
           transition: { delay: Math.min(i * 0.04, 0.3) },
-          children: /* @__PURE__ */ jsx(Link, { href: `/materials/${cat.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "group h-full cursor-pointer overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#edad1a]/50 hover:shadow-xl hover:shadow-blue-900/10", children: [
+          children: /* @__PURE__ */ jsx(Link, { href: `/materials/${cat.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "group h-full cursor-pointer overflow-hidden rounded-lg border-2 border-[#00274d] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#edad1a] hover:shadow-xl hover:shadow-blue-900/10", children: [
             /* @__PURE__ */ jsxs("div", { className: "relative h-44 overflow-hidden bg-slate-100", children: [
               /* @__PURE__ */ jsx(
                 MaterialImage,
@@ -7830,7 +7830,7 @@ function Materials() {
           }
         )
       ] }),
-      /* @__PURE__ */ jsxs("div", { className: "rounded-lg border border-slate-200 bg-white p-6 shadow-sm", children: [
+      /* @__PURE__ */ jsxs("div", { className: "rounded-lg border-2 border-[#00274d] bg-white p-6 shadow-sm", children: [
         /* @__PURE__ */ jsxs("div", { className: "mb-5 flex items-center gap-3", children: [
           /* @__PURE__ */ jsx("span", { className: "flex h-10 w-10 items-center justify-center rounded-lg bg-[#edad1a]/20 text-[#00274d]", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "h-5 w-5" }) }),
           /* @__PURE__ */ jsxs("div", { children: [
@@ -7838,7 +7838,7 @@ function Materials() {
             /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-500", children: "Find categories based on your project requirements" })
           ] })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-2", children: categories.map((cat) => /* @__PURE__ */ jsxs(Link, { href: `/materials/${cat.slug}`, className: "inline-flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-[#00274d] transition-colors hover:border-[#edad1a] hover:bg-[#edad1a] hover:text-white", children: [
+        /* @__PURE__ */ jsx("div", { className: "flex flex-wrap gap-2", children: categories.map((cat) => /* @__PURE__ */ jsxs(Link, { href: `/materials/${cat.slug}`, className: "inline-flex items-center gap-1 rounded-full border-2 border-[#00274d] bg-slate-50 px-3 py-1.5 text-sm font-semibold text-[#00274d] transition-colors hover:border-[#edad1a] hover:bg-[#edad1a] hover:text-white", children: [
           cat.name,
           /* @__PURE__ */ jsx(ChevronRight, { className: "h-3.5 w-3.5" })
         ] }, cat.slug)) })
@@ -8090,7 +8090,7 @@ function MaterialCategory() {
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: true },
           transition: { delay: i * 0.06 },
-          className: "border border-gray-200 rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col",
+          className: "border-2 border-[#00274d] rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col",
           children: [
             /* @__PURE__ */ jsxs(Link, { href: `/materials/${category.slug}/${product.slug}`, className: "block", children: [
               /* @__PURE__ */ jsxs("div", { className: "relative h-36 overflow-hidden bg-gray-50", children: [
@@ -8131,7 +8131,7 @@ function MaterialCategory() {
             whileInView: { opacity: 1, y: 0 },
             viewport: { once: true },
             transition: { delay: i * 0.04 },
-            children: /* @__PURE__ */ jsx(Link, { href: `/materials/${cat.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "border border-gray-200 rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a]/40 transition-all duration-300 group cursor-pointer", children: [
+            children: /* @__PURE__ */ jsx(Link, { href: `/materials/${cat.slug}`, children: /* @__PURE__ */ jsxs("div", { className: "border-2 border-[#00274d] rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a] transition-all duration-300 group cursor-pointer", children: [
               /* @__PURE__ */ jsx("div", { className: "h-24 overflow-hidden", children: /* @__PURE__ */ jsx(MaterialImage, { src: cat.image, alt: cat.name, label: cat.name, className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" }) }),
               /* @__PURE__ */ jsx("div", { className: "p-2.5", children: /* @__PURE__ */ jsxs("span", { className: "flex items-center gap-1 text-[#00274d] group-hover:text-[#edad1a] text-sm font-semibold transition-colors", children: [
                 /* @__PURE__ */ jsx(ChevronRight, { className: "w-3.5 h-3.5" }),
