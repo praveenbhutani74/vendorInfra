@@ -285,7 +285,10 @@ export default function Blog() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-10">
               {blogPosts.map((post) => (
-                <Card key={post.slug} className="overflow-hidden border-border/50 hover:shadow-xl transition-all duration-300 group">
+                <Card
+  key={post.slug}
+  className="overflow-hidden border border-[#00274d] hover:shadow-xl transition-all duration-300 group"
+>
                   <CardContent className="p-0">
                     <div className="p-8 md:p-10 space-y-5 bg-white">
                       <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-muted-foreground">

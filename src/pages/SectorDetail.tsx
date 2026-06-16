@@ -7,6 +7,9 @@ import { getSectorBySlug, sectors } from "@/lib/sectorsData";
 import { SiteButton } from "@/components/SiteButton";
 import NotFound from "@/pages/not-found";
 
+
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
+
 export default function SectorDetail() {
   const { slug } = useParams<{ slug: string }>();
   const sector = getSectorBySlug(slug);
@@ -277,14 +280,16 @@ export default function SectorDetail() {
               Join <span className="font-semibold">32,000+</span> ccontractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
-              <Link href="/contact">
-                <SiteButton variant="onGold" className="normal-case tracking-normal">
-                  Get in Touch
-                </SiteButton>
-                   {/* <SiteButton variant="onGold" className="normal-case tracking-normal">
-                  Get in Touch
-                </SiteButton> */}
-              </Link>
+       
+        <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
                 <Link href="/sectors">
               <SiteButton variant="onGold"  className="normal-case tracking-normal">
                 Back to Sectors

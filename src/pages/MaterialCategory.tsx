@@ -10,6 +10,8 @@ import { useQuoteCart } from "@/lib/quoteCart";
 import { useState } from "react";
 import { SiteButton } from "@/components/SiteButton";
 
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
+
 function AddToQuoteBtn({
   categorySlug,
   categoryName,
@@ -28,6 +30,7 @@ function AddToQuoteBtn({
   const [error, setError] = useState("");
 
   const isSteel = categorySlug === "steel";
+
 
   const handleAdd = () => {
     if (isSteel && !selectedGrade) {
@@ -258,7 +261,7 @@ export default function MaterialCategory() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
-                className="border-2 border-[#00274d] rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
+                className="border-1 border-[#00274d] rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col"
               >
                 <Link href={`/materials/${category.slug}/${product.slug}`} className="block">
                   <div className="relative h-36 overflow-hidden bg-gray-50">
@@ -302,7 +305,7 @@ export default function MaterialCategory() {
                   transition={{ delay: i * 0.04 }}
                 >
                   <Link href={`/materials/${cat.slug}`}>
-                    <div className="border-2 border-[#00274d] rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a] transition-all duration-300 group cursor-pointer">
+                    <div className="border-1 border-[#00274d] rounded-xl overflow-hidden hover:shadow-md hover:border-[#edad1a] transition-all duration-300 group cursor-pointer">
                       <div className="h-24 overflow-hidden">
                         <MaterialImage src={cat.image} alt={cat.name} label={cat.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                       </div>
@@ -343,11 +346,15 @@ export default function MaterialCategory() {
               Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants across diverse sectors already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
-              <Link href="/contact">
-                <SiteButton variant="onGold" className="normal-case tracking-normal">
-                  Get in Touch
-                </SiteButton>
-              </Link>
+                   <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
               <Link href="/materials">
                 <SiteButton variant="onGold" className="normal-case tracking-normal">
                   Back to Materials

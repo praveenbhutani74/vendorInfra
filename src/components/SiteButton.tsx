@@ -15,7 +15,7 @@ const buttonVariants: Record<SiteButtonVariant, string> = {
 
 export function siteButtonClasses(variant: SiteButtonVariant = "primary", className?: string) {
   return cn(
-    "group inline-flex items-center justify-center gap-3 rounded-lg px-6 py-3 text-sm font-bold tracking-wide uppercase transition-all duration-300 hover:-translate-y-0.5",
+    "group inline-flex items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-[15px] font-semibold leading-none transition-all duration-300 hover:-translate-y-0.5",
     buttonVariants[variant],
     className,
   );

@@ -184,7 +184,7 @@ export default function Referral() {
                     Join {selectedProgram}
                   </h2>
                   <p className="text-white/70 text-sm mt-2 relative z-10">
-                    Share your details and our team will get back within 12 hours.
+                    Share your details and our team will get back to you soon.
                   </p>
                 </div>
 
@@ -256,10 +256,10 @@ export default function Referral() {
                           <CheckCircle2 className="w-9 h-9 text-green-500" />
                         </div>
                         <h3 className="text-xl font-semibold text-[#00274d]">Application Received!</h3>
-                        <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
-                          Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
-                          <span className="font-semibold text-gray-700">{form.phone}</span> within 12 hours.
-                        </p>
+                       <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
+                      Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will reach out to you at{" "}
+                      <span className="font-semibold text-gray-700">{form.phone}</span> shortly.
+                    </p>
                         <button onClick={handleClose}
                           className="mt-2 bg-[#00274d] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#003a6e] transition-colors text-sm">
                           Done

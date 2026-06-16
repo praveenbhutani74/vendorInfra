@@ -75,7 +75,7 @@ type ServiceItem = {
 };
 
 const services: ServiceItem[] = [
-  { icon: Search,      title: "AI-Powered Vendor Discovery",     href: PORTAL_LOGIN_URL, external: true, image: "/images/services/ai-vendor-discovery.jpg",                                                            desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
+  { icon: Search,      title: "AI-Powered Vendor Discovery",     href: PORTAL_LOGIN_URL, external: true, image: "/images/services/ai-discovery.jpg",                                                            desc: "Search and connect with verified vendors and suppliers in real time. Compare multiple options to identify the best partners for your projects quickly and confidently." },
   { icon: Calculator,  title: "Smart Price Discovery",           href: PORTAL_LOGIN_URL, external: true, image: "/images/services/smart-price-discovery.jpg",           desc: "Streamline vendor selection and proposal management. Request quotes or send instant proposals to secure the best prices for services and materials." },
   { icon: Tractor,     title: "AI-Powered Plants & Equipment",   href: PORTAL_LOGIN_URL, external: true, image: "/images/services/plants-equipment-marketplace.png",    desc: "A dedicated marketplace to buy, sell, or hire plants and equipment. Maximize asset utilization and reduce idle machinery across projects." },
   { icon: Package,     title: "Smart Material Procurement",      href: "/materials", image: "/images/services/smart-material-procurement.jpg", desc: "Access a one-stop marketplace for all construction and raw material requirements. Simplify sourcing and ensure timely availability for every project." },
@@ -309,7 +309,9 @@ function HeroDemoForm() {
         </div>
         <h3 className="text-lg font-semibold text-[#00274d] mb-2">Demo Booked Successfully</h3>
         <p className="text-gray-500 text-sm mb-1">Thank you, <strong className="font-medium">{form.name}</strong>.</p>
-        <p className="text-gray-400 text-sm">Our team will reach out on <strong className="font-medium">{form.phone}</strong> within 12 hours.</p>
+<p className="text-gray-400 text-sm">
+  Our team will reach out on <strong className="font-medium">{form.phone}</strong> soon.
+</p>
       </div>
     );
   }
@@ -365,13 +367,15 @@ function HeroDemoForm() {
         <button type="submit" disabled={status === "loading"}
           className={siteButtonClasses("primary", "w-full py-3 rounded-xl normal-case tracking-normal disabled:cursor-not-allowed disabled:opacity-70")}>
           {status === "loading" ? (
-            <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+            <span className="w-4 h-4 border-1 border-white/40 border-t-white rounded-full animate-spin" />
           ) : (
             <>Request Free Demo <CtaArrow variant="dark" /></>
           )}
         </button>
 
-        <p className="text-center text-gray-400 text-[11px]">Our team responds within 12 hours</p>
+      <p className="text-center text-gray-400 text-[11px]">
+  Our team will get back to you soon
+</p>
       </form>
     </div>
   );
@@ -615,7 +619,7 @@ export default function Home() {
               <div className="mt-7 flex flex-wrap items-center gap-4">
               <Link href="/about">
                   <SiteButton className="px-5 py-2.5">
-                    KNOW MORE
+                    Know More
                   </SiteButton>
                 </Link>
               </div>
@@ -975,7 +979,7 @@ export default function Home() {
                 From discovery to delivery, we digitize every step — giving vendors the exposure they deserve and contractors the reliability they demand.
               </p>
 
-              <div className="grid grid-cols-3 divide-x divide-gray-200 border-y border-gray-200 max-w-md mb-8">
+           <div className="grid grid-cols-3 divide-x divide-[#00274d] border-y border-[#00274d] max-w-md mb-8">
                 {[
                   { value: "20+",  label: "Sectors" },
                   { value: "31K+", label: "Vendors" },
@@ -996,7 +1000,7 @@ export default function Home() {
             <FadeUp delay={0.12}>
               <div className="relative">
                 <div className="absolute -inset-6 bg-[#edad1a]/6 blur-3xl" />
-                <div className="relative overflow-hidden rounded-2xl bg-white border border-gray-100 p-5 sm:p-6 shadow-xl">
+               <div className="relative overflow-hidden rounded-2xl bg-white border border-[#00274d] p-5 sm:p-6 shadow-xl">
                   <div className="relative flex items-center justify-between mb-5">
                     <div>
                       <h3 className="text-[#00274d] text-xl font-semibold leading-tight mt-1">Why Vendor Infra</h3>
@@ -1079,7 +1083,7 @@ export default function Home() {
                           <div className="w-24 h-24 rounded-full overflow-hidden ring-[3px] ring-[#edad1a]/60 shadow-[0_0_28px_rgba(237,173,26,0.35)]">
                             <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
                           </div>
-                          <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-[#edad1a] flex items-center justify-center shadow-lg border-2 border-[#00274d]">
+                          <div className="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-[#edad1a] flex items-center justify-center shadow-lg border-1 border-[#00274d]">
                             <CheckCircle2 className="w-3.5 h-3.5 text-[#00274d]" />
                           </div>
                         </div>
@@ -1135,7 +1139,7 @@ export default function Home() {
                   key={i}
                   onClick={() => setActiveTestimonial(i)}
                   title={t.name}
-                  className={`rounded-full overflow-hidden border-2 transition-all duration-300 ${
+                  className={`rounded-full overflow-hidden border-1 transition-all duration-300 ${
                     i === activeTestimonial
                       ? "border-[#edad1a] w-11 h-11 shadow-[0_0_14px_rgba(237,173,26,0.45)] opacity-100"
                       : "border-white/15 w-8 h-8 opacity-40 hover:opacity-70 hover:border-white/40"
@@ -1195,7 +1199,7 @@ export default function Home() {
             {blogs.map((b, i) => (
               <motion.div key={i} variants={gridItem}>
                 <Link href="/blog">
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group h-full flex flex-col cursor-pointer">
+                  <div className="bg-white rounded-2xl overflow-hidden shadow-sm  border-1 border-[#00274d] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group h-full flex flex-col cursor-pointer">
                     <div className="overflow-hidden h-48 bg-gray-100">
                       <img src={b.img} alt={b.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="eager" />
@@ -1447,11 +1451,15 @@ export default function Home() {
               Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
-              <Link href="/contact">
-                <SiteButton variant="onGold" className="normal-case tracking-normal">
-                  Get in Touch
-                </SiteButton>
-              </Link>
+        <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
               {/* <Link href="/services">
                 <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
                   Explore Services

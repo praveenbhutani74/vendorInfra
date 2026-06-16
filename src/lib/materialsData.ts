@@ -895,7 +895,7 @@ export const categories: Category[] = [
   },
   {
     slug: "electronic-and-electrical-accessories",
-    name: "Electronic and Electrical Accessories",
+    name: "Electrical Accessories",
     image: "/materials/Cat-Electrical-Accessories.jpg",
     products: [
       {

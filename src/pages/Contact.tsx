@@ -173,7 +173,7 @@ export default function Contact() {
                 </div>
 
                 {/* ── RIGHT: Enquiry Form Card ── */}
-                <div className="bg-white rounded-2xl shadow-sm border-2 border-[#00274d] p-8 flex flex-col" style={{ backgroundColor: '#ffffff' }}>
+                <div className="bg-white rounded-2xl shadow-sm border-1 border-[#00274d] p-8 flex flex-col" style={{ backgroundColor: '#ffffff' }}>
                   <div className="mb-7">
                     <span className="inline-flex items-center gap-2 text-[#edad1a] text-[11px] font-bold uppercase tracking-[0.35em] mb-4">
                       <span className="w-6 h-px bg-[#edad1a]/60" />
@@ -243,7 +243,7 @@ export default function Contact() {
                     >
                       {isSubmitting ? (
                         <>
-                          <span className="animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/30 border-t-[#00274d]" />
+                          <span className="animate-spin rounded-full h-4 w-4 border-1 border-[#00274d]/30 border-t-[#00274d]" />
                           Sending...
                         </>
                       ) : (

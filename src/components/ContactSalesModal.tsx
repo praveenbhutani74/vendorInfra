@@ -148,9 +148,9 @@ export function ContactSalesModal({ open, onClose, planName }: Props) {
                         className="w-full bg-[#edad1a] hover:bg-[#d4941a] text-white font-bold py-4 rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-yellow-400/20 text-sm">
                         Submit →
                       </button>
-                      <p className="text-center text-xs text-gray-400">
-                        We'll get back to you within 12 hours.
-                      </p>
+                     <p className="text-center text-xs text-gray-400">
+                      We'll get back to you soon.
+                    </p>
                       {submitError && (
                         <p className="text-center text-xs text-red-500">{submitError}</p>
                       )}
@@ -171,10 +171,10 @@ export function ContactSalesModal({ open, onClose, planName }: Props) {
                         <CheckCircle2 className="w-9 h-9 text-green-500" />
                       </div>
                       <h3 className="text-xl font-semibold text-[#00274d]">Request Sent!</h3>
-                      <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
-                        Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
-                        <span className="font-semibold text-gray-700">{form.contact}</span> within 12 hours.
-                      </p>
+                    <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
+                  Thanks, <span className="font-semibold text-gray-700">{form.name}</span>! Our team will contact you on{" "}
+                  <span className="font-semibold text-gray-700">{form.contact}</span> soon.
+                </p>
                       <button onClick={handleClose}
                         className="mt-2 bg-[#00274d] text-white font-semibold px-8 py-3 rounded-full hover:bg-[#003a6e] transition-colors text-sm">
                         Done

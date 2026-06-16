@@ -72,7 +72,7 @@ function PlanCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className={`relative flex flex-col rounded-2xl overflow-hidden h-full ${
+      className={`relative flex flex-col rounded-2xl overflow-hidden h-full bg-white border border-[#00274d] shadow-md ${
         plan.highlight
           ? "shadow-2xl shadow-yellow-400/20 ring-2 ring-[#edad1a]"
           : "shadow-md ring-1 ring-gray-200"

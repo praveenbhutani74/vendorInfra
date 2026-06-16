@@ -55,6 +55,8 @@ function highlight(text: string, query: string) {
   );
 }
 
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
+
 export default function Materials() {
   usePageSeo("Material Procurement | Vendor Infra", "Source 1000+ construction and infrastructure materials across 10+ categories including steel, cement, electrical and solar.");
   const { total } = useQuoteCart();
@@ -250,7 +252,7 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
           >
             {featuredCategories.map((category) => (
               <Link key={category.slug} href={`/materials/${category.slug}`}>
-                <div className="group grid grid-cols-[92px_1fr] overflow-hidden rounded-lg border border-white/15 bg-white shadow-xl shadow-black/10 transition-transform hover:-translate-y-0.5">
+              <div className="group grid grid-cols-[92px_1fr] overflow-hidden rounded-lg border border-[#00274d]/30 bg-white shadow-xl shadow-black/10 transition-transform hover:-translate-y-0.5">
                   <MaterialImage src={category.image} alt={category.name} label={category.name} className="h-24 w-full object-cover" />
                   <div className="flex min-w-0 flex-col justify-center p-4">
                     <p className="truncate text-sm font-semibold text-[#00274d]">{category.name}</p>
@@ -365,7 +367,7 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
                   transition={{ delay: Math.min(i * 0.04, 0.3) }}
                 >
                   <Link href={`/materials/${cat.slug}`}>
-                    <div className="group h-full cursor-pointer overflow-hidden rounded-lg border-2 border-[#00274d] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#edad1a] hover:shadow-xl hover:shadow-blue-900/10">
+                    <div className="group h-full cursor-pointer overflow-hidden rounded-lg border-1 border-[#00274d] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#edad1a] hover:shadow-xl hover:shadow-blue-900/10">
                       <div className="relative h-44 overflow-hidden bg-slate-100">
                         <MaterialImage
                           src={cat.image}
@@ -411,7 +413,7 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
           )}
 
           {/* Product Category Index */}
-          <div className="rounded-lg border-2 border-[#00274d] bg-white p-6 shadow-sm">
+          <div className="rounded-lg border-1 border-[#00274d] bg-white p-6 shadow-sm">
             <div className="mb-5 flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#edad1a]/20 text-[#00274d]">
                 <CheckCircle2 className="h-5 w-5" />
@@ -423,7 +425,7 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
             </div>
             <div className="flex flex-wrap gap-2">
               {categories.map((cat) => (
-                <Link key={cat.slug} href={`/materials/${cat.slug}`} className="inline-flex items-center gap-1 rounded-full border-2 border-[#00274d] bg-slate-50 px-3 py-1.5 text-sm font-semibold text-[#00274d] transition-colors hover:border-[#edad1a] hover:bg-[#edad1a] hover:text-white">
+                <Link key={cat.slug} href={`/materials/${cat.slug}`} className="inline-flex items-center gap-1 rounded-full border-1 border-[#00274d] bg-slate-50 px-3 py-1.5 text-sm font-semibold text-[#00274d] transition-colors hover:border-[#edad1a] hover:bg-[#edad1a] hover:text-white">
                   {cat.name}
                   <ChevronRight className="h-3.5 w-3.5" />
                 </Link>
@@ -457,11 +459,15 @@ const { dropdownResults, filteredCategories } = useMemo(() => {
                     Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center items-center">
-                    <Link href="/contact">
-                      <SiteButton variant="onGold" className="normal-case tracking-normal">
-                        Get in Touch
-                      </SiteButton>
-                    </Link>
+                        <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
                     {/* <Link href="/services">
                       <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
                         Explore Services

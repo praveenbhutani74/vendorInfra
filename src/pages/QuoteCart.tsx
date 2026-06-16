@@ -74,7 +74,7 @@ export default function QuoteCart() {
                 transition={{ repeat: Infinity, duration: 1.8, ease: "easeOut" }}
                 className="absolute inset-0 rounded-full bg-[#edad1a]/20"
               />
-              <div className="relative w-20 h-20 rounded-full bg-[#edad1a]/10 border-2 border-[#edad1a]/30 flex items-center justify-center">
+              <div className="relative w-20 h-20 rounded-full bg-[#edad1a]/10 border-1 border-[#edad1a]/30 flex items-center justify-center">
                 <CheckCircle className="w-9 h-9 text-[#edad1a]" />
               </div>
             </div>
@@ -84,10 +84,9 @@ export default function QuoteCart() {
             <h2 className="text-2xl font-extrabold text-white mb-3 tracking-tight leading-snug">
               We've got your quote<br />request!
             </h2>
-            <p className="text-white/40 text-sm leading-relaxed mb-8">
-              Our team personally reviews every request and will contact you within{" "}
-              <span className="text-white/70 font-semibold">12 hours</span> with pricing and availability.
-            </p>
+           <p className="text-white/40 text-sm leading-relaxed mb-8">
+  Our team personally reviews every request and will contact you soon with pricing and availability.
+</p>
             <Link href="/materials">
               <button className="w-full bg-[#edad1a] text-[#00274d] font-extrabold py-4 rounded-2xl hover:bg-[#f5c43a] transition-all duration-200 tracking-wide text-sm">
                 Continue browsing
@@ -350,7 +349,7 @@ export default function QuoteCart() {
                       >
                         {isSubmitting ? (
                           <>
-                            <span className="animate-spin rounded-full h-4 w-4 border-2 border-[#00274d]/20 border-t-[#00274d]" />
+                            <span className="animate-spin rounded-full h-4 w-4 border-1 border-[#00274d]/20 border-t-[#00274d]" />
                             Sending…
                           </>
                         ) : (

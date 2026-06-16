@@ -9,6 +9,8 @@ import { Link } from "wouter";
 
 const base = import.meta.env.BASE_URL;
 
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
+
 const trustedBy = [
   { name: "Adani Group",    logo: "/logos/Adani-Group.png" },
   { name: "NCC",            logo: "/logos/NCC.png" },
@@ -171,7 +173,7 @@ export default function About() {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-6">
-              <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl border border-gray-200 bg-[#f6f8fb] p-7 md:p-8">
+              <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl  border-1 border-[#00274d] bg-[#f6f8fb] p-7 md:p-8">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-11 h-11 rounded-xl bg-[#edad1a]/10 flex items-center justify-center">
                     <Target className="w-5 h-5 text-[#edad1a]" />
@@ -183,9 +185,11 @@ export default function About() {
                   <p>Headquartered in Delhi NCR, Vendor Infra was founded by industry leaders with over two decades of experience in managing and executing large-scale infrastructure projects.</p>
                   <p>Our platform is built to simplify vendor discovery and collaboration, enable supply chain finance, offer a dedicated plants and equipment marketplace, and facilitate project insurance - empowering businesses to overcome industry challenges and drive greater efficiency, transparency, and growth.</p>
                 </div>
-                <a href="/services" className={siteButtonClasses("primary", "mt-7 px-5")}>
-                  Explore Services <CtaArrow variant="dark" />
-                </a>
+<Link href="/services" className="mt-7 inline-block">
+  <SiteButton variant="primary">
+    Explore Services
+  </SiteButton>
+</Link>
               </motion.div>
 
               <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }} className="rounded-2xl border border-gray-200 bg-[#082b4f] p-7 md:p-8 text-white relative overflow-hidden">
@@ -202,10 +206,11 @@ export default function About() {
                     <p>Our AI- and ML Powered seamlessly blends technology with the real-world needs of infrastructure stakeholders, enabling smarter decision-making, cost optimization, profit maximization, and faster collaboration.</p>
                     <p>Vendor Infra brings integrated services on a single platform, empowering contractors, suppliers, consultants, and developers to connect, collaborate, and construct more efficiently than ever before.</p>
                   </div>
-                  <a href="/contact" className={siteButtonClasses("primary", "mt-7 px-5 py-2.5 normal-case tracking-normal")}>
-                    Book a demo
-                    <CtaArrow variant="dark" />
-                  </a>
+                <Link href="/contact">
+  <SiteButton variant="primary" className="mt-7">
+    Book a Demo
+  </SiteButton>
+</Link>
                 </div>
               </motion.div>
             </div>
@@ -225,7 +230,7 @@ export default function About() {
             </div>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
               {usps.map((usp, i) => (
-                <motion.div key={usp.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="group overflow-hidden bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <motion.div key={usp.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.06 }} className="group overflow-hidden bg-white rounded-2xl shadow-sm  border border-[#00274d] hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="aspect-[16/10] overflow-hidden bg-gray-100">
                     <img src={usp.image} alt={usp.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="eager" />
                   </div>
@@ -270,7 +275,7 @@ export default function About() {
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {management.map((m, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300">
+                <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }} className="group relative bg-white rounded-2xl overflow-hidden border border-[#00274d] shadow-md hover:shadow-xl transition-all duration-300">
                   <div className="relative aspect-[4/5] bg-gradient-to-br from-[#f6f8fb] to-[#eef2f8] overflow-hidden">
                     <img src={`${base}${m.photo}`} alt={m.name} className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" onError={e => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(m.name)}&background=00274d&color=fff&size=400`; }} />
                     <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="absolute top-3 right-3 w-9 h-9 bg-white/90 hover:bg-[#0077b5] text-[#0077b5] hover:text-white rounded-full flex items-center justify-center shadow transition-all duration-200">
@@ -331,7 +336,7 @@ export default function About() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
               {team.map((member, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 5) * 0.06 }} className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: (i % 5) * 0.06 }} className="group bg-white rounded-2xl overflow-hidden  border-1 border-[#00274d] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col">
                   <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-[#00274d]/5 to-[#edad1a]/10">
                     <img src={`${base}${member.photo}`} alt={member.name} className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" onError={e => { (e.target as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&background=e8eef9&color=1a4fdb&size=300`; }} />
                     {member.linkedin && (
@@ -377,11 +382,15 @@ export default function About() {
                     Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
                   </p>
                   <div className="flex flex-wrap gap-3 justify-center items-center">
-                    <Link href="/contact">
-                      <SiteButton variant="onGold" className="normal-case tracking-normal">
-                        Get in Touch
-                      </SiteButton>
-                    </Link>
+                          <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
                     {/* <Link href="/services">
                       <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
                         Explore Services

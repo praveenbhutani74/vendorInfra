@@ -12,12 +12,13 @@ import { Footer } from "@/components/layout/Footer";
 import { SiteButton } from "@/components/SiteButton";
 
 const PORTAL_LOGIN_URL = "http://3.110.208.157/customer/";
+const PORTAL_REGISTER_URL = "http://3.110.208.157/customer/";
 
 const services = [
   {
     title: "AI-Powered Vendor Discovery",
     icon: Search,
-    image: "/images/services/ai-vendor-discovery.jpg",
+    image: "/images/services/ai-discovery.jpg",
     imageAlt: "AI vendor discovery platform",
     flip: false,
     href: PORTAL_LOGIN_URL,
@@ -252,7 +253,7 @@ function FadeUp({
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="border border-[#00274d] rounded-xl overflow-hidden">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
@@ -500,14 +501,14 @@ export default function Services() {
           <FadeUp delay={0.15}>
             <VideoPlayer />
           </FadeUp>
-
+{/* 
           <FadeUp delay={0.2} className="text-center mt-12">
             <Link href="/contact">
               <SiteButton className="normal-case tracking-normal">
                 Get Started with Us
               </SiteButton>
             </Link>
-          </FadeUp>
+          </FadeUp> */}
         </div>
       </section>
     <section
@@ -535,11 +536,15 @@ export default function Services() {
               Join <span className="font-semibold">32,000+</span> contractors, vendors, manufacturers, suppliers, and consultants already using Vendor Infra to discover new opportunities, streamline procurement, acesss plants and equipment solutions, and secure project financing and insurance—all through a single integrated platform.
             </p>
             <div className="flex flex-wrap gap-3 justify-center items-center">
-              <Link href="/contact">
-                <SiteButton variant="onGold" className="normal-case tracking-normal">
-                  Get in Touch
-                </SiteButton>
-              </Link>
+             <a
+  href={PORTAL_REGISTER_URL}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <SiteButton variant="onGold" className="normal-case tracking-normal">
+    Join Now
+  </SiteButton>
+</a>
               {/* <Link href="/services">
                 <button className="group inline-flex items-center gap-2 border border-[#00274d] text-[#00274d] font-medium px-5 py-2.5 text-sm rounded-md hover:bg-[#00274d] hover:text-white transition-colors">
                   Explore Services
