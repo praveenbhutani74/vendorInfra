@@ -2616,14 +2616,14 @@ function LogoMarquee$1({ logos, bg = "white" }) {
         children: doubled.map((l, i) => /* @__PURE__ */ jsx(
           "div",
           {
-            className: `group flex-shrink-0 flex items-center justify-center h-14 px-5 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 ${bg === "dark" ? "bg-white/8 border-white/10 hover:border-[#edad1a]/40" : "bg-white border-[#00274d]/10 shadow-[0_2px_10px_-6px_rgba(0,39,77,0.18)] hover:shadow-[0_6px_18px_-8px_rgba(0,39,77,0.3)] hover:border-[#00274d]/25"}`,
-            style: { minWidth: 130 },
+            className: `group flex-shrink-0 flex items-center justify-center h-14 px-8 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 ${bg === "dark" ? "bg-white/8 border-white/10 hover:border-[#edad1a]/40" : "bg-white border-[#00274d]/10 shadow-[0_2px_10px_-6px_rgba(0,39,77,0.18)] hover:shadow-[0_6px_18px_-8px_rgba(0,39,77,0.3)] hover:border-[#00274d]/25"}`,
+            style: { minWidth: 150 },
             children: /* @__PURE__ */ jsx(
               "img",
               {
                 src: l.logo,
                 alt: l.name,
-                className: `max-h-8 max-w-[100px] object-contain transition duration-300 ${bg === "dark" ? "brightness-0 invert opacity-80" : "opacity-90 group-hover:opacity-100"}`,
+                className: `max-h-12 max-w-[140px] object-contain transition duration-300 ${bg === "dark" ? "brightness-0 invert opacity-80" : "opacity-90 group-hover:opacity-100"}`,
                 loading: "eager"
               }
             )
@@ -4083,9 +4083,16 @@ function Services() {
             /* @__PURE__ */ jsx("span", { className: "h-px flex-1 bg-gradient-to-r from-[#edad1a]/40 to-transparent" })
           ] }),
           /* @__PURE__ */ jsx("h3", { className: "text-2xl md:text-3xl font-semibold text-[#00274d] tracking-normal leading-tight mb-7", children: service.title }),
-          /* @__PURE__ */ jsx("div", { className: "space-y-5", children: service.points.map((point, i) => /* @__PURE__ */ jsxs("div", { className: "group/p flex gap-4 p-4 -mx-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300", children: [
-            /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-xl bg-[#edad1a]/10 text-[#edad1a] flex items-center justify-center shrink-0 mt-0.5 group-hover/p:bg-[#edad1a] group-hover/p:text-white transition-colors", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "w-4.5 h-4.5", strokeWidth: 2.5 }) }),
-            /* @__PURE__ */ jsxs("div", { children: [
+          /* @__PURE__ */ jsx("div", { className: "space-y-8", children: service.points.map((point, i) => /* @__PURE__ */ jsxs("div", { className: "relative flex gap-4", children: [
+            i !== service.points.length - 1 && /* @__PURE__ */ jsx("div", { className: "absolute left-[18px] top-10 w-[2px] h-[calc(100%+24px)] bg-[#edad1a]" }),
+            /* @__PURE__ */ jsx("div", { className: "relative z-10 w-9 h-9 rounded-xl bg-[#fdf4e3] flex items-center justify-center shrink-0", children: /* @__PURE__ */ jsx(
+              CheckCircle2,
+              {
+                className: "w-4 h-4 text-[#edad1a]",
+                strokeWidth: 2.5
+              }
+            ) }),
+            /* @__PURE__ */ jsxs("div", { className: "pb-6", children: [
               /* @__PURE__ */ jsx("h4", { className: "type-card-title text-[#00274d] mb-1", children: point.label }),
               /* @__PURE__ */ jsx("p", { className: "text-gray-500 text-sm leading-relaxed", children: point.desc })
             ] })
@@ -5686,22 +5693,42 @@ function PlanCard({
               children: plan.tag
             }
           ),
-          /* @__PURE__ */ jsx("h3", { className: `text-2xl font-bold mb-3 ${plan.highlight ? "text-white" : "text-[#00274d]"}`, children: plan.name }),
-          /* @__PURE__ */ jsxs("div", { className: "flex items-baseline gap-1 mb-3", children: [
+          /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-8 mb-4", children: [
+            /* @__PURE__ */ jsx(
+              "h3",
+              {
+                className: `text-2xl font-bold ${plan.highlight ? "text-white" : "text-[#00274d]"}`,
+                children: plan.name
+              }
+            ),
             isContact ? /* @__PURE__ */ jsx(
               "button",
               {
                 type: "button",
                 onClick: () => onContact(plan.name),
-                className: `inline-flex items-center justify-center rounded-xl px-5 py-3 text-lg font-bold transition-all ${plan.highlight ? "bg-[#edad1a] text-white hover:bg-[#d4941a] shadow-lg shadow-yellow-500/20" : "bg-[#00274d] text-white hover:bg-[#003a73] shadow-md"}`,
+                className: `inline-flex items-center justify-center rounded-xl px-5 py-3 text-lg font-bold transition-all ${plan.highlight ? "bg-[#edad1a] text-white hover:bg-[#d4941a]" : "bg-[#00274d] text-white hover:bg-[#003a73]"}`,
                 children: plan.price
               }
-            ) : /* @__PURE__ */ jsx("span", { className: `text-4xl font-extrabold tracking-tight ${plan.highlight ? "text-white" : "text-[#00274d]"}`, children: plan.price }),
-            plan.priceSuffix && /* @__PURE__ */ jsx("span", { className: `text-sm font-medium ${plan.highlight ? "text-white/60" : "text-gray-500"}`, children: plan.priceSuffix })
+            ) : /* @__PURE__ */ jsxs("div", { className: "flex items-baseline gap-1", children: [
+              /* @__PURE__ */ jsx(
+                "span",
+                {
+                  className: `text-4xl font-extrabold tracking-tight ${plan.highlight ? "text-white" : "text-[#00274d]"}`,
+                  children: plan.price
+                }
+              ),
+              plan.priceSuffix && /* @__PURE__ */ jsx(
+                "span",
+                {
+                  className: `text-sm font-medium ${plan.highlight ? "text-white/60" : "text-gray-500"}`,
+                  children: plan.priceSuffix
+                }
+              )
+            ] })
           ] }),
           /* @__PURE__ */ jsx("p", { className: `text-sm leading-snug ${plan.highlight ? "text-white/65" : "text-gray-500"}`, children: plan.description })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: `h-px ${plan.highlight ? "bg-white/10" : "bg-gray-100"}` }),
+        /* @__PURE__ */ jsx("div", { className: `h-px ${plan.highlight ? "bg-white/10" : "bg-[#00274d]"}` }),
         /* @__PURE__ */ jsxs("div", { className: `px-8 py-6 flex-1 flex flex-col ${plan.highlight ? "bg-[#00274d]" : "bg-white"}`, children: [
           /* @__PURE__ */ jsxs("ul", { className: "space-y-3 flex-1 mb-8", children: [
             plan.features.map((f) => /* @__PURE__ */ jsxs("li", { className: "flex items-start gap-3", children: [
@@ -6692,86 +6719,222 @@ const certifications = [
     title: "ISO 9001",
     image: "/images/wp/ISO-9001-img.png",
     icon: ShieldCheck,
+    accent: "#0057b8",
+    accentLight: "#e8f1fb",
+    accentMid: "#b5d4f4",
+    label: "Quality Management",
     content: "Vendor Infra is ISO 9001 certified. This is one of the most popular ISO standards for creating, implementing, and maintaining a Quality Management System (QMS) for any given company, regardless of its industry, capital, or size"
   },
   {
     title: "ISO 14001",
     image: "/images/wp/ISO-14001.png",
     icon: Leaf,
+    accent: "#166534",
+    accentLight: "#dcfce7",
+    accentMid: "#86efac",
+    label: "Environmental Management",
     content: "Vendor Infra is ISO 14001 certified. This ISO standard provides guidelines on what has to be done to implement an environmental management system (EMS). It includes policies, processes, plans, records, and best practices that define rules regarding how your company interacts with the environment. ISO 14001 requirements give you a framework, along with guidelines. for creating EMS for any organization"
   },
   {
     title: "ISO 27001",
     image: "/images/wp/iso-27000.png",
     icon: Lock,
+    accent: "#6d28d9",
+    accentLight: "#ede9fe",
+    accentMid: "#c4b5fd",
+    label: "Information Security",
     content: "Vendor Infra is ISO 27001 certified. This ISO Standard is for information security. It specifies the requirements for establishing, implementing, maintaining and continually improving an information security management and continually improving an information security management system within the context of the organization. It also includes requirements for the assessment and treatment of information security risks tailored to the needs of the organization."
   }
 ];
 function ISO() {
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-white", children: [
     /* @__PURE__ */ jsx(Navbar, {}),
-    /* @__PURE__ */ jsx(
-      PageHero,
-      {
-        eyebrow: "ISO",
-        title: "ISO Certifications"
-      }
-    ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-[#f5f7fb] flex-1", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4", children: /* @__PURE__ */ jsx("div", { className: "max-w-6xl mx-auto", children: /* @__PURE__ */ jsx("div", { className: "space-y-10", children: certifications.map((cert, index) => {
-      const Icon = cert.icon;
-      const flip = index % 2 === 1;
-      return /* @__PURE__ */ jsxs(
-        motion.article,
-        {
-          initial: { opacity: 0, y: 28 },
-          whileInView: { opacity: 1, y: 0 },
-          viewport: { once: true, margin: "-80px" },
-          transition: { delay: index * 0.08 },
-          className: "grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden",
-          children: [
-            /* @__PURE__ */ jsx(
-              "div",
-              {
-                className: `${flip ? "lg:order-2" : ""} bg-[#071827] p-8 md:p-10 flex items-center justify-center`,
-                children: /* @__PURE__ */ jsx("div", { className: "bg-white rounded-2xl p-6 shadow-xl w-full max-w-sm", children: /* @__PURE__ */ jsx(
-                  "img",
-                  {
-                    src: cert.image,
-                    alt: cert.title,
-                    className: "w-full h-auto object-contain",
-                    loading: "eager"
-                  }
-                ) })
-              }
-            ),
-            /* @__PURE__ */ jsxs(
-              "div",
-              {
-                className: `${flip ? "lg:order-1" : ""} p-8 md:p-12 flex flex-col justify-center`,
-                children: [
-                  /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 mb-7", children: [
-                    /* @__PURE__ */ jsx("div", { className: "w-13 h-13 rounded-2xl bg-[#fef3c7] text-[#071827] flex items-center justify-center", children: /* @__PURE__ */ jsx(Icon, { className: "w-6 h-6", "aria-hidden": "true" }) }),
-                    /* @__PURE__ */ jsxs("span", { className: "inline-flex items-center gap-2 rounded-full bg-[#f8fafc] border border-gray-200 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-gray-600", children: [
+    /* @__PURE__ */ jsx(PageHero, { eyebrow: "ISO", title: "ISO Certifications" }),
+    /* @__PURE__ */ jsx("section", { className: "py-16 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-5xl", children: [
+      /* @__PURE__ */ jsx("div", { className: "flex flex-wrap justify-center gap-3 mb-12", children: certifications.map((cert) => {
+        const Icon = cert.icon;
+        return /* @__PURE__ */ jsxs(
+          "div",
+          {
+            className: "flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold",
+            style: {
+              borderColor: cert.accent,
+              color: cert.accent,
+              backgroundColor: cert.accentLight
+            },
+            children: [
+              /* @__PURE__ */ jsx(Icon, { className: "w-4 h-4" }),
+              cert.title
+            ]
+          },
+          cert.title
+        );
+      }) }),
+      /* @__PURE__ */ jsx("div", { className: "space-y-8", children: certifications.map((cert, index) => {
+        const Icon = cert.icon;
+        const flip = index % 2 === 1;
+        return /* @__PURE__ */ jsxs(
+          motion.article,
+          {
+            initial: { opacity: 0, y: 32 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true, margin: "-60px" },
+            transition: { delay: index * 0.1, duration: 0.5 },
+            className: "relative bg-white rounded-3xl overflow-hidden shadow-sm",
+            style: { border: `1.5px solid ${cert.accentMid}` },
+            children: [
+              /* @__PURE__ */ jsx(
+                "div",
+                {
+                  className: "h-1 w-full",
+                  style: { backgroundColor: cert.accent }
+                }
+              ),
+              /* @__PURE__ */ jsxs(
+                "div",
+                {
+                  className: `flex flex-col lg:flex-row ${flip ? "lg:flex-row-reverse" : ""}`,
+                  children: [
+                    /* @__PURE__ */ jsxs(
+                      "div",
+                      {
+                        className: "relative lg:w-[42%] flex-shrink-0 flex items-center justify-center p-10 min-h-[260px]",
+                        style: { backgroundColor: cert.accentLight },
+                        children: [
+                          /* @__PURE__ */ jsx(
+                            "div",
+                            {
+                              className: "absolute inset-0 hidden lg:block",
+                              style: {
+                                backgroundColor: cert.accentLight,
+                                clipPath: flip ? "polygon(0 0, 100% 0, 85% 100%, 0 100%)" : "polygon(0 0, 100% 0, 100% 100%, 15% 100%)"
+                              }
+                            }
+                          ),
+                          /* @__PURE__ */ jsx(
+                            "span",
+                            {
+                              className: "absolute font-black select-none pointer-events-none",
+                              style: {
+                                fontSize: "clamp(80px, 14vw, 140px)",
+                                color: cert.accentMid,
+                                opacity: 0.5,
+                                bottom: "-10px",
+                                right: flip ? "auto" : "8px",
+                                left: flip ? "8px" : "auto",
+                                lineHeight: 1,
+                                letterSpacing: "-4px"
+                              },
+                              children: cert.title.replace("ISO ", "")
+                            }
+                          ),
+                          /* @__PURE__ */ jsx("div", { className: "relative z-10 bg-white rounded-2xl p-5 shadow-md w-full max-w-[220px]", children: /* @__PURE__ */ jsx(
+                            "img",
+                            {
+                              src: cert.image,
+                              alt: cert.title,
+                              className: "w-full h-auto object-contain",
+                              loading: "eager"
+                            }
+                          ) })
+                        ]
+                      }
+                    ),
+                    /* @__PURE__ */ jsxs("div", { className: "flex-1 p-8 md:p-10 flex flex-col justify-center", children: [
+                      /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-2 mb-5", children: [
+                        /* @__PURE__ */ jsx(
+                          "div",
+                          {
+                            className: "flex items-center justify-center w-9 h-9 rounded-xl",
+                            style: { backgroundColor: cert.accentLight },
+                            children: /* @__PURE__ */ jsx(
+                              Icon,
+                              {
+                                className: "w-5 h-5",
+                                style: { color: cert.accent }
+                              }
+                            )
+                          }
+                        ),
+                        /* @__PURE__ */ jsx(
+                          "span",
+                          {
+                            className: "text-xs font-bold uppercase tracking-widest",
+                            style: { color: cert.accent },
+                            children: cert.label
+                          }
+                        ),
+                        /* @__PURE__ */ jsx(
+                          BadgeCheck,
+                          {
+                            className: "w-4 h-4 ml-1",
+                            style: { color: cert.accent }
+                          }
+                        )
+                      ] }),
                       /* @__PURE__ */ jsx(
-                        BadgeCheck,
+                        "h2",
                         {
-                          className: "w-4 h-4 text-[#edad1a]",
-                          "aria-hidden": "true"
+                          className: "text-4xl md:text-5xl font-black leading-none mb-1",
+                          style: { color: "#00274d" },
+                          children: "ISO"
                         }
                       ),
-                      cert.title
+                      /* @__PURE__ */ jsx(
+                        "h2",
+                        {
+                          className: "text-4xl md:text-5xl font-black leading-none mb-6",
+                          style: { color: cert.accent },
+                          children: cert.title.replace("ISO ", "")
+                        }
+                      ),
+                      /* @__PURE__ */ jsx(
+                        "div",
+                        {
+                          className: "h-[2px] w-12 rounded-full mb-5",
+                          style: { backgroundColor: cert.accent }
+                        }
+                      ),
+                      /* @__PURE__ */ jsx("p", { className: "text-slate-600 leading-relaxed text-sm md:text-base text-justify", children: cert.content })
                     ] })
-                  ] }),
-                  /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#071827] mb-5", children: cert.title }),
-                  /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-base md:text-lg", children: cert.content })
+                  ]
+                }
+              )
+            ]
+          },
+          cert.title
+        );
+      }) }),
+      /* @__PURE__ */ jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true },
+          className: "mt-12 rounded-2xl bg-[#00274d] p-6 flex flex-col sm:flex-row items-center justify-between gap-4",
+          children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("div", { className: "w-10 h-10 rounded-full bg-[#0057b8]/30 flex items-center justify-center", children: /* @__PURE__ */ jsx(BadgeCheck, { className: "w-5 h-5 text-blue-300" }) }),
+              /* @__PURE__ */ jsxs("div", { children: [
+                /* @__PURE__ */ jsx("p", { className: "text-white font-semibold text-sm", children: "Internationally Certified" }),
+                /* @__PURE__ */ jsx("p", { className: "text-blue-200 text-xs", children: "ISO 9001 · ISO 14001 · ISO 27001" })
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: "mailto:enquiry@vendorinfra.com",
+                className: "inline-flex items-center gap-2 bg-[#0057b8] hover:bg-[#0046a0] text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors duration-200 whitespace-nowrap",
+                children: [
+                  "enquiry@vendorinfra.com",
+                  /* @__PURE__ */ jsx("svg", { className: "w-3.5 h-3.5", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", strokeWidth: 2.5, children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M17 8l4 4m0 0l-4 4m4-4H3" }) })
                 ]
               }
             )
           ]
-        },
-        cert.title
-      );
-    }) }) }) }) }),
+        }
+      )
+    ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
 }
@@ -6826,32 +6989,130 @@ const sections$2 = [
   }
 ];
 function PricingPolicy() {
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-white", children: [
     /* @__PURE__ */ jsx(Navbar, {}),
-    /* @__PURE__ */ jsx(
-      PageHero,
-      {
-        eyebrow: "Policy",
-        title: "Pricing Policy"
-      }
-    ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-gray-50 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-4xl", children: [
-      /* @__PURE__ */ jsx("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden", children: sections$2.map((section, index) => /* @__PURE__ */ jsxs(
+    /* @__PURE__ */ jsx(PageHero, { eyebrow: "Policy", title: "Pricing Policy" }),
+    /* @__PURE__ */ jsx("section", { className: "py-16 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-4xl", children: [
+      /* @__PURE__ */ jsxs(
         motion.div,
         {
-          initial: { opacity: 0, y: 20 },
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.4 },
+          className: "mb-10 rounded-2xl border border-[#0057b8]/20 bg-white shadow-sm overflow-hidden",
+          children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 px-6 py-4 bg-[#00274d]", children: [
+              /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-blue-300 animate-pulse" }),
+              /* @__PURE__ */ jsx("span", { className: "text-white text-sm font-semibold tracking-wider uppercase", children: "Table of Contents" })
+            ] }),
+            /* @__PURE__ */ jsx("ul", { className: "grid grid-cols-2 sm:grid-cols-3 gap-px bg-[#e8f1fb]", children: sections$2.map((s, i) => /* @__PURE__ */ jsx("li", { className: "bg-white", children: /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: `#section-${i}`,
+                className: "flex items-center gap-2 px-4 py-3 text-xs text-[#00274d] font-medium hover:bg-[#e8f1fb] hover:text-[#0057b8] transition-colors group",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "w-5 h-5 flex-shrink-0 rounded-full bg-[#e8f1fb] group-hover:bg-[#0057b8] group-hover:text-white text-[10px] font-bold flex items-center justify-center text-[#0057b8] transition-colors", children: String(i + 1).padStart(2, "0") }),
+                  s.title
+                ]
+              }
+            ) }, s.title)) })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute left-[27px] top-0 bottom-0 w-px bg-gradient-to-b from-[#0057b8] via-[#0057b8]/30 to-transparent hidden sm:block" }),
+        /* @__PURE__ */ jsx("div", { className: "space-y-5", children: sections$2.map((s, i) => /* @__PURE__ */ jsxs(
+          motion.div,
+          {
+            id: `section-${i}`,
+            initial: { opacity: 0, x: -12 },
+            whileInView: { opacity: 1, x: 0 },
+            viewport: { once: true, margin: "-60px" },
+            transition: { delay: i * 0.05, duration: 0.4 },
+            className: "group relative",
+            children: [
+              /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-6 w-[55px] hidden sm:flex items-center justify-center z-10", children: /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-full bg-white border-2 border-[#0057b8] flex items-center justify-center text-[11px] font-bold text-[#0057b8] shadow-sm group-hover:bg-[#0057b8] group-hover:text-white transition-colors duration-200", children: String(i + 1).padStart(2, "0") }) }),
+              /* @__PURE__ */ jsxs("div", { className: "sm:ml-16 rounded-2xl bg-white border border-[#0057b8]/15 shadow-sm overflow-hidden group-hover:border-[#0057b8]/50 group-hover:shadow-md transition-all duration-200", children: [
+                /* @__PURE__ */ jsx("div", { className: "h-[3px] w-full bg-gradient-to-r from-[#0057b8] to-[#38bdf8]" }),
+                /* @__PURE__ */ jsxs("div", { className: "px-8 py-7", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4 mb-4", children: [
+                    /* @__PURE__ */ jsx("span", { className: "sm:hidden flex-shrink-0 mt-1 w-7 h-7 rounded-full bg-[#e8f1fb] text-[#0057b8] text-[11px] font-bold flex items-center justify-center", children: String(i + 1).padStart(2, "0") }),
+                    /* @__PURE__ */ jsx("h2", { className: "text-xl md:text-2xl font-bold text-[#00274d] leading-snug", children: s.title })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "h-px bg-gradient-to-r from-[#0057b8]/30 via-[#0057b8]/10 to-transparent mb-5" }),
+                  s.content.split("\n\n").map((para, j) => /* @__PURE__ */ jsx(
+                    "p",
+                    {
+                      className: "text-slate-600 leading-relaxed text-sm mb-3 last:mb-0 whitespace-pre-line text-justify",
+                      children: para
+                    },
+                    j
+                  ))
+                ] })
+              ] })
+            ]
+          },
+          s.title
+        )) })
+      ] }),
+      /* @__PURE__ */ jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: true },
-          transition: { delay: index * 0.03 },
-          className: `p-7 md:p-8 ${index < sections$2.length - 1 ? "border-b border-gray-100" : ""}`,
+          className: "mt-12 sm:ml-16 rounded-2xl bg-[#00274d] border border-[#0057b8]/30 p-8 text-center shadow-lg",
           children: [
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-3", children: section.title }),
-            section.content.split("\n\n").map((paragraph) => /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-sm mb-3 last:mb-0", children: paragraph }, paragraph))
+            /* @__PURE__ */ jsx("div", { className: "inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#0057b8]/20 mb-4", children: /* @__PURE__ */ jsx(
+              "svg",
+              {
+                className: "w-5 h-5 text-blue-300",
+                fill: "none",
+                viewBox: "0 0 24 24",
+                stroke: "currentColor",
+                strokeWidth: 2,
+                children: /* @__PURE__ */ jsx(
+                  "path",
+                  {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  }
+                )
+              }
+            ) }),
+            /* @__PURE__ */ jsx("p", { className: "text-white font-semibold text-base mb-1", children: "Have questions? Reach out to us at" }),
+            /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: "mailto:enquiry@vendorinfra.com",
+                className: "inline-flex items-center gap-2 bg-[#0057b8] hover:bg-[#0046a0] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200",
+                children: [
+                  "enquiry@vendorinfra.com",
+                  /* @__PURE__ */ jsx(
+                    "svg",
+                    {
+                      className: "w-3.5 h-3.5",
+                      fill: "none",
+                      viewBox: "0 0 24 24",
+                      stroke: "currentColor",
+                      strokeWidth: 2.5,
+                      children: /* @__PURE__ */ jsx(
+                        "path",
+                        {
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                        }
+                      )
+                    }
+                  )
+                ]
+              }
+            )
           ]
-        },
-        section.title
-      )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
+        }
+      )
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -6903,7 +7164,7 @@ Phone: +91-8800404840`
   }
 ];
 function PrivacyPolicy() {
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-white", children: [
     /* @__PURE__ */ jsx(Navbar, {}),
     /* @__PURE__ */ jsx(
       PageHero,
@@ -6912,23 +7173,127 @@ function PrivacyPolicy() {
         title: "Committed to protecting your privacy"
       }
     ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-gray-50 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-3xl", children: [
-      /* @__PURE__ */ jsx("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden", children: sections$1.map((s, i) => /* @__PURE__ */ jsxs(
+    /* @__PURE__ */ jsx("section", { className: "py-16 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-4xl", children: [
+      /* @__PURE__ */ jsxs(
         motion.div,
         {
-          initial: { opacity: 0, y: 20 },
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.4 },
+          className: "mb-10 rounded-2xl border border-[#0057b8]/20 bg-white shadow-sm overflow-hidden",
+          children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 px-6 py-4 bg-[#00274d]", children: [
+              /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-blue-300 animate-pulse" }),
+              /* @__PURE__ */ jsx("span", { className: "text-white text-sm font-semibold tracking-wider uppercase", children: "Table of Contents" })
+            ] }),
+            /* @__PURE__ */ jsx("ul", { className: "grid grid-cols-2 sm:grid-cols-3 gap-px bg-[#e8f1fb]", children: sections$1.map((s, i) => /* @__PURE__ */ jsx("li", { className: "bg-white", children: /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: `#section-${i}`,
+                className: "flex items-center gap-2 px-4 py-3 text-xs text-[#00274d] font-medium hover:bg-[#e8f1fb] hover:text-[#0057b8] transition-colors group",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "w-5 h-5 flex-shrink-0 rounded-full bg-[#e8f1fb] group-hover:bg-[#0057b8] group-hover:text-white text-[10px] font-bold flex items-center justify-center text-[#0057b8] transition-colors", children: String(i + 1).padStart(2, "0") }),
+                  s.title
+                ]
+              }
+            ) }, s.title)) })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute left-[27px] top-0 bottom-0 w-px bg-gradient-to-b from-[#0057b8] via-[#0057b8]/30 to-transparent hidden sm:block" }),
+        /* @__PURE__ */ jsx("div", { className: "space-y-5", children: sections$1.map((s, i) => /* @__PURE__ */ jsxs(
+          motion.div,
+          {
+            id: `section-${i}`,
+            initial: { opacity: 0, x: -12 },
+            whileInView: { opacity: 1, x: 0 },
+            viewport: { once: true, margin: "-60px" },
+            transition: { delay: i * 0.05, duration: 0.4 },
+            className: "group relative",
+            children: [
+              /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-6 w-[55px] hidden sm:flex items-center justify-center z-10", children: /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-full bg-white border-2 border-[#0057b8] flex items-center justify-center text-[11px] font-bold text-[#0057b8] shadow-sm group-hover:bg-[#0057b8] group-hover:text-white transition-colors duration-200", children: String(i + 1).padStart(2, "0") }) }),
+              /* @__PURE__ */ jsxs("div", { className: "sm:ml-16 rounded-2xl bg-white border border-[#0057b8]/15 shadow-sm overflow-hidden group-hover:border-[#0057b8]/50 group-hover:shadow-md transition-all duration-200", children: [
+                /* @__PURE__ */ jsx("div", { className: "h-[3px] w-full bg-gradient-to-r from-[#0057b8] to-[#38bdf8]" }),
+                /* @__PURE__ */ jsxs("div", { className: "px-8 py-7", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4 mb-4", children: [
+                    /* @__PURE__ */ jsx("span", { className: "sm:hidden flex-shrink-0 mt-1 w-7 h-7 rounded-full bg-[#e8f1fb] text-[#0057b8] text-[11px] font-bold flex items-center justify-center", children: String(i + 1).padStart(2, "0") }),
+                    /* @__PURE__ */ jsx("h2", { className: "text-xl md:text-2xl font-bold text-[#00274d] leading-snug", children: s.title })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "h-px bg-gradient-to-r from-[#0057b8]/30 via-[#0057b8]/10 to-transparent mb-5" }),
+                  s.content.split("\n\n").map((para, j) => /* @__PURE__ */ jsx(
+                    "p",
+                    {
+                      className: "text-slate-600 leading-relaxed text-sm mb-3 last:mb-0 whitespace-pre-line text-justify",
+                      children: para
+                    },
+                    j
+                  ))
+                ] })
+              ] })
+            ]
+          },
+          s.title
+        )) })
+      ] }),
+      /* @__PURE__ */ jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: true },
-          transition: { delay: i * 0.04 },
-          className: `p-8 ${i < sections$1.length - 1 ? "border-b border-gray-100" : ""}`,
+          className: "mt-12 sm:ml-16 rounded-2xl bg-[#00274d] border border-[#0057b8]/30 p-8 text-center shadow-lg",
           children: [
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-3", children: s.title }),
-            s.content.split("\n\n").map((para, j) => /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-sm mb-3 last:mb-0 whitespace-pre-line", children: para }, j))
+            /* @__PURE__ */ jsx("div", { className: "inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#0057b8]/20 mb-4", children: /* @__PURE__ */ jsx(
+              "svg",
+              {
+                className: "w-5 h-5 text-blue-300",
+                fill: "none",
+                viewBox: "0 0 24 24",
+                stroke: "currentColor",
+                strokeWidth: 2,
+                children: /* @__PURE__ */ jsx(
+                  "path",
+                  {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  }
+                )
+              }
+            ) }),
+            /* @__PURE__ */ jsx("p", { className: "text-white font-semibold text-base mb-1", children: "Have questions? Reach out to us at" }),
+            /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: "mailto:enquiry@vendorinfra.com",
+                className: "inline-flex items-center gap-2 bg-[#0057b8] hover:bg-[#0046a0] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200",
+                children: [
+                  "enquiry@vendorinfra.com",
+                  /* @__PURE__ */ jsx(
+                    "svg",
+                    {
+                      className: "w-3.5 h-3.5",
+                      fill: "none",
+                      viewBox: "0 0 24 24",
+                      stroke: "currentColor",
+                      strokeWidth: 2.5,
+                      children: /* @__PURE__ */ jsx(
+                        "path",
+                        {
+                          strokeLinecap: "round",
+                          strokeLinejoin: "round",
+                          d: "M17 8l4 4m0 0l-4 4m4-4H3"
+                        }
+                      )
+                    }
+                  )
+                ]
+              }
+            )
           ]
-        },
-        s.title
-      )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
+        }
+      )
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });
@@ -7282,7 +7647,7 @@ Email: enquiry@vendorinfra.com`
   }
 ];
 function Terms() {
-  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
+  return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col bg-white", children: [
     /* @__PURE__ */ jsx(Navbar, {}),
     /* @__PURE__ */ jsx(
       PageHero,
@@ -7291,23 +7656,93 @@ function Terms() {
         title: "Simple, transparent usage guidelines"
       }
     ),
-    /* @__PURE__ */ jsx("section", { className: "py-20 bg-gray-50 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-3xl", children: [
-      /* @__PURE__ */ jsx("div", { className: "bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden", children: sections.map((s, i) => /* @__PURE__ */ jsxs(
+    /* @__PURE__ */ jsx("section", { className: "py-16 flex-1", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-4xl", children: [
+      /* @__PURE__ */ jsxs(
         motion.div,
         {
-          initial: { opacity: 0, y: 20 },
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.4 },
+          className: "mb-10 rounded-2xl border border-[#0057b8]/20 bg-white shadow-sm overflow-hidden",
+          children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 px-6 py-4 bg-[#00274d]", children: [
+              /* @__PURE__ */ jsx("div", { className: "w-2 h-2 rounded-full bg-blue-300 animate-pulse" }),
+              /* @__PURE__ */ jsx("span", { className: "text-white text-sm font-semibold tracking-wider uppercase", children: "Table of Contents" })
+            ] }),
+            /* @__PURE__ */ jsx("ul", { className: "grid grid-cols-2 sm:grid-cols-3 gap-px bg-[#e8f1fb]", children: sections.map((s, i) => /* @__PURE__ */ jsx("li", { className: "bg-white", children: /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: `#section-${i}`,
+                className: "flex items-center gap-2 px-4 py-3 text-xs text-[#00274d] font-medium hover:bg-[#e8f1fb] hover:text-[#0057b8] transition-colors group",
+                children: [
+                  /* @__PURE__ */ jsx("span", { className: "w-5 h-5 flex-shrink-0 rounded-full bg-[#e8f1fb] group-hover:bg-[#0057b8] group-hover:text-white text-[10px] font-bold flex items-center justify-center text-[#0057b8] transition-colors", children: String(i + 1).padStart(2, "0") }),
+                  s.title
+                ]
+              }
+            ) }, s.title)) })
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+        /* @__PURE__ */ jsx("div", { className: "absolute left-[27px] top-0 bottom-0 w-px bg-gradient-to-b from-[#0057b8] via-[#0057b8]/30 to-transparent hidden sm:block" }),
+        /* @__PURE__ */ jsx("div", { className: "space-y-5", children: sections.map((s, i) => /* @__PURE__ */ jsxs(
+          motion.div,
+          {
+            id: `section-${i}`,
+            initial: { opacity: 0, x: -12 },
+            whileInView: { opacity: 1, x: 0 },
+            viewport: { once: true, margin: "-60px" },
+            transition: { delay: i * 0.05, duration: 0.4 },
+            className: "group relative",
+            children: [
+              /* @__PURE__ */ jsx("div", { className: "absolute left-0 top-6 w-[55px] hidden sm:flex items-center justify-center z-10", children: /* @__PURE__ */ jsx("div", { className: "w-9 h-9 rounded-full bg-white border-2 border-[#0057b8] flex items-center justify-center text-[11px] font-bold text-[#0057b8] shadow-sm group-hover:bg-[#0057b8] group-hover:text-white transition-colors duration-200", children: String(i + 1).padStart(2, "0") }) }),
+              /* @__PURE__ */ jsxs("div", { className: "sm:ml-16 rounded-2xl bg-white border border-[#0057b8]/15 shadow-sm overflow-hidden group-hover:border-[#0057b8]/50 group-hover:shadow-md transition-all duration-200", children: [
+                /* @__PURE__ */ jsx("div", { className: "h-[3px] w-full bg-gradient-to-r from-[#0057b8] to-[#38bdf8]" }),
+                /* @__PURE__ */ jsxs("div", { className: "px-8 py-7", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4 mb-4", children: [
+                    /* @__PURE__ */ jsx("span", { className: "sm:hidden flex-shrink-0 mt-1 w-7 h-7 rounded-full bg-[#e8f1fb] text-[#0057b8] text-[11px] font-bold flex items-center justify-center", children: String(i + 1).padStart(2, "0") }),
+                    /* @__PURE__ */ jsx("h2", { className: "text-xl md:text-2xl font-bold text-[#00274d] leading-snug", children: s.title })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "h-px bg-gradient-to-r from-[#0057b8]/30 via-[#0057b8]/10 to-transparent mb-5" }),
+                  s.content.split("\n\n").map((para, j) => /* @__PURE__ */ jsx(
+                    "p",
+                    {
+                      className: "text-slate-600 leading-relaxed text-sm mb-3 last:mb-0 whitespace-pre-line text-justify",
+                      children: para
+                    },
+                    j
+                  ))
+                ] })
+              ] })
+            ]
+          },
+          s.title
+        )) })
+      ] }),
+      /* @__PURE__ */ jsxs(
+        motion.div,
+        {
+          initial: { opacity: 0, y: 16 },
           whileInView: { opacity: 1, y: 0 },
           viewport: { once: true },
-          transition: { delay: i * 0.04 },
-          className: `p-8 ${i < sections.length - 1 ? "border-b border-gray-100" : ""}`,
+          className: "mt-12 sm:ml-16 rounded-2xl bg-[#00274d] border border-[#0057b8]/30 p-8 text-center shadow-lg",
           children: [
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-[#00274d] mb-3", children: s.title }),
-            s.content.split("\n\n").map((para, j) => /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed text-sm mb-3 last:mb-0 whitespace-pre-line", children: para }, j))
+            /* @__PURE__ */ jsx("div", { className: "inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#0057b8]/20 mb-4", children: /* @__PURE__ */ jsx("svg", { className: "w-5 h-5 text-blue-300", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", strokeWidth: 2, children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" }) }) }),
+            /* @__PURE__ */ jsx("p", { className: "text-white font-semibold text-base mb-1", children: "Have questions? Reach out to us at " }),
+            /* @__PURE__ */ jsxs(
+              "a",
+              {
+                href: "mailto:enquiry@vendorinfra.com",
+                className: "inline-flex items-center gap-2 bg-[#0057b8] hover:bg-[#0046a0] text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors duration-200",
+                children: [
+                  "enquiry@vendorinfra.com",
+                  /* @__PURE__ */ jsx("svg", { className: "w-3.5 h-3.5", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", strokeWidth: 2.5, children: /* @__PURE__ */ jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", d: "M17 8l4 4m0 0l-4 4m4-4H3" }) })
+                ]
+              }
+            )
           ]
-        },
-        s.title
-      )) }),
-      /* @__PURE__ */ jsx("p", { className: "text-center text-gray-400 text-xs mt-8", children: "Have questions? Reach out to us at enquiry@vendorinfra.com" })
+        }
+      )
     ] }) }),
     /* @__PURE__ */ jsx(Footer, {})
   ] });

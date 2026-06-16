@@ -248,17 +248,17 @@ function LogoMarquee({ logos, bg = "white" }: { logos: { name: string; logo: str
         {doubled.map((l, i) => (
           <div
             key={i}
-            className={`group flex-shrink-0 flex items-center justify-center h-14 px-5 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 ${
+            className={`group flex-shrink-0 flex items-center justify-center h-14 px-8 rounded-xl border transition-all duration-300 hover:-translate-y-0.5 ${
               bg === "dark"
                 ? "bg-white/8 border-white/10 hover:border-[#edad1a]/40"
                 : "bg-white border-[#00274d]/10 shadow-[0_2px_10px_-6px_rgba(0,39,77,0.18)] hover:shadow-[0_6px_18px_-8px_rgba(0,39,77,0.3)] hover:border-[#00274d]/25"
             }`}
-            style={{ minWidth: 130 }}
+            style={{ minWidth: 150 }}
           >
             <img
               src={l.logo}
               alt={l.name}
-              className={`max-h-8 max-w-[100px] object-contain transition duration-300 ${bg === "dark" ? "brightness-0 invert opacity-80" : "opacity-90 group-hover:opacity-100"}`}
+              className={`max-h-12 max-w-[140px] object-contain transition duration-300 ${bg === "dark" ? "brightness-0 invert opacity-80" : "opacity-90 group-hover:opacity-100"}`}
               loading="eager"
             />
           </div>

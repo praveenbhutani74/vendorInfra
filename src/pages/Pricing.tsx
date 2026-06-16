@@ -92,41 +92,59 @@ function PlanCard({
             {plan.tag}
           </span>
         )}
-        <h3 className={`text-2xl font-bold mb-3 ${plan.highlight ? "text-white" : "text-[#00274d]"}`}>
-          {plan.name}
-        </h3>
+       <div className="flex items-center gap-8 mb-4">
+  <h3
+    className={`text-2xl font-bold ${
+      plan.highlight ? "text-white" : "text-[#00274d]"
+    }`}
+  >
+    {plan.name}
+  </h3>
 
-        <div className="flex items-baseline gap-1 mb-3">
-          {isContact ? (
-            <button
-              type="button"
-              onClick={() => onContact(plan.name)}
-              className={`inline-flex items-center justify-center rounded-xl px-5 py-3 text-lg font-bold transition-all ${
-                plan.highlight
-                  ? "bg-[#edad1a] text-white hover:bg-[#d4941a] shadow-lg shadow-yellow-500/20"
-                  : "bg-[#00274d] text-white hover:bg-[#003a73] shadow-md"
-              }`}
-            >
-              {plan.price}
-            </button>
-          ) : (
-            <span className={`text-4xl font-extrabold tracking-tight ${plan.highlight ? "text-white" : "text-[#00274d]"}`}>
-              {plan.price}
-            </span>
-          )}
-          {plan.priceSuffix && (
-            <span className={`text-sm font-medium ${plan.highlight ? "text-white/60" : "text-gray-500"}`}>
-              {plan.priceSuffix}
-            </span>
-          )}
-        </div>
+  {isContact ? (
+    <button
+      type="button"
+      onClick={() => onContact(plan.name)}
+      className={`inline-flex items-center justify-center rounded-xl px-5 py-3 text-lg font-bold transition-all ${
+        plan.highlight
+          ? "bg-[#edad1a] text-white hover:bg-[#d4941a]"
+          : "bg-[#00274d] text-white hover:bg-[#003a73]"
+      }`}
+    >
+      {plan.price}
+    </button>
+  ) : (
+    <div className="flex items-baseline gap-1">
+      <span
+        className={`text-4xl font-extrabold tracking-tight ${
+          plan.highlight ? "text-white" : "text-[#00274d]"
+        }`}
+      >
+        {plan.price}
+      </span>
+
+      {plan.priceSuffix && (
+        <span
+          className={`text-sm font-medium ${
+            plan.highlight ? "text-white/60" : "text-gray-500"
+          }`}
+        >
+          {plan.priceSuffix}
+        </span>
+      )}
+    </div>
+  )}
+</div>
 
         <p className={`text-sm leading-snug ${plan.highlight ? "text-white/65" : "text-gray-500"}`}>
           {plan.description}
         </p>
       </div>
 
-      <div className={`h-px ${plan.highlight ? "bg-white/10" : "bg-gray-100"}`} />
+      {/* <div className={`h-px ${plan.highlight ? "bg-white/10" : "bg-gray-100"}`} />
+       */}
+<div className={`h-px ${plan.highlight ? "bg-white/10" : "bg-[#00274d]"}`} />
+       {/* plan.highlight ? "bg-[#00274d]" : "bg-gray-100" */}
 
       <div className={`px-8 py-6 flex-1 flex flex-col ${plan.highlight ? "bg-[#00274d]" : "bg-white"}`}>
         <ul className="space-y-3 flex-1 mb-8">

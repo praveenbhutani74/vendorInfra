@@ -378,19 +378,35 @@ export default function Services() {
                         {service.title}
                       </h3>
 
-                      <div className="space-y-5">
-                        {service.points.map((point, i) => (
-                          <div key={i} className="group/p flex gap-4 p-4 -mx-4 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300">
-                            <div className="w-9 h-9 rounded-xl bg-[#edad1a]/10 text-[#edad1a] flex items-center justify-center shrink-0 mt-0.5 group-hover/p:bg-[#edad1a] group-hover/p:text-white transition-colors">
-                              <CheckCircle2 className="w-4.5 h-4.5" strokeWidth={2.5} />
-                            </div>
-                            <div>
-                              <h4 className="type-card-title text-[#00274d] mb-1">{point.label}</h4>
-                              <p className="text-gray-500 text-sm leading-relaxed">{point.desc}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+                   <div className="space-y-8">
+  {service.points.map((point, i) => (
+    <div key={i} className="relative flex gap-4">
+      
+      {/* Vertical line */}
+      {i !== service.points.length - 1 && (
+        <div className="absolute left-[18px] top-10 w-[2px] h-[calc(100%+24px)] bg-[#edad1a]" />
+      )}
+
+      {/* Icon */}
+      <div className="relative z-10 w-9 h-9 rounded-xl bg-[#fdf4e3] flex items-center justify-center shrink-0">
+        <CheckCircle2
+          className="w-4 h-4 text-[#edad1a]"
+          strokeWidth={2.5}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="pb-6">
+        <h4 className="type-card-title text-[#00274d] mb-1">
+          {point.label}
+        </h4>
+        <p className="text-gray-500 text-sm leading-relaxed">
+          {point.desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
                     </div>
                   </div>
               );
