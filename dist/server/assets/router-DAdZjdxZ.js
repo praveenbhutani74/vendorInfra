@@ -100,11 +100,11 @@ function RootComponent() {
   const { queryClient } = Route$7.useRouteContext();
   return /* @__PURE__ */ jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./_-Bq50oKXn.js");
+const $$splitComponentImporter$1 = () => import("./_-b8OGQ9Ey.js");
 const Route$6 = createFileRoute("/$")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-Bq50oKXn.js");
+const $$splitComponentImporter = () => import("./index-b8OGQ9Ey.js");
 const Route$5 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });

@@ -57,7 +57,7 @@ const faqGroups = [
     faqs: [
       {
         q: "What is the business model of Vendor Infra?",
-        a: "Vendor Infra operates as a SaaS-enabled B2B marketplace and digital collaboration platform in the infrastructure/construction sector. Revenue streams include subscriptions, vendor listings, marketplace transactions, financing/insurance facilitation and intelligence services.",
+        a: "Vendor Infra is an AI-powered operating system for the infrastructure, construction, and manufacturing industry. We connect all industry stakeholders on a single integrated platform, enabling contractors and businesses to discover verified vendors through AI-powered vendor discovery, access smart procurement, buy, hire, and sell plants & equipment through our AI-powered marketplace, secure project insurance, leverage AI-powered market intelligence, find subcontracting opportunities, and drive business growth—all while reducing costs, improving efficiency, and accelerating growth.",
       },
       {
         q: "What problem is Vendor Infra solving in the infrastructure industry?",
@@ -69,7 +69,7 @@ const faqGroups = [
       },
       {
         q: "How can interested investors engage with Vendor Infra?",
-        a: "Investors can reach out via the company\u2019s investor relations contact, request a pitch deck, and discuss strategic partnerships or funding rounds.",
+        a: "Investors can reach out through our Contact Us page. Our Investor Relations team will get in touch with you to discuss potential investment opportunities and the next steps.",
       },
     ],
   },
