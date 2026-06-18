@@ -6068,7 +6068,7 @@ function Pricing() {
             animate: { opacity: 1, y: 0 },
             transition: { delay: 0.1 },
             className: "text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-4",
-            children: "Clear and transparent pricing"
+            children: "AI-Powered SaaS Platform Pricing"
           }
         )
       ] })
@@ -6116,6 +6116,10 @@ function Pricing() {
           /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold leading-tight text-white max-w-3xl mx-auto", children: "Explore Answers To Frequently Asked Questions" })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "space-y-5", children: [
+          {
+            q: "What does this subscription include?",
+            a: "The subscription provides access to the Vendor Infra AI-powered SaaS platform. Depending on your selected plan, you'll gain access to features such as AI Vendor Discovery, Smart Price Discovery, AI-Powered Plant & Equipment, Sector Intelligence, Smart Dashboards, and more."
+          },
           {
             q: "How is billing handled?",
             a: "All listed plans are monthly pricing plans billed annually. You pay once for the year and receive the discounted monthly rate."
