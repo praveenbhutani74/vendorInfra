@@ -27,11 +27,15 @@ import { usePageSeo } from "@/lib/seo";
 import { siteButtonClasses } from "@/components/SiteButton";
 
 const heroStats = [
-  { value: "260+ Cr", label: "ARR" },
-  { value: "75%", label: "YoY growth" },
-  { value: "106", label: "enterprise clients" },
+  { value: "260+ Cr ARR", label: "ARR" },
+  { value: "75% YOY Growth", label: "YoY growth" },
+
+  { value: "Industry Veteran Angel backed", label: "unit economics" },
   { value: "Profitable", label: "unit economics" },
+    { value: "106 Enterprise Clients", label: "enterprise clients" },
 ];
+
+
 
 const problems = [
   {
@@ -483,24 +487,23 @@ export default function Investor() {
           />
           <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001d3a] to-transparent" />
           <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-            <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center">
+            <div >
               <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>
                 <span className="inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6">
-                  Investor
+                  Investor Relations
                 </span>
-                <h1 className="text-4xl md:text-6xl font-black leading-[0.98] tracking-tight mb-6">
-                Digitizing execution across India’s 12+ lakh crore infrastructure economy.
+                <h1 className="text-4xl md:text-6xl font-black leading-[0.98]  mb-6">
+                AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry
 
                 </h1>
-                {/* <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-                  Vendor Infra is an AI-powered operating system for infrastructure, construction and manufacturing, connecting supply chain, SaaS, plants and equipment, insurance and contract manufacturing into one execution layer.
-                </p> */}
+                <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
+ Digitizing execution across India’s 12+ lakh crore infrastructure economy.                </p>
 
                 <div className="grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4 mb-8">
                   {heroStats.map((stat) => (
                     <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
                       <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
-                      <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p>
+                      {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
                     </div>
                   ))}
                 </div>
@@ -521,42 +524,7 @@ export default function Investor() {
                 transition={{ delay: 0.1 }}
                 className="relative"
               >
-                <div className="rounded-[28px] border border-white/12 bg-white/6 p-5 md:p-6 backdrop-blur shadow-2xl shadow-black/20">
-                <div className="rounded-2xl bg-[#edad1a] p-5 text-[#00274d] shadow-xl shadow-black/20">
-                  <p className="text-xs font-black uppercase tracking-[0.24em]">Core opportunity</p>
-                  <p className="mt-2 text-4xl font-black leading-none">12+ Lac Cr</p>
-                  <p className="mt-2 text-sm font-bold">Infrastructure economy moving toward digital execution</p>
-                </div>
-
-                <div className="mt-5 space-y-4">
-                  {[
-                    ["Network", "Contractors, suppliers, OEMs, consultants", "Creates repeat usage"],
-                    ["Intelligence", "Reliability, pricing, credit and sector data", "Builds data moat"],
-                    ["Transactions", "Supply, financing, equipment and insurance", "Scales revenue"],
-                  ].map(([title, text, outcome], index) => (
-                    <div key={title} className="rounded-2xl border border-white/12 bg-[#00274d] p-4 text-white shadow-lg shadow-black/10">
-                      <div className="flex items-start gap-4">
-                        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white text-[#00274d] font-black">
-                          {index + 1}
-                        </span>
-                        <div>
-                          <h3 className="text-lg font-black">{title}</h3>
-                          <p className="mt-1 text-sm leading-relaxed text-white/65">{text}</p>
-                          <p className="mt-2 text-xs font-black uppercase tracking-[0.18em] text-[#edad1a]">{outcome}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                  {["Industry veteran angel backed", "Profitable", "106 enterprise clients"].map((item) => (
-                    <div key={item} className="rounded-xl border border-white/10 bg-white p-3 text-center text-xs font-black leading-snug text-[#00274d]">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-                </div>
+             
               </motion.div>
             </div>
           </div>
@@ -867,7 +835,7 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Business model</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black leading-tight mb-5">
-                ARE WE SAAS, SUPPLY CHAIN OR AN ECOSYSTEM?
+                Are We SaaS, Supply Chain, or an Ecosystem?
               </h2>
               {/* <p className="mx-auto max-w-3xl text-white/72 leading-relaxed">
                 Each layer reinforces the next: network creates usage, usage creates intelligence, and intelligence converts into higher-quality transactions at scale.
@@ -943,7 +911,7 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Offerings</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight">
-              KEY OFFERINGS & VALUE PROPOSITION
+                Key Offerings & Value Proposition
               </h2>
               {/* <p className="mx-auto mt-4 max-w-2xl text-gray-600">
                 Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer.
@@ -1066,7 +1034,7 @@ export default function Investor() {
               <div className="lg:sticky lg:top-28">
                 <SectionEyebrow>AI platform</SectionEyebrow>
                 <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5">
-                  AI- DRIVEN PLATFORM MODULES
+                  AI-Driven Platform Modules
                 </h2>
                 {/* <p className="text-gray-600 leading-relaxed">
                   Vendor Infra is building high-growth SaaS modules across tender intelligence, tender-to-BOQ conversion, AI bidding, growth automation, vendor intelligence, spare parts and insurance intelligence.
