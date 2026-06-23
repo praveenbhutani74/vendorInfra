@@ -54,7 +54,7 @@ export function Footer() {
                   { href: "/why-us", label: "Why Us" },
                 { href: "/pricing", label: "Pricing Plans" },
                 { href: "/career", label: "Career" },
-                // { href: "/investor", label: "Investor" },
+                { href: "/investor", label: "Investor" },
                 { href: "/blog", label: "Blog" },
               ].map(({ href, label }) => (
                 <li key={href}>

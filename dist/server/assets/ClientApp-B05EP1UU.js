@@ -381,7 +381,7 @@ const MORE_LINKS = [
   { href: "/blog", label: "Blog" },
   { href: "/why-us", label: "Why Us" },
   { href: "/faq", label: "FAQ" },
-  { href: "/investor", label: "Investor" },
+  { href: "/career", label: "Career" },
   { href: "/referral", label: "Referral Programme" }
 ];
 function Navbar() {
@@ -569,7 +569,7 @@ function Footer() {
           { href: "/why-us", label: "Why Us" },
           { href: "/pricing", label: "Pricing Plans" },
           { href: "/career", label: "Career" },
-          // { href: "/investor", label: "Investor" },
+          { href: "/investor", label: "Investor" },
           { href: "/blog", label: "Blog" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
       ] }),

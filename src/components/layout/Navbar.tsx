@@ -12,7 +12,7 @@ const MORE_LINKS = [
   { href: "/blog",     label: "Blog" },
   { href: "/why-us",   label: "Why Us" },
   { href: "/faq",      label: "FAQ" },
-  { href: "/investor", label: "Investor" },
+  { href: "/career", label: "Career" },
   { href: "/referral", label: "Referral Programme" },
 ];
 
