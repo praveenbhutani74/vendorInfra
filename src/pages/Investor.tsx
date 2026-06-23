@@ -455,6 +455,7 @@ function SectionEyebrow({ children }: { children: string }) {
     <span className="inline-flex items-center gap-3 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
       <span className="w-8 h-px bg-[#edad1a]/60" />
       {children}
+      <span className="w-8 h-px bg-[#edad1a]/60" />
     </span>
   );
 }
@@ -560,96 +561,100 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-[#00274d] py-16 md:py-24 text-white">
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage: "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-              backgroundSize: "44px 44px",
-            }}
-          />
-          <div className="container relative mx-auto px-4 max-w-7xl">
-            <div className="mx-auto mb-14 max-w-4xl text-center">
-              <SectionEyebrow>Problem</SectionEyebrow>
-              <h2 className="text-3xl md:text-5xl font-black leading-tight text-white">
-                A massive industry still trapped in offline execution loops.
-              </h2>
-              <p className="mx-auto mt-5 max-w-2xl text-white/70">
-                Four structural gaps keep infrastructure execution slow, opaque and relationship-dependent.
-              </p>
-            </div>
+     <section className="relative overflow-hidden bg-white py-16 md:py-24 text-[#00274d]">
+  <div
+    className="absolute inset-0 opacity-[0.04]"
+    style={{
+      backgroundImage: "linear-gradient(#00274d 1px, transparent 1px), linear-gradient(90deg, #00274d 1px, transparent 1px)",
+      backgroundSize: "44px 44px",
+    }}
+  />
+  <div className="container relative mx-auto px-4 max-w-7xl">
+    <div className="mx-auto mb-14 max-w-4xl text-center">
+      <SectionEyebrow>Problem</SectionEyebrow>
+      <h2 className="text-3xl md:text-5xl font-black leading-tight text-[#00274d]">
+        A massive industry still trapped in offline execution loops.
+      </h2>
+      <p className="mx-auto mt-5 max-w-2xl text-[#00274d]/70">
+        Four structural gaps keep infrastructure execution slow, opaque and relationship-dependent.
+      </p>
+    </div>
 
-            <div className="relative grid gap-5 lg:grid-cols-[1fr_220px_1fr] lg:items-center">
-              <div className="space-y-5">
-                {problems.slice(0, 2).map((item, index) => {
-                  const Icon = [Network, Workflow][index];
-                  return (
-                    <motion.article
-                      key={item.title}
-                      initial={{ opacity: 0, x: -18 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="rounded-2xl border border-white/10 bg-white p-6 text-[#00274d] shadow-xl shadow-black/10"
-                    >
-                      <div className="flex items-start gap-5">
-                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#edad1a]/15 text-[#edad1a]">
-                          <Icon className="h-7 w-7" />
-                        </span>
-                        <div>
-                          <p className="mb-2 text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]">Problem {index + 1}</p>
-                          <h3 className="text-xl font-black leading-tight">{item.title}</h3>
-                          <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.text}</p>
-                        </div>
-                      </div>
-                    </motion.article>
-                  );
-                })}
-              </div>
-
-              <div className="relative mx-auto flex h-56 w-56 items-center justify-center rounded-full border border-[#edad1a]/30 bg-white/8 p-5 shadow-2xl shadow-black/20 lg:h-72 lg:w-72">
-                <div className="absolute inset-6 rounded-full border border-dashed border-[#edad1a]/40" />
-                <div className="absolute h-full w-px bg-[#edad1a]/30" />
-                <div className="absolute h-px w-full bg-[#edad1a]/30" />
-                <div className="relative z-10 rounded-2xl bg-[#edad1a] px-5 py-4 text-center text-[#00274d]">
-                  <p className="text-xs font-black uppercase tracking-[0.22em]">Offline</p>
-                  <p className="mt-1 text-2xl font-black">Friction</p>
+    <div className="relative grid gap-5 lg:grid-cols-[1fr_220px_1fr] lg:items-center">
+      <div className="space-y-5">
+        {problems.slice(0, 2).map((item, index) => {
+          const Icon = [Network, Workflow][index];
+          return (
+            <motion.article
+              key={item.title}
+              initial={{ opacity: 0, x: -18 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="rounded-2xl border border-[#00274d]/12 bg-[#00274d] p-6 text-white shadow-xl shadow-black/10"
+            >
+              <div className="flex items-start gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a]">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <div>
+                  <p className="mb-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-[#edad1a]">Problem {index + 1}</p>
+                  <h3 className="text-lg font-black leading-tight text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
                 </div>
               </div>
+            </motion.article>
+          );
+        })}
+      </div>
 
-              <div className="space-y-5">
-                {problems.slice(2, 4).map((item, index) => {
-                  const Icon = [Target, Layers3][index];
-                  return (
-                    <motion.article
-                      key={item.title}
-                      initial={{ opacity: 0, x: 18 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.05 }}
-                      className="rounded-2xl border border-white/10 bg-white p-6 text-[#00274d] shadow-xl shadow-black/10"
-                    >
-                      <div className="flex items-start gap-5">
-                        <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#edad1a]/15 text-[#edad1a]">
-                          <Icon className="h-7 w-7" />
-                        </span>
-                        <div>
-                          <p className="mb-2 text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]">Problem {index + 3}</p>
-                          <h3 className="text-xl font-black leading-tight">{item.title}</h3>
-                          <p className="mt-3 text-sm leading-relaxed text-gray-600">{item.text}</p>
-                        </div>
-                      </div>
-                    </motion.article>
-                  );
-                })}
+      {/* ── Center Orb ── */}
+      <div className="relative mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[#edad1a]/35 bg-[#f0f2f5] lg:h-[220px] lg:w-[220px]">
+        {/* crosshair lines bleeding outside */}
+        <div className="absolute top-1/2 -left-8 -right-8 h-px -translate-y-1/2 bg-[#edad1a]/40" />
+        <div className="absolute left-1/2 -top-8 -bottom-8 w-px -translate-x-1/2 bg-[#edad1a]/40" />
+        {/* inner dashed ring */}
+        <div className="absolute inset-5 rounded-full border border-dashed border-[#edad1a]/50" />
+        {/* badge */}
+        <div className="relative z-10 rounded-xl bg-[#edad1a] px-5 py-3 text-center text-[#00274d] shadow-lg shadow-[#edad1a]/25">
+          <p className="text-[9px] font-black uppercase tracking-[0.22em]">Offline</p>
+          <p className="mt-0.5 text-2xl font-black">Friction</p>
+        </div>
+      </div>
+
+      <div className="space-y-5">
+        {problems.slice(2, 4).map((item, index) => {
+          const Icon = [Target, Layers3][index];
+          return (
+            <motion.article
+              key={item.title}
+              initial={{ opacity: 0, x: 18 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              className="rounded-2xl border border-[#00274d]/12 bg-[#00274d] p-6 text-white shadow-xl shadow-black/10"
+            >
+              <div className="flex items-start gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a]">
+                  <Icon className="h-6 w-6" />
+                </span>
+                <div>
+                  <p className="mb-1.5 text-[10px] font-black uppercase tracking-[0.22em] text-[#edad1a]">Problem {index + 3}</p>
+                  <h3 className="text-lg font-black leading-tight text-white">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-white/60">{item.text}</p>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </motion.article>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="relative overflow-hidden bg-white py-16 md:py-24">
-          <div className="absolute left-0 top-12 h-32 w-32 rounded-full border-[10px] border-r-0 border-b-0 border-[#edad1a]" />
-          <div className="absolute bottom-10 right-0 h-32 w-32 rounded-full border-[10px] border-l-0 border-t-0 border-[#00274d]" />
+          {/* <div className="absolute left-0 top-12 h-32 w-32 rounded-full border-[10px] border-r-0 border-b-0 border-[#edad1a]" /> */}
+          {/* <div className="absolute bottom-10 right-0 h-32 w-32 rounded-full border-[10px] border-l-0 border-t-0 border-[#00274d]" /> */}
           <div className="container relative mx-auto px-4 max-w-7xl">
             <div className="mb-12 text-center">
               <SectionEyebrow>Our thesis</SectionEyebrow>
@@ -1108,40 +1113,100 @@ export default function Investor() {
               </p>
             </div>
 
-            <div className="space-y-8">
-              {supplyChainFlow.map((flow) => (
-                <motion.div
-                  key={flow.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="rounded-2xl border border-gray-100 bg-[#f8fafc] p-5 md:p-6"
-                >
-                  <div className={`mb-5 inline-flex rounded-full px-5 py-2 text-sm font-black text-white ${flow.badge}`}>
-                    {flow.label}
-                  </div>
-                  <div className="grid gap-5 lg:grid-cols-[1fr_260px]">
-                    {flow.lanes.map((lane) => (
-                      <div key={lane.title} className={`rounded-2xl border-2 border-dashed ${flow.tone} bg-white p-5`}>
-                        <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-                          <h3 className="text-lg font-black text-[#00274d]">{lane.title}</h3>
-                          <span className="text-sm font-bold text-[#edad1a]">{lane.share}</span>
+            <div className="grid gap-6 lg:grid-cols-2">
+              {supplyChainFlow.map((flow, flowIndex) => {
+                const isVendorInfra = flow.label === "Vendor Infra";
+                const buyingLane = flow.lanes[0];
+                const sellingLane = flow.lanes[1];
+                return (
+                  <motion.article
+                    key={flow.label}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: flowIndex * 0.08 }}
+                    className={`relative overflow-hidden rounded-3xl border p-6 md:p-7 shadow-xl ${
+                      isVendorInfra
+                        ? "border-[#00274d] bg-[#00274d] text-white shadow-[#00274d]/20"
+                        : "border-gray-100 bg-[#f8fafc] text-[#00274d] shadow-[#00274d]/6"
+                    }`}
+                  >
+                    <div
+                      className="absolute inset-0 opacity-[0.08]"
+                      style={{
+                        backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
+                        backgroundSize: "22px 22px",
+                      }}
+                    />
+                    <div className="relative">
+                      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                          <span className={`inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${
+                            isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"
+                          }`}>
+                            {flow.label}
+                          </span>
+                          <h3 className={`mt-4 text-2xl font-black leading-tight ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>
+                            {isVendorInfra ? "Direct client motion" : "Multi-layer trading motion"}
+                          </h3>
                         </div>
-                        <div className="flex flex-wrap items-center gap-3">
-                          {lane.nodes.map((node, index) => (
-                            <div key={node} className="flex items-center gap-3">
-                              <span className="rounded-xl border-2 border-[#00274d] bg-white px-4 py-2 text-sm font-bold text-[#00274d]">
-                                {node}
-                              </span>
-                              {index < lane.nodes.length - 1 && <ArrowRight className="h-4 w-4 text-[#edad1a]" />}
-                            </div>
-                          ))}
+                        <div className={`rounded-2xl px-4 py-3 text-center ${isVendorInfra ? "bg-white/10" : "bg-white"}`}>
+                          <p className="text-3xl font-black text-[#edad1a]">{isVendorInfra ? "100%" : "80/20"}</p>
+                          <p className={`text-[10px] font-black uppercase tracking-[0.18em] ${isVendorInfra ? "text-white/60" : "text-gray-500"}`}>
+                            {isVendorInfra ? "buy and sell" : "split model"}
+                          </p>
                         </div>
                       </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+
+                      <div className="space-y-5">
+                        <div className={`rounded-2xl border p-5 ${isVendorInfra ? "border-white/15 bg-white/8" : "border-gray-100 bg-white"}`}>
+                          <div className="mb-4 flex items-center justify-between gap-3">
+                            <p className={`font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>{buyingLane.title}</p>
+                            <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]">{buyingLane.share}</span>
+                          </div>
+                          <div className="grid gap-3 sm:grid-cols-2">
+                            {buyingLane.nodes.map((node, index) => (
+                              <div key={node} className={`relative rounded-xl border px-4 py-3 text-sm font-bold ${
+                                isVendorInfra ? "border-white/15 bg-[#00274d] text-white" : "border-[#00274d]/15 bg-[#f8fafc] text-[#00274d]"
+                              }`}>
+                                {node}
+                                {index < buyingLane.nodes.length - 1 && (
+                                  <ArrowRight className="absolute -right-5 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-[#edad1a] sm:block" />
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="flex justify-center">
+                          <div className={`flex items-center gap-3 rounded-full px-5 py-2 text-sm font-black ${
+                            isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"
+                          }`}>
+                            <ArrowRight className="h-4 w-4 rotate-90" />
+                            {isVendorInfra ? "direct conversion to end client" : "handoff through another layer"}
+                          </div>
+                        </div>
+
+                        <div className={`rounded-2xl border p-5 ${isVendorInfra ? "border-[#edad1a]/45 bg-[#edad1a]/12" : "border-gray-100 bg-white"}`}>
+                          <div className="mb-4 flex items-center justify-between gap-3">
+                            <p className={`font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>{sellingLane.title}</p>
+                            <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]">{sellingLane.share}</span>
+                          </div>
+                          <div className="rounded-xl border-2 border-[#edad1a] bg-white px-5 py-4 text-center text-base font-black text-[#00274d]">
+                            {sellingLane.nodes[0]}
+                          </div>
+                        </div>
+                      </div>
+
+                      <p className={`mt-6 text-sm leading-relaxed ${isVendorInfra ? "text-white/70" : "text-gray-600"}`}>
+                        {isVendorInfra
+                          ? "Vendor Infra buys across the supply base and sells directly to end clients, strengthening account ownership and cross-selling potential."
+                          : "New-age companies primarily operate inside manufacturer-distributor-trader networks, leaving a smaller direct end-client motion."}
+                      </p>
+                    </div>
+                  </motion.article>
+                );
+              })}
             </div>
           </div>
         </section>

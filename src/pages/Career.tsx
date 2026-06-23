@@ -28,7 +28,7 @@ const culturePoints = [
     icon: Users,
   },
   {
-    title: "Performance-driven rewards",
+    title: "Performance-driven",
     text: "Hard work and results are recognized and rewarded, not overlooked.",
     icon: CheckCircle2,
   },
@@ -41,7 +41,7 @@ const culturePoints = [
 
 const openings = [
   "Sales Executive / Senior Sales Executive",
-  "Social Media Executive (Graphic Design Specialisation)",
+  "Digital Marketing Executive (Graphic Design & Social Media Specialist)",
 ];
 
 const positions = [
@@ -53,7 +53,7 @@ const positions = [
 
 export default function Career() {
   usePageSeo(
-    "Careers at Vendor Infra | Join Our Team",
+    "Career at Vendor Infra | Join Our Team",
     "Explore current openings at Vendor Infra and apply to build your career with a growth-oriented infrastructure technology company."
   );
 
@@ -71,7 +71,7 @@ export default function Career() {
       <Navbar />
 
       <PageHero
-        eyebrow="Careers"
+        eyebrow="Career"
         title="A place to build, grow, and succeed — together."
       />
 
@@ -88,6 +88,7 @@ export default function Career() {
                 <span className="inline-flex items-center gap-3 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
                   <span className="w-8 h-px bg-[#edad1a]/60" />
                   Join the team
+                  <span className="w-8 h-px bg-[#edad1a]/60" />
                 </span>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
                   Your work should feel visible, valued, and useful.
@@ -100,7 +101,7 @@ export default function Career() {
                 </p>
               </motion.div>
 
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid sm:grid-cols-2 gap-2">
                 {culturePoints.map((item, index) => {
                   const Icon = item.icon;
                   return (
@@ -115,7 +116,7 @@ export default function Career() {
                       <div className="w-12 h-12 rounded-xl bg-[#00274d]/5 text-[#00274d] flex items-center justify-center mb-5">
                         <Icon className="w-6 h-6" />
                       </div>
-                      <h3 className="text-lg font-bold text-[#00274d] mb-2">{item.title}</h3>
+                      <h4 className="text-lg font-bold text-[#00274d] mb-2">{item.title}</h4>
                       <p className="text-sm text-gray-600 leading-relaxed">{item.text}</p>
                     </motion.article>
                   );
@@ -132,7 +133,9 @@ export default function Career() {
                 <span className="inline-flex items-center gap-3 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
                   <span className="w-8 h-px bg-[#edad1a]/60" />
                   Current openings
+                  <span className="w-8 h-px bg-[#edad1a]/60" />
                 </span>
+                
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-8">
                   Roles we are hiring for
                 </h2>
@@ -153,7 +156,7 @@ export default function Career() {
                         <p className="font-bold text-[#00274d] text-lg leading-snug">{opening}</p>
                         <p className="text-sm text-gray-500 mt-1">Full-time role at Vendor Infra</p>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-[#edad1a] shrink-0" />
+                      {/* <ArrowRight className="w-5 h-5 text-[#edad1a] shrink-0" /> */}
                     </motion.div>
                   ))}
                 </div>
@@ -213,12 +216,12 @@ export default function Career() {
                 </label>
                 <label className="block">
                   <span className="block text-sm font-semibold text-[#00274d] mb-2">Position Applying For</span>
-                  <select required name="position" defaultValue="" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10">
-                    <option value="" disabled>Select a position</option>
+                  <input required name="position" defaultValue="" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10">
+                    {/* <option value="" disabled>Select a position</option>
                     {positions.map((position) => (
                       <option key={position} value={position}>{position}</option>
-                    ))}
-                  </select>
+                    ))} */}
+                  </input>
                 </label>
                 <label className="block">
                   <span className="block text-sm font-semibold text-[#00274d] mb-2">Years of Experience</span>
