@@ -447,7 +447,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.28 }}
               className="text-white/75 text-sm lg:text-base leading-relaxed mb-8 max-w-xl font-light"
             >
-              Unleashing the potential through Ecosystem.
+              Connecting Contractors, Manufacturers & Capital.
             </motion.p>
 
             <motion.div

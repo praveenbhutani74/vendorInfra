@@ -2700,7 +2700,7 @@ function Home() {
             animate: { opacity: 1, y: 0 },
             transition: { duration: 0.6, delay: 0.28 },
             className: "text-white/75 text-sm lg:text-base leading-relaxed mb-8 max-w-xl font-light",
-            children: "Unleashing the potential through Ecosystem."
+            children: "Connecting Contractors, Manufacturers & Capital."
           }
         ),
         /* @__PURE__ */ jsxs(
