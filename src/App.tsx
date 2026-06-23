@@ -23,6 +23,8 @@ import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import Security from "@/pages/Security";
 import Terms from "@/pages/Terms";
 import FAQ from "@/pages/FAQ";
+import Career from "@/pages/Career";
+import Investor from "@/pages/Investor";
 import Materials from "@/pages/Materials";
 import MaterialCategory from "@/pages/MaterialCategory";
 import MaterialProduct from "@/pages/MaterialProduct";
@@ -64,6 +66,10 @@ function Router() {
         <Route path="/security" component={Security} />
         <Route path="/terms" component={Terms} />
         <Route path="/faq" component={FAQ} />
+        <Route path="/career" component={Career} />
+        <Route path="/careers" component={Career} />
+        <Route path="/investor" component={Investor} />
+        <Route path="/investors" component={Investor} />
         <Route path="/materials" component={Materials} />
         <Route path="/materials/:category" component={MaterialCategory} />
         <Route path="/materials/:category/:product" component={MaterialProduct} />

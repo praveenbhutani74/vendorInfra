@@ -53,6 +53,8 @@ export function Footer() {
                 { href: "/materials", label: "Materials" },
                   { href: "/why-us", label: "Why Us" },
                 { href: "/pricing", label: "Pricing Plans" },
+                { href: "/career", label: "Career" },
+                // { href: "/investor", label: "Investor" },
                 { href: "/blog", label: "Blog" },
               ].map(({ href, label }) => (
                 <li key={href}>
