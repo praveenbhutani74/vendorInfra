@@ -5,7 +5,7 @@ import { useLocation, Link, useParams, Router as Router$1, Switch, Route } from 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva } from "class-variance-authority";
-import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, Upload, Workflow, Handshake, CircleDollarSign, Boxes, Landmark, Bot, BadgeIndianRupee, MapPinned, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
+import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, Upload, Workflow, Bot, CircleDollarSign, Boxes, Landmark, BadgeIndianRupee, MapPinned, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
@@ -8229,56 +8229,6 @@ const solutions = [
     icon: Layers3
   }
 ];
-const ecosystemWheel = [
-  {
-    title: "Tender Intelligence",
-    text: "Live tender details, support and analysis",
-    icon: BarChart3,
-    area: "lg:col-start-2 lg:row-start-1"
-  },
-  {
-    title: "Vendor Discovery",
-    text: "32K verified vendors and faster sourcing",
-    icon: Building2,
-    area: "lg:col-start-3 lg:row-start-1"
-  },
-  {
-    title: "Price Discovery/SOR",
-    text: "Transparent pricing and 75+ updated SOR available",
-    icon: CircleDollarSign,
-    area: "lg:col-start-3 lg:row-start-2"
-  },
-  {
-    title: "Project Insurance",
-    text: "Integrated risk coverage",
-    icon: ShieldCheck,
-    area: "lg:col-start-3 lg:row-start-3"
-  },
-  {
-    title: "Material Procurement & Credit",
-    text: "Materials procurement with working-capital solutions",
-    icon: Boxes,
-    area: "lg:col-start-2 lg:row-start-3"
-  },
-  {
-    title: "Plants & Equipment",
-    text: "Optimized utilization of heavy assets",
-    icon: Landmark,
-    area: "lg:col-start-1 lg:row-start-3"
-  },
-  {
-    title: "Maintenance",
-    text: "Choose from our integrated services",
-    icon: Workflow,
-    area: "lg:col-start-1 lg:row-start-2"
-  },
-  {
-    title: "Growth & Diversification",
-    text: "From one sector and geography to another",
-    icon: TrendingUp,
-    area: "lg:col-start-1 lg:row-start-1"
-  }
-];
 const ecosystem = [
   {
     layer: "Layer 1",
@@ -8542,26 +8492,6 @@ const revenueStreams = [
     accent: "bg-[#edad1a]"
   }
 ];
-const supplyChainFlow = [
-  {
-    label: "New Age Companies",
-    tone: "border-[#edad1a]",
-    badge: "bg-[#edad1a]",
-    lanes: [
-      { title: "Buying & Selling", share: "80%", nodes: ["Manufacturer", "Distributors", "Stockiest", "Traders"] },
-      { title: "NAC Selling", share: "20%", nodes: ["End Client"] }
-    ]
-  },
-  {
-    label: "Vendor Infra",
-    tone: "border-[#00274d]",
-    badge: "bg-[#00274d]",
-    lanes: [
-      { title: "VI Buying", share: "100%", nodes: ["Manufacturer", "Distributors", "Stockiest", "Traders"] },
-      { title: "VI Selling", share: "100%", nodes: ["End Client"] }
-    ]
-  }
-];
 const timeline = [
   ["Oct 2019", "Testing"],
   ["Apr 2021", "Company formation"],
@@ -8621,21 +8551,15 @@ function Investor() {
         /* @__PURE__ */ jsx("div", { className: "relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-16 items-center", children: [
           /* @__PURE__ */ jsxs(motion.div, { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, children: [
             /* @__PURE__ */ jsx("span", { className: "inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6", children: "Investor" }),
-            /* @__PURE__ */ jsx("h1", { className: "text-4xl md:text-6xl font-black leading-[0.98] tracking-tight mb-6", children: "Digitising India's infrastructure execution economy." }),
+            /* @__PURE__ */ jsx("h1", { className: "text-4xl md:text-6xl font-black leading-[0.98] tracking-tight mb-6", children: "Digitizing execution across India’s 12+ lakh crore infrastructure economy." }),
             /* @__PURE__ */ jsx("div", { className: "grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4 mb-8", children: heroStats.map((stat) => /* @__PURE__ */ jsxs("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: [
               /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }),
               /* @__PURE__ */ jsx("p", { className: "mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55", children: stat.label })
             ] }, stat.label)) }),
-            /* @__PURE__ */ jsxs("div", { className: "flex flex-col sm:flex-row gap-3", children: [
-              /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
-                "Contact Investor Relations ",
-                /* @__PURE__ */ jsx(Mail, { className: "w-4 h-4" })
-              ] }),
-              /* @__PURE__ */ jsxs(Link, { href: "/contact", className: siteButtonClasses("navy", "border border-white/15 px-6 py-3"), children: [
-                "Connect with team ",
-                /* @__PURE__ */ jsx(ArrowRight, { className: "w-4 h-4" })
-              ] })
-            ] })
+            /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-3", children: /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
+              "Contact Investor Relations ",
+              /* @__PURE__ */ jsx(Mail, { className: "w-4 h-4" })
+            ] }) })
           ] }),
           /* @__PURE__ */ jsx(
             motion.div,
@@ -8682,8 +8606,7 @@ function Investor() {
         /* @__PURE__ */ jsxs("div", { className: "container relative mx-auto px-4 max-w-7xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-14 max-w-4xl text-center", children: [
             /* @__PURE__ */ jsx(SectionEyebrow, { children: "Problem" }),
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight text-[#00274d]", children: "A massive industry still trapped in offline execution loops." }),
-            /* @__PURE__ */ jsx("p", { className: "mx-auto mt-5 max-w-2xl text-[#00274d]/70", children: "Four structural gaps keep infrastructure execution slow, opaque and relationship-dependent." })
+            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight text-[#00274d]", children: "A massive industry still trapped in offline execution loops." })
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "relative grid gap-5 lg:grid-cols-[1fr_220px_1fr] lg:items-center", children: [
             /* @__PURE__ */ jsx("div", { className: "space-y-5", children: problems.slice(0, 2).map((item2, index) => {
@@ -8714,11 +8637,7 @@ function Investor() {
             /* @__PURE__ */ jsxs("div", { className: "relative mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[#edad1a]/35 bg-[#f0f2f5] lg:h-[220px] lg:w-[220px]", children: [
               /* @__PURE__ */ jsx("div", { className: "absolute top-1/2 -left-8 -right-8 h-px -translate-y-1/2 bg-[#edad1a]/40" }),
               /* @__PURE__ */ jsx("div", { className: "absolute left-1/2 -top-8 -bottom-8 w-px -translate-x-1/2 bg-[#edad1a]/40" }),
-              /* @__PURE__ */ jsx("div", { className: "absolute inset-5 rounded-full border border-dashed border-[#edad1a]/50" }),
-              /* @__PURE__ */ jsxs("div", { className: "relative z-10 rounded-xl bg-[#edad1a] px-5 py-3 text-center text-[#00274d] shadow-lg shadow-[#edad1a]/25", children: [
-                /* @__PURE__ */ jsx("p", { className: "text-[9px] font-black uppercase tracking-[0.22em]", children: "Offline" }),
-                /* @__PURE__ */ jsx("p", { className: "mt-0.5 text-2xl font-black", children: "Friction" })
-              ] })
+              /* @__PURE__ */ jsx("div", { className: "absolute inset-5 rounded-full border border-dashed border-[#edad1a]/50" })
             ] }),
             /* @__PURE__ */ jsx("div", { className: "space-y-5", children: problems.slice(2, 4).map((item2, index) => {
               const Icon = [Target, Layers3][index];
@@ -8834,92 +8753,6 @@ function Investor() {
           );
         }) })
       ] }) }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[360px_1fr] gap-8 items-stretch", children: [
-        /* @__PURE__ */ jsxs(
-          motion.aside,
-          {
-            initial: { opacity: 0, x: -18 },
-            whileInView: { opacity: 1, x: 0 },
-            viewport: { once: true },
-            className: "relative overflow-hidden rounded-2xl bg-[#00274d] p-7 md:p-8 text-white",
-            children: [
-              /* @__PURE__ */ jsx(
-                "div",
-                {
-                  className: "absolute inset-0 opacity-[0.08]",
-                  style: {
-                    backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
-                    backgroundSize: "26px 26px"
-                  }
-                }
-              ),
-              /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-                /* @__PURE__ */ jsx("div", { className: "mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#edad1a]/15 text-[#edad1a]", children: /* @__PURE__ */ jsx(Handshake, { className: "h-8 w-8" }) }),
-                /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-black leading-tight mb-5", children: "Integrated Products & Services Ecosystem" }),
-                /* @__PURE__ */ jsx("p", { className: "text-white/78 leading-relaxed mb-8", children: "Building one single platform for the infrastructure, construction and manufacturing industry." }),
-                /* @__PURE__ */ jsx("div", { className: "space-y-4", children: ["Procurement", "Discovery", "Reduce Idling", "Cost Optimization & Scalable Growth", "Contract Manufacturing"].map((point) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
-                  /* @__PURE__ */ jsx("span", { className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-[#edad1a]", children: /* @__PURE__ */ jsx(CheckCircle2, { className: "h-4 w-4" }) }),
-                  /* @__PURE__ */ jsx("span", { className: "font-semibold leading-snug", children: point })
-                ] }, point)) })
-              ] })
-            ]
-          }
-        ),
-        /* @__PURE__ */ jsxs(
-          motion.div,
-          {
-            initial: { opacity: 0, y: 18 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            className: "rounded-2xl border border-gray-100 bg-white p-4 md:p-6 shadow-xl shadow-[#00274d]/8",
-            children: [
-              /* @__PURE__ */ jsxs("div", { className: "mb-6 text-center", children: [
-                /* @__PURE__ */ jsx(SectionEyebrow, { children: "Ecosystem map" }),
-                /* @__PURE__ */ jsx("h3", { className: "text-2xl md:text-3xl font-bold text-[#00274d]", children: "Connected growth engines" })
-              ] }),
-              /* @__PURE__ */ jsxs("div", { className: "grid gap-4 lg:grid-cols-3 lg:grid-rows-3 lg:items-stretch", children: [
-                ecosystemWheel.map((item2, index) => {
-                  const Icon = item2.icon;
-                  return /* @__PURE__ */ jsx(
-                    motion.article,
-                    {
-                      initial: { opacity: 0, y: 12 },
-                      whileInView: { opacity: 1, y: 0 },
-                      viewport: { once: true },
-                      transition: { delay: index * 0.035 },
-                      className: `group rounded-2xl border border-gray-100 bg-[#f8fafc] p-4 text-left transition-all hover:-translate-y-1 hover:border-[#edad1a]/45 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/8 ${item2.area}`,
-                      children: /* @__PURE__ */ jsxs("div", { className: "flex items-start gap-4", children: [
-                        /* @__PURE__ */ jsx("span", { className: "flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edad1a]/12 text-[#edad1a] ring-1 ring-[#edad1a]/25 group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors", children: /* @__PURE__ */ jsx(Icon, { className: "h-6 w-6" }) }),
-                        /* @__PURE__ */ jsxs("div", { children: [
-                          /* @__PURE__ */ jsx("h3", { className: "font-black text-[#00274d] leading-snug", children: item2.title }),
-                          /* @__PURE__ */ jsx("p", { className: "mt-1 text-sm text-gray-600 leading-relaxed", children: item2.text })
-                        ] })
-                      ] })
-                    },
-                    item2.title
-                  );
-                }),
-                /* @__PURE__ */ jsx("div", { className: "order-first flex min-h-[260px] items-center justify-center rounded-2xl bg-[#00274d] p-6 text-white shadow-xl shadow-[#00274d]/18 lg:order-none lg:col-start-2 lg:row-start-2", children: /* @__PURE__ */ jsxs("div", { className: "relative h-52 w-52", children: [
-                  /* @__PURE__ */ jsx(
-                    "div",
-                    {
-                      className: "absolute inset-0 rounded-full p-2",
-                      style: {
-                        background: "conic-gradient(from -35deg, #edad1a 0 35%, #ffffff 35% 52%, #00274d 52% 76%, #edad1a 76% 100%)"
-                      },
-                      children: /* @__PURE__ */ jsx("div", { className: "flex h-full w-full items-center justify-center rounded-full bg-[#00274d]", children: /* @__PURE__ */ jsx("div", { className: "flex h-24 w-24 items-center justify-center rounded-full bg-white text-[#00274d] shadow-2xl shadow-black/20", children: /* @__PURE__ */ jsx(Network, { className: "h-10 w-10" }) }) })
-                    }
-                  ),
-                  /* @__PURE__ */ jsx("span", { className: "absolute left-1/2 top-5 h-0 w-0 -translate-x-1/2 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#edad1a]" }),
-                  /* @__PURE__ */ jsx("span", { className: "absolute bottom-5 left-1/2 h-0 w-0 -translate-x-1/2 rotate-180 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#edad1a]" }),
-                  /* @__PURE__ */ jsx("span", { className: "absolute left-5 top-1/2 h-0 w-0 -translate-y-1/2 -rotate-90 border-x-[19px] border-t-[34px] border-x-transparent border-t-white" }),
-                  /* @__PURE__ */ jsx("span", { className: "absolute right-5 top-1/2 h-0 w-0 -translate-y-1/2 rotate-90 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#00274d]" })
-                ] }) })
-              ] })
-            ]
-          }
-        )
-      ] }) }) }),
       /* @__PURE__ */ jsxs("section", { className: "relative overflow-hidden bg-[#00274d] py-16 md:py-24 text-white", children: [
         /* @__PURE__ */ jsx(
           "div",
@@ -8935,8 +8768,7 @@ function Investor() {
         /* @__PURE__ */ jsxs("div", { className: "relative container mx-auto px-4 max-w-7xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
             /* @__PURE__ */ jsx(SectionEyebrow, { children: "Business model" }),
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight mb-5", children: "SaaS, supply chain or ecosystem? Vendor Infra compounds as all three." }),
-            /* @__PURE__ */ jsx("p", { className: "mx-auto max-w-3xl text-white/72 leading-relaxed", children: "Each layer reinforces the next: network creates usage, usage creates intelligence, and intelligence converts into higher-quality transactions at scale." })
+            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight mb-5", children: "ARE WE SAAS, SUPPLY CHAIN OR AN ECOSYSTEM?" })
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "relative", children: [
             /* @__PURE__ */ jsx("div", { className: "absolute left-[16%] right-[16%] top-16 hidden h-px bg-gradient-to-r from-[#edad1a]/20 via-[#edad1a]/70 to-[#edad1a]/20 lg:block" }),
@@ -8989,8 +8821,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Offerings" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black text-[#00274d] leading-tight", children: "Five revenue engines, one operating system." }),
-          /* @__PURE__ */ jsx("p", { className: "mx-auto mt-4 max-w-2xl text-gray-600", children: "Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black text-[#00274d] leading-tight", children: "KEY OFFERINGS & VALUE PROPOSITION" })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid gap-4 lg:grid-cols-5", children: offerings.map((item2, index) => {
           const Icon = item2.icon;
@@ -9015,7 +8846,13 @@ function Investor() {
                   /* @__PURE__ */ jsx(CheckCircle2, { className: "mt-0.5 h-4 w-4 shrink-0 text-[#edad1a]" }),
                   /* @__PURE__ */ jsx("span", { children: point })
                 ] }, point)) }) }),
-                /* @__PURE__ */ jsx("div", { className: "border-t border-gray-100 bg-white px-5 py-4", children: /* @__PURE__ */ jsx("p", { className: "rounded-xl bg-[#edad1a]/12 px-4 py-3 text-center text-sm font-black text-[#00274d]", children: item2.revenue }) })
+                /* @__PURE__ */ jsx("div", { className: "border-t border-gray-100 bg-white px-5 py-4", children: /* @__PURE__ */ jsx(
+                  "p",
+                  {
+                    className: `rounded-xl px-4 py-3 text-center text-sm font-black ${index < 3 ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200" : "bg-gray-100 text-gray-500 ring-1 ring-gray-200"}`,
+                    children: item2.revenue
+                  }
+                ) })
               ]
             },
             item2.title
@@ -9036,8 +8873,7 @@ function Investor() {
         /* @__PURE__ */ jsxs("div", { className: "container relative mx-auto px-4 max-w-7xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
             /* @__PURE__ */ jsx(SectionEyebrow, { children: "Product vision" }),
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight", children: "The roadmap is a set of compounding build tracks." }),
-            /* @__PURE__ */ jsx("p", { className: "mx-auto mt-4 max-w-2xl text-white/70", children: "Every product line moves from workflow capture to intelligence, automation and transaction depth." })
+            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight", children: "The roadmap is a set of compounding build tracks." })
           ] }),
           /* @__PURE__ */ jsx("div", { className: "space-y-4", children: productVision.map((item2, index) => {
             const Icon = item2.icon;
@@ -9071,16 +8907,36 @@ function Investor() {
           }) })
         ] })
       ] }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start", children: [
-        /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: "AI platform modules" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "AI roadmap from completed modules to agentic execution." }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed", children: "Vendor Infra is building high-growth SaaS modules across tender intelligence, tender-to-BOQ conversion, AI bidding, AI growth engine, vendor updation and verification, spare parts and insurance intelligence." })
+      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start", children: [
+        /* @__PURE__ */ jsxs("div", { className: "lg:sticky lg:top-28", children: [
+          /* @__PURE__ */ jsx(SectionEyebrow, { children: "AI platform" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5", children: "AI- DRIVEN PLATFORM MODULES" }),
+          /* @__PURE__ */ jsxs("div", { className: "mt-7 rounded-2xl bg-[#00274d] p-6 text-white", children: [
+            /* @__PURE__ */ jsx("p", { className: "text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]", children: "Platform logic" }),
+            /* @__PURE__ */ jsx("div", { className: "mt-5 grid gap-3", children: ["Discover", "Analyse", "Automate", "Convert"].map((step, index) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-xl bg-white/8 px-4 py-3", children: [
+              /* @__PURE__ */ jsx("span", { className: "flex h-8 w-8 items-center justify-center rounded-lg bg-[#edad1a] text-sm font-black text-[#00274d]", children: index + 1 }),
+              /* @__PURE__ */ jsx("span", { className: "font-bold", children: step })
+            ] }, step)) })
+          ] })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid sm:grid-cols-2 gap-3", children: aiModules.map((module) => /* @__PURE__ */ jsxs("div", { className: "rounded-xl border border-gray-100 bg-white p-4 shadow-sm", children: [
-          /* @__PURE__ */ jsx("p", { className: "text-sm font-bold text-[#00274d] leading-snug", children: module.name }),
-          /* @__PURE__ */ jsx("span", { className: `mt-3 inline-flex rounded-full px-3 py-1 text-xs font-bold ${module.status === "Completed" ? "bg-[#edad1a]/12 text-[#00274d]" : module.status === "Under development" ? "bg-[#edad1a]/12 text-[#00274d]" : "bg-[#00274d]/7 text-[#00274d]"}`, children: module.status })
-        ] }, module.name)) })
+        /* @__PURE__ */ jsx("div", { className: "grid gap-4 sm:grid-cols-2 xl:grid-cols-3", children: aiModules.map((module, index) => /* @__PURE__ */ jsxs(
+          motion.article,
+          {
+            initial: { opacity: 0, y: 14 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: true },
+            transition: { delay: index * 0.025 },
+            className: "group relative min-h-[150px] overflow-hidden rounded-2xl border border-gray-100 bg-[#f8fafc] p-5 shadow-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/10",
+            children: [
+              /* @__PURE__ */ jsx("div", { className: "absolute right-4 top-4 text-5xl font-black text-[#00274d]/5", children: String(index + 1).padStart(2, "0") }),
+              /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+                /* @__PURE__ */ jsx("span", { className: "mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a] group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors", children: /* @__PURE__ */ jsx(Bot, { className: "h-5 w-5" }) }),
+                /* @__PURE__ */ jsx("h3", { className: "text-base font-black leading-snug text-[#00274d]", children: module.name })
+              ] })
+            ]
+          },
+          module.name
+        )) })
       ] }) }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
@@ -9092,82 +8948,10 @@ function Investor() {
           /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-600 leading-relaxed", children: item2.text })
         ] }, item2.title)) })
       ] }) }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
-        /* @__PURE__ */ jsxs("div", { className: "text-center max-w-4xl mx-auto mb-12", children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: "Supply chain revenue" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Differentiated buying and selling structure." }),
-          /* @__PURE__ */ jsx("p", { className: "mt-4 text-gray-600", children: "Vendor Infra builds stronger direct client relationships and creates cross-selling opportunities by operating directly with end clients." })
-        ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid gap-6 lg:grid-cols-2", children: supplyChainFlow.map((flow, flowIndex) => {
-          const isVendorInfra = flow.label === "Vendor Infra";
-          const buyingLane = flow.lanes[0];
-          const sellingLane = flow.lanes[1];
-          return /* @__PURE__ */ jsxs(
-            motion.article,
-            {
-              initial: { opacity: 0, y: 18 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true },
-              transition: { delay: flowIndex * 0.08 },
-              className: `relative overflow-hidden rounded-3xl border p-6 md:p-7 shadow-xl ${isVendorInfra ? "border-[#00274d] bg-[#00274d] text-white shadow-[#00274d]/20" : "border-gray-100 bg-[#f8fafc] text-[#00274d] shadow-[#00274d]/6"}`,
-              children: [
-                /* @__PURE__ */ jsx(
-                  "div",
-                  {
-                    className: "absolute inset-0 opacity-[0.08]",
-                    style: {
-                      backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
-                      backgroundSize: "22px 22px"
-                    }
-                  }
-                ),
-                /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-                  /* @__PURE__ */ jsxs("div", { className: "mb-6 flex flex-wrap items-center justify-between gap-4", children: [
-                    /* @__PURE__ */ jsxs("div", { children: [
-                      /* @__PURE__ */ jsx("span", { className: `inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"}`, children: flow.label }),
-                      /* @__PURE__ */ jsx("h3", { className: `mt-4 text-2xl font-black leading-tight ${isVendorInfra ? "text-white" : "text-[#00274d]"}`, children: isVendorInfra ? "Direct client motion" : "Multi-layer trading motion" })
-                    ] }),
-                    /* @__PURE__ */ jsxs("div", { className: `rounded-2xl px-4 py-3 text-center ${isVendorInfra ? "bg-white/10" : "bg-white"}`, children: [
-                      /* @__PURE__ */ jsx("p", { className: "text-3xl font-black text-[#edad1a]", children: isVendorInfra ? "100%" : "80/20" }),
-                      /* @__PURE__ */ jsx("p", { className: `text-[10px] font-black uppercase tracking-[0.18em] ${isVendorInfra ? "text-white/60" : "text-gray-500"}`, children: isVendorInfra ? "buy and sell" : "split model" })
-                    ] })
-                  ] }),
-                  /* @__PURE__ */ jsxs("div", { className: "space-y-5", children: [
-                    /* @__PURE__ */ jsxs("div", { className: `rounded-2xl border p-5 ${isVendorInfra ? "border-white/15 bg-white/8" : "border-gray-100 bg-white"}`, children: [
-                      /* @__PURE__ */ jsxs("div", { className: "mb-4 flex items-center justify-between gap-3", children: [
-                        /* @__PURE__ */ jsx("p", { className: `font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`, children: buyingLane.title }),
-                        /* @__PURE__ */ jsx("span", { className: "rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]", children: buyingLane.share })
-                      ] }),
-                      /* @__PURE__ */ jsx("div", { className: "grid gap-3 sm:grid-cols-2", children: buyingLane.nodes.map((node, index) => /* @__PURE__ */ jsxs("div", { className: `relative rounded-xl border px-4 py-3 text-sm font-bold ${isVendorInfra ? "border-white/15 bg-[#00274d] text-white" : "border-[#00274d]/15 bg-[#f8fafc] text-[#00274d]"}`, children: [
-                        node,
-                        index < buyingLane.nodes.length - 1 && /* @__PURE__ */ jsx(ArrowRight, { className: "absolute -right-5 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-[#edad1a] sm:block" })
-                      ] }, node)) })
-                    ] }),
-                    /* @__PURE__ */ jsx("div", { className: "flex justify-center", children: /* @__PURE__ */ jsxs("div", { className: `flex items-center gap-3 rounded-full px-5 py-2 text-sm font-black ${isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"}`, children: [
-                      /* @__PURE__ */ jsx(ArrowRight, { className: "h-4 w-4 rotate-90" }),
-                      isVendorInfra ? "direct conversion to end client" : "handoff through another layer"
-                    ] }) }),
-                    /* @__PURE__ */ jsxs("div", { className: `rounded-2xl border p-5 ${isVendorInfra ? "border-[#edad1a]/45 bg-[#edad1a]/12" : "border-gray-100 bg-white"}`, children: [
-                      /* @__PURE__ */ jsxs("div", { className: "mb-4 flex items-center justify-between gap-3", children: [
-                        /* @__PURE__ */ jsx("p", { className: `font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`, children: sellingLane.title }),
-                        /* @__PURE__ */ jsx("span", { className: "rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]", children: sellingLane.share })
-                      ] }),
-                      /* @__PURE__ */ jsx("div", { className: "rounded-xl border-2 border-[#edad1a] bg-white px-5 py-4 text-center text-base font-black text-[#00274d]", children: sellingLane.nodes[0] })
-                    ] })
-                  ] }),
-                  /* @__PURE__ */ jsx("p", { className: `mt-6 text-sm leading-relaxed ${isVendorInfra ? "text-white/70" : "text-gray-600"}`, children: isVendorInfra ? "Vendor Infra buys across the supply base and sells directly to end clients, strengthening account ownership and cross-selling potential." : "New-age companies primarily operate inside manufacturer-distributor-trader networks, leaving a smaller direct end-client motion." })
-                ] })
-              ]
-            },
-            flow.label
-          );
-        }) })
-      ] }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Market size" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "TAM expanding across infrastructure, insurance, equipment and manufacturing." }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed", children: "The opportunity sits across NIP-backed infrastructure activity, general insurance, construction equipment and contract manufacturing. Vendor Infra is positioned across all four pools." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "TAM expanding across infrastructure, insurance, equipment and manufacturing." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid sm:grid-cols-2 gap-4", children: marketCards.map((card) => /* @__PURE__ */ jsxs("article", { className: "rounded-2xl bg-[#00274d] p-5 text-white", children: [
           /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold mb-4", children: card.title }),
@@ -9183,8 +8967,7 @@ function Investor() {
           /* @__PURE__ */ jsxs("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: [
             "Revenue streams share ",
             /* @__PURE__ */ jsx("span", { className: "text-gray-400 text-2xl", children: "(Value in Cr)" })
-          ] }),
-          /* @__PURE__ */ jsx("p", { className: "mt-4 text-gray-600", children: "Since inception till April 2026, revenue has scaled across supply chain and contract manufacturing pilots." })
+          ] })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid gap-5 lg:grid-cols-4", children: revenueStreams.map((item2, index) => /* @__PURE__ */ jsxs(
           motion.article,
@@ -9226,8 +9009,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Competitive landscape" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Significant untapped market with a differentiated unified ecosystem." }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed", children: "Despite multiple players, only 5-7% of the overall market has been tapped so far, indicating significant untapped potential." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Significant untapped market with a differentiated unified ecosystem." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm", children: /* @__PURE__ */ jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxs("table", { className: "w-full table-fixed text-xs sm:text-sm", children: [
           /* @__PURE__ */ jsx("thead", { className: "bg-[#00274d] text-white", children: /* @__PURE__ */ jsx("tr", { children: ["Company", "Founded", "Funding", "Unicorn", "Business type"].map((head) => /* @__PURE__ */ jsx("th", { className: "px-3 py-4 text-left font-bold first:w-[22%] last:w-[32%] sm:px-4", children: head }, head)) }) }),
@@ -9239,16 +9021,41 @@ function Investor() {
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Growth timeline" }),
           /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "From formation to AI-native infrastructure ecosystem." })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-4", children: timeline.map(([date, label]) => /* @__PURE__ */ jsxs("div", { className: "rounded-2xl bg-white border border-gray-100 p-5", children: [
-          /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-sm font-black mb-2", children: date }),
-          /* @__PURE__ */ jsx("p", { className: "text-[#00274d] font-semibold leading-snug", children: label })
-        ] }, date + label)) })
+        /* @__PURE__ */ jsx("div", { className: "space-y-10", children: [timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+          /* @__PURE__ */ jsx("div", { className: "absolute left-[3.5%] right-[3.5%] top-[22px] hidden h-[2px] bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block rounded-full" }),
+          /* @__PURE__ */ jsx(
+            "div",
+            {
+              className: `grid gap-3 ${row.length === 6 ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" : "grid-cols-2 sm:grid-cols-3 xl:grid-cols-5"}`,
+              children: row.map(([date, label], itemIndex) => {
+                const index = rowIndex === 0 ? itemIndex : itemIndex + 6;
+                return /* @__PURE__ */ jsxs(
+                  motion.div,
+                  {
+                    initial: { opacity: 0, y: 16 },
+                    whileInView: { opacity: 1, y: 0 },
+                    viewport: { once: true },
+                    transition: { delay: index * 0.025 },
+                    className: "flex flex-col items-center",
+                    children: [
+                      /* @__PURE__ */ jsx("div", { className: "relative z-10 mb-2.5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border-[3px] border-[#f6f8fb] bg-[#00274d] text-xs font-black text-[#edad1a] ring-2 ring-[#00274d]/20", children: String(index + 1).padStart(2, "0") }),
+                      /* @__PURE__ */ jsxs("div", { className: "w-full flex-1 min-h-[110px] rounded-2xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-150 hover:-translate-y-1 hover:shadow-md hover:shadow-[#00274d]/10", children: [
+                        /* @__PURE__ */ jsx("p", { className: "mb-1.5 text-xs font-black text-[#edad1a]", children: date }),
+                        /* @__PURE__ */ jsx("p", { className: "text-xs font-bold leading-snug text-[#00274d]", children: label })
+                      ] })
+                    ]
+                  },
+                  date + label
+                );
+              })
+            }
+          )
+        ] }, rowIndex)) })
       ] }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Fund requirement" }),
           /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Raising $12M to accelerate expansion and build a defensible technology platform." }),
-          /* @__PURE__ */ jsx("p", { className: "text-gray-600 leading-relaxed mb-6", children: "The round is intended to unlock 3-4x growth, scale to $70M+ revenue, and combine market expansion, technology, and capital-efficient credit structures with strong unit economics." }),
           /* @__PURE__ */ jsxs("div", { className: "rounded-2xl bg-[#00274d] p-6 text-white", children: [
             /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-4xl font-black mb-2", children: "$12M" }),
             /* @__PURE__ */ jsx("p", { className: "text-white/75", children: "1$ equity is expected to create 3-5$ GMV impact through blended revenue, technology and working-capital leverage." })

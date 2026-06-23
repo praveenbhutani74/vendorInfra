@@ -489,7 +489,8 @@ export default function Investor() {
                   Investor
                 </span>
                 <h1 className="text-4xl md:text-6xl font-black leading-[0.98] tracking-tight mb-6">
-                  Digitising India's infrastructure execution economy.
+                Digitizing execution across India’s 12+ lakh crore infrastructure economy.
+
                 </h1>
                 {/* <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
                   Vendor Infra is an AI-powered operating system for infrastructure, construction and manufacturing, connecting supply chain, SaaS, plants and equipment, insurance and contract manufacturing into one execution layer.
@@ -508,9 +509,9 @@ export default function Investor() {
                   <a href="mailto:enquiry@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
                     Contact Investor Relations <Mail className="w-4 h-4" />
                   </a>
-                  <Link href="/contact" className={siteButtonClasses("navy", "border border-white/15 px-6 py-3")}>
+                  {/* <Link href="/contact" className={siteButtonClasses("navy", "border border-white/15 px-6 py-3")}>
                     Connect with team <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  </Link> */}
                 </div>
               </motion.div>
 
@@ -575,9 +576,9 @@ export default function Investor() {
       <h2 className="text-3xl md:text-5xl font-black leading-tight text-[#00274d]">
         A massive industry still trapped in offline execution loops.
       </h2>
-      <p className="mx-auto mt-5 max-w-2xl text-[#00274d]/70">
+      {/* <p className="mx-auto mt-5 max-w-2xl text-[#00274d]/70">
         Four structural gaps keep infrastructure execution slow, opaque and relationship-dependent.
-      </p>
+      </p> */}
     </div>
 
     <div className="relative grid gap-5 lg:grid-cols-[1fr_220px_1fr] lg:items-center">
@@ -616,10 +617,10 @@ export default function Investor() {
         {/* inner dashed ring */}
         <div className="absolute inset-5 rounded-full border border-dashed border-[#edad1a]/50" />
         {/* badge */}
-        <div className="relative z-10 rounded-xl bg-[#edad1a] px-5 py-3 text-center text-[#00274d] shadow-lg shadow-[#edad1a]/25">
-          <p className="text-[9px] font-black uppercase tracking-[0.22em]">Offline</p>
-          <p className="mt-0.5 text-2xl font-black">Friction</p>
-        </div>
+        {/* <div className="relative z-10 rounded-xl bg-[#edad1a] px-5 py-3 text-center text-[#00274d] shadow-lg shadow-[#edad1a]/25">
+          <p className="text-[9px] font-black uppercase tracking-[0.22em]"></p>
+          <p className="mt-0.5 text-2xl font-black"></p>
+        </div> */}
       </div>
 
       <div className="space-y-5">
@@ -752,7 +753,7 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-[#f6f8fb]">
+        {/* <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-stretch">
               <motion.aside
@@ -851,7 +852,7 @@ export default function Investor() {
               </motion.div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="relative overflow-hidden bg-[#00274d] py-16 md:py-24 text-white">
           <div
@@ -866,11 +867,11 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Business model</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black leading-tight mb-5">
-                SaaS, supply chain or ecosystem? Vendor Infra compounds as all three.
+                ARE WE SAAS, SUPPLY CHAIN OR AN ECOSYSTEM?
               </h2>
-              <p className="mx-auto max-w-3xl text-white/72 leading-relaxed">
+              {/* <p className="mx-auto max-w-3xl text-white/72 leading-relaxed">
                 Each layer reinforces the next: network creates usage, usage creates intelligence, and intelligence converts into higher-quality transactions at scale.
-              </p>
+              </p> */}
             </div>
 
             <div className="relative">
@@ -942,11 +943,11 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Offerings</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight">
-                Five revenue engines, one operating system.
+              KEY OFFERINGS & VALUE PROPOSITION
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              {/* <p className="mx-auto mt-4 max-w-2xl text-gray-600">
                 Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer.
-              </p>
+              </p> */}
             </div>
 
             <div className="grid gap-4 lg:grid-cols-5">
@@ -984,8 +985,17 @@ export default function Investor() {
                     </div>
 
                     <div className="border-t border-gray-100 bg-white px-5 py-4">
-                      <p className="rounded-xl bg-[#edad1a]/12 px-4 py-3 text-center text-sm font-black text-[#00274d]">
+                      <p
+                        className={`rounded-xl px-4 py-3 text-center text-sm font-black ${
+                          index < 3
+                            ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200"
+                            : "bg-gray-100 text-gray-500 ring-1 ring-gray-200"
+                        }`}
+                      >
                         {item.revenue}
+                        {/* <span className="mt-1 block text-[10px] uppercase tracking-[0.18em]">
+                          {index < 3 ? "Completed" : "In progress"}
+                        </span> */}
                       </p>
                     </div>
                   </motion.article>
@@ -1009,9 +1019,9 @@ export default function Investor() {
               <h2 className="text-3xl md:text-5xl font-black leading-tight">
                 The roadmap is a set of compounding build tracks.
               </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-white/70">
+              {/* <p className="mx-auto mt-4 max-w-2xl text-white/70">
                 Every product line moves from workflow capture to intelligence, automation and transaction depth.
-              </p>
+              </p> */}
             </div>
 
             <div className="space-y-4">
@@ -1050,32 +1060,54 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20">
+        <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
-              <div>
-                <SectionEyebrow>AI platform modules</SectionEyebrow>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                  AI roadmap from completed modules to agentic execution.
+            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+              <div className="lg:sticky lg:top-28">
+                <SectionEyebrow>AI platform</SectionEyebrow>
+                <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5">
+                  AI- DRIVEN PLATFORM MODULES
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
-                  Vendor Infra is building high-growth SaaS modules across tender intelligence, tender-to-BOQ conversion, AI bidding, AI growth engine, vendor updation and verification, spare parts and insurance intelligence.
-                </p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {aiModules.map((module) => (
-                  <div key={module.name} className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                    <p className="text-sm font-bold text-[#00274d] leading-snug">{module.name}</p>
-                    <span className={`mt-3 inline-flex rounded-full px-3 py-1 text-xs font-bold ${
-                      module.status === "Completed"
-                        ? "bg-[#edad1a]/12 text-[#00274d]"
-                        : module.status === "Under development"
-                          ? "bg-[#edad1a]/12 text-[#00274d]"
-                          : "bg-[#00274d]/7 text-[#00274d]"
-                    }`}>
-                      {module.status}
-                    </span>
+                {/* <p className="text-gray-600 leading-relaxed">
+                  Vendor Infra is building high-growth SaaS modules across tender intelligence, tender-to-BOQ conversion, AI bidding, growth automation, vendor intelligence, spare parts and insurance intelligence.
+                </p> */}
+                <div className="mt-7 rounded-2xl bg-[#00274d] p-6 text-white">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]">Platform logic</p>
+                  <div className="mt-5 grid gap-3">
+                    {["Discover", "Analyse", "Automate", "Convert"].map((step, index) => (
+                      <div key={step} className="flex items-center gap-3 rounded-xl bg-white/8 px-4 py-3">
+                        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#edad1a] text-sm font-black text-[#00274d]">
+                          {index + 1}
+                        </span>
+                        <span className="font-bold">{step}</span>
+                      </div>
+                    ))}
                   </div>
+                </div>
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                {aiModules.map((module, index) => (
+                  <motion.article
+                    key={module.name}
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.025 }}
+                    className="group relative min-h-[150px] overflow-hidden rounded-2xl border border-gray-100 bg-[#f8fafc] p-5 shadow-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/10"
+                  >
+                    <div className="absolute right-4 top-4 text-5xl font-black text-[#00274d]/5">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
+                    <div className="relative">
+                      <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a] group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors">
+                        <Bot className="h-5 w-5" />
+                      </span>
+                      <h3 className="text-base font-black leading-snug text-[#00274d]">
+                        {module.name}
+                      </h3>
+                    </div>
+                  </motion.article>
                 ))}
               </div>
             </div>
@@ -1101,7 +1133,7 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-white">
+        {/* <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center max-w-4xl mx-auto mb-12">
               <SectionEyebrow>Supply chain revenue</SectionEyebrow>
@@ -1209,7 +1241,7 @@ export default function Investor() {
               })}
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -1219,9 +1251,9 @@ export default function Investor() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
                   TAM expanding across infrastructure, insurance, equipment and manufacturing.
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
+                {/* <p className="text-gray-600 leading-relaxed">
                   The opportunity sits across NIP-backed infrastructure activity, general insurance, construction equipment and contract manufacturing. Vendor Infra is positioned across all four pools.
-                </p>
+                </p> */}
               </div>
               <div className="grid sm:grid-cols-2 gap-4">
                 {marketCards.map((card) => (
@@ -1249,9 +1281,9 @@ export default function Investor() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
                 Revenue streams share <span className="text-gray-400 text-2xl">(Value in Cr)</span>
               </h2>
-              <p className="mt-4 text-gray-600">
+              {/* <p className="mt-4 text-gray-600">
                 Since inception till April 2026, revenue has scaled across supply chain and contract manufacturing pilots.
-              </p>
+              </p> */}
             </div>
 
             <div className="grid gap-5 lg:grid-cols-4">
@@ -1329,9 +1361,9 @@ export default function Investor() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
                   Significant untapped market with a differentiated unified ecosystem.
                 </h2>
-                <p className="text-gray-600 leading-relaxed">
+                {/* <p className="text-gray-600 leading-relaxed">
                   Despite multiple players, only 5-7% of the overall market has been tapped so far, indicating significant untapped potential.
-                </p>
+                </p> */}
               </div>
               <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
                 <div className="overflow-hidden">
@@ -1360,7 +1392,7 @@ export default function Investor() {
             </div>
           </div>
         </section>
-
+{/* 
         <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -1369,16 +1401,98 @@ export default function Investor() {
                 From formation to AI-native infrastructure ecosystem.
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {timeline.map(([date, label]) => (
-                <div key={date + label} className="rounded-2xl bg-white border border-gray-100 p-5">
-                  <p className="text-[#edad1a] text-sm font-black mb-2">{date}</p>
-                  <p className="text-[#00274d] font-semibold leading-snug">{label}</p>
+
+            <div className="space-y-12">
+              {[timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => (
+                <div key={rowIndex} className="relative">
+                  <div className="absolute left-0 right-0 top-5 hidden h-1 rounded-full bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block" />
+                  <div
+                    className={`grid gap-4 ${
+                      row.length === 6
+                        ? "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+                        : "sm:grid-cols-2 lg:grid-cols-5"
+                    }`}
+                  >
+                    {row.map(([date, label], itemIndex) => {
+                      const index = rowIndex === 0 ? itemIndex : itemIndex + 6;
+                      return (
+                        <motion.div
+                          key={date + label}
+                          initial={{ opacity: 0, y: 16 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.025 }}
+                          className="relative"
+                        >
+                          <div className="relative z-10 mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-full border-4 border-[#f6f8fb] bg-[#00274d] text-xs font-black text-[#edad1a] shadow-lg shadow-[#00274d]/15">
+                            {String(index + 1).padStart(2, "0")}
+                          </div>
+                          <div className="h-full min-h-[150px] rounded-2xl border border-gray-100 bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#00274d]/8">
+                            <p className="text-[#edad1a] text-sm font-black mb-2">{date}</p>
+                            <p className="text-[#00274d] text-sm font-bold leading-snug">{label}</p>
+                          </div>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
+<section className="py-16 md:py-20 bg-[#f6f8fb]">
+  <div className="container mx-auto px-4 max-w-7xl">
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      <SectionEyebrow>Growth timeline</SectionEyebrow>
+      <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
+        From formation to AI-native infrastructure ecosystem.
+      </h2>
+    </div>
+
+    <div className="space-y-10">
+      {[timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => (
+        <div key={rowIndex} className="relative">
+          {/* Connector line — sits behind the numbered dots */}
+          <div className="absolute left-[3.5%] right-[3.5%] top-[22px] hidden h-[2px] bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block rounded-full" />
+
+          <div
+            className={`grid gap-3 ${
+              row.length === 6
+                ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6"
+                : "grid-cols-2 sm:grid-cols-3 xl:grid-cols-5"
+            }`}
+          >
+            {row.map(([date, label], itemIndex) => {
+              const index = rowIndex === 0 ? itemIndex : itemIndex + 6;
+              return (
+                <motion.div
+                  key={date + label}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.025 }}
+                  className="flex flex-col items-center"
+                >
+                  {/* Numbered circle */}
+                  <div className="relative z-10 mb-2.5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border-[3px] border-[#f6f8fb] bg-[#00274d] text-xs font-black text-[#edad1a] ring-2 ring-[#00274d]/20">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+
+                  {/* Card */}
+                  <div className="w-full flex-1 min-h-[110px] rounded-2xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-150 hover:-translate-y-1 hover:shadow-md hover:shadow-[#00274d]/10">
+                    <p className="mb-1.5 text-xs font-black text-[#edad1a]">{date}</p>
+                    <p className="text-xs font-bold leading-snug text-[#00274d]">{label}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -1388,9 +1502,9 @@ export default function Investor() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
                   Raising $12M to accelerate expansion and build a defensible technology platform.
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                {/* <p className="text-gray-600 leading-relaxed mb-6">
                   The round is intended to unlock 3-4x growth, scale to $70M+ revenue, and combine market expansion, technology, and capital-efficient credit structures with strong unit economics.
-                </p>
+                </p> */}
                 <div className="rounded-2xl bg-[#00274d] p-6 text-white">
                   <p className="text-[#edad1a] text-4xl font-black mb-2">$12M</p>
                   <p className="text-white/75">1$ equity is expected to create 3-5$ GMV impact through blended revenue, technology and working-capital leverage.</p>
