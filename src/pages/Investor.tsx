@@ -411,17 +411,18 @@ const supplyChainFlow = [
 ];
 
 const timeline = [
-  ["Oct 2019", "Testing"],
-  ["Apr 2021", "Company formation"],
-  ["Aug 2021", "Angel round funding"],
-  ["Dec 2021", "Live material procurement"],
-  ["Apr 2022", "Plants and equipment listing"],
-  ["Jul 2025", "SaaS platform free"],
-  ["May 2026", "Contract manufacturing"],
-  ["Dec 2026", "AI-powered insurance service and tender intelligence"],
-  ["Apr 2027", "Paid SaaS, AI vendor discovery, AI plants and equipment, AI sector intelligence"],
-  ["Dec 2027", "AI bidding engine, AI growth engine, AI agents"],
-  ["Jun 2028", "Cross border supply chain and backend integration"],
+  ["Oct 2019", "Company formation"],
+  ["Apr 2021", "Testing"],
+  ["Aug 2021", "Live"],
+  ["Dec 2021", "Angel Round Funding"],
+  ["Apr 2022", "Material Procurement"],
+   ["Apr 2024", "Plants & Equipment Listing"],
+  ["Jul 2025", "SaaS Platform (Free) Contract Manufacturing"],
+  ["May 2026", "SaaS Platform (Paid) and AI-Powered Vendor Discovery AI-Powered Plants & Equipment AI Powered Sector Intelligence."],
+  ["Dec 2026", "AI-Powered Insurance Service. Tender Intelligence. AI Bidding Engine AI Growth Engine AI Agents (Vendor Update & Verification)"],
+  ["Dec 2027", "Backend Integration of Supply Chain "],
+  ["Apr 2027", "NBFC/IRDA License"],
+  ["Jun 2028", "Cross Border Supply Chain"],
 ];
 
 const fundUse = [
@@ -434,11 +435,67 @@ const fundUse = [
 ];
 
 const competitors = [
-  ["Vendor Infra", "2021", "~$265K", "No", "B2B unified ecosystem"],
-  ["OFBusiness", "2015", "~$890M+", "Yes", "Construction materials platform + financing"],
-  ["Zetwerk", "2018", "~$860M+", "Yes", "B2B manufacturing marketplace"],
-  ["Moglix", "2015", "~$470M+", "Yes", "B2B/B2C industrial commerce"],
-  ["Infra.Market", "2016", "~$763M+", "Yes", "Construction materials platform"],
+  {
+    company: "Vendor Infra",
+    foundedYear: 2021,
+    totalFundingRaised: "~$265K",
+    unicornStatus: "No",
+    unicornYear: "NY",
+    currentValuation: "TBD",
+    revenueFY2425: "₹116 Cr",
+    businessType: "B2B unified ecosystem",
+  },
+  {
+    company: "OFBusiness",
+    foundedYear: 2015,
+    totalFundingRaised: "~$890M+",
+    unicornStatus: "Yes",
+    unicornYear: 2021,
+    currentValuation: "~$5B (Target $6–9B IPO)",
+    revenueFY2425: "~₹22,241 Cr",
+    businessType: "Construction materials platform + financing",
+  },
+  {
+    company: "Zetwerk",
+    foundedYear: 2018,
+    totalFundingRaised: "~$860M+",
+    unicornStatus: "Yes",
+    unicornYear: 2021,
+    currentValuation: "~$3.1B",
+    revenueFY2425: "~₹12,798 Cr",
+    businessType: "B2B manufacturing marketplace",
+  },
+  {
+    company: "Moglix",
+    foundedYear: 2015,
+    totalFundingRaised: "~$470M+",
+    unicornStatus: "Yes",
+    unicornYear: 2021,
+    currentValuation: "~$2.6B",
+    revenueFY2425: "₹6,197 Cr",
+    businessType: "B2B/B2C industrial commerce",
+  },
+  {
+    company: "Infra.Market",
+    foundedYear: 2016,
+    totalFundingRaised: "~$763M+",
+    unicornStatus: "Yes",
+    unicornYear: 2021,
+    currentValuation: "~$2.8B",
+    revenueFY2425: "~₹18,472 Cr",
+    businessType: "Construction materials platform",
+  },
+];
+
+const TABLE_HEADERS = [
+  "Company",
+  "Founded",
+  "Funding",
+  "Unicorn Status",
+  "Unicorn Year",
+  "Valuation",
+  "Revenue (FY24-25)",
+  "Business Type",
 ];
 
 function SectionEyebrow({ children }: { children: string }) {
@@ -687,11 +744,12 @@ export default function Investor() {
 
         <section className="py-16 md:py-20">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <SectionEyebrow>Solutions</SectionEyebrow>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-One connected platform for every stage of the infrastructure value chain.              </h2>
-            </div>
+  <div className="text-center max-w-5xl mx-auto mb-12">
+    <SectionEyebrow>Solutions</SectionEyebrow>
+    <h2 className="text-3xl md:text-5xl font-bold text-[#00274d] leading-tight">
+      One connected platform for every stage of the infrastructure value chain.
+    </h2>
+  </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {solutions.map((item, index) => {
                 const Icon = item.icon;
@@ -1316,45 +1374,90 @@ One connected platform for every stage of the infrastructure value chain.       
           </div>
         </section>
 
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
-              <div>
-                <SectionEyebrow>Competitive Advantage</SectionEyebrow>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                 A unified platform with multiple competitive moats.
-                </h2>
-                {/* <p className="text-gray-600 leading-relaxed">
-                  Despite multiple players, only 5-7% of the overall market has been tapped so far, indicating significant untapped potential.
-                </p> */}
-              </div>
-              <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
-                <div className="overflow-hidden">
-                  <table className="w-full table-fixed text-xs sm:text-sm">
-                    <thead className="bg-[#00274d] text-white">
-                      <tr>
-                        {["Company", "Founded", "Funding", "Unicorn", "Business type"].map((head) => (
-                          <th key={head} className="px-3 py-4 text-left font-bold first:w-[22%] last:w-[32%] sm:px-4">{head}</th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {competitors.map((row) => (
-                        <tr key={row[0]} className="border-t border-gray-100">
-                          {row.map((cell, index) => (
-                            <td key={cell + index} className={`break-words px-3 py-4 align-top leading-snug sm:px-4 ${row[0] === "Vendor Infra" ? "font-bold text-[#00274d] bg-[#edad1a]/8" : "text-gray-600"}`}>
-                              {cell}
-                            </td>
-                          ))}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <section className="py-16 md:py-20">
+  <div className="container mx-auto px-4 max-w-7xl">
+    <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
+
+      {/* Left heading */}
+      <div>
+        <SectionEyebrow>Competitive Advantage</SectionEyebrow>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
+          A unified platform with multiple competitive moats.
+        </h2>
+      </div>
+
+      {/* Right table — no overflow-x-auto, fits naturally */}
+      <div className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
+        <table className="w-full text-[11px] sm:text-xs table-fixed">
+
+          <thead className="bg-[#00274d] text-white">
+            <tr>
+              {[
+                { label: "Company",           width: "w-[13%]" },
+                { label: "Founded",           width: "w-[9%]"  },
+                { label: "Funding",           width: "w-[10%]" },
+                { label: "Unicorn Status",    width: "w-[10%]" },
+                { label: "Unicorn Year",      width: "w-[10%]" },
+                { label: "Valuation",         width: "w-[14%]" },
+                { label: "Revenue (FY24-25)", width: "w-[14%]" },
+                { label: "Business Type",     width: "w-[20%]" },
+              ].map(({ label, width }) => (
+                <th
+                  key={label}
+                  className={`${width} px-2 py-3 text-left font-bold leading-snug`}
+                >
+                  {label}
+                </th>
+              ))}
+            </tr>
+          </thead>
+
+          <tbody>
+            {competitors.map((row) => {
+              const isVendorInfra = row.company === "Vendor Infra";
+              return (
+                <tr
+                  key={row.company}
+                  className={`border-t border-gray-100 ${
+                    isVendorInfra ? "bg-[#edad1a]/10" : ""
+                  }`}
+                >
+                  {[
+                    row.company,
+                    row.foundedYear,
+                    row.totalFundingRaised,
+                    row.unicornStatus,
+                    row.unicornYear,
+                    row.currentValuation,
+                    row.revenueFY2425,
+                    row.businessType,
+                  ].map((cell, index) => (
+                    <td
+                      key={index}
+                      className={`px-2 py-3 align-top leading-snug ${
+                        isVendorInfra
+                          ? "font-bold text-[#00274d]"
+                          : index === 7
+                          ? "text-blue-600"
+                          : index === 4 && row.unicornYear !== "NY"
+                          ? "text-blue-600"
+                          : "text-gray-600"
+                      }`}
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>
 {/* 
         <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -1405,12 +1508,12 @@ One connected platform for every stage of the infrastructure value chain.       
         </section> */}
 <section className="py-16 md:py-20 bg-[#f6f8fb]">
   <div className="container mx-auto px-4 max-w-7xl">
-    <div className="text-center max-w-3xl mx-auto mb-12">
-      <SectionEyebrow>Growth timeline</SectionEyebrow>
-      <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-        Building the future of the infrastructure, construction, and manufacturing industries—one milestone at a time.
-      </h2>
-    </div>
+   <div className="text-center max-w-5xl mx-auto mb-12 px-4">
+  <SectionEyebrow>Growth timeline</SectionEyebrow>
+  <h2 className="text-3xl md:text-5xl font-bold text-[#00274d] leading-tight">
+    Building the future of the infrastructure, construction, and manufacturing industries—one milestone at a time.
+  </h2>
+</div>
 
     <div className="space-y-10">
       {[timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => (
