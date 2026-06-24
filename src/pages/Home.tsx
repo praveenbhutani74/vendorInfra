@@ -568,16 +568,9 @@ export default function Home() {
                   />
                 </span>
               </h2>
-
-              <p className="mt-5 max-w-2xl text-sm md:text-[15px] leading-7 text-white/75">
-                Vendor Infra is more than just a platform; it's a community for the Infrastructure, Construction &amp;
-                Manufacturing industry. Designed exclusively for vendors, suppliers, contractors,
-                consultants, and developers, we combine collaboration, marketplace, and supply chain
-                management into one powerful AI-Powered Ecosystem. Based in Delhi NCR and founded by
-                seasoned leaders with decades of experience, Vendor Infra helps stakeholders eliminate
-                bottlenecks, discover the right partners, and execute projects with unmatched speed,
-                transparency, and efficiency.
-              </p>
+<p className="mt-5 max-w-2xl text-sm md:text-[15px] leading-7 text-white/75">
+  Vendor Infra is more than just a platform; it's a community for the trillion-dollar Infrastructure, Construction & Manufacturing industry. Designed exclusively for vendors, suppliers, contractors, consultants, and developers, we combine collaboration, marketplace, and supply chain management into one powerful AI-Powered Ecosystem. Based in Delhi NCR and founded by seasoned leaders with decades of experience, Vendor Infra helps stakeholders eliminate bottlenecks, discover the right partners, and execute projects with unmatched speed, transparency, and efficiency.
+</p>
               <p className="hidden">
                 Empowering contractors &amp; vendors with an AI-driven SaaS platform to discover partners,
                 access opportunities, source efficiently, and scale execution — all in one place.

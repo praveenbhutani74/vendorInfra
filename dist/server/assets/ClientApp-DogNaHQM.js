@@ -2828,7 +2828,7 @@ function Home() {
               )
             ] })
           ] }),
-          /* @__PURE__ */ jsx("p", { className: "mt-5 max-w-2xl text-sm md:text-[15px] leading-7 text-white/75", children: "Vendor Infra is more than just a platform; it's a community for the Infrastructure, Construction & Manufacturing industry. Designed exclusively for vendors, suppliers, contractors, consultants, and developers, we combine collaboration, marketplace, and supply chain management into one powerful AI-Powered Ecosystem. Based in Delhi NCR and founded by seasoned leaders with decades of experience, Vendor Infra helps stakeholders eliminate bottlenecks, discover the right partners, and execute projects with unmatched speed, transparency, and efficiency." }),
+          /* @__PURE__ */ jsx("p", { className: "mt-5 max-w-2xl text-sm md:text-[15px] leading-7 text-white/75", children: "Vendor Infra is more than just a platform; it's a community for the trillion-dollar Infrastructure, Construction & Manufacturing industry. Designed exclusively for vendors, suppliers, contractors, consultants, and developers, we combine collaboration, marketplace, and supply chain management into one powerful AI-Powered Ecosystem. Based in Delhi NCR and founded by seasoned leaders with decades of experience, Vendor Infra helps stakeholders eliminate bottlenecks, discover the right partners, and execute projects with unmatched speed, transparency, and efficiency." }),
           /* @__PURE__ */ jsx("p", { className: "hidden", children: "Empowering contractors & vendors with an AI-driven SaaS platform to discover partners, access opportunities, source efficiently, and scale execution — all in one place." }),
           /* @__PURE__ */ jsx(
             motion.ul,
@@ -8193,40 +8193,40 @@ const heroStats = [
 const problems = [
   {
     title: "Fragmented industry",
-    text: "The infrastructure, construction and manufacturing industry remains heavily dependent on offline references, limiting efficiency and scale."
+    text: "The infrastructure, construction & manufacturing industry is highly fragmented and heavily dependent on offline references, limiting efficiency and scale, with minimal use of intelligent systems."
   },
   {
-    title: "Low contractor visibility",
-    text: "Contractors lack market visibility beyond existing networks, restricting growth and access to high-value opportunities."
+    title: "No hand holding for contractors",
+    text: "Contractors working on large infrastructure projects lack structured support and unified digital tools for growth, resulting in low visibility and missed opportunities."
   },
   {
-    title: "Limited hand-holding",
-    text: "Large project contractors lack structured support and unified digital tools for growth, execution and opportunity access."
+    title: "Low visibility",
+    text: "Contractors lack market visibility, restricting growth beyond existing networks & limiting access to high-value opportunities, with limited data-driven support."
   },
   {
     title: "Disconnected stakeholders",
-    text: "Stakeholders operate in silos, creating inefficiencies, missed opportunities and slower decision-making."
+    text: "Stakeholders across the value chain operate in silos, leading to inefficiencies and lost opportunities, with lack of smart, connected systems limiting seamless coordination and decision-making."
   }
 ];
 const solutions = [
   {
     title: "Unified AI-based ecosystem",
-    text: "A single operating system connecting discovery, supply chain, plants and equipment, insurance and manufacturing workflows.",
+    text: "A single platform connecting all infrastructure, construction & manufacturing stakeholders, unifying discovery, supply chain, plants & equipment, and insurance into one data-driven operating system.",
     icon: Network
   },
   {
     title: "Integrated value-chain collaboration",
-    text: "Seamless coordination across planning, design, execution, quality assurance, delivery and operations.",
+    text: "One platform enabling seamless coordination    across all infrastructure, construction & Manufacturing stakeholders. Ensuring aligned execution across planning, design, execution,  quality assurance, delivery, and operations.",
     icon: Workflow
   },
   {
     title: "Smart visibility and discovery",
-    text: "Verified profiles and smart matching surface the right vendors, contractors and partners at the right time.",
+    text: "Verified profiles and smart matching unlock high-intent opportunities by surfacing the right vendors, contractors, and partners at the right time through data-driven insights.",
     icon: Target
   },
   {
     title: "Scalable ecosystem monetisation",
-    text: "Multiple AI-led solutions across the value chain unlock recurring usage, wallet expansion and transaction scale.",
+    text: "AI tools and ecosystem supports the contractors execute better and scale faster Multiple solutions built across the entire value chain to unlock opportunities.",
     icon: Layers3
   }
 ];
@@ -8235,7 +8235,7 @@ const ecosystem = [
     layer: "Layer 1",
     title: "Network",
     subtitle: "SaaS",
-    creates: "Creates network effect",
+    creates: "Network Effect",
     items: ["Contractors", "Suppliers", "Consultants", "OEMs", "Equipment owners"],
     icon: Users
   },
@@ -8243,7 +8243,7 @@ const ecosystem = [
     layer: "Layer 2",
     title: "Intelligence",
     subtitle: "Data advantage",
-    creates: "Creates data moat",
+    creates: "Data Moat",
     items: ["Vendor reliability score", "Price intelligence", "Credit behaviour", "Demand forecasting", "Sector trends"],
     icon: Bot
   },
@@ -8251,7 +8251,7 @@ const ecosystem = [
     layer: "Layer 3",
     title: "Transactions",
     subtitle: "Monetisation",
-    creates: "Creates revenue scale",
+    creates: "Revenue Scale",
     items: ["Material supply", "Financing", "Equipment", "Insurance", "Enterprise solutions"],
     icon: CircleDollarSign
   }
@@ -8277,7 +8277,7 @@ const offerings = [
   {
     title: "Contract Manufacturing",
     revenue: "Revenue Stream 2",
-    intro: "Seamless design, sourcing, manufacturing, quality check and delivery.",
+    intro: "Vendor Infra enables seamless design, sourcing, manufacturing, quality check & delivery through a connected ecosystem of verified manufacturers and real-time execution visibility.",
     bullets: [
       "Verified manufacturer network",
       "AI-powered supplier matching",
@@ -8291,13 +8291,12 @@ const offerings = [
   {
     title: "SaaS Platform",
     revenue: "Revenue Stream 3",
-    intro: "AI-powered discovery and collaboration with ecosystem stakeholders.",
+    intro: "AI-powered Discovery & Collaboration with Vendors, Suppliers, Contractors, Manufacturers, Consultants.",
     bullets: [
       "AI-powered vendor discovery",
       "Smart price discovery",
-      "AI-based sector intelligence",
-      "SOR and industry updates",
-      "AI-powered plants and equipment intelligence"
+      "AI-based Sector Intelligence & SOR & Industry Updates.",
+      "AI-Powered Plants & Equipment Intelligence Platform."
     ],
     icon: Building2,
     accent: "bg-[#edad1a]"
@@ -8305,14 +8304,13 @@ const offerings = [
   {
     title: "Plants and Equipment Marketplace",
     revenue: "Revenue Stream 4",
-    intro: "AI-powered platform to reduce idling and maximize utilization.",
+    intro: "AI-Powered platform for Plants & Equipment to Reduce Idling and Maximize Utilization.",
     bullets: [
       "Intelligent listing",
       "Smart buying decisions",
       "Efficient hiring",
       "Faster selling",
-      "Smart spare parts sourcing",
-      "Predictive recommendations"
+      "Smart spare parts sourcing with predictive recommendations"
     ],
     icon: Landmark,
     accent: "bg-[#00274d]"
@@ -8324,8 +8322,7 @@ const offerings = [
     bullets: [
       "Project insurance",
       "Plants and equipment insurance",
-      "Raw material insurance",
-      "Integrated risk coverage"
+      "Raw material insurance"
     ],
     icon: ShieldCheck,
     accent: "bg-[#edad1a]"
@@ -8348,11 +8345,9 @@ const productVision = [
     icon: Factory,
     accent: "bg-[#edad1a]",
     points: [
-      "Build an AI-native manufacturing ecosystem",
-      "Predictive sourcing and smart capacity allocation",
-      "Automated production planning",
-      "Digital-first manufacturing execution with real-time visibility",
-      "Predictive intelligence and proactive execution control"
+      "We will build  an AI-native manufacturing ecosystem with predictive sourcing, smart capacity allocation, and automated production planning",
+      "Enable digital-first manufacturing execution with real-time visibility, intelligent workflows, and connected factory operations. ",
+      "Transform manufacturing with predictive intelligence and proactive execution control."
     ]
   },
   {
@@ -8360,11 +8355,8 @@ const productVision = [
     icon: Building2,
     accent: "bg-[#00274d]",
     points: [
-      "Tender intelligence and profiling",
-      "Tender-to-BOQ conversion with AI-based tender filling",
-      "AI bidding engine",
-      "AI growth engine and AI agent for vendor updation and verification",
-      "ML-based vendor matching using inputs and past project data"
+      "We will build these high-growth SaaS modules: Tender Intelligence & Profiling, Tender-to-BOQ Conversion with AI-Based Tender Filling, AI Bidding Engine, and AI Growth Engine & AI Agent for Vendor Updation & Verification.",
+      "Matched vendors based on inputs and past project data with Machine Learning technology."
     ]
   },
   {
@@ -8372,12 +8364,8 @@ const productVision = [
     icon: Landmark,
     accent: "bg-[#edad1a]",
     points: [
-      "Project-equipment matching",
-      "Equipment recommendations",
-      "Predictive maintenance",
-      "Utilization optimization and dynamic pricing",
-      "Risk and failure prediction",
-      "Spare parts marketplace with AI visual recognition"
+      "AI-Powered Plants & Equipment Ecosystem: Project–Equipment Matching, Equipment Recommendations, Predictive Maintenance, Utilization Optimization, Dynamic Pricing, and Risk & Failure Prediction.",
+      "Develop a Spare Parts Marketplace to allow P&E owners to search for compatible parts using AI visual recognition system."
     ]
   },
   {
@@ -8385,10 +8373,8 @@ const productVision = [
     icon: ShieldCheck,
     accent: "bg-[#edad1a]",
     points: [
-      "Acquire universal brokerage license",
-      "Partner with non-life insurance companies",
-      "Offer multi-quote comparisons",
-      "Construction industry specific policies"
+      "Acquire a universal brokerage license & Partner with non-life insurance companies .",
+      "Offer multi-quote comparisons similar to a Marsh for construction Industry specific policies."
     ]
   }
 ];
@@ -8408,28 +8394,28 @@ const aiModules = [
 ];
 const rightToWin = [
   {
+    title: "Buying-selling Market",
+    text: "New-age companies operate 80% within manufacturer-distributor-trader networks and only 20% with end clients. Vendor Infra operates differently. We buy 100% from manufacturers, distributors and stockists and sell 100% directly to end clients, eliminating multi-layer trading complexity."
+  },
+  {
+    title: "Debtor Days",
+    text: "Buying-selling structure directly impacts debtor days. New-age companies have lower debtor days (~12 days) due to inter-trader transactions. Vendor Infra operates on industry demand debtor days (~45 days), aligned with real project cycles and end-client payment structures."
+  },
+  {
+    title: "Gross Margins",
+    text: "Debtors structure drives margin performance. New-age companies recorded 1.2% (FY24) and 1.7% (FY25) gross margins, while Vendor Infra achieved 3.5% (FY24) and 5.3% (FY25), creating an approximately 3% structural margin advantage."
+  },
+  {
     title: "Strong founder-market fit",
-    text: "Leadership brings deep domain expertise and strong industry relationships, accelerating growth and strengthening market penetration."
+    text: "Our leadership team brings deep domain expertise and strong industry relationships. Their experience has accelerated our growth and strengthened market penetration. This strategic advantage enables faster execution and sustained competitive positioning."
   },
   {
-    title: "Proven unit economics",
-    text: "Positive unit economics have been achieved using debt, proving the business is a need of the industry."
+    title: "Proven Unit Economics",
+    text: "Most businesses chase growth through equity and operate on limited runway. We have achieved positive unit economics using debt, proving the business is a need of the industry."
   },
   {
-    title: "Deep infrastructure focus",
-    text: "Infrastructure-specific services across supply chain, insurance, plants and equipment, and SaaS solve problems multi-industry platforms miss."
-  },
-  {
-    title: "Direct client model",
-    text: "Vendor Infra buys 100% from manufacturers, distributors and stockists, and sells 100% directly to end clients."
-  },
-  {
-    title: "Industry-aligned debtor days",
-    text: "Vendor Infra operates around 45 debtor days, aligned with real project cycles and end-client payment structures."
-  },
-  {
-    title: "Structural margin advantage",
-    text: "Vendor Infra delivered 3.5% and 5.3% gross margin in FY24 and FY25, with an average gap of about 3% against new-age companies."
+    title: "Deep Infrastructure Focus",
+    text: "We build infrastructure-specific services across the value chain, including supply chain, insurance, P&E, and SaaS. This exclusive focus on infrastructure allows us to solve problems that multi-industry platforms do not address."
   }
 ];
 const marketCards = [
@@ -8552,9 +8538,12 @@ function Investor() {
         /* @__PURE__ */ jsx("div", { className: "relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsxs(motion.div, { initial: { opacity: 0, y: 18 }, animate: { opacity: 1, y: 0 }, children: [
             /* @__PURE__ */ jsx("span", { className: "inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6", children: "Investor Relations" }),
-            /* @__PURE__ */ jsx("h1", { className: "text-4xl md:text-6xl font-black leading-[0.98]  mb-6", children: "AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry" }),
-            /* @__PURE__ */ jsx("p", { className: "text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8", children: "Digitizing execution across India’s 12+ lakh crore infrastructure economy.                " }),
-            /* @__PURE__ */ jsx("div", { className: "grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4 mb-8", children: heroStats.map((stat) => /* @__PURE__ */ jsx("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }) }, stat.label)) }),
+            /* @__PURE__ */ jsx("h1", { className: "text-4xl md:text-6xl font-black leading-[0.98] mb-6", children: "AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry" }),
+            /* @__PURE__ */ jsx("p", { className: "text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8", children: "Digitizing execution across India's 12+ lakh crore infrastructure economy." }),
+            /* @__PURE__ */ jsxs("div", { className: "max-w-2xl mb-8", children: [
+              /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 gap-3 mb-3", children: heroStats.slice(0, 3).map((stat) => /* @__PURE__ */ jsx("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }) }, stat.label)) }),
+              /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 gap-3", children: heroStats.slice(3, 5).map((stat) => /* @__PURE__ */ jsx("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }) }, stat.label)) })
+            ] }),
             /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-3", children: /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
               "Contact Investor Relations ",
               /* @__PURE__ */ jsx(Mail, { className: "w-4 h-4" })
@@ -8649,7 +8638,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "relative overflow-hidden bg-white py-16 md:py-24", children: /* @__PURE__ */ jsxs("div", { className: "container relative mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "mb-12 text-center", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Our thesis" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-black text-[#00274d] leading-tight", children: "Infrastructure execution is becoming data-driven, scalable and AI-native." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-black text-[#00274d] leading-tight", children: "Vendor Infra Ecosystem" })
         ] }),
         /* @__PURE__ */ jsxs("div", { className: "grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center", children: [
           /* @__PURE__ */ jsxs(
@@ -8710,7 +8699,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Solutions" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "One connected platform across the infrastructure value chain." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "One connected platform for every stage of the infrastructure value chain.              " })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-4 gap-4", children: solutions.map((item2, index) => {
           const Icon = item2.icon;
@@ -8747,7 +8736,7 @@ function Investor() {
         /* @__PURE__ */ jsxs("div", { className: "relative container mx-auto px-4 max-w-7xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
             /* @__PURE__ */ jsx(SectionEyebrow, { children: "Business model" }),
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight mb-5", children: "Are We SaaS, Supply Chain, or an Ecosystem?" })
+            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight mb-5", children: "Are we SaaS, Supply Chain, or an Ecosystem?" })
           ] }),
           /* @__PURE__ */ jsxs("div", { className: "relative", children: [
             /* @__PURE__ */ jsx("div", { className: "absolute left-[16%] right-[16%] top-16 hidden h-px bg-gradient-to-r from-[#edad1a]/20 via-[#edad1a]/70 to-[#edad1a]/20 lg:block" }),
@@ -8777,7 +8766,7 @@ function Investor() {
                         /* @__PURE__ */ jsx("span", { className: "leading-snug", children: point })
                       ] }, point)) }),
                       /* @__PURE__ */ jsxs("div", { className: "mt-7 rounded-xl border border-[#00274d]/8 bg-[#00274d]/5 p-4", children: [
-                        /* @__PURE__ */ jsx("p", { className: "text-xs font-black uppercase tracking-[0.18em] text-[#edad1a]", children: "Outcome" }),
+                        /* @__PURE__ */ jsx("p", { className: "text-xs font-black uppercase tracking-[0.18em] text-[#edad1a]", children: "Creates:" }),
                         /* @__PURE__ */ jsx("p", { className: "mt-1 font-black text-[#00274d]", children: item2.creates })
                       ] })
                     ] })
@@ -8786,15 +8775,7 @@ function Investor() {
                 item2.title
               );
             }) })
-          ] }),
-          /* @__PURE__ */ jsx("div", { className: "mt-8 grid gap-4 md:grid-cols-3", children: [
-            ["Network effect", "More stakeholders create richer demand signals."],
-            ["Data moat", "Transactions improve reliability, pricing and risk intelligence."],
-            ["Revenue scale", "The ecosystem expands wallet share across repeat workflows."]
-          ].map(([title, text]) => /* @__PURE__ */ jsxs("div", { className: "rounded-2xl border border-white/10 bg-white/8 p-5 backdrop-blur", children: [
-            /* @__PURE__ */ jsx("p", { className: "text-lg font-black text-[#edad1a]", children: title }),
-            /* @__PURE__ */ jsx("p", { className: "mt-2 text-sm leading-relaxed text-white/70", children: text })
-          ] }, title)) })
+          ] })
         ] })
       ] }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
@@ -8852,7 +8833,7 @@ function Investor() {
         /* @__PURE__ */ jsxs("div", { className: "container relative mx-auto px-4 max-w-7xl", children: [
           /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
             /* @__PURE__ */ jsx(SectionEyebrow, { children: "Product vision" }),
-            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight", children: "The roadmap is a set of compounding build tracks." })
+            /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black leading-tight", children: "A strategic roadmap driving continuous innovation and customer value." })
           ] }),
           /* @__PURE__ */ jsx("div", { className: "space-y-4", children: productVision.map((item2, index) => {
             const Icon = item2.icon;
@@ -8919,8 +8900,8 @@ function Investor() {
       ] }) }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: "Right to win" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Structural advantages built for this industry." })
+          /* @__PURE__ */ jsx(SectionEyebrow, { children: " Our Right to win" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Technology, network effects, and industry expertise create our competitive edge." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-4", children: rightToWin.map((item2) => /* @__PURE__ */ jsxs("article", { className: "rounded-2xl border border-gray-100 bg-white p-6", children: [
           /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-[#00274d] mb-2", children: item2.title }),
@@ -8930,7 +8911,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Market size" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "TAM expanding across infrastructure, insurance, equipment and manufacturing." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "grid sm:grid-cols-2 gap-4", children: marketCards.map((card) => /* @__PURE__ */ jsxs("article", { className: "rounded-2xl bg-[#00274d] p-5 text-white", children: [
           /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold mb-4", children: card.title }),
@@ -8987,8 +8968,8 @@ function Investor() {
       ] }) }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: "Competitive landscape" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Significant untapped market with a differentiated unified ecosystem." })
+          /* @__PURE__ */ jsx(SectionEyebrow, { children: "Competitive Advantage" }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "A unified platform with multiple competitive moats." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm", children: /* @__PURE__ */ jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxs("table", { className: "w-full table-fixed text-xs sm:text-sm", children: [
           /* @__PURE__ */ jsx("thead", { className: "bg-[#00274d] text-white", children: /* @__PURE__ */ jsx("tr", { children: ["Company", "Founded", "Funding", "Unicorn", "Business type"].map((head) => /* @__PURE__ */ jsx("th", { className: "px-3 py-4 text-left font-bold first:w-[22%] last:w-[32%] sm:px-4", children: head }, head)) }) }),
@@ -8998,7 +8979,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Growth timeline" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "From formation to AI-native infrastructure ecosystem." })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Building the future of the infrastructure, construction, and manufacturing industries—one milestone at a time." })
         ] }),
         /* @__PURE__ */ jsx("div", { className: "space-y-10", children: [timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => /* @__PURE__ */ jsxs("div", { className: "relative", children: [
           /* @__PURE__ */ jsx("div", { className: "absolute left-[3.5%] right-[3.5%] top-[22px] hidden h-[2px] bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block rounded-full" }),
@@ -9034,7 +9015,7 @@ function Investor() {
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start", children: [
         /* @__PURE__ */ jsxs("div", { children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Fund requirement" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Raising $12M to accelerate expansion and build a defensible technology platform." }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Fueling the next phase of growth and innovation." }),
           /* @__PURE__ */ jsxs("div", { className: "rounded-2xl bg-[#00274d] p-6 text-white", children: [
             /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-4xl font-black mb-2", children: "$12M" }),
             /* @__PURE__ */ jsx("p", { className: "text-white/75", children: "1$ equity is expected to create 3-5$ GMV impact through blended revenue, technology and working-capital leverage." })

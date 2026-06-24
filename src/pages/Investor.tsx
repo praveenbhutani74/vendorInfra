@@ -40,41 +40,41 @@ const heroStats = [
 const problems = [
   {
     title: "Fragmented industry",
-    text: "The infrastructure, construction and manufacturing industry remains heavily dependent on offline references, limiting efficiency and scale.",
+    text: "The infrastructure, construction & manufacturing industry is highly fragmented and heavily dependent on offline references, limiting efficiency and scale, with minimal use of intelligent systems.",
   },
   {
-    title: "Low contractor visibility",
-    text: "Contractors lack market visibility beyond existing networks, restricting growth and access to high-value opportunities.",
+    title: "No hand holding for contractors",
+    text: "Contractors working on large infrastructure projects lack structured support and unified digital tools for growth, resulting in low visibility and missed opportunities.",
   },
   {
-    title: "Limited hand-holding",
-    text: "Large project contractors lack structured support and unified digital tools for growth, execution and opportunity access.",
+    title: "Low visibility",
+    text: "Contractors lack market visibility, restricting growth beyond existing networks & limiting access to high-value opportunities, with limited data-driven support.",
   },
   {
     title: "Disconnected stakeholders",
-    text: "Stakeholders operate in silos, creating inefficiencies, missed opportunities and slower decision-making.",
+    text: "Stakeholders across the value chain operate in silos, leading to inefficiencies and lost opportunities, with lack of smart, connected systems limiting seamless coordination and decision-making.",
   },
 ];
 
 const solutions = [
   {
     title: "Unified AI-based ecosystem",
-    text: "A single operating system connecting discovery, supply chain, plants and equipment, insurance and manufacturing workflows.",
+    text: "A single platform connecting all infrastructure, construction & manufacturing stakeholders, unifying discovery, supply chain, plants & equipment, and insurance into one data-driven operating system.",
     icon: Network,
   },
   {
     title: "Integrated value-chain collaboration",
-    text: "Seamless coordination across planning, design, execution, quality assurance, delivery and operations.",
+    text: "One platform enabling seamless coordination    across all infrastructure, construction & Manufacturing stakeholders. Ensuring aligned execution across planning, design, execution,  quality assurance, delivery, and operations.",
     icon: Workflow,
   },
   {
     title: "Smart visibility and discovery",
-    text: "Verified profiles and smart matching surface the right vendors, contractors and partners at the right time.",
+    text: "Verified profiles and smart matching unlock high-intent opportunities by surfacing the right vendors, contractors, and partners at the right time through data-driven insights.",
     icon: Target,
   },
   {
     title: "Scalable ecosystem monetisation",
-    text: "Multiple AI-led solutions across the value chain unlock recurring usage, wallet expansion and transaction scale.",
+    text: "AI tools and ecosystem supports the contractors execute better and scale faster Multiple solutions built across the entire value chain to unlock opportunities.",
     icon: Layers3,
   },
 ];
@@ -135,7 +135,7 @@ const ecosystem = [
     layer: "Layer 1",
     title: "Network",
     subtitle: "SaaS",
-    creates: "Creates network effect",
+    creates: "Network Effect",
     items: ["Contractors", "Suppliers", "Consultants", "OEMs", "Equipment owners"],
     icon: Users,
   },
@@ -143,7 +143,7 @@ const ecosystem = [
     layer: "Layer 2",
     title: "Intelligence",
     subtitle: "Data advantage",
-    creates: "Creates data moat",
+    creates: "Data Moat",
     items: ["Vendor reliability score", "Price intelligence", "Credit behaviour", "Demand forecasting", "Sector trends"],
     icon: Bot,
   },
@@ -151,7 +151,7 @@ const ecosystem = [
     layer: "Layer 3",
     title: "Transactions",
     subtitle: "Monetisation",
-    creates: "Creates revenue scale",
+    creates: "Revenue Scale",
     items: ["Material supply", "Financing", "Equipment", "Insurance", "Enterprise solutions"],
     icon: CircleDollarSign,
   },
@@ -178,7 +178,7 @@ const offerings = [
   {
     title: "Contract Manufacturing",
     revenue: "Revenue Stream 2",
-    intro: "Seamless design, sourcing, manufacturing, quality check and delivery.",
+    intro: "Vendor Infra enables seamless design, sourcing, manufacturing, quality check & delivery through a connected ecosystem of verified manufacturers and real-time execution visibility.",
     bullets: [
       "Verified manufacturer network",
       "AI-powered supplier matching",
@@ -192,13 +192,12 @@ const offerings = [
   {
     title: "SaaS Platform",
     revenue: "Revenue Stream 3",
-    intro: "AI-powered discovery and collaboration with ecosystem stakeholders.",
+    intro: "AI-powered Discovery & Collaboration with Vendors, Suppliers, Contractors, Manufacturers, Consultants.",
     bullets: [
       "AI-powered vendor discovery",
       "Smart price discovery",
-      "AI-based sector intelligence",
-      "SOR and industry updates",
-      "AI-powered plants and equipment intelligence",
+      "AI-based Sector Intelligence & SOR & Industry Updates.",
+      "AI-Powered Plants & Equipment Intelligence Platform.",
     ],
     icon: Building2,
     accent: "bg-[#edad1a]",
@@ -206,14 +205,13 @@ const offerings = [
   {
     title: "Plants and Equipment Marketplace",
     revenue: "Revenue Stream 4",
-    intro: "AI-powered platform to reduce idling and maximize utilization.",
+    intro: "AI-Powered platform for Plants & Equipment to Reduce Idling and Maximize Utilization.",
     bullets: [
       "Intelligent listing",
       "Smart buying decisions",
       "Efficient hiring",
       "Faster selling",
-      "Smart spare parts sourcing",
-      "Predictive recommendations",
+      "Smart spare parts sourcing with predictive recommendations",
     ],
     icon: Landmark,
     accent: "bg-[#00274d]",
@@ -226,7 +224,6 @@ const offerings = [
       "Project insurance",
       "Plants and equipment insurance",
       "Raw material insurance",
-      "Integrated risk coverage",
     ],
     icon: ShieldCheck,
     accent: "bg-[#edad1a]",
@@ -250,11 +247,9 @@ const productVision = [
     icon: Factory,
     accent: "bg-[#edad1a]",
     points: [
-      "Build an AI-native manufacturing ecosystem",
-      "Predictive sourcing and smart capacity allocation",
-      "Automated production planning",
-      "Digital-first manufacturing execution with real-time visibility",
-      "Predictive intelligence and proactive execution control",
+      "We will build  an AI-native manufacturing ecosystem with predictive sourcing, smart capacity allocation, and automated production planning",
+      "Enable digital-first manufacturing execution with real-time visibility, intelligent workflows, and connected factory operations. ",
+      "Transform manufacturing with predictive intelligence and proactive execution control.",
     ],
   },
   {
@@ -262,11 +257,9 @@ const productVision = [
     icon: Building2,
     accent: "bg-[#00274d]",
     points: [
-      "Tender intelligence and profiling",
-      "Tender-to-BOQ conversion with AI-based tender filling",
-      "AI bidding engine",
-      "AI growth engine and AI agent for vendor updation and verification",
-      "ML-based vendor matching using inputs and past project data",
+      "We will build these high-growth SaaS modules: Tender Intelligence & Profiling, Tender-to-BOQ Conversion with AI-Based Tender Filling, AI Bidding Engine, and AI Growth Engine & AI Agent for Vendor Updation & Verification.",
+      "Matched vendors based on inputs and past project data with Machine Learning technology.",
+  
     ],
   },
   {
@@ -274,12 +267,8 @@ const productVision = [
     icon: Landmark,
     accent: "bg-[#edad1a]",
     points: [
-      "Project-equipment matching",
-      "Equipment recommendations",
-      "Predictive maintenance",
-      "Utilization optimization and dynamic pricing",
-      "Risk and failure prediction",
-      "Spare parts marketplace with AI visual recognition",
+      "AI-Powered Plants & Equipment Ecosystem: Project–Equipment Matching, Equipment Recommendations, Predictive Maintenance, Utilization Optimization, Dynamic Pricing, and Risk & Failure Prediction.",
+      "Develop a Spare Parts Marketplace to allow P&E owners to search for compatible parts using AI visual recognition system.",
     ],
   },
   {
@@ -287,10 +276,8 @@ const productVision = [
     icon: ShieldCheck,
     accent: "bg-[#edad1a]",
     points: [
-      "Acquire universal brokerage license",
-      "Partner with non-life insurance companies",
-      "Offer multi-quote comparisons",
-      "Construction industry specific policies",
+      "Acquire a universal brokerage license & Partner with non-life insurance companies .",
+      "Offer multi-quote comparisons similar to a Marsh for construction Industry specific policies.",
     ],
   },
 ];
@@ -312,28 +299,28 @@ const aiModules = [
 
 const rightToWin = [
   {
+    title: "Buying-selling Market",
+    text: "New-age companies operate 80% within manufacturer-distributor-trader networks and only 20% with end clients. Vendor Infra operates differently. We buy 100% from manufacturers, distributors and stockists and sell 100% directly to end clients, eliminating multi-layer trading complexity.",
+  },
+  {
+    title: "Debtor Days",
+    text: "Buying-selling structure directly impacts debtor days. New-age companies have lower debtor days (~12 days) due to inter-trader transactions. Vendor Infra operates on industry demand debtor days (~45 days), aligned with real project cycles and end-client payment structures.",
+  },
+  {
+    title: "Gross Margins",
+    text: "Debtors structure drives margin performance. New-age companies recorded 1.2% (FY24) and 1.7% (FY25) gross margins, while Vendor Infra achieved 3.5% (FY24) and 5.3% (FY25), creating an approximately 3% structural margin advantage.",
+  },
+  {
     title: "Strong founder-market fit",
-    text: "Leadership brings deep domain expertise and strong industry relationships, accelerating growth and strengthening market penetration.",
+    text: "Our leadership team brings deep domain expertise and strong industry relationships. Their experience has accelerated our growth and strengthened market penetration. This strategic advantage enables faster execution and sustained competitive positioning.",
   },
   {
-    title: "Proven unit economics",
-    text: "Positive unit economics have been achieved using debt, proving the business is a need of the industry.",
+    title: "Proven Unit Economics",
+    text: "Most businesses chase growth through equity and operate on limited runway. We have achieved positive unit economics using debt, proving the business is a need of the industry.",
   },
   {
-    title: "Deep infrastructure focus",
-    text: "Infrastructure-specific services across supply chain, insurance, plants and equipment, and SaaS solve problems multi-industry platforms miss.",
-  },
-  {
-    title: "Direct client model",
-    text: "Vendor Infra buys 100% from manufacturers, distributors and stockists, and sells 100% directly to end clients.",
-  },
-  {
-    title: "Industry-aligned debtor days",
-    text: "Vendor Infra operates around 45 debtor days, aligned with real project cycles and end-client payment structures.",
-  },
-  {
-    title: "Structural margin advantage",
-    text: "Vendor Infra delivered 3.5% and 5.3% gross margin in FY24 and FY25, with an average gap of about 3% against new-age companies.",
+    title: "Deep Infrastructure Focus",
+    text: "We build infrastructure-specific services across the value chain, including supply chain, insurance, P&E, and SaaS. This exclusive focus on infrastructure allows us to solve problems that multi-industry platforms do not address.",
   },
 ];
 
@@ -476,59 +463,68 @@ export default function Investor() {
       <Navbar />
 
       <main className="flex-1 bg-white">
-        <section className="relative overflow-hidden bg-[#00274d] text-white">
-          <div
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-              backgroundSize: "42px 42px",
-            }}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001d3a] to-transparent" />
-          <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-            <div >
-              <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>
-                <span className="inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6">
-                  Investor Relations
-                </span>
-                <h1 className="text-4xl md:text-6xl font-black leading-[0.98]  mb-6">
-                AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry
+     <section className="relative overflow-hidden bg-[#00274d] text-white">
+  <div
+    className="absolute inset-0 opacity-[0.08]"
+    style={{
+      backgroundImage:
+        "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+      backgroundSize: "42px 42px",
+    }}
+  />
+  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001d3a] to-transparent" />
+  <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+    <div>
+      <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6">
+          Investor Relations
+        </span>
+        <h1 className="text-4xl md:text-6xl font-black leading-[0.98] mb-6">
+          AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry
+        </h1>
+        <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
+          Digitizing execution across India's 12+ lakh crore infrastructure economy.
+        </p>
 
-                </h1>
-                <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
- Digitizing execution across India’s 12+ lakh crore infrastructure economy.                </p>
-
-                <div className="grid max-w-2xl grid-cols-2 gap-3 sm:grid-cols-4 mb-8">
-                  {heroStats.map((stat) => (
-                    <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
-                      <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
-                      {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="mailto:enquiry@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
-                    Contact Investor Relations <Mail className="w-4 h-4" />
-                  </a>
-                  {/* <Link href="/contact" className={siteButtonClasses("navy", "border border-white/15 px-6 py-3")}>
-                    Connect with team <ArrowRight className="w-4 h-4" />
-                  </Link> */}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 22 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="relative"
-              >
-             
-              </motion.div>
-            </div>
+        {/* Stats grid: 3 on first row, 2 on second row */}
+        <div className="max-w-2xl mb-8">
+          {/* Row 1: 3 stats */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            {heroStats.slice(0, 3).map((stat) => (
+              <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
+                <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
+                {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
+              </div>
+            ))}
           </div>
-        </section>
+          {/* Row 2: 2 stats */}
+          <div className="grid grid-cols-3 gap-3">
+            {heroStats.slice(3, 5).map((stat) => (
+              <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
+                <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
+                {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a href="mailto:enquiry@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
+            Contact Investor Relations <Mail className="w-4 h-4" />
+          </a>
+        </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 22 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+        className="relative"
+      >
+      </motion.div>
+    </div>
+  </div>
+</section>
 
      <section className="relative overflow-hidden bg-white py-16 md:py-24 text-[#00274d]">
   <div
@@ -628,7 +624,7 @@ export default function Investor() {
             <div className="mb-12 text-center">
               <SectionEyebrow>Our thesis</SectionEyebrow>
               <h2 className="text-3xl md:text-4xl font-black text-[#00274d] leading-tight">
-                Infrastructure execution is becoming data-driven, scalable and AI-native.
+                Vendor Infra Ecosystem
               </h2>
             </div>
 
@@ -694,8 +690,7 @@ export default function Investor() {
             <div className="text-center max-w-3xl mx-auto mb-12">
               <SectionEyebrow>Solutions</SectionEyebrow>
               <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-                One connected platform across the infrastructure value chain.
-              </h2>
+One connected platform for every stage of the infrastructure value chain.              </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {solutions.map((item, index) => {
@@ -835,7 +830,7 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Business model</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black leading-tight mb-5">
-                Are We SaaS, Supply Chain, or an Ecosystem?
+                Are we SaaS, Supply Chain, or an Ecosystem?
               </h2>
               {/* <p className="mx-auto max-w-3xl text-white/72 leading-relaxed">
                 Each layer reinforces the next: network creates usage, usage creates intelligence, and intelligence converts into higher-quality transactions at scale.
@@ -881,7 +876,7 @@ export default function Investor() {
                         </ul>
 
                         <div className="mt-7 rounded-xl border border-[#00274d]/8 bg-[#00274d]/5 p-4">
-                          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#edad1a]">Outcome</p>
+                          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#edad1a]">Creates:</p>
                           <p className="mt-1 font-black text-[#00274d]">{item.creates}</p>
                         </div>
                       </div>
@@ -891,7 +886,7 @@ export default function Investor() {
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {/* <div className="mt-8 grid gap-4 md:grid-cols-3">
               {[
                 ["Network effect", "More stakeholders create richer demand signals."],
                 ["Data moat", "Transactions improve reliability, pricing and risk intelligence."],
@@ -902,7 +897,7 @@ export default function Investor() {
                   <p className="mt-2 text-sm leading-relaxed text-white/70">{text}</p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -985,7 +980,7 @@ export default function Investor() {
             <div className="mx-auto mb-12 max-w-4xl text-center">
               <SectionEyebrow>Product vision</SectionEyebrow>
               <h2 className="text-3xl md:text-5xl font-black leading-tight">
-                The roadmap is a set of compounding build tracks.
+                A strategic roadmap driving continuous innovation and customer value.
               </h2>
               {/* <p className="mx-auto mt-4 max-w-2xl text-white/70">
                 Every product line moves from workflow capture to intelligence, automation and transaction depth.
@@ -1085,9 +1080,9 @@ export default function Investor() {
         <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <SectionEyebrow>Right to win</SectionEyebrow>
+              <SectionEyebrow> Our Right to win</SectionEyebrow>
               <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-                Structural advantages built for this industry.
+               Technology, network effects, and industry expertise create our competitive edge.
               </h2>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -1217,7 +1212,7 @@ export default function Investor() {
               <div>
                 <SectionEyebrow>Market size</SectionEyebrow>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                  TAM expanding across infrastructure, insurance, equipment and manufacturing.
+                  Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry.
                 </h2>
                 {/* <p className="text-gray-600 leading-relaxed">
                   The opportunity sits across NIP-backed infrastructure activity, general insurance, construction equipment and contract manufacturing. Vendor Infra is positioned across all four pools.
@@ -1325,9 +1320,9 @@ export default function Investor() {
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
               <div>
-                <SectionEyebrow>Competitive landscape</SectionEyebrow>
+                <SectionEyebrow>Competitive Advantage</SectionEyebrow>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                  Significant untapped market with a differentiated unified ecosystem.
+                 A unified platform with multiple competitive moats.
                 </h2>
                 {/* <p className="text-gray-600 leading-relaxed">
                   Despite multiple players, only 5-7% of the overall market has been tapped so far, indicating significant untapped potential.
@@ -1413,7 +1408,7 @@ export default function Investor() {
     <div className="text-center max-w-3xl mx-auto mb-12">
       <SectionEyebrow>Growth timeline</SectionEyebrow>
       <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-        From formation to AI-native infrastructure ecosystem.
+        Building the future of the infrastructure, construction, and manufacturing industries—one milestone at a time.
       </h2>
     </div>
 
@@ -1468,7 +1463,7 @@ export default function Investor() {
               <div>
                 <SectionEyebrow>Fund requirement</SectionEyebrow>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                  Raising $12M to accelerate expansion and build a defensible technology platform.
+                 Fueling the next phase of growth and innovation.
                 </h2>
                 {/* <p className="text-gray-600 leading-relaxed mb-6">
                   The round is intended to unlock 3-4x growth, scale to $70M+ revenue, and combine market expansion, technology, and capital-efficient credit structures with strong unit economics.
