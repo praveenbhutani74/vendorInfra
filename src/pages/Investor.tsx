@@ -1,24 +1,38 @@
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  BadgeCheck,
   BarChart3,
   Bot,
   Boxes,
+  BrainCircuit,
   Building2,
   CheckCircle2,
   CircleDollarSign,
+  ClipboardList,
   Factory,
+  FilePenLine,
+  FileSpreadsheet,
+
+  Gavel,
+
   Globe2,
   Handshake,
+  HardHat,
   Landmark,
   Layers3,
   Mail,
+  Monitor,
   Network,
+  Package,
+  Search,
   ShieldCheck,
   Target,
   TrendingUp,
+  Upload,
   Users,
   Workflow,
+  Wrench,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
@@ -229,6 +243,207 @@ const offerings = [
     accent: "bg-[#edad1a]",
   },
 ];
+const aiPlatformModules = [
+  {
+    title: "AI-Powered Vendor Discovery",
+    status: "Completed",
+    intro:
+      "AI-powered vendor discovery engine with intelligent search based on capability, location, performance, type of work and more.",
+    bullets: [
+      "AI-powered vendor discovery engine with intelligent search based on capability, location, performance, type of work and more.",
+      "Predicts vendor fit, improves sourcing speed, and reduces procurement effort.",
+    ],
+    icon: Search,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "AI-Powered Plants & Equipment Search",
+    status: "Completed",
+    intro:
+      "AI-driven plant & equipment intelligent search based on location, machine type, category and more.",
+    bullets: [
+      "AI-driven plant & equipment intelligent search based on location, machine type, category and more.",
+      "Enhances equipment sourcing efficiency, reduces idling and improves asset utilization.",
+    ],
+    icon: Wrench,
+    accent: "bg-[#F4B400]",
+  },
+  {
+    title: "AI-Powered Sector Intelligence",
+    status: "Completed",
+    intro:
+      "AI-based sector intelligence platform delivering market trends, demand insights, and industry analytics.",
+    bullets: [
+      "AI-based sector intelligence platform delivering market trends, demand insights, and industry analytics.",
+      "Enables smarter decisions through real-time data and predictive insights.",
+    ],
+    icon: BarChart3,
+    accent: "bg-[#00B8A9]",
+  },
+  {
+    title: "AI-Assisted Plants & Equipment Upload",
+    status: "Under Development",
+    intro:
+      "Implementing image recognition and object detection AI for equipment uploads.",
+    bullets: [
+      "Implementing an image recognition and object detection AI model (e.g., using a vendor-uploaded photo of equipment).",
+      "Integrating the AI output to automatically fill out relevant fields to simplify the upload process.",
+    ],
+    icon: Upload,
+    accent: "bg-[#9BC75B]",
+  },
+  {
+    title: "Plants & Equipment Spare Parts Marketplace",
+    status: "Under Development",
+    intro:
+      "AI-powered marketplace for spare parts and servicing with smart onboarding and inventory.",
+    bullets: [
+      "AI-powered marketplace for spare parts & servicing with smart onboarding & inventory.",
+      "Predicts demand, recommends parts, and reduces downtime.",
+    ],
+    icon: Package,
+    accent: "bg-[#A9A9A9]",
+  },
+];
+
+const aiVisionModules = [
+  {
+    title: "Vendor Verification using AI Agents",
+    description:
+      "Designing, training, and deploying AI agents to automate the human verification process. Development of a verification workflow tool and flagging system for manual review.",
+    icon: BadgeCheck,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "Tender to BOQ Conversion",
+    description:
+      "Development and training of a specialized NLP/ML model. Automatically convert structured and unstructured tender documents into a standardized BOQ format.",
+    icon: FileSpreadsheet,
+    accent: "bg-[#F4B400]",
+  },
+  {
+    title: "Tender Intelligence & Profiling",
+    description:
+      "Matching the tender's requirements with specific contractor profiles with AI and ML. Developing a logic engine to identify and flag potential issues or missing information in the tender submission.",
+    icon: BrainCircuit,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "Fill Tender Module",
+    description:
+      "Development module capable of drafting and completing tender forms on behalf of the contractor with AI, including a critique function to suggest improvements and competitive bid adjustments.",
+    icon: FilePenLine,
+    accent: "bg-[#F4B400]",
+  },
+  {
+    title: "Machine Maintenance Module",
+    description:
+      "Dedicated feature set for scheduling, tracking, and managing equipment maintenance services between vendors and contractors.",
+    icon: Wrench,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "Auction Feature Development",
+    description:
+      "Development of a dynamic auction module where contractors can upload a BOQ and multiple vendors can submit competitive bids; includes bidding logic and notification systems.",
+    icon: Gavel,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "AI-Powered Insurance Engine",
+    description:
+      "AI-powered insurance engine that simplifies risk assessment, recommends the right coverage, and automates claims, pricing, and policy management for faster, smarter insurance operations.",
+    icon: ShieldCheck,
+    accent: "bg-[#F4B400]",
+  },
+  {
+    title: "New EPC Acquisition",
+    description:
+      "Agentic AI identifies newly published tenders and automatically reaches out to eligible EPC companies with a personalised tender summary and eligibility report.",
+    icon: Building2,
+    accent: "bg-[#2E97D4]",
+  },
+  {
+    title: "Pre-Bid Engagement",
+    description:
+      "For live tenders, the agent proactively contacts eligible, unregistered EPC companies with a preview analysis and eligibility score—converting cold leads into active platform users before the bid deadline.",
+    icon: ClipboardList,
+    accent: "bg-[#F4B400]",
+  },
+  {
+    title: "Post-Award Conversion",
+    description:
+      "When an EPC company wins a bid, a vendor landscape summary of eligible suppliers is shared without contact details, creating a strong pull to subscribe and unlock full access.",
+    icon: Monitor,
+    accent: "bg-[#2E97D4]",
+  },
+];
+
+const marketOpportunities = [
+  {
+    title: "Infrastructure Pipeline",
+    subtitle: "NIP Coverage across Projects, States",
+    icon: HardHat,
+    accent: "bg-[#d32f2f]",
+    metrics: [
+      { label: "NIP", value: "12.2+ Lac Cr" },
+      { label: "Target (Pipeline)", value: "13.15 lakh Cr (2025–28)" },
+      { label: "Projects", value: "13000+ projects" },
+      { label: "Sectors", value: "30+ sectors" },
+      { label: "States & UTs", value: "36 states & UTs" },
+      { label: "Key Sectors", value: "Roads, Railways, Water etc." },
+    ],
+    highlight: {
+      label: "",
+      value: "",
+    },
+  },
+  {
+    title: "Contract Manufacturing",
+    subtitle: "Contract manufacturing across industries",
+    icon: Factory,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "2,20,000 Cr" },
+      { label: "2026", value: "2,95,000 Cr" },
+      { label: "2030 (P)", value: "4,90,000+ Cr" },
+    ],
+    highlight: {
+      label: "Growth",
+      value: "~15%",
+    },
+  },
+  {
+    title: "Construction Equipment",
+    subtitle: "Indian Construction Equipment Market",
+    icon: Building2,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "71,925 Cr" },
+      { label: "2026", value: "84,014 Cr" },
+      { label: "2030 (P)", value: "1,58,223 Cr" },
+    ],
+    highlight: {
+      label: "CAGR",
+      value: "8%",
+    },
+  },
+  {
+    title: "Insurance",
+    subtitle: "25 general insurance companies Premium",
+    icon: ShieldCheck,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "93,000 Cr" },
+      { label: "2026", value: "1,40,000 Cr" },
+      { label: "2030 (P)", value: "2,80,000 Cr" },
+    ],
+    highlight: {
+      label: "Growth",
+      value: "30.77%",
+    },
+  },
+];
 
 const productVision = [
   {
@@ -355,11 +570,11 @@ const tractionStats = [
 ];
 
 const achievements = [
-  "470+ Cr consolidated revenue since inception",
-  "220+ projects delivered across 20+ sectors",
-  "25+ states operating footprint in India",
-  "340+ material types supplied",
-  "106 trusted clients across infrastructure, construction and manufacturing",
+  "Achieved ₹470+ Cr in consolidated revenue, demonstrating strong financial performance and consistent growth momentum.",
+  "Successfully delivered 220+ projects across 20+ sectors, showcasing diverse execution capabilities.",
+  "Established a strong footprint with operations across 25+ states in India.",
+  "Supplied 340+ types of materials, covering a wide spectrum of project requirements.",
+  "Trusted by 106 clients, building long-term partnerships across the infrastructure, Construction and manufacturing ecosystem.",
 ];
 
 const revenueStreams = [
@@ -1081,59 +1296,184 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-white">
+
+          <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-              <div className="lg:sticky lg:top-28">
-                <SectionEyebrow>AI platform</SectionEyebrow>
+            <div className="mx-auto mb-12 max-w-4xl text-center">
+              <SectionEyebrow>AI platform</SectionEyebrow>
                 <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5">
                   AI-Driven Platform Modules
                 </h2>
-                {/* <p className="text-gray-600 leading-relaxed">
-                  Vendor Infra is building high-growth SaaS modules across tender intelligence, tender-to-BOQ conversion, AI bidding, growth automation, vendor intelligence, spare parts and insurance intelligence.
-                </p> */}
-                <div className="mt-7 rounded-2xl bg-[#00274d] p-6 text-white">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]">Platform logic</p>
-                  <div className="mt-5 grid gap-3">
-                    {["Discover", "Analyse", "Automate", "Convert"].map((step, index) => (
-                      <div key={step} className="flex items-center gap-3 rounded-xl bg-white/8 px-4 py-3">
-                        <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#edad1a] text-sm font-black text-[#00274d]">
-                          {index + 1}
-                        </span>
-                        <span className="font-bold">{step}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {aiModules.map((module, index) => (
-                  <motion.article
-                    key={module.name}
-                    initial={{ opacity: 0, y: 14 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.025 }}
-                    className="group relative min-h-[150px] overflow-hidden rounded-2xl border border-gray-100 bg-[#f8fafc] p-5 shadow-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/10"
-                  >
-                    <div className="absolute right-4 top-4 text-5xl font-black text-[#00274d]/5">
-                      {String(index + 1).padStart(2, "0")}
-                    </div>
-                    <div className="relative">
-                      <span className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a] group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors">
-                        <Bot className="h-5 w-5" />
-                      </span>
-                      <h3 className="text-base font-black leading-snug text-[#00274d]">
-                        {module.name}
-                      </h3>
-                    </div>
-                  </motion.article>
-                ))}
-              </div>
+              {/* <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+                Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer.
+              </p> */}
             </div>
+
+ <div className="grid gap-4 lg:grid-cols-5">
+  {aiPlatformModules.map((item, index) => {
+    const Icon = item.icon;
+
+    return (
+      <motion.article
+        key={item.title}
+        initial={{ opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.05 }}
+        className="group flex min-h-[640px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg"
+      >
+        {/* HEADER */}
+        <div className="bg-[#00274d] p-5 text-white">
+          <div className="flex items-start justify-between">
+            <span
+              className={`flex h-14 w-14 items-center justify-center rounded-xl ${item.accent}`}
+            >
+              <Icon className="h-7 w-7 text-white" />
+            </span>
+
+            <span className="text-4xl font-black text-white/15">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+          </div>
+
+          <h3 className="mt-6 text-3xl font-black leading-tight">
+            {item.title}
+          </h3>
+
+          {/* <p className="mt-4 text-[15px] leading-7 text-white/75">
+            {item.intro}
+          </p> */}
+        </div>
+
+        {/* BODY */}
+        <div className="flex flex-1 flex-col bg-white p-6">
+          <ul className="space-y-4">
+            {item.bullets.map((point) => (
+              <li
+                key={point}
+                className="flex gap-3 text-[15px] leading-7 text-gray-700"
+              >
+                <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#edad1a]" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* FOOTER */}
+        <div
+          className={`py-4 text-center text-lg font-bold ${
+            item.status === "Completed"
+              ? "bg-[#edad1a] text-[#00274d]"
+              : "bg-gray-200 text-[#00274d]"
+          }`}
+        >
+          {item.status}
+        </div>
+      </motion.article>
+    );
+  })}
+</div>
           </div>
         </section>
+
+     <section className="py-20 bg-[#f8fafc]">
+  <div className="container mx-auto max-w-7xl px-4">
+    <div className="grid gap-16 lg:grid-cols-[360px_1fr]">
+
+      {/* Left */}
+      <div className="lg:sticky lg:top-28 h-fit">
+        <SectionEyebrow>AI Vision</SectionEyebrow>
+
+        <h2 className="mt-3 text-4xl font-black leading-tight text-[#00274d]">
+          AI-Driven
+          <br />
+          Platform Vision
+        </h2>
+
+        {/* <p className="mt-6 text-gray-600 leading-7">
+          The next generation of AI modules being developed to automate
+          procurement, tendering, insurance, maintenance and business growth
+          across the infrastructure ecosystem.
+        </p> */}
+
+        <div className="mt-10 rounded-2xl bg-[#00274d] p-6 text-white">
+          <div className="space-y-4">
+
+            <div className="flex items-center gap-3">
+              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
+              <p>Agentic AI Automation</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
+              <p>Infrastructure Intelligence</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
+              <p>AI-first Workflows</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Right */}
+      <div className="relative">
+
+        <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-[#00274d]/10" />
+
+        <div className="space-y-8">
+
+          {aiVisionModules.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: 25 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="relative flex gap-6"
+              >
+                {/* Icon */}
+                <div
+                  className={`relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${item.accent}`}
+                >
+                  <Icon className="h-8 w-8 text-white" />
+                </div>
+
+                {/* Card */}
+                <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+                  <div className="mb-3 flex items-center justify-between">
+
+                    <h3 className="text-xl font-bold text-[#00274d]">
+                      {item.title}
+                    </h3>
+
+                    <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#edad1a]">
+                      AI Vision
+                    </span>
+
+                  </div>
+
+                  <p className="leading-7 text-gray-600">
+                    {item.description}
+                  </p>
+
+                </div>
+              </motion.div>
+            );
+          })}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -1264,36 +1604,99 @@ export default function Investor() {
           </div>
         </section> */}
 
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
-              <div>
-                <SectionEyebrow>Market size</SectionEyebrow>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                  Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry.
-                </h2>
-                {/* <p className="text-gray-600 leading-relaxed">
-                  The opportunity sits across NIP-backed infrastructure activity, general insurance, construction equipment and contract manufacturing. Vendor Infra is positioned across all four pools.
-                </p> */}
-              </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {marketCards.map((card) => (
-                  <article key={card.title} className="rounded-2xl bg-[#00274d] p-5 text-white">
-                    <h3 className="text-lg font-bold mb-4">{card.title}</h3>
-                    <ul className="space-y-2">
-                      {card.values.map((value) => (
-                        <li key={value} className="flex gap-2 text-sm text-white/75">
-                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-[#edad1a] shrink-0" />
-                          {value}
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
+<section className="bg-white py-16 lg:py-20">
+  <div className="container mx-auto max-w-7xl px-4">
+
+    {/* Heading */}
+    <div className="mx-auto mb-12 text-center">
+      <div className="mb-5 flex items-center justify-center gap-5">
+        <SectionEyebrow className="!mb-0">
+          Market Size
+        </SectionEyebrow>
+      </div>
+
+      <h2 className="text-[28px] font-black leading-[1.15] text-[#00274d] lg:text-[46px]">
+        <span className="hidden lg:inline">
+          Driving growth, innovation, and scale across the trillion-dollar Infrastructure,
+          <br />
+          Construction and Manufacturing Industry.
+        </span>
+        <span className="lg:hidden">
+          Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry.
+        </span>
+      </h2>
+    </div>
+
+    {/* Cards */}
+    <div className="mx-auto grid max-w-4xl gap-5 lg:grid-cols-2">
+      {marketOpportunities.map((item) => {
+        const Icon = item.icon;
+
+        return (
+          <article
+            key={item.title}
+            className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            {/* Header */}
+            <div className="bg-[#00274d] px-4 py-3 text-white">
+              <div className="flex items-center gap-3">
+                <div
+                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.accent}`}
+                >
+                  <Icon className="h-5 w-5 text-white" />
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-bold leading-none">
+                    {item.title}
+                  </h3>
+
+                  <p className="mt-1 text-xs text-white/70">
+                    {item.subtitle}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+
+            {/* Body */}
+            <div className="p-4">
+              <div className="space-y-2">
+                {item.metrics.map((metric) => (
+                  <div
+                    key={metric.label}
+                    className="flex items-center justify-between border-b border-gray-100 pb-2 last:border-none last:pb-0"
+                  >
+                    <span className="text-sm text-gray-500">
+                      {metric.label}
+                    </span>
+
+                    <span className="text-sm font-bold text-[#00274d]">
+                      {metric.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {item.highlight.label && (
+                <div className="mt-3 rounded-lg bg-gray-50 px-4 py-2.5">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-semibold text-gray-600">
+                      {item.highlight.label}
+                    </span>
+
+                    <span className="text-base font-black text-[#edad1a]">
+                      {item.highlight.value}
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</section>
 
         <section className="py-16 md:py-20 bg-[#f6f8fb]">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -1604,12 +2007,12 @@ export default function Investor() {
                     Connect with our team for investor discussions, deck access and strategic partnership conversations.
                   </p>
                 </div>
-                <a href="mailto:enquiry@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
-                  enquiry@vendorinfra.com <Mail className="w-4 h-4" />
+                <a href="mailto:rahul@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
+                  rahul@vendorinfra.com <Mail className="w-4 h-4" />
                 </a>
               </div>
               <p className="text-white/35 text-xs mt-6">
-                Highly confidential and for private circulation only. Figures are based on the supplied investor deck.
+                Highly confidential and for private circulation only.
               </p>
             </div>
           </div>

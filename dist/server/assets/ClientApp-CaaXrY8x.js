@@ -5,7 +5,7 @@ import { useLocation, Link, useParams, Router as Router$1, Switch, Route } from 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import * as ToastPrimitives from "@radix-ui/react-toast";
 import { cva } from "class-variance-authority";
-import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, Upload, Workflow, Bot, CircleDollarSign, Boxes, Landmark, BadgeIndianRupee, MapPinned, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
+import { X, AlertCircle, ArrowRight, ChevronDown, ShoppingCart, Menu, Facebook, Twitter, Linkedin, Instagram, User, Phone, Mail, Building2, MessageSquare, Loader2, CheckCircle2, Sparkles, Search, Calculator, Tractor, Package, Factory, ShieldCheck, Briefcase, BarChart3, ArrowUpRight, Star, ChevronLeft, ChevronRight, Target, Shield, Layers, Zap, BarChart, Globe, Play, FileSearch, Gauge, Layers3, BadgeCheck, ClipboardCheck, GitBranch, Truck, PackageCheck, LineChart, Globe2, MapPin, Send, Calendar, Tag, ArrowLeft, TrendingUp, Check, Brain, Database, Clock, Leaf, Lock, Network, LockKeyhole, Users, BriefcaseBusiness, HelpCircle, Upload, Workflow, Bot, CircleDollarSign, Boxes, Landmark, Wrench, FileSpreadsheet, BrainCircuit, FilePenLine, Gavel, ClipboardList, Monitor, HardHat, BadgeIndianRupee, MapPinned, PackageSearch, ShoppingBag, Minus, Plus, RotateCcw, CheckCircle, Trash2, CalendarCheck, ArrowUp } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import * as TooltipPrimitive from "@radix-ui/react-tooltip";
@@ -8328,6 +8328,190 @@ const offerings = [
     accent: "bg-[#edad1a]"
   }
 ];
+const aiPlatformModules = [
+  {
+    title: "AI-Powered Vendor Discovery",
+    status: "Completed",
+    intro: "AI-powered vendor discovery engine with intelligent search based on capability, location, performance, type of work and more.",
+    bullets: [
+      "AI-powered vendor discovery engine with intelligent search based on capability, location, performance, type of work and more.",
+      "Predicts vendor fit, improves sourcing speed, and reduces procurement effort."
+    ],
+    icon: Search,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "AI-Powered Plants & Equipment Search",
+    status: "Completed",
+    intro: "AI-driven plant & equipment intelligent search based on location, machine type, category and more.",
+    bullets: [
+      "AI-driven plant & equipment intelligent search based on location, machine type, category and more.",
+      "Enhances equipment sourcing efficiency, reduces idling and improves asset utilization."
+    ],
+    icon: Wrench,
+    accent: "bg-[#F4B400]"
+  },
+  {
+    title: "AI-Powered Sector Intelligence",
+    status: "Completed",
+    intro: "AI-based sector intelligence platform delivering market trends, demand insights, and industry analytics.",
+    bullets: [
+      "AI-based sector intelligence platform delivering market trends, demand insights, and industry analytics.",
+      "Enables smarter decisions through real-time data and predictive insights."
+    ],
+    icon: BarChart3,
+    accent: "bg-[#00B8A9]"
+  },
+  {
+    title: "AI-Assisted Plants & Equipment Upload",
+    status: "Under Development",
+    intro: "Implementing image recognition and object detection AI for equipment uploads.",
+    bullets: [
+      "Implementing an image recognition and object detection AI model (e.g., using a vendor-uploaded photo of equipment).",
+      "Integrating the AI output to automatically fill out relevant fields to simplify the upload process."
+    ],
+    icon: Upload,
+    accent: "bg-[#9BC75B]"
+  },
+  {
+    title: "Plants & Equipment Spare Parts Marketplace",
+    status: "Under Development",
+    intro: "AI-powered marketplace for spare parts and servicing with smart onboarding and inventory.",
+    bullets: [
+      "AI-powered marketplace for spare parts & servicing with smart onboarding & inventory.",
+      "Predicts demand, recommends parts, and reduces downtime."
+    ],
+    icon: Package,
+    accent: "bg-[#A9A9A9]"
+  }
+];
+const aiVisionModules = [
+  {
+    title: "Vendor Verification using AI Agents",
+    description: "Designing, training, and deploying AI agents to automate the human verification process. Development of a verification workflow tool and flagging system for manual review.",
+    icon: BadgeCheck,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "Tender to BOQ Conversion",
+    description: "Development and training of a specialized NLP/ML model. Automatically convert structured and unstructured tender documents into a standardized BOQ format.",
+    icon: FileSpreadsheet,
+    accent: "bg-[#F4B400]"
+  },
+  {
+    title: "Tender Intelligence & Profiling",
+    description: "Matching the tender's requirements with specific contractor profiles with AI and ML. Developing a logic engine to identify and flag potential issues or missing information in the tender submission.",
+    icon: BrainCircuit,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "Fill Tender Module",
+    description: "Development module capable of drafting and completing tender forms on behalf of the contractor with AI, including a critique function to suggest improvements and competitive bid adjustments.",
+    icon: FilePenLine,
+    accent: "bg-[#F4B400]"
+  },
+  {
+    title: "Machine Maintenance Module",
+    description: "Dedicated feature set for scheduling, tracking, and managing equipment maintenance services between vendors and contractors.",
+    icon: Wrench,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "Auction Feature Development",
+    description: "Development of a dynamic auction module where contractors can upload a BOQ and multiple vendors can submit competitive bids; includes bidding logic and notification systems.",
+    icon: Gavel,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "AI-Powered Insurance Engine",
+    description: "AI-powered insurance engine that simplifies risk assessment, recommends the right coverage, and automates claims, pricing, and policy management for faster, smarter insurance operations.",
+    icon: ShieldCheck,
+    accent: "bg-[#F4B400]"
+  },
+  {
+    title: "New EPC Acquisition",
+    description: "Agentic AI identifies newly published tenders and automatically reaches out to eligible EPC companies with a personalised tender summary and eligibility report.",
+    icon: Building2,
+    accent: "bg-[#2E97D4]"
+  },
+  {
+    title: "Pre-Bid Engagement",
+    description: "For live tenders, the agent proactively contacts eligible, unregistered EPC companies with a preview analysis and eligibility score—converting cold leads into active platform users before the bid deadline.",
+    icon: ClipboardList,
+    accent: "bg-[#F4B400]"
+  },
+  {
+    title: "Post-Award Conversion",
+    description: "When an EPC company wins a bid, a vendor landscape summary of eligible suppliers is shared without contact details, creating a strong pull to subscribe and unlock full access.",
+    icon: Monitor,
+    accent: "bg-[#2E97D4]"
+  }
+];
+const marketOpportunities = [
+  {
+    title: "Infrastructure Pipeline",
+    subtitle: "NIP Coverage across Projects, States",
+    icon: HardHat,
+    accent: "bg-[#d32f2f]",
+    metrics: [
+      { label: "NIP", value: "12.2+ Lac Cr" },
+      { label: "Target (Pipeline)", value: "13.15 lakh Cr (2025–28)" },
+      { label: "Projects", value: "13000+ projects" },
+      { label: "Sectors", value: "30+ sectors" },
+      { label: "States & UTs", value: "36 states & UTs" },
+      { label: "Key Sectors", value: "Roads, Railways, Water etc." }
+    ],
+    highlight: {
+      label: "",
+      value: ""
+    }
+  },
+  {
+    title: "Contract Manufacturing",
+    subtitle: "Contract manufacturing across industries",
+    icon: Factory,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "2,20,000 Cr" },
+      { label: "2026", value: "2,95,000 Cr" },
+      { label: "2030 (P)", value: "4,90,000+ Cr" }
+    ],
+    highlight: {
+      label: "Growth",
+      value: "~15%"
+    }
+  },
+  {
+    title: "Construction Equipment",
+    subtitle: "Indian Construction Equipment Market",
+    icon: Building2,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "71,925 Cr" },
+      { label: "2026", value: "84,014 Cr" },
+      { label: "2030 (P)", value: "1,58,223 Cr" }
+    ],
+    highlight: {
+      label: "CAGR",
+      value: "8%"
+    }
+  },
+  {
+    title: "Insurance",
+    subtitle: "25 general insurance companies Premium",
+    icon: ShieldCheck,
+    accent: "bg-[#edad1a]",
+    metrics: [
+      { label: "2024", value: "93,000 Cr" },
+      { label: "2026", value: "1,40,000 Cr" },
+      { label: "2030 (P)", value: "2,80,000 Cr" }
+    ],
+    highlight: {
+      label: "Growth",
+      value: "30.77%"
+    }
+  }
+];
 const productVision = [
   {
     title: "Supply Chain",
@@ -8378,20 +8562,6 @@ const productVision = [
     ]
   }
 ];
-const aiModules = [
-  { name: "AI-powered vendor discovery", status: "Completed" },
-  { name: "AI-powered sector intelligence", status: "Completed" },
-  { name: "AI-powered plants and equipment search", status: "Completed" },
-  { name: "AI assisted plants and equipment upload", status: "Under development" },
-  { name: "Plants and equipment spare parts marketplace", status: "Under development" },
-  { name: "Vendor verification using AI agents", status: "Vision" },
-  { name: "Tender to BOQ conversion", status: "Vision" },
-  { name: "Tender intelligence and profiling", status: "Vision" },
-  { name: "Fill tender module", status: "Vision" },
-  { name: "AI-powered insurance engine", status: "Vision" },
-  { name: "Machine maintenance module", status: "Vision" },
-  { name: "New EPC acquisition and pre-bid engagement", status: "Vision" }
-];
 const rightToWin = [
   {
     title: "Buying-selling Market",
@@ -8418,24 +8588,6 @@ const rightToWin = [
     text: "We build infrastructure-specific services across the value chain, including supply chain, insurance, P&E, and SaaS. This exclusive focus on infrastructure allows us to solve problems that multi-industry platforms do not address."
   }
 ];
-const marketCards = [
-  {
-    title: "Infrastructure pipeline",
-    values: ["12.2+ Lac Cr NIP", "13.15 Lac Cr target pipeline 2025-28", "13000+ projects", "30+ sectors", "36 states and UTs"]
-  },
-  {
-    title: "Insurance",
-    values: ["25 general insurance companies", "93,000 Cr premium in 2024", "1,40,000 Cr in 2026", "2,80,000 Cr projected by 2030", "30.77% growth"]
-  },
-  {
-    title: "Construction equipment",
-    values: ["71,925 Cr market in 2024", "84,014 Cr in 2026", "1,58,223 Cr projected by 2030", "8% CAGR"]
-  },
-  {
-    title: "Contract manufacturing",
-    values: ["2,20,000 Cr in 2024", "2,95,000 Cr in 2026", "4,90,000+ Cr projected by 2030", "About 15% growth"]
-  }
-];
 const tractionStats = [
   { value: "32,930", label: "verified vendors" },
   { value: "18,473", label: "outbound leads" },
@@ -8447,11 +8599,11 @@ const tractionStats = [
   { value: "159", label: "live plants and equipment" }
 ];
 const achievements = [
-  "470+ Cr consolidated revenue since inception",
-  "220+ projects delivered across 20+ sectors",
-  "25+ states operating footprint in India",
-  "340+ material types supplied",
-  "106 trusted clients across infrastructure, construction and manufacturing"
+  "Achieved ₹470+ Cr in consolidated revenue, demonstrating strong financial performance and consistent growth momentum.",
+  "Successfully delivered 220+ projects across 20+ sectors, showcasing diverse execution capabilities.",
+  "Established a strong footprint with operations across 25+ states in India.",
+  "Supplied 340+ types of materials, covering a wide spectrum of project requirements.",
+  "Trusted by 106 clients, building long-term partnerships across the infrastructure, Construction and manufacturing ecosystem."
 ];
 const revenueStreams = [
   {
@@ -8913,36 +9065,115 @@ function Investor() {
           }) })
         ] })
       ] }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start", children: [
-        /* @__PURE__ */ jsxs("div", { className: "lg:sticky lg:top-28", children: [
+      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-white", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
+        /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 max-w-4xl text-center", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "AI platform" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5", children: "AI-Driven Platform Modules" }),
-          /* @__PURE__ */ jsxs("div", { className: "mt-7 rounded-2xl bg-[#00274d] p-6 text-white", children: [
-            /* @__PURE__ */ jsx("p", { className: "text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]", children: "Platform logic" }),
-            /* @__PURE__ */ jsx("div", { className: "mt-5 grid gap-3", children: ["Discover", "Analyse", "Automate", "Convert"].map((step, index) => /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3 rounded-xl bg-white/8 px-4 py-3", children: [
-              /* @__PURE__ */ jsx("span", { className: "flex h-8 w-8 items-center justify-center rounded-lg bg-[#edad1a] text-sm font-black text-[#00274d]", children: index + 1 }),
-              /* @__PURE__ */ jsx("span", { className: "font-bold", children: step })
-            ] }, step)) })
-          ] })
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5", children: "AI-Driven Platform Modules" })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid gap-4 sm:grid-cols-2 xl:grid-cols-3", children: aiModules.map((module, index) => /* @__PURE__ */ jsxs(
-          motion.article,
-          {
-            initial: { opacity: 0, y: 14 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { delay: index * 0.025 },
-            className: "group relative min-h-[150px] overflow-hidden rounded-2xl border border-gray-100 bg-[#f8fafc] p-5 shadow-sm transition-all hover:-translate-y-1 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/10",
-            children: [
-              /* @__PURE__ */ jsx("div", { className: "absolute right-4 top-4 text-5xl font-black text-[#00274d]/5", children: String(index + 1).padStart(2, "0") }),
-              /* @__PURE__ */ jsxs("div", { className: "relative", children: [
-                /* @__PURE__ */ jsx("span", { className: "mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-[#edad1a]/15 text-[#edad1a] group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors", children: /* @__PURE__ */ jsx(Bot, { className: "h-5 w-5" }) }),
-                /* @__PURE__ */ jsx("h3", { className: "text-base font-black leading-snug text-[#00274d]", children: module.name })
-              ] })
-            ]
-          },
-          module.name
-        )) })
+        /* @__PURE__ */ jsx("div", { className: "grid gap-4 lg:grid-cols-5", children: aiPlatformModules.map((item2, index) => {
+          const Icon = item2.icon;
+          return /* @__PURE__ */ jsxs(
+            motion.article,
+            {
+              initial: { opacity: 0, y: 16 },
+              whileInView: { opacity: 1, y: 0 },
+              viewport: { once: true },
+              transition: { delay: index * 0.05 },
+              className: "group flex min-h-[640px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg",
+              children: [
+                /* @__PURE__ */ jsxs("div", { className: "bg-[#00274d] p-5 text-white", children: [
+                  /* @__PURE__ */ jsxs("div", { className: "flex items-start justify-between", children: [
+                    /* @__PURE__ */ jsx(
+                      "span",
+                      {
+                        className: `flex h-14 w-14 items-center justify-center rounded-xl ${item2.accent}`,
+                        children: /* @__PURE__ */ jsx(Icon, { className: "h-7 w-7 text-white" })
+                      }
+                    ),
+                    /* @__PURE__ */ jsx("span", { className: "text-4xl font-black text-white/15", children: String(index + 1).padStart(2, "0") })
+                  ] }),
+                  /* @__PURE__ */ jsx("h3", { className: "mt-6 text-3xl font-black leading-tight", children: item2.title })
+                ] }),
+                /* @__PURE__ */ jsx("div", { className: "flex flex-1 flex-col bg-white p-6", children: /* @__PURE__ */ jsx("ul", { className: "space-y-4", children: item2.bullets.map((point) => /* @__PURE__ */ jsxs(
+                  "li",
+                  {
+                    className: "flex gap-3 text-[15px] leading-7 text-gray-700",
+                    children: [
+                      /* @__PURE__ */ jsx(CheckCircle2, { className: "mt-1 h-4 w-4 shrink-0 text-[#edad1a]" }),
+                      /* @__PURE__ */ jsx("span", { children: point })
+                    ]
+                  },
+                  point
+                )) }) }),
+                /* @__PURE__ */ jsx(
+                  "div",
+                  {
+                    className: `py-4 text-center text-lg font-bold ${item2.status === "Completed" ? "bg-[#edad1a] text-[#00274d]" : "bg-gray-200 text-[#00274d]"}`,
+                    children: item2.status
+                  }
+                )
+              ]
+            },
+            item2.title
+          );
+        }) })
+      ] }) }),
+      /* @__PURE__ */ jsx("section", { className: "py-20 bg-[#f8fafc]", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto max-w-7xl px-4", children: /* @__PURE__ */ jsxs("div", { className: "grid gap-16 lg:grid-cols-[360px_1fr]", children: [
+        /* @__PURE__ */ jsxs("div", { className: "lg:sticky lg:top-28 h-fit", children: [
+          /* @__PURE__ */ jsx(SectionEyebrow, { children: "AI Vision" }),
+          /* @__PURE__ */ jsxs("h2", { className: "mt-3 text-4xl font-black leading-tight text-[#00274d]", children: [
+            "AI-Driven",
+            /* @__PURE__ */ jsx("br", {}),
+            "Platform Vision"
+          ] }),
+          /* @__PURE__ */ jsx("div", { className: "mt-10 rounded-2xl bg-[#00274d] p-6 text-white", children: /* @__PURE__ */ jsxs("div", { className: "space-y-4", children: [
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("span", { className: "h-3 w-3 rounded-full bg-[#edad1a]" }),
+              /* @__PURE__ */ jsx("p", { children: "Agentic AI Automation" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("span", { className: "h-3 w-3 rounded-full bg-[#edad1a]" }),
+              /* @__PURE__ */ jsx("p", { children: "Infrastructure Intelligence" })
+            ] }),
+            /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+              /* @__PURE__ */ jsx("span", { className: "h-3 w-3 rounded-full bg-[#edad1a]" }),
+              /* @__PURE__ */ jsx("p", { children: "AI-first Workflows" })
+            ] })
+          ] }) })
+        ] }),
+        /* @__PURE__ */ jsxs("div", { className: "relative", children: [
+          /* @__PURE__ */ jsx("div", { className: "absolute left-8 top-0 bottom-0 w-[2px] bg-[#00274d]/10" }),
+          /* @__PURE__ */ jsx("div", { className: "space-y-8", children: aiVisionModules.map((item2, index) => {
+            const Icon = item2.icon;
+            return /* @__PURE__ */ jsxs(
+              motion.div,
+              {
+                initial: { opacity: 0, x: 25 },
+                whileInView: { opacity: 1, x: 0 },
+                viewport: { once: true },
+                transition: { delay: index * 0.05 },
+                className: "relative flex gap-6",
+                children: [
+                  /* @__PURE__ */ jsx(
+                    "div",
+                    {
+                      className: `relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${item2.accent}`,
+                      children: /* @__PURE__ */ jsx(Icon, { className: "h-8 w-8 text-white" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsxs("div", { className: "flex-1 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl", children: [
+                    /* @__PURE__ */ jsxs("div", { className: "mb-3 flex items-center justify-between", children: [
+                      /* @__PURE__ */ jsx("h3", { className: "text-xl font-bold text-[#00274d]", children: item2.title }),
+                      /* @__PURE__ */ jsx("span", { className: "rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#edad1a]", children: "AI Vision" })
+                    ] }),
+                    /* @__PURE__ */ jsx("p", { className: "leading-7 text-gray-600", children: item2.description })
+                  ] })
+                ]
+              },
+              item2.title
+            );
+          }) })
+        ] })
       ] }) }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
@@ -8954,19 +9185,61 @@ function Investor() {
           /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-600 leading-relaxed", children: item2.text })
         ] }, item2.title)) })
       ] }) }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20", children: /* @__PURE__ */ jsx("div", { className: "container mx-auto px-4 max-w-7xl", children: /* @__PURE__ */ jsxs("div", { className: "grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start", children: [
-        /* @__PURE__ */ jsxs("div", { children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: "Market size" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5", children: "Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry." })
+      /* @__PURE__ */ jsx("section", { className: "bg-white py-16 lg:py-20", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto max-w-7xl px-4", children: [
+        /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 text-center", children: [
+          /* @__PURE__ */ jsx("div", { className: "mb-5 flex items-center justify-center gap-5", children: /* @__PURE__ */ jsx(SectionEyebrow, { className: "!mb-0", children: "Market Size" }) }),
+          /* @__PURE__ */ jsxs("h2", { className: "text-[28px] font-black leading-[1.15] text-[#00274d] lg:text-[46px]", children: [
+            /* @__PURE__ */ jsxs("span", { className: "hidden lg:inline", children: [
+              "Driving growth, innovation, and scale across the trillion-dollar Infrastructure,",
+              /* @__PURE__ */ jsx("br", {}),
+              "Construction and Manufacturing Industry."
+            ] }),
+            /* @__PURE__ */ jsx("span", { className: "lg:hidden", children: "Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry." })
+          ] })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid sm:grid-cols-2 gap-4", children: marketCards.map((card) => /* @__PURE__ */ jsxs("article", { className: "rounded-2xl bg-[#00274d] p-5 text-white", children: [
-          /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold mb-4", children: card.title }),
-          /* @__PURE__ */ jsx("ul", { className: "space-y-2", children: card.values.map((value) => /* @__PURE__ */ jsxs("li", { className: "flex gap-2 text-sm text-white/75", children: [
-            /* @__PURE__ */ jsx("span", { className: "mt-2 h-1.5 w-1.5 rounded-full bg-[#edad1a] shrink-0" }),
-            value
-          ] }, value)) })
-        ] }, card.title)) })
-      ] }) }) }),
+        /* @__PURE__ */ jsx("div", { className: "mx-auto grid max-w-4xl gap-5 lg:grid-cols-2", children: marketOpportunities.map((item2) => {
+          const Icon = item2.icon;
+          return /* @__PURE__ */ jsxs(
+            "article",
+            {
+              className: "overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+              children: [
+                /* @__PURE__ */ jsx("div", { className: "bg-[#00274d] px-4 py-3 text-white", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center gap-3", children: [
+                  /* @__PURE__ */ jsx(
+                    "div",
+                    {
+                      className: `flex h-10 w-10 items-center justify-center rounded-lg ${item2.accent}`,
+                      children: /* @__PURE__ */ jsx(Icon, { className: "h-5 w-5 text-white" })
+                    }
+                  ),
+                  /* @__PURE__ */ jsxs("div", { children: [
+                    /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold leading-none", children: item2.title }),
+                    /* @__PURE__ */ jsx("p", { className: "mt-1 text-xs text-white/70", children: item2.subtitle })
+                  ] })
+                ] }) }),
+                /* @__PURE__ */ jsxs("div", { className: "p-4", children: [
+                  /* @__PURE__ */ jsx("div", { className: "space-y-2", children: item2.metrics.map((metric) => /* @__PURE__ */ jsxs(
+                    "div",
+                    {
+                      className: "flex items-center justify-between border-b border-gray-100 pb-2 last:border-none last:pb-0",
+                      children: [
+                        /* @__PURE__ */ jsx("span", { className: "text-sm text-gray-500", children: metric.label }),
+                        /* @__PURE__ */ jsx("span", { className: "text-sm font-bold text-[#00274d]", children: metric.value })
+                      ]
+                    },
+                    metric.label
+                  )) }),
+                  item2.highlight.label && /* @__PURE__ */ jsx("div", { className: "mt-3 rounded-lg bg-gray-50 px-4 py-2.5", children: /* @__PURE__ */ jsxs("div", { className: "flex items-center justify-between", children: [
+                    /* @__PURE__ */ jsx("span", { className: "text-sm font-semibold text-gray-600", children: item2.highlight.label }),
+                    /* @__PURE__ */ jsx("span", { className: "text-base font-black text-[#edad1a]", children: item2.highlight.value })
+                  ] }) })
+                ] })
+              ]
+            },
+            item2.title
+          );
+        }) })
+      ] }) }),
       /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
         /* @__PURE__ */ jsxs("div", { className: "text-center max-w-4xl mx-auto mb-12", children: [
           /* @__PURE__ */ jsx(SectionEyebrow, { children: "Revenue streams" }),
@@ -9124,12 +9397,12 @@ function Investor() {
             /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold mb-3", children: "Interested in Vendor Infra's growth story?" }),
             /* @__PURE__ */ jsx("p", { className: "text-white/72 max-w-3xl", children: "Connect with our team for investor discussions, deck access and strategic partnership conversations." })
           ] }),
-          /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
-            "enquiry@vendorinfra.com ",
+          /* @__PURE__ */ jsxs("a", { href: "mailto:rahul@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
+            "rahul@vendorinfra.com ",
             /* @__PURE__ */ jsx(Mail, { className: "w-4 h-4" })
           ] })
         ] }),
-        /* @__PURE__ */ jsx("p", { className: "text-white/35 text-xs mt-6", children: "Highly confidential and for private circulation only. Figures are based on the supplied investor deck." })
+        /* @__PURE__ */ jsx("p", { className: "text-white/35 text-xs mt-6", children: "Highly confidential and for private circulation only." })
       ] }) }) })
     ] }),
     /* @__PURE__ */ jsx(Footer, {})
