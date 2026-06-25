@@ -515,26 +515,32 @@ const aiModules = [
 const rightToWin = [
   {
     title: "Buying-selling Market",
+    icon: "🔄",
     text: "New-age companies operate 80% within manufacturer-distributor-trader networks and only 20% with end clients. Vendor Infra operates differently. We buy 100% from manufacturers, distributors and stockists and sell 100% directly to end clients, eliminating multi-layer trading complexity.",
   },
   {
     title: "Debtor Days",
+    icon: "📅",
     text: "Buying-selling structure directly impacts debtor days. New-age companies have lower debtor days (~12 days) due to inter-trader transactions. Vendor Infra operates on industry demand debtor days (~45 days), aligned with real project cycles and end-client payment structures.",
   },
   {
     title: "Gross Margins",
+    icon: "📈",
     text: "Debtors structure drives margin performance. New-age companies recorded 1.2% (FY24) and 1.7% (FY25) gross margins, while Vendor Infra achieved 3.5% (FY24) and 5.3% (FY25), creating an approximately 3% structural margin advantage.",
   },
   {
-    title: "Strong founder-market fit",
+    title: "Strong Founder-Market Fit",
+    icon: "🤝",
     text: "Our leadership team brings deep domain expertise and strong industry relationships. Their experience has accelerated our growth and strengthened market penetration. This strategic advantage enables faster execution and sustained competitive positioning.",
   },
   {
     title: "Proven Unit Economics",
+    icon: "✅",
     text: "Most businesses chase growth through equity and operate on limited runway. We have achieved positive unit economics using debt, proving the business is a need of the industry.",
   },
   {
     title: "Deep Infrastructure Focus",
+    icon: "🏗️",
     text: "We build infrastructure-specific services across the value chain, including supply chain, insurance, P&E, and SaaS. This exclusive focus on infrastructure allows us to solve problems that multi-industry platforms do not address.",
   },
 ];
@@ -726,7 +732,7 @@ function SectionEyebrow({ children }: { children: string }) {
 export default function Investor() {
   usePageSeo(
     "Investor Relations | Vendor Infra",
-    "Vendor Infra investor overview: AI-powered operating system for infrastructure, construction and manufacturing with strong traction, market opportunity and growth roadmap."
+    "Vendor Infra investor-relations overview: AI-powered operating system for infrastructure, construction and manufacturing with strong traction, market opportunity and growth roadmap."
   );
 
   return (
@@ -781,7 +787,7 @@ export default function Investor() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3">
-          <a href="mailto:enquiry@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
+          <a href="mailto:utkarsh.kashyap@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
             Contact Investor Relations <Mail className="w-4 h-4" />
           </a>
         </div>
@@ -1475,24 +1481,48 @@ export default function Investor() {
   </div>
 </section>
 
-        <section className="py-16 md:py-20 bg-[#f6f8fb]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <SectionEyebrow> Our Right to win</SectionEyebrow>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-               Technology, network effects, and industry expertise create our competitive edge.
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {rightToWin.map((item) => (
-                <article key={item.title} className="rounded-2xl border border-gray-100 bg-white p-6">
-                  <h3 className="text-lg font-bold text-[#00274d] mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{item.text}</p>
-                </article>
-              ))}
-            </div>
+      <section className="py-16 md:py-20 bg-[#00274d]">
+  <div className="container mx-auto px-4 max-w-7xl">
+
+    {/* Header */}
+    <div className="text-center max-w-3xl mx-auto mb-14">
+      <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#edad1a] mb-4">
+        <span className="block w-6 h-px bg-[#edad1a] opacity-50" />
+        Our Right to Win
+        <span className="block w-6 h-px bg-[#edad1a] opacity-50" />
+      </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+        Technology, network effects, and industry expertise create our competitive edge.
+      </h2>
+    </div>
+
+    {/* Cards Grid */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {rightToWin.map((item) => (
+        <article
+          key={item.title}
+          className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-7 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
+        >
+          {/* Top accent line on hover */}
+          <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+
+          {/* Icon badge */}
+          <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-400/25 flex items-center justify-center text-lg mb-4">
+            {item.icon}
           </div>
-        </section>
+
+          <h3 className="text-[15px] font-bold text-blue-50 mb-2 tracking-tight">
+            {item.title}
+          </h3>
+          <p className="text-sm text-white/55 leading-relaxed">
+            {item.text}
+          </p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>
 
         {/* <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 max-w-7xl">
@@ -2004,7 +2034,7 @@ export default function Investor() {
                   <p className="text-[#edad1a] text-sm font-bold uppercase tracking-[0.22em] mb-3">Investor relations</p>
                   <h2 className="text-2xl md:text-3xl font-bold mb-3">Interested in Vendor Infra's growth story?</h2>
                   <p className="text-white/72 max-w-3xl">
-                    Connect with our team for investor discussions, deck access and strategic partnership conversations.
+                    Connect with our team for investor-relations discussions, deck access and strategic partnership conversations.
                   </p>
                 </div>
                 <a href="mailto:rahul@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>

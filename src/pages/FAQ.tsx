@@ -253,7 +253,7 @@ export default function FAQ() {
                   </div>
                   <h3 className="text-xl font-bold leading-snug mb-2">Still have questions?</h3>
                   <p className="text-white/80 text-sm leading-relaxed mb-5">
-                    Our team is ready to help with onboarding, pricing, vendor discovery, procurement, and investor enquiries.
+                    Our team is ready to help with onboarding, pricing, vendor discovery, procurement, and investor-relations enquiries.
                   </p>
                   <Link
                     href="/contact"

@@ -382,7 +382,7 @@ const MORE_LINKS = [
   { href: "/why-us", label: "Why Us" },
   { href: "/faq", label: "FAQ" },
   { href: "/career", label: "Career" },
-  { href: "/investor", label: "Investor Relations" },
+  { href: "/investor-relations", label: "Investor Relations" },
   { href: "/referral", label: "Referral Programme" }
 ];
 function Navbar() {
@@ -570,7 +570,7 @@ function Footer() {
           { href: "/why-us", label: "Why Us" },
           { href: "/pricing", label: "Pricing Plans" },
           { href: "/career", label: "Career" },
-          { href: "/investor", label: "Investor Relations" }
+          { href: "/investor-relations", label: "Investor Relations" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "shrink-0", children: [
@@ -3385,7 +3385,7 @@ function Home() {
     )
   ] });
 }
-const DEFAULT_TITLE = "Vendor Infra | Vendor Management & Procurement Platform";
+const DEFAULT_TITLE = "Vendor Infra | Vendor Infra | AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry.";
 const DEFAULT_DESCRIPTION = "Discover vendors, procure materials & access real-time market intelligence. India's #1 platform for contractors and EPC companies.";
 function getOgImageUrl() {
   return `${window.location.origin}/og-image.jpg`;
@@ -7941,7 +7941,7 @@ function FAQ() {
                 /* @__PURE__ */ jsxs("div", { className: "relative", children: [
                   /* @__PURE__ */ jsx("div", { className: "w-12 h-12 rounded-xl bg-white/15 backdrop-blur flex items-center justify-center mb-5", children: /* @__PURE__ */ jsx(MessageSquare, { className: "w-6 h-6 text-[#edad1a]" }) }),
                   /* @__PURE__ */ jsx("h3", { className: "text-xl font-bold leading-snug mb-2", children: "Still have questions?" }),
-                  /* @__PURE__ */ jsx("p", { className: "text-white/80 text-sm leading-relaxed mb-5", children: "Our team is ready to help with onboarding, pricing, vendor discovery, procurement, and investor enquiries." }),
+                  /* @__PURE__ */ jsx("p", { className: "text-white/80 text-sm leading-relaxed mb-5", children: "Our team is ready to help with onboarding, pricing, vendor discovery, procurement, and investor-relations enquiries." }),
                   /* @__PURE__ */ jsxs(
                     Link,
                     {
@@ -8566,26 +8566,32 @@ const productVision = [
 const rightToWin = [
   {
     title: "Buying-selling Market",
+    icon: "🔄",
     text: "New-age companies operate 80% within manufacturer-distributor-trader networks and only 20% with end clients. Vendor Infra operates differently. We buy 100% from manufacturers, distributors and stockists and sell 100% directly to end clients, eliminating multi-layer trading complexity."
   },
   {
     title: "Debtor Days",
+    icon: "📅",
     text: "Buying-selling structure directly impacts debtor days. New-age companies have lower debtor days (~12 days) due to inter-trader transactions. Vendor Infra operates on industry demand debtor days (~45 days), aligned with real project cycles and end-client payment structures."
   },
   {
     title: "Gross Margins",
+    icon: "📈",
     text: "Debtors structure drives margin performance. New-age companies recorded 1.2% (FY24) and 1.7% (FY25) gross margins, while Vendor Infra achieved 3.5% (FY24) and 5.3% (FY25), creating an approximately 3% structural margin advantage."
   },
   {
-    title: "Strong founder-market fit",
+    title: "Strong Founder-Market Fit",
+    icon: "🤝",
     text: "Our leadership team brings deep domain expertise and strong industry relationships. Their experience has accelerated our growth and strengthened market penetration. This strategic advantage enables faster execution and sustained competitive positioning."
   },
   {
     title: "Proven Unit Economics",
+    icon: "✅",
     text: "Most businesses chase growth through equity and operate on limited runway. We have achieved positive unit economics using debt, proving the business is a need of the industry."
   },
   {
     title: "Deep Infrastructure Focus",
+    icon: "🏗️",
     text: "We build infrastructure-specific services across the value chain, including supply chain, insurance, P&E, and SaaS. This exclusive focus on infrastructure allows us to solve problems that multi-industry platforms do not address."
   }
 ];
@@ -8716,7 +8722,7 @@ function SectionEyebrow({ children }) {
 function Investor() {
   usePageSeo(
     "Investor Relations | Vendor Infra",
-    "Vendor Infra investor overview: AI-powered operating system for infrastructure, construction and manufacturing with strong traction, market opportunity and growth roadmap."
+    "Vendor Infra investor-relations overview: AI-powered operating system for infrastructure, construction and manufacturing with strong traction, market opportunity and growth roadmap."
   );
   return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col", children: [
     /* @__PURE__ */ jsx("div", { className: "fixed right-0 top-0 h-full w-[18px] bg-[#00274d] z-50 pointer-events-none" }),
@@ -8743,7 +8749,7 @@ function Investor() {
               /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 gap-3 mb-3", children: heroStats.slice(0, 3).map((stat) => /* @__PURE__ */ jsx("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }) }, stat.label)) }),
               /* @__PURE__ */ jsx("div", { className: "grid grid-cols-3 gap-3", children: heroStats.slice(3, 5).map((stat) => /* @__PURE__ */ jsx("div", { className: "border-l-2 border-[#edad1a] bg-white/7 px-4 py-3", children: /* @__PURE__ */ jsx("p", { className: "text-xl md:text-2xl font-black text-white", children: stat.value }) }, stat.label)) })
             ] }),
-            /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-3", children: /* @__PURE__ */ jsxs("a", { href: "mailto:enquiry@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
+            /* @__PURE__ */ jsx("div", { className: "flex flex-col sm:flex-row gap-3", children: /* @__PURE__ */ jsxs("a", { href: "mailto:utkarsh.kashyap@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
               "Contact Investor Relations ",
               /* @__PURE__ */ jsx(Mail, { className: "w-4 h-4" })
             ] }) })
@@ -9176,15 +9182,28 @@ function Investor() {
           }) })
         ] })
       ] }) }) }),
-      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#f6f8fb]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
-        /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-12", children: [
-          /* @__PURE__ */ jsx(SectionEyebrow, { children: " Our Right to win" }),
-          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-[#00274d] leading-tight", children: "Technology, network effects, and industry expertise create our competitive edge." })
+      /* @__PURE__ */ jsx("section", { className: "py-16 md:py-20 bg-[#00274d]", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto px-4 max-w-7xl", children: [
+        /* @__PURE__ */ jsxs("div", { className: "text-center max-w-3xl mx-auto mb-14", children: [
+          /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#edad1a] mb-4", children: [
+            /* @__PURE__ */ jsx("span", { className: "block w-6 h-px bg-[#edad1a] opacity-50" }),
+            "Our Right to Win",
+            /* @__PURE__ */ jsx("span", { className: "block w-6 h-px bg-[#edad1a] opacity-50" })
+          ] }),
+          /* @__PURE__ */ jsx("h2", { className: "text-3xl md:text-4xl font-bold text-white leading-tight", children: "Technology, network effects, and industry expertise create our competitive edge." })
         ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-4", children: rightToWin.map((item2) => /* @__PURE__ */ jsxs("article", { className: "rounded-2xl border border-gray-100 bg-white p-6", children: [
-          /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-[#00274d] mb-2", children: item2.title }),
-          /* @__PURE__ */ jsx("p", { className: "text-sm text-gray-600 leading-relaxed", children: item2.text })
-        ] }, item2.title)) })
+        /* @__PURE__ */ jsx("div", { className: "grid md:grid-cols-2 lg:grid-cols-3 gap-4", children: rightToWin.map((item2) => /* @__PURE__ */ jsxs(
+          "article",
+          {
+            className: "group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-7 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]",
+            children: [
+              /* @__PURE__ */ jsx("span", { className: "absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" }),
+              /* @__PURE__ */ jsx("div", { className: "w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-400/25 flex items-center justify-center text-lg mb-4", children: item2.icon }),
+              /* @__PURE__ */ jsx("h3", { className: "text-[15px] font-bold text-blue-50 mb-2 tracking-tight", children: item2.title }),
+              /* @__PURE__ */ jsx("p", { className: "text-sm text-white/55 leading-relaxed", children: item2.text })
+            ]
+          },
+          item2.title
+        )) })
       ] }) }),
       /* @__PURE__ */ jsx("section", { className: "bg-white py-16 lg:py-20", children: /* @__PURE__ */ jsxs("div", { className: "container mx-auto max-w-7xl px-4", children: [
         /* @__PURE__ */ jsxs("div", { className: "mx-auto mb-12 text-center", children: [
@@ -9396,7 +9415,7 @@ function Investor() {
           /* @__PURE__ */ jsxs("div", { children: [
             /* @__PURE__ */ jsx("p", { className: "text-[#edad1a] text-sm font-bold uppercase tracking-[0.22em] mb-3", children: "Investor relations" }),
             /* @__PURE__ */ jsx("h2", { className: "text-2xl md:text-3xl font-bold mb-3", children: "Interested in Vendor Infra's growth story?" }),
-            /* @__PURE__ */ jsx("p", { className: "text-white/72 max-w-3xl", children: "Connect with our team for investor discussions, deck access and strategic partnership conversations." })
+            /* @__PURE__ */ jsx("p", { className: "text-white/72 max-w-3xl", children: "Connect with our team for investor-relations discussions, deck access and strategic partnership conversations." })
           ] }),
           /* @__PURE__ */ jsxs("a", { href: "mailto:rahul@vendorinfra.com", className: siteButtonClasses("primary", "px-6 py-3"), children: [
             "rahul@vendorinfra.com ",
@@ -11213,7 +11232,7 @@ function Router() {
       /* @__PURE__ */ jsx(Route, { path: "/faq", component: FAQ }),
       /* @__PURE__ */ jsx(Route, { path: "/career", component: Career }),
       /* @__PURE__ */ jsx(Route, { path: "/careers", component: Career }),
-      /* @__PURE__ */ jsx(Route, { path: "/investor", component: Investor }),
+      /* @__PURE__ */ jsx(Route, { path: "/investor-relations", component: Investor }),
       /* @__PURE__ */ jsx(Route, { path: "/investors", component: Investor }),
       /* @__PURE__ */ jsx(Route, { path: "/materials", component: Materials }),
       /* @__PURE__ */ jsx(Route, { path: "/materials/:category", component: MaterialCategory }),

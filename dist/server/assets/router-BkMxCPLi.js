@@ -3,7 +3,7 @@ import { createRootRouteWithContext, useRouter, Link, Outlet, HeadContent, Scrip
 import { jsx, jsxs } from "react/jsx-runtime";
 import { ZodError, z } from "zod";
 import nodemailer from "nodemailer";
-const appCss = "/assets/styles-BC_0G3J7.css";
+const appCss = "/assets/styles-Bi8DRM4q.css";
 function NotFoundComponent() {
   return /* @__PURE__ */ jsx("div", { className: "flex min-h-screen items-center justify-center bg-background px-4", children: /* @__PURE__ */ jsxs("div", { className: "max-w-md text-center", children: [
     /* @__PURE__ */ jsx("h1", { className: "text-7xl font-bold text-foreground", children: "404" }),
@@ -53,16 +53,16 @@ const Route$7 = createRootRouteWithContext()({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vendor Infra | Vendor Management & Procurement Platform" },
+      { title: "Vendor Infra | Vendor Infra | AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry." },
       { name: "description", content: "Vendor Infra helps infrastructure, construction and manufacturing teams discover vendors, procure materials, request quotes and manage project services on one platform." },
       { name: "author", content: "Vendor Infra Global Private Limited" },
-      { property: "og:title", content: "Vendor Infra | Vendor Management & Procurement Platform" },
-      { property: "og:description", content: "Discover vendors, procure materials, request quotes and manage infrastructure services with Vendor Infra." },
+      { property: "og:title", content: "Vendor Infra | Vendor Infra | AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry." },
+      { property: "og:description", content: "Discover AI-Powered Vendor Discovery, Smart Price Discovery, AI-Powered Plants & Equipment, Smart Project Insurance, Smart Material Procurement, AI-Powered Sector Intelligence, Subcontracting, Growth & Market Entry, and Diversification—all on one unified platform." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@vendorinfra" },
-      { name: "twitter:title", content: "Vendor Infra | Vendor Management & Procurement Platform" },
-      { name: "twitter:description", content: "Discover vendors, procure materials, request quotes and manage infrastructure services with Vendor Infra." },
+      { name: "twitter:title", content: "Vendor Infra | Vendor Infra | AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry." },
+      { name: "twitter:description", content: "Discover AI-Powered Vendor Discovery, Smart Price Discovery, AI-Powered Plants & Equipment, Smart Project Insurance, Smart Material Procurement, AI-Powered Sector Intelligence, Subcontracting, Growth & Market Entry, and Diversification—all on one unified platform." },
       { property: "og:image", content: "https://www.vendorinfra.com/opengraph.jpg" },
       { name: "twitter:image", content: "https://www.vendorinfra.com/opengraph.jpg" }
     ],
@@ -100,11 +100,11 @@ function RootComponent() {
   const { queryClient } = Route$7.useRouteContext();
   return /* @__PURE__ */ jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./_-05xwjejc.js");
+const $$splitComponentImporter$1 = () => import("./_-DZcoX-_q.js");
 const Route$6 = createFileRoute("/$")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-05xwjejc.js");
+const $$splitComponentImporter = () => import("./index-DZcoX-_q.js");
 const Route$5 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
