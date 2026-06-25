@@ -54,8 +54,7 @@ export function Footer() {
                   { href: "/why-us", label: "Why Us" },
                 { href: "/pricing", label: "Pricing Plans" },
                 { href: "/career", label: "Career" },
-                { href: "/investor", label: "Investor" },
-                { href: "/blog", label: "Blog" },
+                { href: "/investor", label: "Investor Relations" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-white/75 hover:text-[#edad1a] transition-colors">{label}</Link>
@@ -78,6 +77,8 @@ export function Footer() {
                 { href: "/pricing-policy", label: "Pricing Policy" },
                 { href: "/security", label: "Security" },
                  { href: "/contact", label: "Contact Us" },
+                { href: "/blog", label: "Blog" },
+
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-white/75 hover:text-[#edad1a] transition-colors">{label}</Link>

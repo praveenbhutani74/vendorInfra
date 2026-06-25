@@ -382,6 +382,7 @@ const MORE_LINKS = [
   { href: "/why-us", label: "Why Us" },
   { href: "/faq", label: "FAQ" },
   { href: "/career", label: "Career" },
+  { href: "/investor", label: "Investor Relations" },
   { href: "/referral", label: "Referral Programme" }
 ];
 function Navbar() {
@@ -569,8 +570,7 @@ function Footer() {
           { href: "/why-us", label: "Why Us" },
           { href: "/pricing", label: "Pricing Plans" },
           { href: "/career", label: "Career" },
-          { href: "/investor", label: "Investor" },
-          { href: "/blog", label: "Blog" }
+          { href: "/investor", label: "Investor Relations" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "shrink-0", children: [
@@ -583,7 +583,8 @@ function Footer() {
           { href: "/terms", label: "Terms of Service" },
           { href: "/pricing-policy", label: "Pricing Policy" },
           { href: "/security", label: "Security" },
-          { href: "/contact", label: "Contact Us" }
+          { href: "/contact", label: "Contact Us" },
+          { href: "/blog", label: "Blog" }
         ].map(({ href, label }) => /* @__PURE__ */ jsx("li", { children: /* @__PURE__ */ jsx(Link, { href, className: "text-white/75 hover:text-[#edad1a] transition-colors", children: label }) }, href)) })
       ] }),
       /* @__PURE__ */ jsxs("div", { className: "shrink-0 max-w-[240px]", children: [
