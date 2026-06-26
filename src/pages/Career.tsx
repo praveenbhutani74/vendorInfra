@@ -85,6 +85,7 @@ export default function Career() {
                 viewport={{ once: true }}
                 className="lg:sticky lg:top-28"
               >
+
                 
                 <span className="inline-flex items-center gap-3 text-[#edad1a] text-[12px] font-bold uppercase tracking-[0.3em] mb-4">
                   <span className="w-8 h-px bg-[#edad1a]/60" />
