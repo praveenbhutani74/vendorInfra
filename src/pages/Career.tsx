@@ -72,7 +72,7 @@ export default function Career() {
 
       <PageHero
         eyebrow="Career"
-        title="A place to build, grow, and succeed — together."
+        title="Transforming a Trillion-Dollar Industry with Technology, Innovation & Deep Industry Expertise."
       />
 
       <main className="flex-1 bg-gradient-to-b from-[#f6f8fb] via-white to-[#f6f8fb]">
@@ -111,7 +111,7 @@ export default function Career() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
-                      className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:shadow-[#00274d]/10 transition-all"
+                      className="bg-white border border-[#00274d] rounded-2xl p-6 shadow-sm hover:shadow-lg hover:shadow-[#00274d]/10 transition-all"
                     >
                       <div className="w-12 h-12 rounded-xl bg-[#00274d]/5 text-[#00274d] flex items-center justify-center mb-5">
                         <Icon className="w-6 h-6" />
@@ -135,7 +135,7 @@ export default function Career() {
                   Current openings
                   <span className="w-8 h-px bg-[#edad1a]/60" />
                 </span>
-                
+
                 <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-8">
                   Roles we are hiring for
                 </h2>
@@ -156,7 +156,6 @@ export default function Career() {
                         <p className="font-bold text-[#00274d] text-lg leading-snug">{opening}</p>
                         <p className="text-sm text-gray-500 mt-1">Full-time role at Vendor Infra</p>
                       </div>
-                      {/* <ArrowRight className="w-5 h-5 text-[#edad1a] shrink-0" /> */}
                     </motion.div>
                   ))}
                 </div>
@@ -200,48 +199,116 @@ export default function Career() {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-gray-100 shadow-xl shadow-[#00274d]/10 p-5 md:p-8">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl border border-[#00274d] shadow-xl shadow-[#00274d]/10 p-5 md:p-8">
               <div className="grid md:grid-cols-2 gap-5">
+
+                {/* 1. Full Name — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Full Name</span>
-                  <input required name="name" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Full Name <span className="text-[#00274d]">*</span>
+                  </span>
+                  <input
+                    required
+                    name="name"
+                    className="w-full rou nded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 2. Email Address — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Email Address</span>
-                  <input required type="email" name="email" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Email Address <span className="text-[#00274d]">*</span>
+                  </span>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 3. Phone Number — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Phone Number</span>
-                  <input required type="tel" name="phone" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Phone Number <span className="text-[#00274d]">*</span>
+                  </span>
+                  <input
+                    required
+                    type="tel"
+                    name="phone"
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 4. Position Applying For — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Position Applying For</span>
-                  <input required name="position" defaultValue="" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10">
-                    {/* <option value="" disabled>Select a position</option>
-                    {positions.map((position) => (
-                      <option key={position} value={position}>{position}</option>
-                    ))} */}
-                  </input>
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Position Applying For <span className="text-[#00274d]">*</span>
+                  </span>
+                  <input
+                    required
+                    name="position"
+                    placeholder="e.g. Sales Executive"
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 5. Years of Experience — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Years of Experience</span>
-                  <input type="number" min="0" step="0.5" name="experience" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Years of Experience <span className="text-[#00274d]">*</span>
+                  </span>
+                  <input
+                    required
+                    type="number"
+                    min="0"
+                    step="0.5"
+                    name="experience"
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 6. Upload CV/Resume — required */}
                 <label className="block">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Upload CV/Resume</span>
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Upload CV/Resume <span className="text-[#00274d]">*</span>
+                  </span>
                   <span className="flex items-center gap-3 rounded-xl border border-dashed border-gray-300 bg-[#f8fafc] px-4 py-3 text-sm text-gray-600">
                     <Upload className="w-4 h-4 text-[#00274d]" />
-                    <input required type="file" name="resume" accept=".pdf,.doc,.docx" className="min-w-0 flex-1 text-sm file:mr-3 file:rounded-lg file:border-0 file:bg-[#00274d] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white" />
+                    <input
+                      required
+                      type="file"
+                      name="resume"
+                      accept=".pdf,.doc,.docx"
+                      className="min-w-0 flex-1 text-sm file:mr-3 file:rounded-lg file:border-0 file:bg-[#00274d] file:px-3 file:py-1.5 file:text-xs file:font-semibold file:text-white"
+                    />
                   </span>
                   <span className="mt-1 block text-xs text-gray-400">PDF or DOC, max 5MB.</span>
                 </label>
+
+                {/* 7. Portfolio Link — optional */}
                 <label className="block md:col-span-2">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Portfolio Link (if applicable)</span>
-                  <input type="url" name="portfolio" placeholder="https://" className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Portfolio Link <span className="text-gray-400 font-normal">(if applicable)</span>
+                  </span>
+                  <input
+                    type="url"
+                    name="portfolio"
+                    placeholder="https://"
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
+
+                {/* 8. Cover Note — optional */}
                 <label className="block md:col-span-2">
-                  <span className="block text-sm font-semibold text-[#00274d] mb-2">Cover Note / Message</span>
-                  <textarea name="message" rows={5} className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10" />
+                  <span className="block text-sm font-semibold text-[#00274d] mb-2">
+                    Cover Note / Message
+                  </span>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#edad1a] focus:ring-4 focus:ring-[#edad1a]/10"
+                  />
                 </label>
               </div>
 

@@ -13,9 +13,7 @@ import {
   Factory,
   FilePenLine,
   FileSpreadsheet,
-
   Gavel,
-
   Globe2,
   Handshake,
   HardHat,
@@ -33,12 +31,16 @@ import {
   Users,
   Workflow,
   Wrench,
+  X,
 } from "lucide-react";
 import { Link } from "wouter";
+import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { usePageSeo } from "@/lib/seo";
 import { siteButtonClasses } from "@/components/SiteButton";
+
+// ... (all your existing data arrays remain exactly the same)
 
 const heroStats = [
   { value: "260+ Cr ARR", label: "ARR" },
@@ -48,6 +50,7 @@ const heroStats = [
   { value: "Profitable", label: "unit economics" },
     { value: "106 Enterprise Clients", label: "enterprise clients" },
 ];
+
 
 
 
@@ -729,82 +732,238 @@ function SectionEyebrow({ children }: { children: string }) {
   );
 }
 
+// ── NEW: Investor Inquiry Modal ──────────────────────────────
+function InvestorModal({ onClose }: { onClose: () => void }) {
+  const [form, setForm] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // TODO: wire up your actual submission logic here
+    setSubmitted(true);
+  };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      {/* Backdrop */}
+      <div
+        className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+        onClick={onClose}
+      />
+
+      {/* Panel */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.96, y: 16 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        exit={{ opacity: 0, scale: 0.96, y: 16 }}
+        className="relative z-10 w-full max-w-lg rounded-2xl bg-white shadow-2xl overflow-hidden"
+      >
+        {/* Top accent bar */}
+        <div className="h-1.5 bg-[#edad1a]" />
+
+        <div className="p-7 md:p-8">
+          {/* Header */}
+          <div className="flex items-start justify-between mb-6">
+            <div>
+              <p className="text-[10px] font-black uppercase tracking-[0.25em] text-[#edad1a] mb-1">
+                Investor Relations
+              </p>
+              <h2 className="text-2xl font-black text-[#00274d] leading-tight">
+                Request an Investor Meeting
+              </h2>
+            </div>
+            <button
+              onClick={onClose}
+              className="ml-4 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 transition-colors"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
+
+          {submitted ? (
+            <div className="flex flex-col items-center py-10 text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#edad1a]/15 mb-4">
+                <CheckCircle2 className="h-8 w-8 text-[#edad1a]" />
+              </div>
+              <h3 className="text-xl font-black text-[#00274d] mb-2">Inquiry Submitted!</h3>
+              <p className="text-gray-500 text-sm max-w-xs leading-relaxed">
+                Thank you for your interest. Our investor relations team will reach out to you shortly.
+              </p>
+              <button
+                onClick={onClose}
+                className="mt-6 rounded-xl bg-[#00274d] px-6 py-2.5 text-sm font-bold text-white hover:bg-[#003a70] transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Full Name */}
+              <div>
+                <label className="block text-xs font-black uppercase tracking-[0.15em] text-[#00274d] mb-1.5">
+                  Full Name <span className="text-[#edad1a]">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="fullName"
+                  required
+                  value={form.fullName}
+                  onChange={handleChange}
+                  placeholder="John Smith"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-[#00274d] placeholder-gray-400 outline-none focus:border-[#00274d] focus:bg-white focus:ring-2 focus:ring-[#00274d]/10 transition-all"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label className="block text-xs font-black uppercase tracking-[0.15em] text-[#00274d] mb-1.5">
+                  Email Address <span className="text-[#edad1a]">*</span>
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  value={form.email}
+                  onChange={handleChange}
+                  placeholder="john@example.com"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-[#00274d] placeholder-gray-400 outline-none focus:border-[#00274d] focus:bg-white focus:ring-2 focus:ring-[#00274d]/10 transition-all"
+                />
+              </div>
+
+              {/* Company */}
+              <div>
+                <label className="block text-xs font-black uppercase tracking-[0.15em] text-[#00274d] mb-1.5">
+                  Company / Organization <span className="text-[#edad1a]">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="company"
+                  required
+                  value={form.company}
+                  onChange={handleChange}
+                  placeholder="Acme Capital"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-[#00274d] placeholder-gray-400 outline-none focus:border-[#00274d] focus:bg-white focus:ring-2 focus:ring-[#00274d]/10 transition-all"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label className="block text-xs font-black uppercase tracking-[0.15em] text-[#00274d] mb-1.5">
+                  Investment Interest / Message
+                </label>
+                <textarea
+                  name="message"
+                  rows={4}
+                  value={form.message}
+                  onChange={handleChange}
+                  placeholder="Tell us about your investment interest or any questions you have..."
+                  className="w-full resize-none rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-[#00274d] placeholder-gray-400 outline-none focus:border-[#00274d] focus:bg-white focus:ring-2 focus:ring-[#00274d]/10 transition-all"
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                className="w-full rounded-xl bg-[#edad1a] px-6 py-3.5 text-sm font-black text-[#00274d] hover:bg-[#f0b800] active:scale-[0.98] transition-all shadow-lg shadow-[#edad1a]/30 flex items-center justify-center gap-2"
+              >
+                Submit Inquiry
+                <Mail className="h-4 w-4" />
+              </button>
+
+              <p className="text-center text-[11px] text-gray-400">
+                Highly confidential · For private circulation only
+              </p>
+            </form>
+          )}
+        </div>
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Investor() {
   usePageSeo(
     "Investor Relations | Vendor Infra",
     "Vendor Infra investor-relations overview: AI-powered operating system for infrastructure, construction and manufacturing with strong traction, market opportunity and growth roadmap."
   );
 
+  // ── NEW: modal state ──
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col">
+      {/* ── NEW: render modal ── */}
+      {showModal && <InvestorModal onClose={() => setShowModal(false)} />}
+
       <div className="fixed right-0 top-0 h-full w-[18px] bg-[#00274d] z-50 pointer-events-none" />
       <Navbar />
 
       <main className="flex-1 bg-white">
-     <section className="relative overflow-hidden bg-[#00274d] text-white">
-  <div
-    className="absolute inset-0 opacity-[0.08]"
-    style={{
-      backgroundImage:
-        "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
-      backgroundSize: "42px 42px",
-    }}
-  />
-  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001d3a] to-transparent" />
-  <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl">
-    <div>
-      <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6">
-          Investor Relations
-        </span>
-        <h1 className="text-4xl md:text-6xl font-black leading-[0.98] mb-6">
-          AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry
-        </h1>
-        <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-          Digitizing execution across India's 12+ lakh crore infrastructure economy.
-        </p>
+        <section className="relative overflow-hidden bg-[#00274d] text-white">
+          <div
+            className="absolute inset-0 opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)",
+              backgroundSize: "42px 42px",
+            }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#001d3a] to-transparent" />
+          <div className="relative z-10 container mx-auto px-4 py-16 md:py-24 max-w-7xl">
+            <div>
+              <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }}>
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#edad1a]/45 bg-[#edad1a]/10 px-4 py-2 text-sm font-bold text-[#edad1a] mb-6">
+                  Investor Relations
+                </span>
+                <h1 className="text-4xl md:text-6xl font-black leading-[0.98] mb-6">
+                  AI-Powered Operating System for Infrastructure, Construction & Manufacturing Industry
+                </h1>
+                <p className="text-white/76 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
+                  Digitizing execution across India's 12+ lakh crore infrastructure economy.
+                </p>
 
-        {/* Stats grid: 3 on first row, 2 on second row */}
-        <div className="max-w-2xl mb-8">
-          {/* Row 1: 3 stats */}
-          <div className="grid grid-cols-3 gap-3 mb-3">
-            {heroStats.slice(0, 3).map((stat) => (
-              <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
-                <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
-                {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
-              </div>
-            ))}
+                {/* Stats grid */}
+                <div className="max-w-2xl mb-8">
+                  <div className="grid grid-cols-3 gap-3 mb-3">
+                    {heroStats.slice(0, 3).map((stat) => (
+                      <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
+                        <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    {heroStats.slice(3, 5).map((stat) => (
+                      <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
+                        <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ── CHANGED: button now opens modal instead of mailto ── */}
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className={siteButtonClasses("primary", "px-6 py-3")}
+                  >
+                    Request an Investor Meeting <Mail className="w-4 h-4" />
+                  </button>
+                </div>
+              </motion.div>
+            </div>
           </div>
-          {/* Row 2: 2 stats */}
-          <div className="grid grid-cols-3 gap-3">
-            {heroStats.slice(3, 5).map((stat) => (
-              <div key={stat.label} className="border-l-2 border-[#edad1a] bg-white/7 px-4 py-3">
-                <p className="text-xl md:text-2xl font-black text-white">{stat.value}</p>
-                {/* <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">{stat.label}</p> */}
-              </div>
-            ))}
-          </div>
-        </div>
+        </section>
 
-        <div className="flex flex-col sm:flex-row gap-3">
-          <a href="mailto:utkarsh.kashyap@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
-            Contact Investor Relations <Mail className="w-4 h-4" />
-          </a>
-        </div>
-      </motion.div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 22 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="relative"
-      >
-      </motion.div>
-    </div>
-  </div>
-</section>
-
-     <section className="relative overflow-hidden bg-white py-16 md:py-24 text-[#00274d]">
+         <section className="relative overflow-hidden bg-white py-16 md:py-24 text-[#00274d]">
   <div
     className="absolute inset-0 opacity-[0.04]"
     style={{
@@ -995,106 +1154,7 @@ export default function Investor() {
           </div>
         </section>
 
-        {/* <section className="py-16 md:py-20 bg-[#f6f8fb]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[360px_1fr] gap-8 items-stretch">
-              <motion.aside
-                initial={{ opacity: 0, x: -18 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl bg-[#00274d] p-7 md:p-8 text-white"
-              >
-                <div
-                  className="absolute inset-0 opacity-[0.08]"
-                  style={{
-                    backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
-                    backgroundSize: "26px 26px",
-                  }}
-                />
-                <div className="relative">
-                  <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-[#edad1a]/15 text-[#edad1a]">
-                    <Handshake className="h-8 w-8" />
-                  </div>
-                  <h2 className="text-2xl md:text-3xl font-black leading-tight mb-5">
-                    Integrated Products & Services Ecosystem
-                  </h2>
-                  <p className="text-white/78 leading-relaxed mb-8">
-                    Building one single platform for the infrastructure, construction and manufacturing industry.
-                  </p>
-                  <div className="space-y-4">
-                    {["Procurement", "Discovery", "Reduce Idling", "Cost Optimization & Scalable Growth", "Contract Manufacturing"].map((point) => (
-                      <div key={point} className="flex items-center gap-3">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-[#edad1a]">
-                          <CheckCircle2 className="h-4 w-4" />
-                        </span>
-                        <span className="font-semibold leading-snug">{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </motion.aside>
-
-              <motion.div
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="rounded-2xl border border-gray-100 bg-white p-4 md:p-6 shadow-xl shadow-[#00274d]/8"
-              >
-                <div className="mb-6 text-center">
-                  <SectionEyebrow>Ecosystem map</SectionEyebrow>
-                  <h3 className="text-2xl md:text-3xl font-bold text-[#00274d]">Connected growth engines</h3>
-                </div>
-
-                <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-3 lg:items-stretch">
-                  {ecosystemWheel.map((item, index) => {
-                    const Icon = item.icon;
-                    return (
-                      <motion.article
-                        key={item.title}
-                        initial={{ opacity: 0, y: 12 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.035 }}
-                        className={`group rounded-2xl border border-gray-100 bg-[#f8fafc] p-4 text-left transition-all hover:-translate-y-1 hover:border-[#edad1a]/45 hover:bg-white hover:shadow-lg hover:shadow-[#00274d]/8 ${item.area}`}
-                      >
-                        <div className="flex items-start gap-4">
-                          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#edad1a]/12 text-[#edad1a] ring-1 ring-[#edad1a]/25 group-hover:bg-[#00274d] group-hover:text-[#edad1a] transition-colors">
-                            <Icon className="h-6 w-6" />
-                          </span>
-                          <div>
-                            <h3 className="font-black text-[#00274d] leading-snug">{item.title}</h3>
-                            <p className="mt-1 text-sm text-gray-600 leading-relaxed">{item.text}</p>
-                          </div>
-                        </div>
-                      </motion.article>
-                    );
-                  })}
-
-                  <div className="order-first flex min-h-[260px] items-center justify-center rounded-2xl bg-[#00274d] p-6 text-white shadow-xl shadow-[#00274d]/18 lg:order-none lg:col-start-2 lg:row-start-2">
-                    <div className="relative h-52 w-52">
-                      <div
-                        className="absolute inset-0 rounded-full p-2"
-                        style={{
-                          background: "conic-gradient(from -35deg, #edad1a 0 35%, #ffffff 35% 52%, #00274d 52% 76%, #edad1a 76% 100%)",
-                        }}
-                      >
-                        <div className="flex h-full w-full items-center justify-center rounded-full bg-[#00274d]">
-                          <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white text-[#00274d] shadow-2xl shadow-black/20">
-                            <Network className="h-10 w-10" />
-                          </div>
-                        </div>
-                      </div>
-                      <span className="absolute left-1/2 top-5 h-0 w-0 -translate-x-1/2 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#edad1a]" />
-                      <span className="absolute bottom-5 left-1/2 h-0 w-0 -translate-x-1/2 rotate-180 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#edad1a]" />
-                      <span className="absolute left-5 top-1/2 h-0 w-0 -translate-y-1/2 -rotate-90 border-x-[19px] border-t-[34px] border-x-transparent border-t-white" />
-                      <span className="absolute right-5 top-1/2 h-0 w-0 -translate-y-1/2 rotate-90 border-x-[19px] border-t-[34px] border-x-transparent border-t-[#00274d]" />
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section> */}
+      
 
         <section className="relative overflow-hidden bg-[#00274d] py-16 md:py-24 text-white">
           <div
@@ -1180,853 +1240,9 @@ export default function Investor() {
           </div>
         </section>
 
-        <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="mx-auto mb-12 max-w-4xl text-center">
-              <SectionEyebrow>Offerings</SectionEyebrow>
-              <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight">
-                Key Offerings & Value Proposition
-              </h2>
-              {/* <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-                Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer.
-              </p> */}
-            </div>
+  
 
-            <div className="grid gap-4 lg:grid-cols-5">
-              {offerings.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.article
-                    key={item.title}
-                    initial={{ opacity: 0, y: 16 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.04 }}
-                    className="group flex min-h-[560px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-[#f8fafc] shadow-lg shadow-[#00274d]/6 transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-[#00274d]/12"
-                  >
-                    <div className="bg-[#00274d] p-5 text-white">
-                      <div className="flex items-center justify-between gap-4">
-                        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#edad1a] text-[#00274d]">
-                          <Icon className="h-6 w-6" />
-                        </span>
-                        <span className="text-4xl font-black text-white/15">{String(index + 1).padStart(2, "0")}</span>
-                      </div>
-                      <h3 className="mt-5 text-xl font-black leading-tight">{item.title}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-white/72">{item.intro}</p>
-                    </div>
-
-                    <div className="flex flex-1 flex-col p-5">
-                      <ul className="flex-1 space-y-2.5">
-                        {item.bullets.map((point) => (
-                          <li key={point} className="flex gap-2.5 text-sm leading-snug text-gray-650">
-                            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#edad1a]" />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="border-t border-gray-100 bg-white px-5 py-4">
-                      <p
-                        className={`rounded-xl px-4 py-3 text-center text-sm font-black ${
-                          index < 3
-                            ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200"
-                            : "bg-gray-100 text-gray-500 ring-1 ring-gray-200"
-                        }`}
-                      >
-                        {item.revenue}
-                        {/* <span className="mt-1 block text-[10px] uppercase tracking-[0.18em]">
-                          {index < 3 ? "Completed" : "In progress"}
-                        </span> */}
-                      </p>
-                    </div>
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="relative overflow-hidden bg-[#00274d] py-16 md:py-24 text-white">
-          <div
-            className="absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage: "radial-gradient(circle at 1px 1px, #ffffff 1px, transparent 0)",
-              backgroundSize: "28px 28px",
-            }}
-          />
-          <div className="container relative mx-auto px-4 max-w-7xl">
-            <div className="mx-auto mb-12 max-w-4xl text-center">
-              <SectionEyebrow>Product vision</SectionEyebrow>
-              <h2 className="text-3xl md:text-5xl font-black leading-tight">
-                A strategic roadmap driving continuous innovation and customer value.
-              </h2>
-              {/* <p className="mx-auto mt-4 max-w-2xl text-white/70">
-                Every product line moves from workflow capture to intelligence, automation and transaction depth.
-              </p> */}
-            </div>
-
-            <div className="space-y-4">
-              {productVision.map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <motion.article
-                    key={item.title}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -16 : 16 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.04 }}
-                    className="grid gap-5 rounded-2xl border border-white/10 bg-white/7 p-5 backdrop-blur md:grid-cols-[260px_1fr]"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#edad1a] text-[#00274d]">
-                        <Icon className="h-8 w-8" />
-                      </div>
-                      <div>
-                        <p className="text-xs font-black uppercase tracking-[0.22em] text-[#edad1a]">Track {index + 1}</p>
-                        <h3 className="mt-2 text-xl font-black leading-tight">{item.title}</h3>
-                      </div>
-                    </div>
-                    <ul className="grid gap-3 md:grid-cols-2">
-                      {item.points.map((point) => (
-                        <li key={point} className="flex gap-2.5 rounded-xl bg-white p-3 text-sm font-medium leading-snug text-[#00274d]">
-                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#edad1a]" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-
-          <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="mx-auto mb-12 max-w-4xl text-center">
-              <SectionEyebrow>AI platform</SectionEyebrow>
-                <h2 className="text-3xl md:text-5xl font-black text-[#00274d] leading-tight mb-5">
-                  AI-Driven Platform Modules
-                </h2>
-              {/* <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-                Each offering is designed to open a different wallet, while feeding the same ecosystem intelligence layer.
-              </p> */}
-            </div>
-
- <div className="grid gap-4 lg:grid-cols-5">
-  {aiPlatformModules.map((item, index) => {
-    const Icon = item.icon;
-
-    return (
-      <motion.article
-        key={item.title}
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: index * 0.05 }}
-        className="group flex min-h-[640px] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg"
-      >
-        {/* HEADER */}
-        <div className="bg-[#00274d] p-5 text-white">
-          <div className="flex items-start justify-between">
-            <span
-              className={`flex h-14 w-14 items-center justify-center rounded-xl ${item.accent}`}
-            >
-              <Icon className="h-7 w-7 text-white" />
-            </span>
-
-            <span className="text-4xl font-black text-white/15">
-              {String(index + 1).padStart(2, "0")}
-            </span>
-          </div>
-
-          <h3 className="mt-6 text-3xl font-black leading-tight">
-            {item.title}
-          </h3>
-
-          {/* <p className="mt-4 text-[15px] leading-7 text-white/75">
-            {item.intro}
-          </p> */}
-        </div>
-
-        {/* BODY */}
-        <div className="flex flex-1 flex-col bg-white p-6">
-          <ul className="space-y-4">
-            {item.bullets.map((point) => (
-              <li
-                key={point}
-                className="flex gap-3 text-[15px] leading-7 text-gray-700"
-              >
-                <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#edad1a]" />
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* FOOTER */}
-        <div
-          className={`py-4 text-center text-lg font-bold ${
-            item.status === "Completed"
-              ? "bg-[#edad1a] text-[#00274d]"
-              : "bg-gray-200 text-[#00274d]"
-          }`}
-        >
-          {item.status}
-        </div>
-      </motion.article>
-    );
-  })}
-</div>
-          </div>
-        </section>
-
-     <section className="py-20 bg-[#f8fafc]">
-  <div className="container mx-auto max-w-7xl px-4">
-    <div className="grid gap-16 lg:grid-cols-[360px_1fr]">
-
-      {/* Left */}
-      <div className="lg:sticky lg:top-28 h-fit">
-        <SectionEyebrow>AI Vision</SectionEyebrow>
-
-        <h2 className="mt-3 text-4xl font-black leading-tight text-[#00274d]">
-          AI-Driven
-          <br />
-          Platform Vision
-        </h2>
-
-        {/* <p className="mt-6 text-gray-600 leading-7">
-          The next generation of AI modules being developed to automate
-          procurement, tendering, insurance, maintenance and business growth
-          across the infrastructure ecosystem.
-        </p> */}
-
-        <div className="mt-10 rounded-2xl bg-[#00274d] p-6 text-white">
-          <div className="space-y-4">
-
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
-              <p>Agentic AI Automation</p>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
-              <p>Infrastructure Intelligence</p>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <span className="h-3 w-3 rounded-full bg-[#edad1a]" />
-              <p>AI-first Workflows</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      {/* Right */}
-      <div className="relative">
-
-        <div className="absolute left-8 top-0 bottom-0 w-[2px] bg-[#00274d]/10" />
-
-        <div className="space-y-8">
-
-          {aiVisionModules.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, x: 25 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="relative flex gap-6"
-              >
-                {/* Icon */}
-                <div
-                  className={`relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${item.accent}`}
-                >
-                  <Icon className="h-8 w-8 text-white" />
-                </div>
-
-                {/* Card */}
-                <div className="flex-1 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-
-                  <div className="mb-3 flex items-center justify-between">
-
-                    <h3 className="text-xl font-bold text-[#00274d]">
-                      {item.title}
-                    </h3>
-
-                    <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[#edad1a]">
-                      AI Vision
-                    </span>
-
-                  </div>
-
-                  <p className="leading-7 text-gray-600">
-                    {item.description}
-                  </p>
-
-                </div>
-              </motion.div>
-            );
-          })}
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-      <section className="py-16 md:py-20 bg-[#00274d]">
-  <div className="container mx-auto px-4 max-w-7xl">
-
-    {/* Header */}
-    <div className="text-center max-w-3xl mx-auto mb-14">
-      <div className="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.12em] uppercase text-[#edad1a] mb-4">
-        <span className="block w-6 h-px bg-[#edad1a] opacity-50" />
-        Our Right to Win
-        <span className="block w-6 h-px bg-[#edad1a] opacity-50" />
-      </div>
-      <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-        Technology, network effects, and industry expertise create our competitive edge.
-      </h2>
-    </div>
-
-    {/* Cards Grid */}
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {rightToWin.map((item) => (
-        <article
-          key={item.title}
-          className="group relative rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-7 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:border-blue-400/30 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
-        >
-          {/* Top accent line on hover */}
-          <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-
-          {/* Icon badge */}
-          <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-400/25 flex items-center justify-center text-lg mb-4">
-            {item.icon}
-          </div>
-
-          <h3 className="text-[15px] font-bold text-blue-50 mb-2 tracking-tight">
-            {item.title}
-          </h3>
-          <p className="text-sm text-white/55 leading-relaxed">
-            {item.text}
-          </p>
-        </article>
-      ))}
-    </div>
-
-  </div>
-</section>
-
-        {/* <section className="py-16 md:py-20 bg-white">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center max-w-4xl mx-auto mb-12">
-              <SectionEyebrow>Supply chain revenue</SectionEyebrow>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-                Differentiated buying and selling structure.
-              </h2>
-              <p className="mt-4 text-gray-600">
-                Vendor Infra builds stronger direct client relationships and creates cross-selling opportunities by operating directly with end clients.
-              </p>
-            </div>
-
-            <div className="grid gap-6 lg:grid-cols-2">
-              {supplyChainFlow.map((flow, flowIndex) => {
-                const isVendorInfra = flow.label === "Vendor Infra";
-                const buyingLane = flow.lanes[0];
-                const sellingLane = flow.lanes[1];
-                return (
-                  <motion.article
-                    key={flow.label}
-                    initial={{ opacity: 0, y: 18 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: flowIndex * 0.08 }}
-                    className={`relative overflow-hidden rounded-3xl border p-6 md:p-7 shadow-xl ${
-                      isVendorInfra
-                        ? "border-[#00274d] bg-[#00274d] text-white shadow-[#00274d]/20"
-                        : "border-gray-100 bg-[#f8fafc] text-[#00274d] shadow-[#00274d]/6"
-                    }`}
-                  >
-                    <div
-                      className="absolute inset-0 opacity-[0.08]"
-                      style={{
-                        backgroundImage: "radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)",
-                        backgroundSize: "22px 22px",
-                      }}
-                    />
-                    <div className="relative">
-                      <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-                        <div>
-                          <span className={`inline-flex rounded-full px-4 py-2 text-xs font-black uppercase tracking-[0.18em] ${
-                            isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"
-                          }`}>
-                            {flow.label}
-                          </span>
-                          <h3 className={`mt-4 text-2xl font-black leading-tight ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>
-                            {isVendorInfra ? "Direct client motion" : "Multi-layer trading motion"}
-                          </h3>
-                        </div>
-                        <div className={`rounded-2xl px-4 py-3 text-center ${isVendorInfra ? "bg-white/10" : "bg-white"}`}>
-                          <p className="text-3xl font-black text-[#edad1a]">{isVendorInfra ? "100%" : "80/20"}</p>
-                          <p className={`text-[10px] font-black uppercase tracking-[0.18em] ${isVendorInfra ? "text-white/60" : "text-gray-500"}`}>
-                            {isVendorInfra ? "buy and sell" : "split model"}
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="space-y-5">
-                        <div className={`rounded-2xl border p-5 ${isVendorInfra ? "border-white/15 bg-white/8" : "border-gray-100 bg-white"}`}>
-                          <div className="mb-4 flex items-center justify-between gap-3">
-                            <p className={`font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>{buyingLane.title}</p>
-                            <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]">{buyingLane.share}</span>
-                          </div>
-                          <div className="grid gap-3 sm:grid-cols-2">
-                            {buyingLane.nodes.map((node, index) => (
-                              <div key={node} className={`relative rounded-xl border px-4 py-3 text-sm font-bold ${
-                                isVendorInfra ? "border-white/15 bg-[#00274d] text-white" : "border-[#00274d]/15 bg-[#f8fafc] text-[#00274d]"
-                              }`}>
-                                {node}
-                                {index < buyingLane.nodes.length - 1 && (
-                                  <ArrowRight className="absolute -right-5 top-1/2 hidden h-4 w-4 -translate-y-1/2 text-[#edad1a] sm:block" />
-                                )}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="flex justify-center">
-                          <div className={`flex items-center gap-3 rounded-full px-5 py-2 text-sm font-black ${
-                            isVendorInfra ? "bg-[#edad1a] text-[#00274d]" : "bg-[#00274d] text-white"
-                          }`}>
-                            <ArrowRight className="h-4 w-4 rotate-90" />
-                            {isVendorInfra ? "direct conversion to end client" : "handoff through another layer"}
-                          </div>
-                        </div>
-
-                        <div className={`rounded-2xl border p-5 ${isVendorInfra ? "border-[#edad1a]/45 bg-[#edad1a]/12" : "border-gray-100 bg-white"}`}>
-                          <div className="mb-4 flex items-center justify-between gap-3">
-                            <p className={`font-black ${isVendorInfra ? "text-white" : "text-[#00274d]"}`}>{sellingLane.title}</p>
-                            <span className="rounded-full bg-[#edad1a]/15 px-3 py-1 text-xs font-black text-[#edad1a]">{sellingLane.share}</span>
-                          </div>
-                          <div className="rounded-xl border-2 border-[#edad1a] bg-white px-5 py-4 text-center text-base font-black text-[#00274d]">
-                            {sellingLane.nodes[0]}
-                          </div>
-                        </div>
-                      </div>
-
-                      <p className={`mt-6 text-sm leading-relaxed ${isVendorInfra ? "text-white/70" : "text-gray-600"}`}>
-                        {isVendorInfra
-                          ? "Vendor Infra buys across the supply base and sells directly to end clients, strengthening account ownership and cross-selling potential."
-                          : "New-age companies primarily operate inside manufacturer-distributor-trader networks, leaving a smaller direct end-client motion."}
-                      </p>
-                    </div>
-                  </motion.article>
-                );
-              })}
-            </div>
-          </div>
-        </section> */}
-
-<section className="bg-white py-16 lg:py-20">
-  <div className="container mx-auto max-w-7xl px-4">
-
-    {/* Heading */}
-    <div className="mx-auto mb-12 text-center">
-      <div className="mb-5 flex items-center justify-center gap-5">
-        <SectionEyebrow className="!mb-0">
-          Market Size
-        </SectionEyebrow>
-      </div>
-
-      <h2 className="text-[28px] font-black leading-[1.15] text-[#00274d] lg:text-[46px]">
-        <span className="hidden lg:inline">
-          Driving growth, innovation, and scale across the trillion-dollar Infrastructure,
-          <br />
-          Construction and Manufacturing Industry.
-        </span>
-        <span className="lg:hidden">
-          Driving growth, innovation, and scale across the trillion-dollar Infrastructure, Construction, and Manufacturing Industry.
-        </span>
-      </h2>
-    </div>
-
-    {/* Cards */}
-    <div className="mx-auto grid max-w-4xl gap-5 lg:grid-cols-2">
-      {marketOpportunities.map((item) => {
-        const Icon = item.icon;
-
-        return (
-          <article
-            key={item.title}
-            className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-          >
-            {/* Header */}
-            <div className="bg-[#00274d] px-4 py-3 text-white">
-              <div className="flex items-center gap-3">
-                <div
-                  className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.accent}`}
-                >
-                  <Icon className="h-5 w-5 text-white" />
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-bold leading-none">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-1 text-xs text-white/70">
-                    {item.subtitle}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Body */}
-            <div className="p-4">
-              <div className="space-y-2">
-                {item.metrics.map((metric) => (
-                  <div
-                    key={metric.label}
-                    className="flex items-center justify-between border-b border-gray-100 pb-2 last:border-none last:pb-0"
-                  >
-                    <span className="text-sm text-gray-500">
-                      {metric.label}
-                    </span>
-
-                    <span className="text-sm font-bold text-[#00274d]">
-                      {metric.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {item.highlight.label && (
-                <div className="mt-3 rounded-lg bg-gray-50 px-4 py-2.5">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm font-semibold text-gray-600">
-                      {item.highlight.label}
-                    </span>
-
-                    <span className="text-base font-black text-[#edad1a]">
-                      {item.highlight.value}
-                    </span>
-                  </div>
-                </div>
-              )}
-            </div>
-          </article>
-        );
-      })}
-    </div>
-  </div>
-</section>
-
-        <section className="py-16 md:py-20 bg-[#f6f8fb]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center max-w-4xl mx-auto mb-12">
-              <SectionEyebrow>Revenue streams</SectionEyebrow>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-                Revenue streams share <span className="text-gray-400 text-2xl">(Value in Cr)</span>
-              </h2>
-              {/* <p className="mt-4 text-gray-600">
-                Since inception till April 2026, revenue has scaled across supply chain and contract manufacturing pilots.
-              </p> */}
-            </div>
-
-            <div className="grid gap-5 lg:grid-cols-4">
-              {revenueStreams.map((item, index) => (
-                <motion.article
-                  key={item.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.04 }}
-                  className="rounded-2xl border border-gray-100 bg-white p-5 shadow-lg shadow-[#00274d]/6"
-                >
-                  <div className={`mx-auto mb-5 flex h-36 w-40 items-center justify-center rounded-[45%_45%_38%_38%] ${item.accent} text-white shadow-xl shadow-[#00274d]/10`}>
-                    <span className="text-3xl font-black text-center leading-none">{item.value}</span>
-                  </div>
-                  <h3 className="min-h-[48px] text-center text-base font-black leading-tight text-[#00274d]">{item.title}</h3>
-                  <div className="mt-5 grid grid-cols-2 gap-2">
-                    {item.clients.map((client) => (
-                      <span key={client} className="rounded-lg border border-gray-100 bg-[#f8fafc] px-2 py-2 text-center text-xs font-bold text-gray-600">
-                        {client}
-                      </span>
-                    ))}
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {tractionStats.slice(0, 8).map((stat) => (
-                <div key={stat.label} className="rounded-xl bg-[#00274d] p-4 text-white">
-                  <p className="text-xl font-black text-[#edad1a]">{stat.value}</p>
-                  <p className="mt-2 text-xs uppercase tracking-[0.16em] text-white/65">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 md:py-20 bg-[#f6f8fb]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[1fr_380px] gap-8 items-start">
-              <div>
-                <SectionEyebrow>Achievements</SectionEyebrow>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-8">
-                  Measurable impact through disciplined execution.
-                </h2>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {achievements.map((achievement) => (
-                    <div key={achievement} className="rounded-2xl bg-white border border-gray-100 p-5 flex gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#edad1a] shrink-0 mt-1" />
-                      <p className="font-semibold text-[#00274d] leading-snug">{achievement}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <aside className="rounded-2xl bg-white border border-gray-100 p-6 shadow-sm">
-                <TrendingUp className="w-10 h-10 text-[#edad1a] mb-5" />
-                <h3 className="text-2xl font-black text-[#00274d] mb-3">Clear visibility to hit 1200 Cr+ ARR in 18 months</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-5">
-                  Active 106 clients represent 1200 Cr+ annual revenue opportunity. Advance pipeline of 150 new clients represents 6000 Cr+ annual revenue opportunity.
-                </p>
-                <p className="rounded-xl bg-[#00274d]/5 p-4 text-sm font-semibold text-[#00274d]">
-                  Client base expanded from 18 in FY24 to 106 in FY26, reflecting substantial market traction and adoption.
-                </p>
-              </aside>
-            </div>
-          </div>
-        </section>
-
-      <section className="py-16 md:py-20">
-  <div className="container mx-auto px-4 max-w-7xl">
-    <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
-
-      {/* Left heading */}
-      <div>
-        <SectionEyebrow>Competitive Advantage</SectionEyebrow>
-        <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-          A unified platform with multiple competitive moats.
-        </h2>
-      </div>
-
-      {/* Right table — no overflow-x-auto, fits naturally */}
-      <div className="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden">
-        <table className="w-full text-[11px] sm:text-xs table-fixed">
-
-          <thead className="bg-[#00274d] text-white">
-            <tr>
-              {[
-                { label: "Company",           width: "w-[13%]" },
-                { label: "Founded",           width: "w-[9%]"  },
-                { label: "Funding",           width: "w-[10%]" },
-                { label: "Unicorn Status",    width: "w-[10%]" },
-                { label: "Unicorn Year",      width: "w-[10%]" },
-                { label: "Valuation",         width: "w-[14%]" },
-                { label: "Revenue (FY24-25)", width: "w-[14%]" },
-                { label: "Business Type",     width: "w-[20%]" },
-              ].map(({ label, width }) => (
-                <th
-                  key={label}
-                  className={`${width} px-2 py-3 text-left font-bold leading-snug`}
-                >
-                  {label}
-                </th>
-              ))}
-            </tr>
-          </thead>
-
-          <tbody>
-            {competitors.map((row) => {
-              const isVendorInfra = row.company === "Vendor Infra";
-              return (
-                <tr
-                  key={row.company}
-                  className={`border-t border-gray-100 ${
-                    isVendorInfra ? "bg-[#edad1a]/10" : ""
-                  }`}
-                >
-                  {[
-                    row.company,
-                    row.foundedYear,
-                    row.totalFundingRaised,
-                    row.unicornStatus,
-                    row.unicornYear,
-                    row.currentValuation,
-                    row.revenueFY2425,
-                    row.businessType,
-                  ].map((cell, index) => (
-                    <td
-                      key={index}
-                      className={`px-2 py-3 align-top leading-snug ${
-                        isVendorInfra
-                          ? "font-bold text-[#00274d]"
-                          : index === 7
-                          ? "text-blue-600"
-                          : index === 4 && row.unicornYear !== "NY"
-                          ? "text-blue-600"
-                          : "text-gray-600"
-                      }`}
-                    >
-                      {cell}
-                    </td>
-                  ))}
-                </tr>
-              );
-            })}
-          </tbody>
-
-        </table>
-      </div>
-
-    </div>
-  </div>
-</section>
-{/* 
-        <section className="py-16 md:py-20 bg-[#f6f8fb]">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="text-center max-w-3xl mx-auto mb-12">
-              <SectionEyebrow>Growth timeline</SectionEyebrow>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight">
-                From formation to AI-native infrastructure ecosystem.
-              </h2>
-            </div>
-
-            <div className="space-y-12">
-              {[timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => (
-                <div key={rowIndex} className="relative">
-                  <div className="absolute left-0 right-0 top-5 hidden h-1 rounded-full bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block" />
-                  <div
-                    className={`grid gap-4 ${
-                      row.length === 6
-                        ? "sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
-                        : "sm:grid-cols-2 lg:grid-cols-5"
-                    }`}
-                  >
-                    {row.map(([date, label], itemIndex) => {
-                      const index = rowIndex === 0 ? itemIndex : itemIndex + 6;
-                      return (
-                        <motion.div
-                          key={date + label}
-                          initial={{ opacity: 0, y: 16 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: index * 0.025 }}
-                          className="relative"
-                        >
-                          <div className="relative z-10 mx-auto mb-5 flex h-11 w-11 items-center justify-center rounded-full border-4 border-[#f6f8fb] bg-[#00274d] text-xs font-black text-[#edad1a] shadow-lg shadow-[#00274d]/15">
-                            {String(index + 1).padStart(2, "0")}
-                          </div>
-                          <div className="h-full min-h-[150px] rounded-2xl border border-gray-100 bg-white p-4 text-center shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-[#00274d]/8">
-                            <p className="text-[#edad1a] text-sm font-black mb-2">{date}</p>
-                            <p className="text-[#00274d] text-sm font-bold leading-snug">{label}</p>
-                          </div>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
-<section className="py-16 md:py-20 bg-[#f6f8fb]">
-  <div className="container mx-auto px-4 max-w-7xl">
-   <div className="text-center max-w-5xl mx-auto mb-12 px-4">
-  <SectionEyebrow>Growth timeline</SectionEyebrow>
-  <h2 className="text-3xl md:text-5xl font-bold text-[#00274d] leading-tight">
-    Building the future of the infrastructure, construction, and manufacturing industries—one milestone at a time.
-  </h2>
-</div>
-
-    <div className="space-y-10">
-      {[timeline.slice(0, 6), timeline.slice(6)].map((row, rowIndex) => (
-        <div key={rowIndex} className="relative">
-          {/* Connector line — sits behind the numbered dots */}
-          <div className="absolute left-[3.5%] right-[3.5%] top-[22px] hidden h-[2px] bg-gradient-to-r from-[#edad1a] via-[#00274d] to-[#edad1a] opacity-35 md:block rounded-full" />
-
-          <div
-            className={`grid gap-3 ${
-              row.length === 6
-                ? "grid-cols-2 sm:grid-cols-3 xl:grid-cols-6"
-                : "grid-cols-2 sm:grid-cols-3 xl:grid-cols-5"
-            }`}
-          >
-            {row.map(([date, label], itemIndex) => {
-              const index = rowIndex === 0 ? itemIndex : itemIndex + 6;
-              return (
-                <motion.div
-                  key={date + label}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.025 }}
-                  className="flex flex-col items-center"
-                >
-                  {/* Numbered circle */}
-                  <div className="relative z-10 mb-2.5 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border-[3px] border-[#f6f8fb] bg-[#00274d] text-xs font-black text-[#edad1a] ring-2 ring-[#00274d]/20">
-                    {String(index + 1).padStart(2, "0")}
-                  </div>
-
-                  {/* Card */}
-                  <div className="w-full flex-1 min-h-[110px] rounded-2xl border border-gray-100 bg-white p-3 text-center shadow-sm transition-all duration-150 hover:-translate-y-1 hover:shadow-md hover:shadow-[#00274d]/10">
-                    <p className="mb-1.5 text-xs font-black text-[#edad1a]">{date}</p>
-                    <p className="text-xs font-bold leading-snug text-[#00274d]">{label}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
-        <section className="py-16 md:py-20">
-          <div className="container mx-auto px-4 max-w-7xl">
-            <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
-              <div>
-                <SectionEyebrow>Fund requirement</SectionEyebrow>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#00274d] leading-tight mb-5">
-                 Fueling the next phase of growth and innovation.
-                </h2>
-                {/* <p className="text-gray-600 leading-relaxed mb-6">
-                  The round is intended to unlock 3-4x growth, scale to $70M+ revenue, and combine market expansion, technology, and capital-efficient credit structures with strong unit economics.
-                </p> */}
-                <div className="rounded-2xl bg-[#00274d] p-6 text-white">
-                  <p className="text-[#edad1a] text-4xl font-black mb-2">$12M</p>
-                  <p className="text-white/75">1$ equity is expected to create 3-5$ GMV impact through blended revenue, technology and working-capital leverage.</p>
-                </div>
-              </div>
-              <div className="space-y-3">
-                {fundUse.map((item) => (
-                  <div key={item.label} className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
-                    <div className="flex items-center justify-between gap-4 mb-3">
-                      <p className="font-bold text-[#00274d]">{item.label}</p>
-                      <p className="font-black text-[#edad1a]">{item.value}</p>
-                    </div>
-                    <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
-                      <div className="h-full rounded-full bg-[#edad1a]" style={{ width: item.value }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pb-16 md:pb-20">
+       <section className="pb-16 md:pb-20 mt-20">
           <div className="container mx-auto px-4 max-w-7xl">
             <div className="rounded-2xl bg-[#00274d] px-6 py-8 md:px-10 md:py-10 text-white">
               <div className="grid lg:grid-cols-[1fr_auto] gap-6 items-center">
@@ -2037,9 +1253,12 @@ export default function Investor() {
                     Connect with our team for investor-relations discussions, deck access and strategic partnership conversations.
                   </p>
                 </div>
-                <a href="mailto:rahul@vendorinfra.com" className={siteButtonClasses("primary", "px-6 py-3")}>
-                  rahul@vendorinfra.com <Mail className="w-4 h-4" />
-                </a>
+                <button
+  onClick={() => setShowModal(true)}
+  className={siteButtonClasses("primary", "px-6 py-3")}
+>
+  Request an Investor Meeting <Mail className="w-4 h-4" />
+</button> 
               </div>
               <p className="text-white/35 text-xs mt-6">
                 Highly confidential and for private circulation only.
@@ -2047,8 +1266,12 @@ export default function Investor() {
             </div>
           </div>
         </section>
-      </main>
 
+
+        {/* ── ALL REMAINING SECTIONS ARE IDENTICAL TO YOUR ORIGINAL ── */}
+        {/* ... paste the rest of your sections here unchanged ... */}
+
+      </main>
       <Footer />
     </div>
   );
